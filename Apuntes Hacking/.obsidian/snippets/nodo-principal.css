@@ -1,0 +1,5 @@
+/* Agranda el nodo que coincida exactamente con el título de tu nota central */
+.graph-view.color-arrow [data-node-name="HACKING" i] {
+    font-size: 24px !important; /* Texto más grande */
+    transform: scale(2.5) !important; /* Esfera 2.5 veces más grande */
+}

@@ -1,0 +1,7 @@
+{
+  "theme": "system",
+  "accentColor": "#ff0000",
+  "enabledCssSnippets": [
+    "nodo-principal"
+  ]
+}

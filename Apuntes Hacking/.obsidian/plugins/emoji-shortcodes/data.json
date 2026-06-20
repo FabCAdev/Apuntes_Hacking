@@ -1,0 +1,14 @@
+{
+  "immediateReplace": true,
+  "suggester": true,
+  "historyPriority": true,
+  "historyLimit": 100,
+  "history": [
+    ":purple_circle:",
+    ":large_blue_circle:",
+    ":red_circle:",
+    ":shield:",
+    ":crossed_swords:",
+    ":owl:"
+  ]
+}
