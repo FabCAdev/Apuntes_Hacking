@@ -1,0 +1,4046 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/Por%20Organizar/Comandos_intro_linux/">
+      
+      
+        <link rel="prev" href="../Comandos_Hacking/">
+      
+      
+        <link rel="next" href="../Creacion%20de%20Scripts/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Comandos basicos de Linux (1-2) - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#comandos-basicos-de-linux-1-2" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Comandos basicos de Linux (1-2)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%F0%9F%9B%A1%EF%B8%8F%20HACKING/" class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  CAPTURE THE FLAG
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Apuntes%20%28copia%201%29/" class="md-tabs__link">
+          
+  
+  Por Organizar
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%F0%9F%9B%A1%EF%B8%8F%20HACKING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CERTIFICACIONES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            CERTIFICACIONES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CERTIFICACIONES/CERTIFICACI%C3%93N%20-%20COMPTIA%20SECURITY%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌐 Plan de Certificación: CompTIA Security+ (SY0-701)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CERTIFICACIONES/T%C3%8DTULO%20UNIVERSITARIO%20-%20INGENIER%C3%8DA%20EN%20SOFTWARE%20Y%20SISTEMAS%20COMPUTACIONALES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏛️ Control de Hito Académico: Universidad De La Salle Bajío
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CERTIFICACIONES/%F0%9F%8F%85%20CERTIFICACIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📜 Certificaciones &amp; Títulos Profesionales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CURSOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            CURSOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/%F0%9F%8E%93%20CURSOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓 CURSOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HACK4U
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            HACK4U
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/%F0%9F%92%BB%20CURSOS%20HACK4U/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💻 CURSOS HACK4U
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2_2" id="__nav_2_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CURSO HACK4U
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            CURSO HACK4U
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%E2%9A%99%EF%B8%8F%20ARCH%20LINUX%20DESDE%20CERO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚙️ ARCH LINUX DESDE CERO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%8C%90%20HACKING%20WEB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌐 HACKING WEB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%8E%A8%20PERSONALIZACION%20LINUX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎨 PERSONALIZACION LINUX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%90%8D%20PYTHON%20OFENSIVO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🐍 PYTHON OFENSIVO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%90%A7%20INTRODUCCION%20LINUX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🐧 INTRODUCCION LINUX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%92%80%20INTRODUCCION%20AL%20HACKING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💀 INTRODUCCION AL HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PROYECTOS PERSONALES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            PROYECTOS PERSONALES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/%F0%9F%92%BB%20PROYECTOS%20PERSONALES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💻 PROYECTOS PERSONALES
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ANALISIS DE AMENAZAS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            ANALISIS DE AMENAZAS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/ANALISIS%20DE%20AMENAZAS/1-%20AN%C3%81LISIS%20DE%20AMENAZAS%20%28BLUE%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1  ANÁLISIS DE AMENAZAS (BLUE TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AUDITORIA INTEGRAL WEB & SISTEMAS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            AUDITORIA INTEGRAL WEB & SISTEMAS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/AUDITORIA%20INTEGRAL%20WEB%20%26%20SISTEMAS/5%20-%20AUDITOR%C3%8DA%20INTEGRAL%20WEB%20%26%20SISTEMAS%20%28PURPLE%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5   AUDITORÍA INTEGRAL WEB & SISTEMAS (PURPLE TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_4" id="__nav_2_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BASTIONADO Y FORTIFICACION HARDENING
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            BASTIONADO Y FORTIFICACION HARDENING
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/BASTIONADO%20Y%20FORTIFICACION%20HARDENING/2%20-%20BASTIONADO%20Y%20FORTIFICACI%C3%93N%20HARDENING%20%28BLUE%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2   BASTIONADO Y FORTIFICACIÓN HARDENING (BLUE TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_5" id="__nav_2_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DESARROLLO DE SOFTWARE & SCRIPTING
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            DESARROLLO DE SOFTWARE & SCRIPTING
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/DESARROLLO%20DE%20SOFTWARE%20%26%20SCRIPTING/4%20-%20DESARROLLO%20DE%20SOFTWARE%20%26%20SCRIPTING%20%28RED%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4   DESARROLLO DE SOFTWARE & SCRIPTING (RED TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_6" id="__nav_2_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    EXPLOTACION DE ENTORNOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            EXPLOTACION DE ENTORNOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/EXPLOTACION%20DE%20ENTORNOS/3%20-%20EXPLOTACI%C3%93N%20DE%20ENTORNOS%20%28RED%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3   EXPLOTACIÓN DE ENTORNOS (RED TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CAPTURE THE FLAG
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CAPTURE THE FLAG
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CAPTURE THE FLAG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/%F0%9F%8C%90%20PortSwigger%20Academy%20-%20Dashboard%20de%20Vulnerabilidades%20Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌐 PortSwigger Academy   Dashboard de Vulnerabilidades Web
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/%F0%9F%94%B4%20TryHackMe%20-%20Dashboard%20de%20Salas%20Guiadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔴 TryHackMe   Dashboard de Salas Guiadas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/%F0%9F%94%B5%20VulnHub%20-%20Dashboard%20de%20M%C3%A1quinas%20Locales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔵 VulnHub   Dashboard de Máquinas Locales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/%F0%9F%9F%A2%20HackTheBox%20-%20Dashboard%20de%20Auditor%C3%ADas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🟢 HackTheBox   Dashboard de Auditorías
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📚 ENCICLOPEDIA: Base de Conocimiento Técnico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ACTIVE DIRECTORY
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            ACTIVE DIRECTORY
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/ACTIVE%20DIRECTORY/E13%20-%20Active%20Directory%20y%20Hacking%20Corporativo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E13   Active Directory y Hacking Corporativo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BUFFER OVERFLOW
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            BUFFER OVERFLOW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/BUFFER%20OVERFLOW/E10%20-%20Buffer%20Overflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E10   Buffer Overflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CONCEPTOS BASE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            CONCEPTOS BASE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/CONCEPTOS%20BASE/E1%20-%20Conceptos%20Base%20%28Sistemas%20y%20Fundamentos%20de%20Redes%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E1   Conceptos Base (Sistemas y Fundamentos de Redes)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CONCEPTOS BASICOS DE EXPLOTACION
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            CONCEPTOS BASICOS DE EXPLOTACION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/CONCEPTOS%20BASICOS%20DE%20EXPLOTACION/E7%20-%20Conceptos%20B%C3%A1sicos%20de%20Explotaci%C3%B3n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E7   Conceptos Básicos de Explotación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ENUMERACION DE SERVICIOS Y CMS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            ENUMERACION DE SERVICIOS Y CMS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/ENUMERACION%20DE%20SERVICIOS%20Y%20CMS/E6%20-%20Enumeraci%C3%B3n%20de%20Servicios%20y%20CMS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E6   Enumeración de Servicios y CMS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ENUMERACION DEL SISTEMA Y ESCALADA PRIVILEGIOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            ENUMERACION DEL SISTEMA Y ESCALADA PRIVILEGIOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/ENUMERACION%20DEL%20SISTEMA%20Y%20ESCALADA%20PRIVILEGIOS/E9%20-%20Enumeraci%C3%B3n%20del%20Sistema%20y%20Escalada%20de%20Privilegios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E9   Enumeración del Sistema y Escalada de Privilegios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GITHUB
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            GITHUB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/GITHUB/E5%20-%20GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E5   GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OTROS SOFTWARE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            OTROS SOFTWARE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9_1" id="__nav_4_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OBSIDIAN
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            OBSIDIAN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/OTROS%20SOFTWARE/OBSIDIAN/Ejemplo%20nota%20markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📓 Guía Maestra de Markdown para Obsidian
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/OTROS%20SOFTWARE/OBSIDIAN/Uso%20de%20markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1- TITULOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PIVOTING Y ENRUTAMIENTO
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            PIVOTING Y ENRUTAMIENTO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/PIVOTING%20Y%20ENRUTAMIENTO/E11%20-%20Pivoting%20y%20Enrutamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E11   Pivoting y Enrutamiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PROGRAMACION Y SCRIPTING
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
+            <span class="md-nav__icon md-icon"></span>
+            PROGRAMACION Y SCRIPTING
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/PROGRAMACION%20Y%20SCRIPTING/E12%20-%20Programaci%C3%B3n%20y%20Scripting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E12   Programación y Scripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    RECONOCIMIENTO PASIVO Y ACTIVO
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12">
+            <span class="md-nav__icon md-icon"></span>
+            RECONOCIMIENTO PASIVO Y ACTIVO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/RECONOCIMIENTO%20PASIVO%20Y%20ACTIVO/E3%20-%20Reconocimiento%20Pasivo%20y%20Activo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E3   Reconocimiento Pasivo y Activo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_13" id="__nav_4_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SEGURIDAD Y HACKING EN LA NUBE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_13">
+            <span class="md-nav__icon md-icon"></span>
+            SEGURIDAD Y HACKING EN LA NUBE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/SEGURIDAD%20Y%20HACKING%20EN%20LA%20NUBE/E14%20-%20Seguridad%20y%20Hacking%20en%20la%20Nube%20%28Cloud%20%26%20Kubernetes%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E14   Seguridad y Hacking en la Nube (Cloud & Kubernetes)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_14" id="__nav_4_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    TECNOLOGIAS CLAVE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_14">
+            <span class="md-nav__icon md-icon"></span>
+            TECNOLOGIAS CLAVE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/TECNOLOGIAS%20CLAVE/E2%20-%20Tecnolog%C3%ADas%20Clave%20y%20Plataformas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E2   Tecnologías Clave y Plataformas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_15" id="__nav_4_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VMs y DOCKER
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_15">
+            <span class="md-nav__icon md-icon"></span>
+            VMs y DOCKER
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/VMs%20y%20DOCKER/E4%20-%20VMs%20y%20Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E4   VMs y Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_16" id="__nav_4_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VULNERABILIDADES Y OWASP TOP 10
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_16">
+            <span class="md-nav__icon md-icon"></span>
+            VULNERABILIDADES Y OWASP TOP 10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/VULNERABILIDADES%20Y%20OWASP%20TOP%2010/E8%20-%20Vulnerabilidades%20y%20OWASP%20Top%2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E8   Vulnerabilidades y OWASP Top 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Por Organizar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Por Organizar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Apuntes%20%28copia%201%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Direcciones IP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Comandos_Hacking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comandos basicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Comandos basicos de Linux (1-2)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Comandos basicos de Linux (1-2)
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-basicos-de-linux-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos basicos de Linux (2-2)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-del-flujo-stderr-stdout-operadores-y-procesos-en-segundo-plano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control del flujo stderr-stdout, operadores y procesos en segundo plano
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descriptores-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptores de archivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-e-interpretacion-de-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura e interpretación de permisos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asignacion-de-permisos-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asignacion de permisos [1-2]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asignacion-de-permisos-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asignacion de permisos [2-2]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notacion-octal-de-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notacion octal de permisos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-especiales-sticky-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos especiales – Sticky Bit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-atributos-de-ficheros-en-linux-chattr-y-lsattr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control de atributos de ficheros en Linux – Chattr y Lsattr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-especiales-suid-y-sgid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos especiales – SUID y SGID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privilegios-especiales-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privilegios especiales – Capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httpwwwetlituc3meslinux_capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      http://www.etl.it.uc3m.es/Linux_Capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-de-estructura-de-directorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema de estructura de directorios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-bashrc-y-zshrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de bashrc y zshrc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizacion-y-upgradeo-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizacion y Upgradeo del sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#busquedas-a-nivel-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Busquedas a nivel sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-scripts-en-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creacion de scripts en bash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-archivos-especiales-y-busquedas-con-find-y-cat-especificos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura archivos especiales y busquedas con find y cat especificos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decodificacion-de-mensajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decodificacion de mensajes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Puertos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexion-de-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conexion de redes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tareas-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tareas Cron
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creacion%20de%20Scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creacion de Scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Etiquetas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Etiquetas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-basicos-de-linux-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos basicos de Linux (2-2)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-del-flujo-stderr-stdout-operadores-y-procesos-en-segundo-plano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control del flujo stderr-stdout, operadores y procesos en segundo plano
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descriptores-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descriptores de archivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-e-interpretacion-de-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura e interpretación de permisos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asignacion-de-permisos-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asignacion de permisos [1-2]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asignacion-de-permisos-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asignacion de permisos [2-2]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notacion-octal-de-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notacion octal de permisos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-especiales-sticky-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos especiales – Sticky Bit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-atributos-de-ficheros-en-linux-chattr-y-lsattr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control de atributos de ficheros en Linux – Chattr y Lsattr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-especiales-suid-y-sgid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permisos especiales – SUID y SGID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privilegios-especiales-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privilegios especiales – Capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httpwwwetlituc3meslinux_capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      http://www.etl.it.uc3m.es/Linux_Capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-de-estructura-de-directorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema de estructura de directorios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-bashrc-y-zshrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de bashrc y zshrc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizacion-y-upgradeo-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizacion y Upgradeo del sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#busquedas-a-nivel-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Busquedas a nivel sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-scripts-en-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creacion de scripts en bash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lectura-archivos-especiales-y-busquedas-con-find-y-cat-especificos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura archivos especiales y busquedas con find y cat especificos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decodificacion-de-mensajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decodificacion de mensajes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Puertos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexion-de-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conexion de redes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tareas-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tareas Cron
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="comandos-basicos-de-linux-1-2">Comandos basicos de Linux (1-2)</h1>
+<p>Etiquetas: #linux #comandos #terminal #permisos #bash #ssh #cron #github</p>
+<p>whoamI</p>
+<p>Nombre de la cuenta</p>
+<p>id</p>
+<p>Saber a que grupos pertenezco</p>
+<p>sudo</p>
+<p>Sudo se refiere a realizar una accion de administrador o del root</p>
+<p>sudo su</p>
+<p>Cambiarse a root</p>
+<p>exit</p>
+<p>Exit se refiere de salirse de algo o salirse de la terminal</p>
+<p>exit (despues de poner sudo su)</p>
+<p>Sales de la sesion de root</p>
+<p>sudo whoami</p>
+<p>Nombre de la cuenta del root</p>
+<p>sudo id</p>
+<p>Saber a que grupos pertenece root</p>
+<p>cat [dirreccion]</p>
+<p>imprimir todo el contenido de un archivo/carpeta a la terminal</p>
+<p>cat [/etc/group]</p>
+<p>Imprime todo el contenido de ese archivo/carpeta</p>
+<p>less [dirreccion]</p>
+<p>Imprime el contenido de un archivo/carpeta, solamente lo que quepa en la ventana de la terminal, permitiendo navegar por diferentes secciones</p>
+<p>less [/etc/group]</p>
+<p>Imprime el contenido de ese archivo/carpeta, dividiendolo en secciones</p>
+<p>which [comando]</p>
+<p>Muestra el alias donde se ubica la ruta para activar el comando</p>
+<p>which [cat]</p>
+<p>Muestra el alias de la ruta de ese comando</p>
+<p>/usr/bin/whoami</p>
+<p>El comando “extendido o completo” de whoami, dirigiendose a la ruta</p>
+<p>echo [palabra o directorio]</p>
+<p>Se imprime la palabra que quieras mencionar en la terminal, o la dirrecion de un archivo o carpeta</p>
+<p>echo [hola]</p>
+<p>Imprime la palabra “hola” en el terminal</p>
+<p>echo [$PATH]</p>
+<p>Imprime la dirrección de la carpeta/archivo PATH</p>
+<p>[comando 1] | [comando 2]</p>
+<p>Se pueden ejecutar 2 comandos, separando con |, en donde el segundo comando dependa del primero</p>
+<p>cat [dirreccion] | grep [operador]</p>
+<p>Primero ejecuta el comando cat y despues el comando grep, este sirve para añadir filtros a la lista de items del archivo</p>
+<p>cat /etc/group | grep “floppy”</p>
+<p>Registra todo el contenido de la carpeta group, y despues añade filtro de floppy para que solo imprima los resultados con esa palabra</p>
+<p>cat /etc/group | grep “floppy” -n</p>
+<p>Lo mismo que lo anterior pero se añade -n, para mostrar en que linea se encuentra ese registro-item</p>
+<p>command -v [comando]</p>
+<p>Sustituto de which, se usa especialmente a la hora de pentesting</p>
+<p>commando -v [whoami]</p>
+<p>Lo mismo que which</p>
+<h2 id="comandos-basicos-de-linux-2-2">Comandos basicos de Linux (2-2)</h2>
+<p>pwd</p>
+<p>Muestra la ubicación donde estas ubicado actualmente</p>
+<p>ls</p>
+<p>En la ubicación deonde estas actualmente, se muestran las subcarpetas y archivos</p>
+<p>ls -l</p>
+<p>Mismo que lo anterior, pero organizandolo en tabla con columnas acerca de ultima fecha de modificacion, permisos, peso, entre otros</p>
+<p>tree [direccion]</p>
+<p>Mismo que ls pero te muestra un arbol</p>
+<p>cd [dirrección]</p>
+<p>Cambias de dirreccion para modificarlo</p>
+<p>cd Descargas</p>
+<p>Cambias a la dirreccion de descargas para modificarlo</p>
+<p>cd ..</p>
+<p>Los 2 puntos .. indica irte para atras</p>
+<p>bash</p>
+<p>Para comandos, otra terminal dentro de la terminal</p>
+<p>mktemp -d</p>
+<p>Crea una carpeta temporal</p>
+<p>https://www.bonaval.com/kb/cheats-chuletas/comandos-basicos-linux</p>
+<p>https://www.fing.edu.uy/inco/cursos/sistoper/recursosLaboratorio/tutorial0.pdf</p>
+<h2 id="control-del-flujo-stderr-stdout-operadores-y-procesos-en-segundo-plano">Control del flujo stderr-stdout, operadores y procesos en segundo plano</h2>
+<p>[comando 1]; [comando 2]; [comando 3]; ...</p>
+<p>Puedes ejecutar 2 comandos o mas en vez de hacerlo por separado, donde cuando termine el primer comando inicie el siguiente y sucecivamente, a diferencia de “|”, el segundo comando depende del primero para ejecutarse</p>
+<p>whoami; ls;</p>
+<p>Ejecuta primero whoami, una vez acabe ejecuta ls;</p>
+<p>[comando 1] &amp;&amp; [comando 2] &amp;&amp; [comando 3] ...</p>
+<p>A diferencia de los “;”, los &amp;&amp; ejecuta el siguiente comando solamente si el comando actual devuelve un valor</p>
+<p>whoami &amp;&amp; ls</p>
+<p>Ejecuta primero whoami, y como regresara un valor (nombre del usuario), se ejecutara ls</p>
+<p>whoam &amp;&amp; ls</p>
+<p>como no existe el colamdno “whoam”, siempre dara error y por ende no ejecutara el siguiente comando que es ls</p>
+<p>echo $?</p>
+<p>$? es un valor booleano donde el resultado es 0/1, lo que hace es verificar si el comando(s) anterior(es) han funcionado correctamente y no fallaron, siendo 1 o mayor positivo (si hubo error), o 0 negativo (no hubo error)</p>
+<p>[comando 1] || [comando 2] || [comando3]...</p>
+<p>Ejecuta el primer comando, en caso de que sea exitoso no ejecuta el segundo ni los demas, si el primer comando falla ejecuta el segundo, si falla el tercero y asi sucecivamente</p>
+<p>whoam || ls</p>
+<p>Como el primer comando fallara, ejecuta el segundo</p>
+<p>whoami || ls</p>
+<p>Ejecuta el primer comando, sera exitoso y no ejecutara el segundo</p>
+<p>[comando1 (mal escrito)] 2&gt;[direccion]</p>
+<p>El comando mal escrito deberia salir un mensaje de error, pero lo que estamos haciendo es que este se diriga hacia una direccion en particular para ejecutar otro comando, anunciandose con el canal 2 para errores</p>
+<p>whoam 2&gt;/dev/null</p>
+<p>como whoam no existe deberia salir error y mensaje del canal 2, pero lo envia al comando de la direccion /dev/null, que lo que hace es no mostrar ningun mensaje de error</p>
+<p>whoami 2&gt;/dev/null</p>
+<p>whoami esta correcto, y por ende no ocurrira ningun mensaje de error o evento similar</p>
+<p>cat /etc/host &gt; /dev/null 2&gt;&amp;1</p>
+<p>Este caso similar tiene 2&gt;&amp;1 , lo que hace es apuntar el canal 2 de errores al mismo donde esta apuntando canal 1, haciendo que la ejecucion de error sea lo mismo que exito</p>
+<p>cat /etc/host &amp;&gt;/dev/null</p>
+<p>lo mismo que lo anterior, &amp;&gt; sirve para capturar ambos canales al mismo tiempo, tanto si esta corrercto como incorrecto</p>
+<p>wireshark &amp;&gt; /dev/null</p>
+<p>wireshack es un programa, el punto es que con /dev/null hacemos que no deje ningun mensaje en la consola</p>
+<p>wireshark &amp;&gt; /dev/null &amp;</p>
+<p>Caso anterior, pero añadiendo &amp; mostrara el ID del proceso del programa ejecutandose</p>
+<p>wireshark &amp;&gt; /dev/null &amp; disown</p>
+<p>Caso anterior, pero añadiendo disown, como es un subproceso ejecutandose de la terminal, el programa se deberia cerrar cuando te salgas de la terminal (exit), pero como tienes disown, son procesos a parter y si sales de la terminal no afectara el programa</p>
+<p>top / htop</p>
+<p>Mostrar los procesos en tiempo real (consumo de CPU/RAM),</p>
+<p>ps aux | grep [nombre]</p>
+<p>Buscar el ID de un proceso (PID) especifico para poder interactuar con el</p>
+<p>kill -9 [PID]</p>
+<p>Forzar cierre de un proceso de forma inmediata</p>
+<p>https://hack4u.io/wp-content/uploads/2022/05/bash-redirections-cheat-sheet.pdf</p>
+<h2 id="descriptores-de-archivos">Descriptores de archivos</h2>
+<p>exec [numero]&lt;&gt; [nombre del archivo]</p>
+<p>Crea un archivo, con &lt;&gt; para indicar al terminal que es para la creacion</p>
+<p>exec 3&lt;&gt; file</p>
+<p>Crea un archivo de tipo file, con el numero 3 de tuberia ya que es personalizable para uso de variables, pues 1 es para éxito y 2 para error</p>
+<p>file [nombre del archivo]</p>
+<p>Analiza el archivo diciendote que tipo es y cuando tamañoo tiene el archivo</p>
+<p>file file</p>
+<p>Analiza el archivo file</p>
+<p>[comando] &gt;&amp;[numero]</p>
+<p>Ejecuta el comando y luego envia la informacion al archivo guardado en el canal 3</p>
+<p>whoami &gt;&amp;3</p>
+<p>Ejecuta whoami y luego lo envia al canal 3, si hay un archivo guardado en ese canal se guardara en ese archivo, como ya habiamos hecho exec 3&lt;&gt; file antes, se guardara la informacion en el archivo file</p>
+<p>exec [numero]&gt;&amp;-</p>
+<p>Desvincula o cierra el canal a elegir (descriptor)</p>
+<p>exec 3&gt;&amp;-</p>
+<p>Desvincula o cierra el canal 3 (descriptor)</p>
+<p>exec [numero 2]&gt;&amp;[numero 1]</p>
+<p>La informaciondescriptor del numero 1 se hace una copia al al siguiente descriptor a elegir</p>
+<p>exec 4&gt;&amp;3</p>
+<p>El descriptor 3 se copia al 4</p>
+<p>exec [numero 2]&gt;&amp;[numero 1]-</p>
+<p>Caso anterior pero tambien cierra el descritor emisor</p>
+<p>exec 6&gt;&amp;5-</p>
+<p>El descriptor 5 se copia al 6 y se cierra el 5</p>
+<p>https://hack4u.io/wp-content/uploads/2022/05/bash-redirections-cheat-sheet.pdf</p>
+<h2 id="lectura-e-interpretacion-de-permisos">Lectura e interpretación de permisos</h2>
+<p>touch [nombre del archivo].[extension]</p>
+<p>Crea un archivo</p>
+<p>touch file.txt</p>
+<p>Crea el archivo file.txt</p>
+<p>echo [mensaje] &gt; [archivo]</p>
+<p>Guarda texto en un archivo, pero si vuelves a usar el comando con el mismo archivo, se reemplazara con la infromacion antigua ya que es lo que indica &gt;, si lo que se quiere es hacer un append, se debe usar »</p>
+<p>echo “Hola probando” &gt; file.txt</p>
+<p>Guarda el texto en el archivo</p>
+<p>echo [mensaje] » [archivo]</p>
+<p>Al poner doble &gt; ya se estaria realizando un append, añadir informacion en vez de sobreescribir</p>
+<p>echo adios » file.txt</p>
+<p>Añade adios al archivo en vez de sobreescribir y quitar “Hola probando”</p>
+<p>rm [archivo]</p>
+<p>Elemina un archivo</p>
+<p>rm file.txt</p>
+<p>Elemina el archivo file.txt</p>
+<p>rm -r *</p>
+<p>Elemina todos los archivos y/o direcctorios</p>
+<p>nano [archivo]</p>
+<p>Te metes adentro del archivo para editarlo, en caso de que no exista el archivo lo crea</p>
+<p>nano file.txt</p>
+<p>Modificas el archivo file.txt, en caso de que ese archivo no exista, se crea</p>
+<p>vi [archivo]</p>
+<p>Tambien editas un archivo, pero usando el programa/plugin vin</p>
+<p>mkdir [nombre]</p>
+<p>Crea un directorio</p>
+<p>mkdir prueba</p>
+<p>Crea el directorio prueba</p>
+<p>https://blog.desdelinux.net/permisos-y-derechos-en-linux/?msclkid=22f8cb88ba8111ecb5d8a3db91f066ab</p>
+<p>https://www.softzone.es/programas/linux/permisos-archivos-directorios-linux/</p>
+<h2 id="asignacion-de-permisos-1-2">Asignacion de permisos [1-2]</h2>
+<p>chmod [u/g/o]+[r/w/x] [archivo]</p>
+<p>Modifica Permisos añadiendolos ya sea al User (Usuario), Group (Grupto) u Other (Otro) acerca de poder Read (Leer), Write (Escribir) o eXecute (Ejecutar) a un archivo o directorio</p>
+<p>chmod o+w prueba</p>
+<p>Añade el permiso de escribir a otros en el directorio de prueba</p>
+<p>chmod [u/g/o]-[r/w/x] [archivo]</p>
+<p>Lo mismo pero ahora quita permisos (esta el – en vez de +)</p>
+<p>chmod o-w prueba</p>
+<p>Quita el permiso de escribir a otros en el directorio de prueba</p>
+<p>chgrp [grupo] [archivo/directorio]</p>
+<p>Cambia de grupo o usuario para un archivo o directorio</p>
+<p>chgrp fabca06 prueba</p>
+<p>Cambia de grupo para el directorio de prueba</p>
+<p>chmod u-x,g-rx,o+w,o-x prueba</p>
+<p>Puedes modificar varios permisos en un mismo archivo tanto usuario, grupos y otros</p>
+<h2 id="asignacion-de-permisos-2-2">Asignacion de permisos [2-2]</h2>
+<p>useradd [usuario] -s [ruta] -d [ruta]</p>
+<p>Crea un usuario nuevo, con las especificaciones del shell a usar y el directorio donde estara ubicado</p>
+<p>useradd pepe -s /bin/bash -d /home/pepe</p>
+<p>Crea el usuario pepe con su propio sheel y ubicación a usar</p>
+<p>chown [usuario] [usuario]</p>
+<p>Dar propietario de la cuenta, especificando a que usuario se quiere dar propietario y para quien</p>
+<p>chown pepe pepe</p>
+<p>Dar propietario de la cuenta de pepe al usuario pepe</p>
+<p>sudo chown pepito:pepito pepito</p>
+<p>Dar propietario de todo</p>
+<p>groupadd [nombre]</p>
+<p>Añade un nuevo grupo</p>
+<p>groupadd Alumnos</p>
+<p>Añade un grupo nuevo llamado Alumnos</p>
+<p>usermod -a -G [grupo] [usuario]</p>
+<p>Añade un grupo a un usuario</p>
+<p>usermod -a -G Alumnos pepe</p>
+<p>Modifica los grupos del usuario pepe para añadir el grupo Alumnos</p>
+<p>sudo userdel [usuario]</p>
+<p>Elemina a un usuario</p>
+<p>sudo userdel -r [usuario]</p>
+<p>Elemina a un usuario y todos sus datos</p>
+<p>grep [usuario] /etc/passwd</p>
+<p>Verifica si un usuario existe o no</p>
+<p>https://computernewage.com/2016/05/22/gestionar-usuarios-y-permisos-en-linux/</p>
+<p>https://www.ionos.es/digitalguide/servidores/know-how/asignacion-de-permisos-de-acceso-con-chmod/</p>
+<h2 id="notacion-octal-de-permisos">Notacion octal de permisos</h2>
+<p>chmod 755 testing</p>
+<p>Otra forma de dar permisos, pues el primer digito corresconde al binario de user, el segundo a grupos y tercero otros</p>
+<p>0 = no hay persmisos de nada</p>
+<p>1 = solo ejecutar</p>
+<p>2 = solo escribir</p>
+<p>3 = escribir y ejecutar</p>
+<p>4 = solo leer</p>
+<p>5 = leer y ejecutar</p>
+<p>6 = escribir y ejecutar</p>
+<p>7 = los 3 permisos, osea todo</p>
+<p>https://blog.alcancelibre.org/staticpages/index.php/permisos-sistema-de-archivos</p>
+<h2 id="permisos-especiales-sticky-bit">Permisos especiales – Sticky Bit</h2>
+<p>chmod +t pruebaspepito/</p>
+<p>Aplica Sticky Bit, donde los usuarios no puedan hacer cambios a los archivos dentro del directorio si no son los propietarios de los archivos, incluyendo si los propios archivos tengan permisos de escritura</p>
+<p>https://www.fpgenred.es/GNU-Linux/el_bit_sticky.html</p>
+<h2 id="control-de-atributos-de-ficheros-en-linux-chattr-y-lsattr">Control de atributos de ficheros en Linux – Chattr y Lsattr</h2>
+<p>cp [archivo/directorio] [nombre del archivo]</p>
+<p>Crea una copia de un archivo y lo introduce en el archivo que indiques, en caso de no existir se crea el archivo dentro de la misma ruta de la terminal</p>
+<p>lsattr [archivo]</p>
+<p>Permite listar los atributos asignados a los ficheros de un sistema de ficheros</p>
+<p>lsattr prueba</p>
+<p>Verifica los atributos asignados al archivo pruebas</p>
+<p>chattr +i -V [archivo]</p>
+<p>Permite modificar dichos atributos de los ficheros, + i es de inmutable (no se puede eleminar), mientras -V indica que sea descriptivo la informacion que nos da</p>
+<p>chattr +i -V prueba</p>
+<p>Le añade la inmutabilidad al archivo prueba</p>
+<p>Igualmente Existen varios atributos no solo de la i de inmutable</p>
+<p>Atributo “A” para deshabilitar la modificacion de la fecha de acceso al fichero</p>
+<p>“c” para comprimir automaticamente el fichero en el disco</p>
+<p>“i” para bloquear la modificacion o borrado de un archivo (inmutable)</p>
+<p>“u” para permitir la recuperacion de archivo aunque sea eliminado</p>
+<p>“s” para escrifir de forma asincrona a discos cambios en los ficharos</p>
+<p>“e” para al eliminar un archivo, sobreescribir con 0 todos sus bloques</p>
+<p>https://programmerclick.com/article/5604675172/</p>
+<h2 id="permisos-especiales-suid-y-sgid">Permisos especiales – SUID y SGID</h2>
+<p>python3</p>
+<p>Ejecuta python</p>
+<p>python3 --version</p>
+<p>Verifica que version de python estas usuando</p>
+<p>which [programa/script] | xargs [comando]</p>
+<p>El xargs actua como un puente, pues toma el output del comando anterior y lo convierte en argumento para el siguiente</p>
+<p>which python3 | xargs ls -l</p>
+<p>Verifica la ubicación de python primero, para despues usarlo de argumento para ls</p>
+<p>chmod [notacion permisos] [archivo]</p>
+<p>Activa el bit SGID (Set Group ID).</p>
+<p>chmod 2755 prueba</p>
+<p>chmod [notacion permisos] [archivo]</p>
+<p>Activa el bit SUID (Set User ID).</p>
+<p>chmod 4755 prueba</p>
+<p>https://deephacking.tech/permisos-sgid-suid-y-sticky-bit-linux/#:~:text=Permiso%20SGID,-El%20permiso%20SGID&amp;text=Si%20se%20establece%20en%20un,perteneciente%2C%20el%20grupo%20del%20directorio.</p>
+<p>https://www.ochobitshacenunbyte.com/2019/06/17/permisos-especiales-en-linux-sticky-bit-suid-y-sgid/</p>
+<p>https://www.ibiblio.org/pub/linux/docs/LuCaS/Manuales-LuCAS/SEGUNIX/unixsec-2.1-html/node56.html</p>
+<h2 id="privilegios-especiales-capabilities">Privilegios especiales – Capabilities</h2>
+<p>getcap -r / 2&gt;/dev/null</p>
+<p>Consigue ver las capacidades de todos los archivos, las capacidades vendrian siendo permisos de root pero dividido en partes, sin necesidad de otorgar todas las clases de permisos de root, y que estos los pueden ejecutar los programas.</p>
+<p>setcap [capacidad] [ruta]</p>
+<p>Asigna capacidades especificando que atributos del root se puede aplicar al programa</p>
+<p>setcap cap_setuid+ep /usr/bin/python3</p>
+<p>Asigna capacidad de setuid para manipular la propia ID del usuario, se añade los atributos e (Effective) para activarse cuando se ejecuta el programa (Python) y p de dar permiso al programa de usar la capacidad</p>
+<h2 id="httpwwwetlituc3meslinux_capabilities">http://www.etl.it.uc3m.es/Linux_Capabilities</h2>
+<h2 id="sistema-de-estructura-de-directorios">Sistema de estructura de directorios</h2>
+<p>Nota: Esta tabla es informativa, acerca del funcionamiento de cada uno de los directorios raiz, por lo tanto no es papeleta de comando</p>
+<p>bin</p>
+<p>Se almacenan los binarios ejecutables para usuario</p>
+<p>sbin</p>
+<p>Se almacenan los binarios ejecutables para root y/o el sistema</p>
+<p>boot</p>
+<p>Se almacenan los ejecutables necesarios para arrancar el sistema, incluido el kernel</p>
+<p>dev</p>
+<p>Se almacenan todos los dispositivos</p>
+<p>etc</p>
+<p>Se almacenan los archivos ficheros de configuracion, especialmente los externos</p>
+<p>home</p>
+<p>Se almacenan los usuarios y sus directorios, asi como archivos temporales para los usuarios</p>
+<p>lib</p>
+<p>Se almacenan las bibliotecas necesarias para ejecutar los binarios</p>
+<p>lib64</p>
+<p>Se almacenan las bibliotecas necesarias para ejecutar los binarios en 64 bits</p>
+<p>media</p>
+<p>Se almacenan los dispositivos extraibles (USB, SD, LECTORES CD, ETC.)</p>
+<p>opt</p>
+<p>Se almacenan programas externos</p>
+<p>proc</p>
+<p>Se almacenan los procesos que estan actualmente ejecutandose</p>
+<p>root</p>
+<p>Se almacena el usuario root y directorios, es ajeno a home</p>
+<p>srv</p>
+<p>Se almacenan servidores</p>
+<p>sys</p>
+<p>Se almacena la kernel</p>
+<p>tmp</p>
+<p>Se almacenan archivos temporales</p>
+<p>usr</p>
+<p>Se almacenan archivos solo lectura del usuario, asi como software instalado por paquetes</p>
+<p>var</p>
+<p>Se almacenan archivos con informacion del sistema</p>
+<h2 id="uso-de-bashrc-y-zshrc">Uso de bashrc y zshrc</h2>
+<p>ls -a</p>
+<p>El parametro -a indica ver todos los archivos, estos incluyen los archivos ocultos</p>
+<p>hostname -I</p>
+<p>Ver las IP</p>
+<p>ifconfig</p>
+<p>Ver todas las redes y sus IP</p>
+<p>[comando] -I | awk ‘{print $[numero]}’</p>
+<p>Al añadir awk vendria siendo un filtro del registro de informacion, seleccionando el ID que quieres que se musetre</p>
+<p>hostname -I | awk ‘{print $1}’</p>
+<p>Imprime la primer IP de todas las Ips mostradas</p>
+<p>echo "Tu IP privada es: $(hostname -I | awk '{print $1}')"</p>
+<p>Puedes hacer un echo para imprimir solo la primera IP con el comando anterior</p>
+<p>source [directorio/archivo]</p>
+<p>Recarga un archivo o directorio especifico</p>
+<p>source ~/.zshrc</p>
+<p>Recarga el directorio zshrc</p>
+<p>https://www.compuhoy.com/que-es-bashrc-en-linux/</p>
+<p>https://respontodo.com/que-es-zsh-y-por-que-deberia-usarlo-en-lugar-de-bash/</p>
+<h2 id="actualizacion-y-upgradeo-del-sistema">Actualizacion y Upgradeo del sistema</h2>
+<p>apt update</p>
+<p>Descarga las actualizaciones</p>
+<p>apt update list --upgradable</p>
+<p>Ve toda la lista a actualizar</p>
+<p>apt search [modulo]</p>
+<p>Busca un modulo en especifico</p>
+<h2 id="busquedas-a-nivel-sistema">Busquedas a nivel sistema</h2>
+<p>find / -[filtro]</p>
+<p>Hace una busqueda a nivel sistema</p>
+<p>find / -name passwd 2&gt;/dev/null</p>
+<p>Encuentra todos los directorios y archivos con nombre de passwd, asi como usar el 2&gt;/dev/null para enviar a la basura los resultados de permisos denegados u otros errores</p>
+<p>find / -name passwd 2&gt;/dev/null | xargs ls -l</p>
+<p>Lo puedes combinar con xargs para hacer una indicacion por cada resultado encontrado, por ejemplo ls para ver permisos de cada directorio encontrado</p>
+<p>find / -perm 4000 2&gt;/dev/null</p>
+<p>Este es otro ejemplo, pues busca todos los archivos y directorios SUID con el filtrador de perm</p>
+<p>find / -group fabca06 2&gt;/dev/null</p>
+<p>Ahora con el filtro group buscas todos los directorios y archivos que estan al grupo de fabca06</p>
+<p>find / -user root 2&gt;/dev/null</p>
+<p>Obviamente esta busqueda por usuario</p>
+<p>find / -group fabca06 -type d 2&gt;/dev/null</p>
+<p>Agregas el modificador -type d para buscar solo directorios</p>
+<p>find / -group fabca06 -type f 2&gt;/dev/null</p>
+<p>Y con F para archivos solamente</p>
+<p>find / -user root -writable 2&gt;/dev/null</p>
+<p>Encontrar archivos con capacidad de escritura</p>
+<p>find / -user root -executable 2&gt;/dev/null</p>
+<p>Ejecutables solamente, pero tambien cuentan directorios pues si tecnicamente se puede “atravesar” son ejecutables</p>
+<p>find / -user root -executable -type f 2&gt;/dev/null</p>
+<p>Ahora si solo busca ejecutables de archivos</p>
+<p>find / -name dex* 2&gt;/dev/null</p>
+<p>Por nombre, que comienzen con “dex”</p>
+<p>find / -name dex*.sh 2&gt;/dev/null</p>
+<p>Que comienze por dex y tenga la extension .sh</p>
+<p>man find</p>
+<p>Abre el manual para find, con todos los atributos y atributos restantes</p>
+<p>grep -r "texto_a_buscar" /ruta</p>
+<p>Busca una palabra dentro de todos los archivos de una carpeta de forma recursiva.</p>
+<p>locate [nombre]</p>
+<p>Mucho más rápido que find, aunque requiere que la base de datos esté actualizada (updatedb).</p>
+<p>https://www.hostinger.es/tutoriales/como-usar-comando-find-locate-en-linux/</p>
+<h2 id="creacion-de-scripts-en-bash">Creacion de scripts en bash</h2>
+<p>./[archivo]</p>
+<p>Ejecuta un archivo (mayormente scripts)</p>
+<p>./touch [archivo.sh]</p>
+<p>Los scripts en bash usan extension sh</p>
+<h2 id="lectura-archivos-especiales-y-busquedas-con-find-y-cat-especificos">Lectura archivos especiales y busquedas con find y cat especificos</h2>
+<p>cat ./[archivo]</p>
+<p>cat /[direccion]</p>
+<p>cat $(pwd)/[archivo]</p>
+<p>grep -r “\w” 2&gt;dev/null | tail -n 1</p>
+<p>grep -r “\w” 2&gt;dev/null | tail -n 1 | awk ‘{print $2}’ FS=”:”</p>
+<p>grep -r “\w” 2&gt;dev/null | tail -n 1 | cut -d ‘:’ -f 2</p>
+<p>grep -r “\w” 2&gt;dev/null | tail -n 1 | tr ‘:’ ‘ ‘</p>
+<p>grep -r “\w” 2&gt;dev/null | tail -n 1 | tr ‘:’ ‘ ‘ | awk ‘{print $2}</p>
+<p>grep -r “\w” 2&gt;dev/null | tail -n 1 | tr ‘:’ ‘ ‘ | awk ‘NF{print $NF}’</p>
+<p>Otras formas de usar cat, pues hay caracteres especiales como guion “-” que se bugea ya que sirve para parametros en los comandos</p>
+<p>cat ./-</p>
+<p>Abre el archivo “-” sin ser parametro</p>
+<p>cat [palabra 1]\ [palabra 2]\ [palabra3]...</p>
+<p>Uso de cat para archivos donde tengan espacios, teniendo que especificar con “\”</p>
+<p>cat spaces\ in\ thist\ filename\</p>
+<p>cat s*</p>
+<p>cat /home/bandit2/s*</p>
+<p>cat /home/bandit2/*</p>
+<p>Abre el archivo “spaces in this filename” que contiene espacios</p>
+<p>cat ./--spaces\ in\ this\ filename--</p>
+<p>Abre el archivo “—spaces in this filename—” que contiene espacios y guiones al principio</p>
+<p>find . -type f | grep [nombre] | xargs file</p>
+<p>Hace una busqueda de los archivos que especifiques pero haciendo xargs file muestras el tipo de archivo</p>
+<p>find . -type f | grep ./-file | xargs file</p>
+<p>Muestra todos los archivos con nombre file, indicando el tipo de archivo</p>
+<p>find . -type f -readable</p>
+<p>Encontrar archivos humanamente leibles</p>
+<p>find . -type f ! -executable -size [Tamaño]</p>
+<p>Busqueda de archivo NO ejecutable, especificando su peso</p>
+<p>find . -type f ! -executable -size 1033c</p>
+<p>Busqueda de un archivo no ejecutable, file y que pese 1033 bytes</p>
+<p>finde -type f -size 33c -user bandit7 -group bandit6 2&gt;dev/null</p>
+<p>Busqueda de un archivo con es file, con 33 bytes de peso, el usuario propietario es bandit 7 y el grupo propietario bandit 6, con el 2&gt;/dev/null</p>
+<p>cat data.txt | grep "millionth"</p>
+<p>cat data.txt | grep "millionth" | awk 'NF{print $NF}'</p>
+<p>cat data.txt | grep "millionth" | awk '{print $2}'</p>
+<p>cat data.txt | cut -d ‘ ‘ -f 1</p>
+<p>Formas de encontrar el texto que va despues de la palabra “millonth”, considerando que el txt. sean 2 columnas y entre ellas 2 haya separacion con espacios</p>
+<p>sort data.txt | uniq -u</p>
+<p>Encontrar la unica palabra que no se repite</p>
+<p>diff [archivo 1] [archivo 2]</p>
+<p>Con diff encuentras cambios que se hicieron en el archivo 1 para tener lo mismo que el archivo 2</p>
+<p>diff passwords.old passwords.new</p>
+<p>Checa las diferencias entre estos 2 archivos</p>
+<p>sed 's/antiguo/nuevo/g' archivo</p>
+<p>Sustituye palabras en todo un documento sin abrirlo.</p>
+<p>head -n [numero]</p>
+<p>Muestra las primeras líneas de un archivo (lo opuesto a tail).</p>
+<p>wc -l [archivo]</p>
+<p>Cuenta cuántas líneas tiene un archivo (muy útil para listas de contraseñas o diccionarios)</p>
+<p>https://en.wikipedia.org/wiki/List_of_file_signatures</p>
+<p>https://www.ionos.es/digitalguide/servidores/configuracion/comando-linux-find/</p>
+<p>AWK Cheat Sheet: https://www.shortcutfoo.com/app/dojos/awk/cheatsheet</p>
+<p>AWK Cheat Sheet 2: https://bl831.als.lbl.gov/~gmeigs/scripting_help/awk_cheat_sheet.pdf</p>
+<p>Cheat Sheet: Cutting Text with cut: https://bencane.com/2012/10/22/cheat-sheet-cutting-text-with-cut/</p>
+<p>Tutorial del uso de SORT: https://www.ibidemgroup.com/edu/tutorial-sort-linux-unix/</p>
+<p>Tutorial del uso de UNIQ: https://victorhckinthefreeworld.com/2021/10/21/el-comando-uniq-de-gnu/</p>
+<p>Diferencias con diff: https://eltallerdelbit.com/comando-diff-ejemplos/</p>
+<h2 id="decodificacion-de-mensajes">Decodificacion de mensajes</h2>
+<p>string data.txt | grep “===”</p>
+<p>string data.txt | grep “===” | tail -n 1</p>
+<p>strings data.txt | grep "===" | tail -n 1 | awk 'NF{print $NF}'</p>
+<p>Agrupa todos los strings de un archivo, y los filtra por los que tienen mas de 3 iguales</p>
+<p>echo "VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg==" | base64 -d</p>
+<p>Desifra el mensaje encriptado en base 64</p>
+<p>cat data.txt | tr '[G-ZA-Fg-za-f]' '[T-ZA-St-za-s]'</p>
+<p>Descifra el mensaje encriptado en rot13</p>
+<p>cat data | xxd -r | sponge data</p>
+<p>Con xxd convierte el archivo de bytes a hexadecimal, pero con -r es reverso encontes hexadecimal a bytes. Y con sponge es poner la infromacion en un arhcivo en especifico, en este caso a su propio archivo data</p>
+<p>ghex data</p>
+<p>Abre el editor hexadecimal, para editar datos binarios, para saber de binarios que representan al inicio se usa https://filesig.search.org/</p>
+<p>mv data data.gz</p>
+<p>Cambias de nombre al archivo añadiendole la extension .gz</p>
+<p>Binarios search: https://filesig.search.org/</p>
+<h2 id="ssh">SSH</h2>
+<p>ping [atributos] [cuantos pings] [IP, pagina]</p>
+<p>Envia un ping para comprobar si se recibe señal</p>
+<p>ping -c 1 bandit.labs.overthewire.org</p>
+<p>Envia 1 ping a esa pagina</p>
+<p>ssh [user]@[IP/pagina web] -p [puerto]</p>
+<p>Activa el protocolo SSH para controlar una computadora de forma remota y que sea segura, usando un nombre de cuenta, mencionando la IP o pagina web y tambien especificas el puerto con -p</p>
+<p>ssh bandit0@bandit.labs.overthewire.org -p 2220</p>
+<p>Accedes a los laboratorios de bandit especificando tu usuario “bandit0” y conectandote con el puerto 2220</p>
+<p>sshpass -p [contraseña] ssh [usuario]@[IP/pagina web] -p [puerto]</p>
+<p>Para entrar poniendo la contraseña de una vez</p>
+<p>sshpass -p ‘ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If’ ssh bandit1@bandit.labs.overthewire.org -p 2220</p>
+<p>Entrar a la maquina poniendo la contraseña de una vez</p>
+<p>export TERM=xterm</p>
+<p>Necesario para importar configuraciones de tu terminal en la tuya como Control + l para limpieza</p>
+<p>systemctl start ssh</p>
+<p>Inicia el servicio ssh para que otras computadoras con la terminal puedan conectarse a la tuya</p>
+<p>systemctl status ssh</p>
+<p>Verifica la conecion con el ssh</p>
+<p>ssh fabca06@localhost</p>
+<p>Te conectas a tu propia maquina remotamente en tu maquina</p>
+<p>ssh key-gen</p>
+<p>Genera dos llaves para conectarse remotamente sin la necesidad de una contraseña, tanto privada como publica, este comando se uso en la carpeta /home/fabca06/pwd. La clave publica siempre tendra como extension .pub</p>
+<p>cp [archivo] authorized_keys</p>
+<p>Copia el archivo con la llave y ponlo en un archillo llamado authorized_keys, esto es importante ya que open-ssh busca todas las llaves autorizadas en esa carpeta</p>
+<p>cp id_ed25519.pub authorized_keys</p>
+<p>Ese archivo con mi llave publica se copio a authorized_keys, gracias a eso conectandome a mi propio maquina no me pidio contraseña</p>
+<p>ssh-copy-id -i id_ed25519 fabca06@localhost</p>
+<p>Esta es otra manera de autorizacion, especificando la maquina</p>
+<p>ssh -i id_ed25519 fabca06@localhost</p>
+<p>Ya conectandote remotamente sin contraseña, le pides a tu terminal que busques la llave necesario para autenticarse y se conecte por ende a la maquina</p>
+<p>systemctl stop ssh</p>
+<p>Recuerda cerrar el servicio ssh cuando no se use</p>
+<p>ssh -i /home/fabca06/.ssh/bandit14_key bandit14@bandit.labs.overthewire.org -p 2220</p>
+<p>Mismo comando, al archivo con la clave privada ubicado en bandit13 en Over the Wire se copia a tu maquina local, lo pones en un archivo adentro de .ssh y te conectas mencionando el nombre de tu archivo con la llave privadaIMPORTANTE: Todas las llaves privadas deben de disponer solo de chmod 600</p>
+<p>ssh bandit19@bandit.labs.overthewire.org -p 2220 [comando]</p>
+<p>Envia un comando despues de conectarse remotamente</p>
+<p>ssh bandit19@bandit.labs.overthewire.org -p 2220 bash</p>
+<p>Abre una bash despues de conectarte</p>
+<p>ip a</p>
+<p>La forma moderna y recomendada de ver tus interfaces de red e IPs (sustituto de ifconfig)</p>
+<p>curl [URL]</p>
+<p>Descarga o visualiza el contenido de una web desde la terminal. Muy útil para descargar scripts de explotación</p>
+<p>wget [URL]</p>
+<p>Similar a curl, ideal para descargar archivos directos.</p>
+<p>scp [archivo] [user]@[IP]:[ruta]</p>
+<p>Copia archivos a través de SSH de tu máquina a una remota (o viceversa).</p>
+<h2 id="puertos">Puertos</h2>
+<p>nc [ip] [puerto]</p>
+<p>Abres una conexión al puerto que quieras especificar</p>
+<p>nc localhost 3000</p>
+<p>Llama al puerto 3000 de tu maquina</p>
+<p>ss -nltp</p>
+<p>Mapeo de los puertos ver, para ver los servicios que estar corriento</p>
+<p>-n No intenta resolver nombres de servicios</p>
+<p>-l Muestra solo los que esten escuchando conexiones</p>
+<p>-t solo conexiones TCP</p>
+<p>-p que programa o proceso tiene abierta cada puerta</p>
+<p>lsof -i :[puerto]</p>
+<p>Que archivos servicios corren en el puerto especifico, los puertos propietarios de root no se muestran al menos que lo corras como root</p>
+<p>lsof -i:22</p>
+<p>Muestra los archivos o servicios que corren en el puerto 22</p>
+<p>ps -faux</p>
+<p>Muestra todos los puertos</p>
+<p>-f los que estan escuchando</p>
+<p>-a para todos los usuarios incluyendo root</p>
+<p>-u da informacion detallada, como el usuario al que pertenece el proceso</p>
+<p>-x solo procesos no vinculados a la terminal</p>
+<p>ncat –ssl [ip] [puerto]</p>
+<p>El nc pero con seguridad ssl, necesario en procesos de seguridad</p>
+<p>ncat --ssl 127.0.0.1 30001</p>
+<p>Inicia una conexión con ssl a esa ip y ese puerto</p>
+<p>nc -nlvp 4646</p>
+<p>Abre un puerto en tu misma maquina</p>
+<p>Usando Netcat - Algunos comandos prácticos: https://blog.desdelinux.net/usando-netcat-algunos-comandos-practicos/</p>
+<h2 id="conexion-de-redes">Conexion de redes</h2>
+<p>nmcli device wifi list</p>
+<p>Escanea las redes Wi-FI cercanas</p>
+<p>nmcli device wifi connect [nombre red] password [contraseña]</p>
+<p>Conectate a una red desde la terminal</p>
+<p>nmcli connection show</p>
+<p>Mira tus perfiles guardados</p>
+<p>nmcli connection ip [ID]</p>
+<p>Activa una conexión especifica</p>
+<p>nmcli connection down [ID]</p>
+<p>Desactiva una conexión especifica</p>
+<h2 id="tareas-cron">Tareas Cron</h2>
+<p>Minuto</p>
+<p>Hora</p>
+<p>Dia de mes</p>
+<p>Mes</p>
+<p>Dia de la semana</p>
+<p>Comando</p>
+<p>¿Cuando se ejecuta?</p>
+<p>0-59</p>
+<p>0-23</p>
+<p>1-31</p>
+<p>1-12</p>
+<p>0-6</p>
+<p>*</p>
+<p>*</p>
+<p>*</p>
+<p>*</p>
+<p>*</p>
+<p>/home/usuario/scripts/check_system.sh</p>
+<p>Cada minuto</p>
+<p>0</p>
+<p>*</p>
+<p>*</p>
+<p>*</p>
+<p>*</p>
+<p>/usr/bin/python3 /home/scripts/limpiar_logs.py</p>
+<p>Cada hora exacto, puntual</p>
+<p>0</p>
+<p>0</p>
+<p>*</p>
+<p>*</p>
+<p>*</p>
+<p>/usr/bin/rsync -a /var/www /respaldos/</p>
+<p>Cada dia comenzando (medianoche)</p>
+<p>30</p>
+<p>3</p>
+<p>*</p>
+<p>*</p>
+<p>0</p>
+<p>/usr/sbin/service mysql restart</p>
+<p>Cada domingo a las 3:30am</p>
+<p>*/15</p>
+<p>*</p>
+<p>*</p>
+<p>*</p>
+<p>*</p>
+<p>/home/scripts/monitor.sh</p>
+<p>Cada 15 minutos</p>
+<p>0</p>
+<p>8</p>
+<p>*</p>
+<p>*</p>
+<p>1-5</p>
+<p>home/scripts/reporte_diario.sh</p>
+<p>De lunes a viernes a las 8:00am</p>
+<p>0</p>
+<p>12</p>
+<p>25</p>
+<p>12</p>
+<p>*</p>
+<p>/home/scripts/feliz_navidad.sh</p>
+<p>Solo en navidad</p>
+<p>0</p>
+<p>6,18</p>
+<p>*</p>
+<p>*</p>
+<p>*</p>
+<p>/home/scripts/sync_data.sh</p>
+<p>2 veces al dia, 6:00am y 6:00pm</p>
+<p>@reboot</p>
+<p>/home/scripts/start_bot.sh</p>
+<p>Cuando se enciende el equipo</p>
+<p>@daily</p>
+<p>/home/scripts/start_bot.sh</p>
+<p>Todos los dias</p>
+<p>@hourly</p>
+<p>/home/scripts/start_bot.sh</p>
+<p>Todas las horas</p>
+<p>https://blog.desdelinux.net/cron-crontab-explicados/</p>
+<h2 id="github">GitHub</h2>
+<p>git clone [link]</p>
+<p>Clona un repositorio de GitHub</p>
+<p>git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo;</p>
+<p>Cona ese repositorio</p>
+<p>git log</p>
+<p>Mira todos los commits del proyecto</p>
+<p>git show [id commit]</p>
+<p>Mira todos los cambios que se le hicieron a un commit especifico</p>
+<p>git show b0354c7be30f500854c5fc971c57e9cbe632fef6</p>
+<p>Mira todos los cambios hechos a ese commit</p>
+<p>git branch</p>
+<p>Muestra la rama actual en la que estas</p>
+<p>git branch -a</p>
+<p>Muestra lista detallada de las ramas de un repositorio</p>
+<p>git checkout [rama]</p>
+<p>Cambia de rama a la que indiques</p>
+<p>git checkout dev</p>
+<p>Cambiar de rama al nombre de dev</p>
+<p>git tag</p>
+<p>Muestra los tags del repositorio</p>
+<p>git show [tag]</p>
+<p>Mostrar un tag</p>
+<p>git show secret</p>
+<p>Mostrar el tag secret</p>
+<p>git add -f [archivo/directorio]</p>
+<p>Añade archivos/directorios al repositorio</p>
+<p>git add -f key.txt</p>
+<p>Añade el archivo key.txt al repositorio</p>
+<p>git commit -m [mensaje]</p>
+<p>Realiza un commit en el repositorio</p>
+<p>git commit -m “Creamos un nuevo archivo”</p>
+<p>Realiza un commit en el repositorio con un mensaje</p>
+<p>Como poner una carpeta en especifico de un repositorio</p>
+<h1 id="1-limpia-el-origen-que-quedo-mal-configurado">1. Limpia el origen que quedó mal configurado</h1>
+<p>git remote remove origin</p>
+<h1 id="2-vincula-la-url-del-repositorio-raiz-esta-es-la-correcta-para-git">2. Vincula la URL del repositorio raíz (Esta es la correcta para Git)</h1>
+<p>git remote add -f origin https://github.com/vulhub/vulhub.git</p>
+<h1 id="3-activa-la-funcion-de-descarga-parcial-si-no-lo-habias-hecho">3. Activa la función de descarga parcial (si no lo habías hecho)</h1>
+<p>git config core.sparseCheckout true</p>
+<h1 id="4-aqui-es-donde-si-va-la-ruta-de-la-subcarpeta-que-quieres">4. Aquí es donde SÍ va la ruta de la subcarpeta que quieres</h1>
+<p>echo "samba/CVE-2017-7494" &gt;&gt; .git/info/sparse-checkout</p>
+<h1 id="5-descarga-finalmente-tu-laboratorio">5. Descarga finalmente tu laboratorio</h1>
+<p>git pull origin master</p>
+<h2 id="compresion-y-descompresion">Compresión y Descompresión</h2>
+<p>tar -cvf archivo.tar [carpeta]</p>
+<p>Crea un archivo empaquetado (c = create).</p>
+<p>tar -xvf archivo.tar</p>
+<p>Extrae un archivo tar (x = extract).</p>
+<p>unzip archivo.zip</p>
+<p>Descomprime archivos .zip.</p>
+<p>gzip -d archivo.gz</p>
+<p>Descomprime archivos .gz</p>
+<p>sudo mount -t cifs //127.0.0.1/myshare /mnt/datos_USB/montaje_labs</p>
+<p>unmount /mnt/datos_USB/montaje_labs</p>
+<p>sudo mount -t cifs //127.0.0.1/myshare /mnt/datos_USB/montaje_labs -o username=null,password=null,domain=,rw</p>
+<p>Monta una carpeta compartida en tu equipo de un contenedor o USB, con -t señalado el tipo de sistema de archivos, y ya despues se pone la ruta, con unmount desmontas</p>
+<h2 id="control-de-energia-y-sesion">Control de energia y Sesion</h2>
+<p>poweroff</p>
+<p>Apaga el sistema</p>
+<p>reboot</p>
+<p>Reinicia el sistema</p>
+<p>shutdown -h +30</p>
+<p>Programa el apagado en 30 minutos</p>
+<p>shutdown -c</p>
+<p>Cancela un apagado programado</p>
+<p>systemctl suspend</p>
+<p>Suspende el equipo</p>
+<p>loginctl terminate-user $USER</p>
+<p>Forma de hacer logout en sistemas modernos</p>
+<h2 id="bluetoothctl">Bluetoothctl</h2>
+<p>bluetoothctl</p>
+<p>Entra al programa</p>
+<p>bluetoothctl power on</p>
+<p>Enciende el adaptador</p>
+<p>bluetoothctl power off</p>
+<p>Apaga el adaptador</p>
+<p>bluetoothctl scan on</p>
+<p>Empieza a buscar dispositivos</p>
+<p>bluetoothctl scan off</p>
+<p>Deja de buscar dispositivos</p>
+<p>bluetoothctl pair [MAC]</p>
+<p>Vincula un dispositivo</p>
+<p>bluetoothctl remove [MAC]</p>
+<p>Desvincula un dispositivo</p>
+<p>bluetoothctl connect [MAC]</p>
+<p>Conecta un dispositivo</p>
+<p>bluetoothctl disconnect [MAC]</p>
+<p>Desconecta un dispositivo</p>
+<p>bluetoothctl trust [MAC]</p>
+<p>Confia en un dispositivo</p>
+<h2 id="informacion-del-sistema">Informacion del sistema</h2>
+<p>neofetch/fastfetch</p>
+<p>El clásico comando para ver el logo de tu distro y specs del PC (muy usado en r/unixporn).</p>
+<p>df -h</p>
+<p>Muestra cuánto espacio libre queda en tus discos en formato "humano" (GB, MB).</p>
+<p>free -h</p>
+<p>Muestra cuánta memoria RAM estás usando realmente.</p>
+<p>lsblk</p>
+<p>Muestra tus particiones y discos duros como un "árbol".</p>
+<p>alias [nombre]='[comando]'</p>
+<p>Crea tus propios comandos cortos.</p>
+<p>history</p>
+<p>Muestra todos los comandos que has escrito antes (por si olvidaste uno muy largo).</p>
+<h2 id="gestion-de-historial">Gestion de historial</h2>
+<p>!!</p>
+<p>Repite el ultimo comando</p>
+<p>!n</p>
+<p>Repite el comando numero n del historial</p>
+<p>fc</p>
+<p>Abre el ultimo</p>
+<p>history -c</p>
+<p>Limpia el historial de la sesión actual (por si escribiste una contraseña por error)</p>
+<p>history -w</p>
+<p>Fuerza el guardado de los comandos actuales al archivo de historial.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

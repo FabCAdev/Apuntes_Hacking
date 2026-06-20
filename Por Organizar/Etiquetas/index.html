@@ -1,0 +1,5809 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/Por%20Organizar/Etiquetas/">
+      
+      
+        <link rel="prev" href="../Creacion%20de%20Scripts/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Etiquetas - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-arquitectura-del-baul-estructura-y-formato" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Etiquetas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%F0%9F%9B%A1%EF%B8%8F%20HACKING/" class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  CAPTURE THE FLAG
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Apuntes%20%28copia%201%29/" class="md-tabs__link">
+          
+  
+  Por Organizar
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%F0%9F%9B%A1%EF%B8%8F%20HACKING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CERTIFICACIONES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            CERTIFICACIONES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CERTIFICACIONES/CERTIFICACI%C3%93N%20-%20COMPTIA%20SECURITY%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌐 Plan de Certificación: CompTIA Security+ (SY0-701)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CERTIFICACIONES/T%C3%8DTULO%20UNIVERSITARIO%20-%20INGENIER%C3%8DA%20EN%20SOFTWARE%20Y%20SISTEMAS%20COMPUTACIONALES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏛️ Control de Hito Académico: Universidad De La Salle Bajío
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CERTIFICACIONES/%F0%9F%8F%85%20CERTIFICACIONES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📜 Certificaciones &amp; Títulos Profesionales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CURSOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            CURSOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/%F0%9F%8E%93%20CURSOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓 CURSOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HACK4U
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            HACK4U
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/%F0%9F%92%BB%20CURSOS%20HACK4U/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💻 CURSOS HACK4U
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2_2" id="__nav_2_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CURSO HACK4U
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            CURSO HACK4U
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%E2%9A%99%EF%B8%8F%20ARCH%20LINUX%20DESDE%20CERO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚙️ ARCH LINUX DESDE CERO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%8C%90%20HACKING%20WEB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌐 HACKING WEB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%8E%A8%20PERSONALIZACION%20LINUX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎨 PERSONALIZACION LINUX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%90%8D%20PYTHON%20OFENSIVO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🐍 PYTHON OFENSIVO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%90%A7%20INTRODUCCION%20LINUX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🐧 INTRODUCCION LINUX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%92%80%20INTRODUCCION%20AL%20HACKING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💀 INTRODUCCION AL HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PROYECTOS PERSONALES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            PROYECTOS PERSONALES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/%F0%9F%92%BB%20PROYECTOS%20PERSONALES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💻 PROYECTOS PERSONALES
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ANALISIS DE AMENAZAS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            ANALISIS DE AMENAZAS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/ANALISIS%20DE%20AMENAZAS/1-%20AN%C3%81LISIS%20DE%20AMENAZAS%20%28BLUE%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1  ANÁLISIS DE AMENAZAS (BLUE TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AUDITORIA INTEGRAL WEB & SISTEMAS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            AUDITORIA INTEGRAL WEB & SISTEMAS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/AUDITORIA%20INTEGRAL%20WEB%20%26%20SISTEMAS/5%20-%20AUDITOR%C3%8DA%20INTEGRAL%20WEB%20%26%20SISTEMAS%20%28PURPLE%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5   AUDITORÍA INTEGRAL WEB & SISTEMAS (PURPLE TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_4" id="__nav_2_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BASTIONADO Y FORTIFICACION HARDENING
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            BASTIONADO Y FORTIFICACION HARDENING
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/BASTIONADO%20Y%20FORTIFICACION%20HARDENING/2%20-%20BASTIONADO%20Y%20FORTIFICACI%C3%93N%20HARDENING%20%28BLUE%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2   BASTIONADO Y FORTIFICACIÓN HARDENING (BLUE TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_5" id="__nav_2_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DESARROLLO DE SOFTWARE & SCRIPTING
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            DESARROLLO DE SOFTWARE & SCRIPTING
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/DESARROLLO%20DE%20SOFTWARE%20%26%20SCRIPTING/4%20-%20DESARROLLO%20DE%20SOFTWARE%20%26%20SCRIPTING%20%28RED%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4   DESARROLLO DE SOFTWARE & SCRIPTING (RED TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_6" id="__nav_2_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    EXPLOTACION DE ENTORNOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            EXPLOTACION DE ENTORNOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/PROYECTOS%20PERSONALES/EXPLOTACION%20DE%20ENTORNOS/3%20-%20EXPLOTACI%C3%93N%20DE%20ENTORNOS%20%28RED%20TEAM%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3   EXPLOTACIÓN DE ENTORNOS (RED TEAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CAPTURE THE FLAG
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            CAPTURE THE FLAG
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CAPTURE THE FLAG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/%F0%9F%8C%90%20PortSwigger%20Academy%20-%20Dashboard%20de%20Vulnerabilidades%20Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🌐 PortSwigger Academy   Dashboard de Vulnerabilidades Web
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/%F0%9F%94%B4%20TryHackMe%20-%20Dashboard%20de%20Salas%20Guiadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔴 TryHackMe   Dashboard de Salas Guiadas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/%F0%9F%94%B5%20VulnHub%20-%20Dashboard%20de%20M%C3%A1quinas%20Locales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔵 VulnHub   Dashboard de Máquinas Locales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/%F0%9F%9F%A2%20HackTheBox%20-%20Dashboard%20de%20Auditor%C3%ADas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🟢 HackTheBox   Dashboard de Auditorías
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📚 ENCICLOPEDIA: Base de Conocimiento Técnico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ACTIVE DIRECTORY
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            ACTIVE DIRECTORY
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/ACTIVE%20DIRECTORY/E13%20-%20Active%20Directory%20y%20Hacking%20Corporativo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E13   Active Directory y Hacking Corporativo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BUFFER OVERFLOW
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            BUFFER OVERFLOW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/BUFFER%20OVERFLOW/E10%20-%20Buffer%20Overflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E10   Buffer Overflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CONCEPTOS BASE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            CONCEPTOS BASE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/CONCEPTOS%20BASE/E1%20-%20Conceptos%20Base%20%28Sistemas%20y%20Fundamentos%20de%20Redes%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E1   Conceptos Base (Sistemas y Fundamentos de Redes)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CONCEPTOS BASICOS DE EXPLOTACION
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            CONCEPTOS BASICOS DE EXPLOTACION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/CONCEPTOS%20BASICOS%20DE%20EXPLOTACION/E7%20-%20Conceptos%20B%C3%A1sicos%20de%20Explotaci%C3%B3n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E7   Conceptos Básicos de Explotación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ENUMERACION DE SERVICIOS Y CMS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            ENUMERACION DE SERVICIOS Y CMS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/ENUMERACION%20DE%20SERVICIOS%20Y%20CMS/E6%20-%20Enumeraci%C3%B3n%20de%20Servicios%20y%20CMS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E6   Enumeración de Servicios y CMS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ENUMERACION DEL SISTEMA Y ESCALADA PRIVILEGIOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            ENUMERACION DEL SISTEMA Y ESCALADA PRIVILEGIOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/ENUMERACION%20DEL%20SISTEMA%20Y%20ESCALADA%20PRIVILEGIOS/E9%20-%20Enumeraci%C3%B3n%20del%20Sistema%20y%20Escalada%20de%20Privilegios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E9   Enumeración del Sistema y Escalada de Privilegios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GITHUB
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            GITHUB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/GITHUB/E5%20-%20GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E5   GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OTROS SOFTWARE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            OTROS SOFTWARE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9_1" id="__nav_4_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OBSIDIAN
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            OBSIDIAN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/OTROS%20SOFTWARE/OBSIDIAN/Ejemplo%20nota%20markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📓 Guía Maestra de Markdown para Obsidian
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/OTROS%20SOFTWARE/OBSIDIAN/Uso%20de%20markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1- TITULOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PIVOTING Y ENRUTAMIENTO
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            PIVOTING Y ENRUTAMIENTO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/PIVOTING%20Y%20ENRUTAMIENTO/E11%20-%20Pivoting%20y%20Enrutamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E11   Pivoting y Enrutamiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PROGRAMACION Y SCRIPTING
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
+            <span class="md-nav__icon md-icon"></span>
+            PROGRAMACION Y SCRIPTING
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/PROGRAMACION%20Y%20SCRIPTING/E12%20-%20Programaci%C3%B3n%20y%20Scripting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E12   Programación y Scripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    RECONOCIMIENTO PASIVO Y ACTIVO
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12">
+            <span class="md-nav__icon md-icon"></span>
+            RECONOCIMIENTO PASIVO Y ACTIVO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/RECONOCIMIENTO%20PASIVO%20Y%20ACTIVO/E3%20-%20Reconocimiento%20Pasivo%20y%20Activo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E3   Reconocimiento Pasivo y Activo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_13" id="__nav_4_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SEGURIDAD Y HACKING EN LA NUBE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_13">
+            <span class="md-nav__icon md-icon"></span>
+            SEGURIDAD Y HACKING EN LA NUBE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/SEGURIDAD%20Y%20HACKING%20EN%20LA%20NUBE/E14%20-%20Seguridad%20y%20Hacking%20en%20la%20Nube%20%28Cloud%20%26%20Kubernetes%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E14   Seguridad y Hacking en la Nube (Cloud & Kubernetes)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_14" id="__nav_4_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    TECNOLOGIAS CLAVE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_14">
+            <span class="md-nav__icon md-icon"></span>
+            TECNOLOGIAS CLAVE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/TECNOLOGIAS%20CLAVE/E2%20-%20Tecnolog%C3%ADas%20Clave%20y%20Plataformas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E2   Tecnologías Clave y Plataformas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_15" id="__nav_4_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VMs y DOCKER
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_15">
+            <span class="md-nav__icon md-icon"></span>
+            VMs y DOCKER
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/VMs%20y%20DOCKER/E4%20-%20VMs%20y%20Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E4   VMs y Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_16" id="__nav_4_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VULNERABILIDADES Y OWASP TOP 10
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_16">
+            <span class="md-nav__icon md-icon"></span>
+            VULNERABILIDADES Y OWASP TOP 10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/VULNERABILIDADES%20Y%20OWASP%20TOP%2010/E8%20-%20Vulnerabilidades%20y%20OWASP%20Top%2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E8   Vulnerabilidades y OWASP Top 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Por Organizar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Por Organizar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Apuntes%20%28copia%201%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Direcciones IP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Comandos_Hacking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comandos basicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Comandos_intro_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comandos basicos de Linux (1-2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creacion%20de%20Scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creacion de Scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Etiquetas
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Etiquetas
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-arquitectura-del-baul-estructura-y-formato" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Arquitectura del Baúl (#estructura/ y #formato/)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuranodo-principal-centro-que-conecta-todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      estructura/nodo-principal -&gt; Centro que conecta todo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuraseccion-principal-principales-categorias-ej-avances" class="md-nav__link">
+    <span class="md-ellipsis">
+      estructura/seccion-principal -&gt; Principales categorías (Ej: AVANCES)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructurasubseccion-principal-subcategorias-mayores-ej-cursos-hack4u" class="md-nav__link">
+    <span class="md-ellipsis">
+      estructura/subseccion-principal -&gt; Subcategorías mayores (Ej: CURSOS HACK4U)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructurasubseccion-modulos-formativos-derivados-ej-intro-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      estructura/subseccion -&gt; Módulos formativos derivados (Ej: INTRO LINUX)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracionmuy-corto-duracion-muy-corta-ej-horas-conceptos-rapidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/muy-corto -&gt; Duración muy corta (Ej: Horas / Conceptos rápidos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracioncorto-duracion-corta-ej-dias-modulos-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/corto -&gt; Duración corta (Ej: Dias / Módulos simples)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracionmedio-duracion-media-ej-semanas-maquinas-intermedias" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/medio -&gt; Duración media (Ej: Semanas / Máquinas intermedias)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracionlargo-duracion-larga-ej-meses-hasta-medio-ano-cursos-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/largo -&gt; Duración larga (Ej: Meses (hasta medio año) / Cursos completos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracionmuy-largo-duracion-muy-larga-ej-mas-de-medio-ano-proyectos-de-desarrollo-o-universidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/muy-largo -&gt; Duración muy larga (Ej: Mas de Medio Año / Proyectos de desarrollo o Universidad)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatolista-contenido-basado-en-listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/lista -&gt; Contenido basado en listas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatotabla-contenido-basado-en-tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/tabla -&gt; Contenido basado en tablas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatoapunte-contenido-basado-en-conceptosapuntes-teoricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/apunte -&gt; Contenido basado en conceptos/apuntes teóricos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatocheatsheet-listas-rapidas-de-puros-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/cheatsheet -&gt; Listas rápidas de puros comandos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatodocumentacion-informes-tecnicos-o-reportes-de-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/documentacion -&gt; Informes técnicos o reportes de auditoría
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="formato/documentacion -> Informes técnicos o reportes de auditoría">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-gestion-y-progreso-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Gestión y Progreso (#gestion/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevanciamuy-alta-relevancia-muy-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/muy-alta -&gt; Relevancia Muy Alta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevanciaalta-relevancia-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/alta -&gt; Relevancia Alta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevanciamedia-relevancia-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/media -&gt; Relevancia Media
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevanciabaja-relevancia-baja" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/baja -&gt; Relevancia Baja
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevancianula-relevancia-nula" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/nula -&gt; Relevancia Nula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionestadosin-empezar-no-iniciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/estado/sin-empezar -&gt; No iniciado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionestadoen-curso-en-ejecucion-actualmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/estado/en-curso -&gt; En ejecución actualmente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionestadopausado-detenido-temporalmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/estado/pausado -&gt; Detenido temporalmente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionestadoterminado-finalizado-con-exito" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/estado/terminado -&gt; Finalizado con éxito
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultadmuy-facil-nula-o-poca-dificultad" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/muy-facil -&gt; Nula o poca dificultad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultadfacil-poca-dificultad" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/facil -&gt; Poca dificultad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultadnormal-dificultad-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/normal -&gt; Dificultad media
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultaddificil-alta-dificultad" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/dificil -&gt; Alta dificultad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultadmuy-dificil-dificultad-extrema" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/muy-dificil -&gt; Dificultad extrema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionacademiahack4u-contenido-perteneciente-a-la-academia-hack4u" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/academia/hack4u -&gt; Contenido perteneciente a la academia Hack4U
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="gestion/academia/hack4u -> Contenido perteneciente a la academia Hack4U">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-categorizacion-de-la-seguridad-hacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Categorización de la Seguridad (#hacking/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingfundamental-nota-esencial-de-ciberseguridad-hacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/fundamental -&gt; Nota esencial de Ciberseguridad / Hacking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingotros-aporta-valor-pero-no-es-100-hacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/otros -&gt; Aporta valor pero no es 100% hacking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingred-team-orientado-a-la-seguridad-ofensiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/red-team -&gt; Orientado a la seguridad ofensiva 🔴
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingblue-team-orientado-a-la-seguridad-defensiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/blue-team -&gt; Orientado a la seguridad defensiva 🔵
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingpurple-team-orientado-a-la-seguridad-mixta-tactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/purple-team -&gt; Orientado a la seguridad mixta / táctica 🟣
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="hacking/purple-team -> Orientado a la seguridad mixta / táctica 🟣">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-entornos-y-sistemas-operativos-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Entornos y Sistemas Operativos (#entorno/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornooswindows-entorno-operativo-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/windows -&gt; Entorno operativo Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornooslinux-entorno-operativo-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/linux -&gt; Entorno operativo Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoosmac-entorno-operativo-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/mac -&gt; Entorno operativo macOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoosandroid-entorno-operativo-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/android -&gt; Entorno operativo Android
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoosios-entorno-operativo-ios-corregido-phone" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/ios -&gt; Entorno operativo iOS (Corregido !Phone)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoinfravirtual-machine-uso-de-hipervisores-maquinas-virtuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/infra/virtual-machine -&gt; Uso de Hipervisores / Máquinas Virtuales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoinfradocker-despliegue-o-explotacion-de-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/infra/docker -&gt; Despliegue o explotación de contenedores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoinfraservidor-local-pruebas-en-el-mismo-equipo-localhost" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/infra/servidor-local -&gt; Pruebas en el mismo equipo (localhost)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoinfraservidor-remoto-pruebas-dirigidas-a-hosts-externos" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/infra/servidor-remoto -&gt; Pruebas dirigidas a hosts externos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="entorno/infra/servidor-remoto -> Pruebas dirigidas a hosts externos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-fases-de-auditoria-y-desarrollo-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Fases de Auditoría y Desarrollo (#auditoria/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriareconocimiento-recoleccion-pasivaactiva-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/reconocimiento -&gt; Recolección pasiva/activa de información
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriareconocimientosubdominios-descubrimiento-de-estructuras-de-dominios" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/reconocimiento/subdominios -&gt; Descubrimiento de estructuras de dominios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriareconocimientogoogle-dorks-uso-de-operadores-de-busqueda-avanzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/reconocimiento/google-dorks -&gt; Uso de operadores de búsqueda avanzada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaenumeracion-identificacion-activa-de-vectores-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/enumeracion -&gt; Identificación activa de vectores de ataque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaenumeracionservicios-identificacion-de-software-expuesto" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/enumeracion/servicios -&gt; Identificación de software expuesto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaenumeracioncms-analisis-de-gestores-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/enumeracion/cms -&gt; Análisis de gestores de contenido
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriafuzzing-pruebas-automatizadas-de-fuerza-bruta-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/fuzzing -&gt; Pruebas automatizadas de fuerza bruta web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaexplotacionmanual-intrusion-manual-sin-scripts-automaticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/explotacion/manual -&gt; Intrusión manual sin scripts automáticos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaexplotacionautomatizada-intrusion-apoyada-por-herramientas-de-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/explotacion/automatizada -&gt; Intrusión apoyada por herramientas de terceros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriamaquinas-conexion-y-compromiso-de-un-hosttarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/maquinas -&gt; Conexión y compromiso de un Host/Target
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriapivoting-movimiento-lateral-y-salto-entre-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/pivoting -&gt; Movimiento lateral y salto entre redes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="auditoria/pivoting -> Movimiento lateral y salto entre redes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-protocolos-servicios-y-cms-tecnologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Protocolos, Servicios y CMS (#tecnologia/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaredes-conceptos-teoricos-de-redes-y-telecomunicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/redes -&gt; Conceptos teóricos de Redes y Telecomunicaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaprotocolotcp-ip-arquitectura-de-la-suite-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/protocolo/tcp-ip -&gt; Arquitectura de la suite TCP/IP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaprotocolomodelo-osi-capas-del-modelo-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/protocolo/modelo-osi -&gt; Capas del Modelo OSI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaservicioftp-auditoria-al-puerto-21-file-transfer-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/servicio/ftp -&gt; Auditoría al puerto 21 (File Transfer Protocol)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaserviciossh-auditoria-al-puerto-22-secure-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/servicio/ssh -&gt; Auditoría al puerto 22 (Secure Shell)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaserviciohttp-s-auditoria-a-los-puertos-80443-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/servicio/http-s -&gt; Auditoría a los puertos 80/443 (Web)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaserviciosmb-auditoria-a-los-puertos-139445-server-message-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/servicio/smb -&gt; Auditoría a los puertos 139/445 (Server Message Block)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacmswordpress-explotacion-especifica-en-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cms/wordpress -&gt; Explotación específica en WordPress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacmsjoomla-explotacion-especifica-en-joomla" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cms/joomla -&gt; Explotación específica en Joomla
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacmsdrupal-explotacion-especifica-en-drupal" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cms/drupal -&gt; Explotación específica en Drupal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacmsmagento-explotacion-especifica-en-magento" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cms/magento -&gt; Explotación específica en Magento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiainfraactive-directory-entornos-de-dominio-corporativo-de-windows-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/infra/active-directory -&gt; Entornos de dominio corporativo de Windows / AD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cloud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tecnologia/cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-lenguajes-y-desarrollo-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Lenguajes y Desarrollo (#desarrollo/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrolloprogramacion-contenido-conceptual-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/programacion -&gt; Contenido conceptual de programación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrolloscripting-automatizacion-mediante-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/scripting -&gt; Automatización mediante Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollolenguajebash-desarrollo-o-uso-intensivo-de-scripts-en-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/lenguaje/bash -&gt; Desarrollo o uso intensivo de scripts en Bash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollolenguajepython-desarrollo-o-uso-intensivo-de-scripts-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/lenguaje/python -&gt; Desarrollo o uso intensivo de scripts en Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollolenguajelua-configuracion-o-scripting-en-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/lenguaje/lua -&gt; Configuración o scripting en Lua
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="desarrollo/lenguaje/lua -> Configuración o scripting en Lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8-herramientas-y-plataformas-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Herramientas y Plataformas (#herramientas/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasobsidian-uso-u-optimizacion-de-este-editor-de-notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/obsidian -&gt; Uso u optimización de este editor de notas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasnmap-escaneo-y-deteccion-con-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/nmap -&gt; Escaneo y detección con Nmap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasfirewall-evasion-o-analisis-de-firewalls-wafs" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/firewall -&gt; Evasión o análisis de Firewalls / WAFs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasburp-suite-uso-de-burpsuite-para-interceptar-trafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/burp-suite -&gt; Uso de BurpSuite para interceptar tráfico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasmetasploit-uso-de-la-suite-metasploit-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/metasploit -&gt; Uso de la suite Metasploit Framework
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientassqlmap-automatizacion-de-inyecciones-con-sqlmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/sqlmap -&gt; Automatización de inyecciones con SQLMap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasimmunity-debugger-ingenieria-inversa-con-immunity-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/immunity-debugger -&gt; Ingeniería inversa con Immunity Debugger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasplataformagithub-repositorios-y-control-de-versiones-con-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/plataforma/github -&gt; Repositorios y control de versiones con Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasplataformahackerone-plataforma-de-bug-bounty-hackerone" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/plataforma/hackerone -&gt; Plataforma de Bug Bounty HackerOne
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasmultimediaimagenes-manipulacion-o-analisis-de-imagenes-esteganografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/multimedia/imagenes -&gt; Manipulación o análisis de imágenes (Esteganografía)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="herramientas/multimedia/imagenes -> Manipulación o análisis de imágenes (Esteganografía)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9-tecnicas-y-vectores-de-acceso-vectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Técnicas y Vectores de Acceso (#vectores/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectoresphishing-ingenieria-social-para-clonacion-o-credenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/phishing -&gt; Ingeniería social para clonación o credenciales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectoresshellsreverse-establecimiento-de-conexiones-inversas" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/shells/reverse -&gt; Establecimiento de conexiones inversas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectoresshellsbind-establecimiento-de-conexiones-atadas-a-puerto" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/shells/bind -&gt; Establecimiento de conexiones atadas a puerto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectoresshellsforward-simulacion-de-shell-interactiva-mediante-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/shells/forward -&gt; Simulación de shell interactiva mediante archivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectorespayloadsstaged-ejecucion-de-cargas-utiles-por-etapas" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/payloads/staged -&gt; Ejecución de cargas útiles por etapas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectorespayloadsnon-staged-ejecucion-de-cargas-utiles-completas-monoliticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/payloads/non-staged -&gt; Ejecución de cargas útiles completas monolíticas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vectores/payloads/non-staged -> Ejecución de cargas útiles completas monolíticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-vulnerabilidades-web-vulnerabilidadesweb" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Vulnerabilidades Web (#vulnerabilidades/web/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebsqli-sql-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/sqli -&gt; SQL Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebnosqli-nosql-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/nosqli -&gt; NoSQL Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebxss-cross-site-scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/xss -&gt; Cross-Site Scripting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebxxe-xml-external-entity-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/xxe -&gt; XML External Entity Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadesweblfi-local-file-inclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/lfi -&gt; Local File Inclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebrfi-remote-file-inclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/rfi -&gt; Remote File Inclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadesweblog-poisoning-inyeccion-de-codigo-en-logs-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/log-poisoning -&gt; Inyección de código en logs del sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebcsrf-cross-site-request-forgery" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/csrf -&gt; Cross-Site Request Forgery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebssrf-server-side-request-forgery" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/ssrf -&gt; Server-Side Request Forgery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebssti-server-side-template-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/ssti -&gt; Server-Side Template Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebcsti-client-side-template-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/csti -&gt; Client-Side Template Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebpadding-oracle-descifrado-de-informacion-mediante-padding-oracle" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/padding-oracle -&gt; Descifrado de información mediante Padding Oracle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebtype-juggling-evasion-de-validaciones-mediante-type-juggling" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/type-juggling -&gt; Evasión de validaciones mediante Type Juggling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebldapi-ldap-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/ldapi -&gt; LDAP Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebdeserialization-insegura-deserializacion-de-objetos-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/deserialization -&gt; Insegura Deserialización de Objetos general
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebdeserializationyaml-deserializacion-insegura-en-yaml-pythonjava" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/deserialization/yaml -&gt; Deserialización insegura en YAML (Python/Java)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebdeserializationpickle-deserializacion-insegura-en-pickle-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/deserialization/pickle -&gt; Deserialización insegura en Pickle (Python)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadesweblatexi-latex-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/latexi -&gt; LaTeX Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebapi-abuse-abuso-de-logica-o-endpoints-en-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/api-abuse -&gt; Abuso de lógica o endpoints en APIs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebfile-upload-vulnerabilidades-de-subida-de-archivos-insegura" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/file-upload -&gt; Vulnerabilidades de subida de archivos insegura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebprototype-pollution-abuso-de-la-propiedad-prototipo-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/prototype-pollution -&gt; Abuso de la propiedad prototipo en JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebaxfr-attack-transferencia-de-zona-dns-no-autorizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/axfr-attack -&gt; Transferencia de zona DNS no autorizada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebmass-assignment-modificacion-masiva-de-parametros-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/mass-assignment -&gt; Modificación masiva de parámetros de objetos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebopen-redirect-redireccion-abierta-hacia-sitios-maliciosos" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/open-redirect -&gt; Redirección abierta hacia sitios maliciosos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebwebdav-explotacion-del-protocolo-webdav-mal-configurado" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/webdav -&gt; Explotación del protocolo WebDAV mal configurado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebsquid-proxy-abuso-y-saltos-mediante-proxies-squid" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/squid-proxy -&gt; Abuso y saltos mediante Proxies SQUID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebshellshock-explotacion-de-vulnerabilidad-de-entorno-en-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/shellshock -&gt; Explotación de vulnerabilidad de entorno en Bash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebxpathi-xpath-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/xpathi -&gt; XPath Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebidors-insecure-direct-object-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/idors -&gt; Insecure Direct Object References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebcors-cross-origin-resource-sharing-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/cors -&gt; Cross-Origin Resource Sharing Attack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebsql-truncation-truncamiento-de-datos-en-bases-de-datos-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/sql-truncation -&gt; Truncamiento de datos en bases de datos SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebsession-fixation-session-puzzling-fixation-overloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/session-fixation -&gt; Session Puzzling / Fixation / Overloading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebjwt-attack-ataques-y-bypasses-a-json-web-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/jwt-attack -&gt; Ataques y bypasses a Json Web Tokens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebrace-condition-condicion-de-carrera-en-peticiones-concurrentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/race-condition -&gt; Condición de carrera en peticiones concurrentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebcssi-css-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/cssi -&gt; CSS Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebgraphql-introspection-exposicion-de-esquemas-por-introspeccion-graphql" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/graphql-introspection -&gt; Exposición de esquemas por introspección GraphQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadesinfraestructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/infraestructura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vulnerabilidades/infraestructura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-laboratorios-hacking-laboratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Laboratorios Hacking (#laboratorio/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioplataformahtb-para-todas-tus-maquinas-de-hackthebox" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/plataforma/htb -&gt; Para todas tus máquinas de HackTheBox.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioplataformathm-para-tus-salas-y-retos-de-tryhackme" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/plataforma/thm -&gt; Para tus salas y retos de TryHackMe.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioplataformavulnhub-para-las-maquinas-virtuales-locales-de-vulnhub" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/plataforma/vulnhub -&gt; Para las máquinas virtuales locales de VulnHub.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioplataformaportswigger-para-los-retos-especificos-de-la-academia-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/plataforma/portswigger -&gt; Para los retos específicos de la academia web.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoriodificultadeasy-dificultad-del-laboratorio-facil" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/dificultad/easy -&gt; Dificultad del laboratorio fácil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoriodificultadmedium-dificultad-del-laboratorio-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/dificultad/medium -&gt; Dificultad del laboratorio media
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoriodificultadhard-dificultad-del-laboratorio-dificil" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/dificultad/hard -&gt; Dificultad del laboratorio dificil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoriodificultadinsane-dificultad-del-laboratorio-muy-dificil" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/dificultad/insane -&gt; Dificultad del laboratorio muy dificil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioestadosin-empezar-maquina-en-cola-en-lista-de-pendientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/estado/sin-empezar -&gt; Máquina en cola (en lista de pendientes).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioestadoreconocimiento-ya-se-escaneo-los-puertos-con-nmap-y-estas-buscando-el-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/estado/reconocimiento -&gt; Ya se escaneo los puertos con Nmap y estás buscando el vector.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioestadouser-flag-se-consiguio-intrusion-inicial-y-se-obtuvo-la-flag-de-usuario-de-bajo-privilegio" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/estado/user-flag -&gt; Se consiguio intrusión inicial y se obtuvo la flag de usuario de bajo privilegio.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioestadoroot-flag-se-escalo-privilegios-con-exito-convirtiendo-root-system-y-la-maquina-esta-100-comprometida" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/estado/root-flag -&gt; Se escalo privilegios con éxito, convirtiendo root / system y la máquina está 100% comprometida.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-arquitectura-del-baul-estructura-y-formato" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Arquitectura del Baúl (#estructura/ y #formato/)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuranodo-principal-centro-que-conecta-todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      estructura/nodo-principal -&gt; Centro que conecta todo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuraseccion-principal-principales-categorias-ej-avances" class="md-nav__link">
+    <span class="md-ellipsis">
+      estructura/seccion-principal -&gt; Principales categorías (Ej: AVANCES)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructurasubseccion-principal-subcategorias-mayores-ej-cursos-hack4u" class="md-nav__link">
+    <span class="md-ellipsis">
+      estructura/subseccion-principal -&gt; Subcategorías mayores (Ej: CURSOS HACK4U)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructurasubseccion-modulos-formativos-derivados-ej-intro-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      estructura/subseccion -&gt; Módulos formativos derivados (Ej: INTRO LINUX)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracionmuy-corto-duracion-muy-corta-ej-horas-conceptos-rapidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/muy-corto -&gt; Duración muy corta (Ej: Horas / Conceptos rápidos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracioncorto-duracion-corta-ej-dias-modulos-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/corto -&gt; Duración corta (Ej: Dias / Módulos simples)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracionmedio-duracion-media-ej-semanas-maquinas-intermedias" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/medio -&gt; Duración media (Ej: Semanas / Máquinas intermedias)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracionlargo-duracion-larga-ej-meses-hasta-medio-ano-cursos-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/largo -&gt; Duración larga (Ej: Meses (hasta medio año) / Cursos completos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionduracionmuy-largo-duracion-muy-larga-ej-mas-de-medio-ano-proyectos-de-desarrollo-o-universidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/duracion/muy-largo -&gt; Duración muy larga (Ej: Mas de Medio Año / Proyectos de desarrollo o Universidad)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatolista-contenido-basado-en-listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/lista -&gt; Contenido basado en listas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatotabla-contenido-basado-en-tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/tabla -&gt; Contenido basado en tablas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatoapunte-contenido-basado-en-conceptosapuntes-teoricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/apunte -&gt; Contenido basado en conceptos/apuntes teóricos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatocheatsheet-listas-rapidas-de-puros-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/cheatsheet -&gt; Listas rápidas de puros comandos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatodocumentacion-informes-tecnicos-o-reportes-de-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      formato/documentacion -&gt; Informes técnicos o reportes de auditoría
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="formato/documentacion -> Informes técnicos o reportes de auditoría">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-gestion-y-progreso-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Gestión y Progreso (#gestion/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevanciamuy-alta-relevancia-muy-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/muy-alta -&gt; Relevancia Muy Alta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevanciaalta-relevancia-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/alta -&gt; Relevancia Alta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevanciamedia-relevancia-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/media -&gt; Relevancia Media
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevanciabaja-relevancia-baja" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/baja -&gt; Relevancia Baja
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionrelevancianula-relevancia-nula" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/relevancia/nula -&gt; Relevancia Nula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionestadosin-empezar-no-iniciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/estado/sin-empezar -&gt; No iniciado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionestadoen-curso-en-ejecucion-actualmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/estado/en-curso -&gt; En ejecución actualmente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionestadopausado-detenido-temporalmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/estado/pausado -&gt; Detenido temporalmente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionestadoterminado-finalizado-con-exito" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/estado/terminado -&gt; Finalizado con éxito
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultadmuy-facil-nula-o-poca-dificultad" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/muy-facil -&gt; Nula o poca dificultad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultadfacil-poca-dificultad" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/facil -&gt; Poca dificultad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultadnormal-dificultad-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/normal -&gt; Dificultad media
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultaddificil-alta-dificultad" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/dificil -&gt; Alta dificultad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestiondificultadmuy-dificil-dificultad-extrema" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/dificultad/muy-dificil -&gt; Dificultad extrema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionacademiahack4u-contenido-perteneciente-a-la-academia-hack4u" class="md-nav__link">
+    <span class="md-ellipsis">
+      gestion/academia/hack4u -&gt; Contenido perteneciente a la academia Hack4U
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="gestion/academia/hack4u -> Contenido perteneciente a la academia Hack4U">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-categorizacion-de-la-seguridad-hacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Categorización de la Seguridad (#hacking/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingfundamental-nota-esencial-de-ciberseguridad-hacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/fundamental -&gt; Nota esencial de Ciberseguridad / Hacking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingotros-aporta-valor-pero-no-es-100-hacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/otros -&gt; Aporta valor pero no es 100% hacking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingred-team-orientado-a-la-seguridad-ofensiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/red-team -&gt; Orientado a la seguridad ofensiva 🔴
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingblue-team-orientado-a-la-seguridad-defensiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/blue-team -&gt; Orientado a la seguridad defensiva 🔵
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hackingpurple-team-orientado-a-la-seguridad-mixta-tactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      hacking/purple-team -&gt; Orientado a la seguridad mixta / táctica 🟣
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="hacking/purple-team -> Orientado a la seguridad mixta / táctica 🟣">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-entornos-y-sistemas-operativos-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Entornos y Sistemas Operativos (#entorno/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornooswindows-entorno-operativo-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/windows -&gt; Entorno operativo Windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornooslinux-entorno-operativo-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/linux -&gt; Entorno operativo Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoosmac-entorno-operativo-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/mac -&gt; Entorno operativo macOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoosandroid-entorno-operativo-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/android -&gt; Entorno operativo Android
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoosios-entorno-operativo-ios-corregido-phone" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/os/ios -&gt; Entorno operativo iOS (Corregido !Phone)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoinfravirtual-machine-uso-de-hipervisores-maquinas-virtuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/infra/virtual-machine -&gt; Uso de Hipervisores / Máquinas Virtuales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoinfradocker-despliegue-o-explotacion-de-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/infra/docker -&gt; Despliegue o explotación de contenedores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoinfraservidor-local-pruebas-en-el-mismo-equipo-localhost" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/infra/servidor-local -&gt; Pruebas en el mismo equipo (localhost)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entornoinfraservidor-remoto-pruebas-dirigidas-a-hosts-externos" class="md-nav__link">
+    <span class="md-ellipsis">
+      entorno/infra/servidor-remoto -&gt; Pruebas dirigidas a hosts externos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="entorno/infra/servidor-remoto -> Pruebas dirigidas a hosts externos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-fases-de-auditoria-y-desarrollo-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Fases de Auditoría y Desarrollo (#auditoria/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriareconocimiento-recoleccion-pasivaactiva-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/reconocimiento -&gt; Recolección pasiva/activa de información
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriareconocimientosubdominios-descubrimiento-de-estructuras-de-dominios" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/reconocimiento/subdominios -&gt; Descubrimiento de estructuras de dominios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriareconocimientogoogle-dorks-uso-de-operadores-de-busqueda-avanzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/reconocimiento/google-dorks -&gt; Uso de operadores de búsqueda avanzada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaenumeracion-identificacion-activa-de-vectores-de-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/enumeracion -&gt; Identificación activa de vectores de ataque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaenumeracionservicios-identificacion-de-software-expuesto" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/enumeracion/servicios -&gt; Identificación de software expuesto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaenumeracioncms-analisis-de-gestores-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/enumeracion/cms -&gt; Análisis de gestores de contenido
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriafuzzing-pruebas-automatizadas-de-fuerza-bruta-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/fuzzing -&gt; Pruebas automatizadas de fuerza bruta web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaexplotacionmanual-intrusion-manual-sin-scripts-automaticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/explotacion/manual -&gt; Intrusión manual sin scripts automáticos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriaexplotacionautomatizada-intrusion-apoyada-por-herramientas-de-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/explotacion/automatizada -&gt; Intrusión apoyada por herramientas de terceros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriamaquinas-conexion-y-compromiso-de-un-hosttarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/maquinas -&gt; Conexión y compromiso de un Host/Target
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoriapivoting-movimiento-lateral-y-salto-entre-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      auditoria/pivoting -&gt; Movimiento lateral y salto entre redes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="auditoria/pivoting -> Movimiento lateral y salto entre redes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-protocolos-servicios-y-cms-tecnologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Protocolos, Servicios y CMS (#tecnologia/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaredes-conceptos-teoricos-de-redes-y-telecomunicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/redes -&gt; Conceptos teóricos de Redes y Telecomunicaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaprotocolotcp-ip-arquitectura-de-la-suite-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/protocolo/tcp-ip -&gt; Arquitectura de la suite TCP/IP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaprotocolomodelo-osi-capas-del-modelo-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/protocolo/modelo-osi -&gt; Capas del Modelo OSI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaservicioftp-auditoria-al-puerto-21-file-transfer-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/servicio/ftp -&gt; Auditoría al puerto 21 (File Transfer Protocol)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaserviciossh-auditoria-al-puerto-22-secure-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/servicio/ssh -&gt; Auditoría al puerto 22 (Secure Shell)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaserviciohttp-s-auditoria-a-los-puertos-80443-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/servicio/http-s -&gt; Auditoría a los puertos 80/443 (Web)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiaserviciosmb-auditoria-a-los-puertos-139445-server-message-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/servicio/smb -&gt; Auditoría a los puertos 139/445 (Server Message Block)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacmswordpress-explotacion-especifica-en-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cms/wordpress -&gt; Explotación específica en WordPress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacmsjoomla-explotacion-especifica-en-joomla" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cms/joomla -&gt; Explotación específica en Joomla
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacmsdrupal-explotacion-especifica-en-drupal" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cms/drupal -&gt; Explotación específica en Drupal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacmsmagento-explotacion-especifica-en-magento" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cms/magento -&gt; Explotación específica en Magento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiainfraactive-directory-entornos-de-dominio-corporativo-de-windows-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/infra/active-directory -&gt; Entornos de dominio corporativo de Windows / AD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologiacloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      tecnologia/cloud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tecnologia/cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-lenguajes-y-desarrollo-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Lenguajes y Desarrollo (#desarrollo/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrolloprogramacion-contenido-conceptual-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/programacion -&gt; Contenido conceptual de programación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrolloscripting-automatizacion-mediante-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/scripting -&gt; Automatización mediante Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollolenguajebash-desarrollo-o-uso-intensivo-de-scripts-en-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/lenguaje/bash -&gt; Desarrollo o uso intensivo de scripts en Bash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollolenguajepython-desarrollo-o-uso-intensivo-de-scripts-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/lenguaje/python -&gt; Desarrollo o uso intensivo de scripts en Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollolenguajelua-configuracion-o-scripting-en-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      desarrollo/lenguaje/lua -&gt; Configuración o scripting en Lua
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="desarrollo/lenguaje/lua -> Configuración o scripting en Lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8-herramientas-y-plataformas-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Herramientas y Plataformas (#herramientas/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasobsidian-uso-u-optimizacion-de-este-editor-de-notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/obsidian -&gt; Uso u optimización de este editor de notas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasnmap-escaneo-y-deteccion-con-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/nmap -&gt; Escaneo y detección con Nmap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasfirewall-evasion-o-analisis-de-firewalls-wafs" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/firewall -&gt; Evasión o análisis de Firewalls / WAFs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasburp-suite-uso-de-burpsuite-para-interceptar-trafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/burp-suite -&gt; Uso de BurpSuite para interceptar tráfico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasmetasploit-uso-de-la-suite-metasploit-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/metasploit -&gt; Uso de la suite Metasploit Framework
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientassqlmap-automatizacion-de-inyecciones-con-sqlmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/sqlmap -&gt; Automatización de inyecciones con SQLMap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasimmunity-debugger-ingenieria-inversa-con-immunity-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/immunity-debugger -&gt; Ingeniería inversa con Immunity Debugger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasplataformagithub-repositorios-y-control-de-versiones-con-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/plataforma/github -&gt; Repositorios y control de versiones con Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasplataformahackerone-plataforma-de-bug-bounty-hackerone" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/plataforma/hackerone -&gt; Plataforma de Bug Bounty HackerOne
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientasmultimediaimagenes-manipulacion-o-analisis-de-imagenes-esteganografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      herramientas/multimedia/imagenes -&gt; Manipulación o análisis de imágenes (Esteganografía)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="herramientas/multimedia/imagenes -> Manipulación o análisis de imágenes (Esteganografía)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#9-tecnicas-y-vectores-de-acceso-vectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Técnicas y Vectores de Acceso (#vectores/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectoresphishing-ingenieria-social-para-clonacion-o-credenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/phishing -&gt; Ingeniería social para clonación o credenciales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectoresshellsreverse-establecimiento-de-conexiones-inversas" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/shells/reverse -&gt; Establecimiento de conexiones inversas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectoresshellsbind-establecimiento-de-conexiones-atadas-a-puerto" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/shells/bind -&gt; Establecimiento de conexiones atadas a puerto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectoresshellsforward-simulacion-de-shell-interactiva-mediante-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/shells/forward -&gt; Simulación de shell interactiva mediante archivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectorespayloadsstaged-ejecucion-de-cargas-utiles-por-etapas" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/payloads/staged -&gt; Ejecución de cargas útiles por etapas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectorespayloadsnon-staged-ejecucion-de-cargas-utiles-completas-monoliticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      vectores/payloads/non-staged -&gt; Ejecución de cargas útiles completas monolíticas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vectores/payloads/non-staged -> Ejecución de cargas útiles completas monolíticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-vulnerabilidades-web-vulnerabilidadesweb" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Vulnerabilidades Web (#vulnerabilidades/web/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebsqli-sql-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/sqli -&gt; SQL Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebnosqli-nosql-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/nosqli -&gt; NoSQL Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebxss-cross-site-scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/xss -&gt; Cross-Site Scripting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebxxe-xml-external-entity-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/xxe -&gt; XML External Entity Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadesweblfi-local-file-inclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/lfi -&gt; Local File Inclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebrfi-remote-file-inclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/rfi -&gt; Remote File Inclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadesweblog-poisoning-inyeccion-de-codigo-en-logs-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/log-poisoning -&gt; Inyección de código en logs del sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebcsrf-cross-site-request-forgery" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/csrf -&gt; Cross-Site Request Forgery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebssrf-server-side-request-forgery" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/ssrf -&gt; Server-Side Request Forgery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebssti-server-side-template-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/ssti -&gt; Server-Side Template Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebcsti-client-side-template-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/csti -&gt; Client-Side Template Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebpadding-oracle-descifrado-de-informacion-mediante-padding-oracle" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/padding-oracle -&gt; Descifrado de información mediante Padding Oracle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebtype-juggling-evasion-de-validaciones-mediante-type-juggling" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/type-juggling -&gt; Evasión de validaciones mediante Type Juggling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebldapi-ldap-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/ldapi -&gt; LDAP Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebdeserialization-insegura-deserializacion-de-objetos-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/deserialization -&gt; Insegura Deserialización de Objetos general
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebdeserializationyaml-deserializacion-insegura-en-yaml-pythonjava" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/deserialization/yaml -&gt; Deserialización insegura en YAML (Python/Java)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebdeserializationpickle-deserializacion-insegura-en-pickle-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/deserialization/pickle -&gt; Deserialización insegura en Pickle (Python)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadesweblatexi-latex-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/latexi -&gt; LaTeX Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebapi-abuse-abuso-de-logica-o-endpoints-en-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/api-abuse -&gt; Abuso de lógica o endpoints en APIs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebfile-upload-vulnerabilidades-de-subida-de-archivos-insegura" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/file-upload -&gt; Vulnerabilidades de subida de archivos insegura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebprototype-pollution-abuso-de-la-propiedad-prototipo-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/prototype-pollution -&gt; Abuso de la propiedad prototipo en JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebaxfr-attack-transferencia-de-zona-dns-no-autorizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/axfr-attack -&gt; Transferencia de zona DNS no autorizada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebmass-assignment-modificacion-masiva-de-parametros-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/mass-assignment -&gt; Modificación masiva de parámetros de objetos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebopen-redirect-redireccion-abierta-hacia-sitios-maliciosos" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/open-redirect -&gt; Redirección abierta hacia sitios maliciosos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebwebdav-explotacion-del-protocolo-webdav-mal-configurado" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/webdav -&gt; Explotación del protocolo WebDAV mal configurado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebsquid-proxy-abuso-y-saltos-mediante-proxies-squid" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/squid-proxy -&gt; Abuso y saltos mediante Proxies SQUID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebshellshock-explotacion-de-vulnerabilidad-de-entorno-en-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/shellshock -&gt; Explotación de vulnerabilidad de entorno en Bash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebxpathi-xpath-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/xpathi -&gt; XPath Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebidors-insecure-direct-object-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/idors -&gt; Insecure Direct Object References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebcors-cross-origin-resource-sharing-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/cors -&gt; Cross-Origin Resource Sharing Attack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebsql-truncation-truncamiento-de-datos-en-bases-de-datos-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/sql-truncation -&gt; Truncamiento de datos en bases de datos SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebsession-fixation-session-puzzling-fixation-overloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/session-fixation -&gt; Session Puzzling / Fixation / Overloading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebjwt-attack-ataques-y-bypasses-a-json-web-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/jwt-attack -&gt; Ataques y bypasses a Json Web Tokens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebrace-condition-condicion-de-carrera-en-peticiones-concurrentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/race-condition -&gt; Condición de carrera en peticiones concurrentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebcssi-css-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/cssi -&gt; CSS Injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadeswebgraphql-introspection-exposicion-de-esquemas-por-introspeccion-graphql" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/web/graphql-introspection -&gt; Exposición de esquemas por introspección GraphQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidadesinfraestructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      vulnerabilidades/infraestructura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vulnerabilidades/infraestructura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-laboratorios-hacking-laboratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Laboratorios Hacking (#laboratorio/)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioplataformahtb-para-todas-tus-maquinas-de-hackthebox" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/plataforma/htb -&gt; Para todas tus máquinas de HackTheBox.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioplataformathm-para-tus-salas-y-retos-de-tryhackme" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/plataforma/thm -&gt; Para tus salas y retos de TryHackMe.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioplataformavulnhub-para-las-maquinas-virtuales-locales-de-vulnhub" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/plataforma/vulnhub -&gt; Para las máquinas virtuales locales de VulnHub.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioplataformaportswigger-para-los-retos-especificos-de-la-academia-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/plataforma/portswigger -&gt; Para los retos específicos de la academia web.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoriodificultadeasy-dificultad-del-laboratorio-facil" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/dificultad/easy -&gt; Dificultad del laboratorio fácil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoriodificultadmedium-dificultad-del-laboratorio-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/dificultad/medium -&gt; Dificultad del laboratorio media
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoriodificultadhard-dificultad-del-laboratorio-dificil" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/dificultad/hard -&gt; Dificultad del laboratorio dificil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoriodificultadinsane-dificultad-del-laboratorio-muy-dificil" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/dificultad/insane -&gt; Dificultad del laboratorio muy dificil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioestadosin-empezar-maquina-en-cola-en-lista-de-pendientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/estado/sin-empezar -&gt; Máquina en cola (en lista de pendientes).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioestadoreconocimiento-ya-se-escaneo-los-puertos-con-nmap-y-estas-buscando-el-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/estado/reconocimiento -&gt; Ya se escaneo los puertos con Nmap y estás buscando el vector.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioestadouser-flag-se-consiguio-intrusion-inicial-y-se-obtuvo-la-flag-de-usuario-de-bajo-privilegio" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/estado/user-flag -&gt; Se consiguio intrusión inicial y se obtuvo la flag de usuario de bajo privilegio.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorioestadoroot-flag-se-escalo-privilegios-con-exito-convirtiendo-root-system-y-la-maquina-esta-100-comprometida" class="md-nav__link">
+    <span class="md-ellipsis">
+      laboratorio/estado/root-flag -&gt; Se escalo privilegios con éxito, convirtiendo root / system y la máquina está 100% comprometida.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h3 id="1-arquitectura-del-baul-estructura-y-formato">1. Arquitectura del Baúl (<code>#estructura/</code> y <code>#formato/</code>)</h3>
+<h1 id="estructuranodo-principal-centro-que-conecta-todo">estructura/nodo-principal              -&gt; Centro que conecta todo</h1>
+<h1 id="estructuraseccion-principal-principales-categorias-ej-avances">estructura/seccion-principal           -&gt; Principales categorías (Ej: AVANCES)</h1>
+<h1 id="estructurasubseccion-principal-subcategorias-mayores-ej-cursos-hack4u">estructura/subseccion-principal        -&gt; Subcategorías mayores (Ej: CURSOS HACK4U)</h1>
+<h1 id="estructurasubseccion-modulos-formativos-derivados-ej-intro-linux">estructura/subseccion                  -&gt; Módulos formativos derivados (Ej: INTRO LINUX)</h1>
+<h1 id="gestionduracionmuy-corto-duracion-muy-corta-ej-horas-conceptos-rapidos">gestion/duracion/muy-corto             -&gt; Duración muy corta (Ej: Horas / Conceptos rápidos)</h1>
+<h1 id="gestionduracioncorto-duracion-corta-ej-dias-modulos-simples">gestion/duracion/corto                  -&gt; Duración corta (Ej: Dias / Módulos simples)</h1>
+<h1 id="gestionduracionmedio-duracion-media-ej-semanas-maquinas-intermedias">gestion/duracion/medio                  -&gt; Duración media (Ej: Semanas / Máquinas intermedias)</h1>
+<h1 id="gestionduracionlargo-duracion-larga-ej-meses-hasta-medio-ano-cursos-completos">gestion/duracion/largo                  -&gt; Duración larga (Ej: Meses (hasta medio año) / Cursos completos)</h1>
+<h1 id="gestionduracionmuy-largo-duracion-muy-larga-ej-mas-de-medio-ano-proyectos-de-desarrollo-o-universidad">gestion/duracion/muy-largo              -&gt; Duración muy larga (Ej: Mas de Medio Año / Proyectos de desarrollo o Universidad)</h1>
+<h1 id="formatolista-contenido-basado-en-listas">formato/lista                          -&gt; Contenido basado en listas</h1>
+<h1 id="formatotabla-contenido-basado-en-tablas">formato/tabla                          -&gt; Contenido basado en tablas</h1>
+<h1 id="formatoapunte-contenido-basado-en-conceptosapuntes-teoricos">formato/apunte                         -&gt; Contenido basado en conceptos/apuntes teóricos</h1>
+<h1 id="formatocheatsheet-listas-rapidas-de-puros-comandos">formato/cheatsheet                     -&gt; Listas rápidas de puros comandos</h1>
+<h1 id="formatodocumentacion-informes-tecnicos-o-reportes-de-auditoria">formato/documentacion                  -&gt; Informes técnicos o reportes de auditoría</h1>
+<h3 id="2-gestion-y-progreso-gestion">2. Gestión y Progreso (<code>#gestion/</code>)</h3>
+<h1 id="gestionrelevanciamuy-alta-relevancia-muy-alta">gestion/relevancia/muy-alta            -&gt; Relevancia Muy Alta</h1>
+<h1 id="gestionrelevanciaalta-relevancia-alta">gestion/relevancia/alta                -&gt; Relevancia Alta</h1>
+<h1 id="gestionrelevanciamedia-relevancia-media">gestion/relevancia/media               -&gt; Relevancia Media</h1>
+<h1 id="gestionrelevanciabaja-relevancia-baja">gestion/relevancia/baja                -&gt; Relevancia Baja</h1>
+<h1 id="gestionrelevancianula-relevancia-nula">gestion/relevancia/nula                -&gt; Relevancia Nula</h1>
+<h1 id="gestionestadosin-empezar-no-iniciado">gestion/estado/sin-empezar             -&gt; No iniciado</h1>
+<h1 id="gestionestadoen-curso-en-ejecucion-actualmente">gestion/estado/en-curso                -&gt; En ejecución actualmente</h1>
+<h1 id="gestionestadopausado-detenido-temporalmente">gestion/estado/pausado                 -&gt; Detenido temporalmente</h1>
+<h1 id="gestionestadoterminado-finalizado-con-exito">gestion/estado/terminado               -&gt; Finalizado con éxito</h1>
+<h1 id="gestiondificultadmuy-facil-nula-o-poca-dificultad">gestion/dificultad/muy-facil           -&gt; Nula o poca dificultad</h1>
+<h1 id="gestiondificultadfacil-poca-dificultad">gestion/dificultad/facil               -&gt; Poca dificultad</h1>
+<h1 id="gestiondificultadnormal-dificultad-media">gestion/dificultad/normal              -&gt; Dificultad media</h1>
+<h1 id="gestiondificultaddificil-alta-dificultad">gestion/dificultad/dificil             -&gt; Alta dificultad</h1>
+<h1 id="gestiondificultadmuy-dificil-dificultad-extrema">gestion/dificultad/muy-dificil         -&gt; Dificultad extrema</h1>
+<h1 id="gestionacademiahack4u-contenido-perteneciente-a-la-academia-hack4u">gestion/academia/hack4u                -&gt; Contenido perteneciente a la academia Hack4U</h1>
+<h3 id="3-categorizacion-de-la-seguridad-hacking">3. Categorización de la Seguridad (<code>#hacking/</code>)</h3>
+<h1 id="hackingfundamental-nota-esencial-de-ciberseguridad-hacking">hacking/fundamental                    -&gt; Nota esencial de Ciberseguridad / Hacking</h1>
+<h1 id="hackingotros-aporta-valor-pero-no-es-100-hacking">hacking/otros                          -&gt; Aporta valor pero no es 100% hacking</h1>
+<h1 id="hackingred-team-orientado-a-la-seguridad-ofensiva">hacking/red-team                       -&gt; Orientado a la seguridad ofensiva 🔴</h1>
+<h1 id="hackingblue-team-orientado-a-la-seguridad-defensiva">hacking/blue-team                      -&gt; Orientado a la seguridad defensiva 🔵</h1>
+<h1 id="hackingpurple-team-orientado-a-la-seguridad-mixta-tactica">hacking/purple-team                    -&gt; Orientado a la seguridad mixta / táctica 🟣</h1>
+<h3 id="4-entornos-y-sistemas-operativos-entorno">4. Entornos y Sistemas Operativos (<code>#entorno/</code>)</h3>
+<h1 id="entornooswindows-entorno-operativo-windows">entorno/os/windows                     -&gt; Entorno operativo Windows</h1>
+<h1 id="entornooslinux-entorno-operativo-linux">entorno/os/linux                       -&gt; Entorno operativo Linux</h1>
+<h1 id="entornoosmac-entorno-operativo-macos">entorno/os/mac                         -&gt; Entorno operativo macOS</h1>
+<h1 id="entornoosandroid-entorno-operativo-android">entorno/os/android                     -&gt; Entorno operativo Android</h1>
+<h1 id="entornoosios-entorno-operativo-ios-corregido-phone">entorno/os/ios                         -&gt; Entorno operativo iOS (Corregido !Phone)</h1>
+<h1 id="entornoinfravirtual-machine-uso-de-hipervisores-maquinas-virtuales">entorno/infra/virtual-machine          -&gt; Uso de Hipervisores / Máquinas Virtuales</h1>
+<h1 id="entornoinfradocker-despliegue-o-explotacion-de-contenedores">entorno/infra/docker                   -&gt; Despliegue o explotación de contenedores</h1>
+<h1 id="entornoinfraservidor-local-pruebas-en-el-mismo-equipo-localhost">entorno/infra/servidor-local           -&gt; Pruebas en el mismo equipo (localhost)</h1>
+<h1 id="entornoinfraservidor-remoto-pruebas-dirigidas-a-hosts-externos">entorno/infra/servidor-remoto          -&gt; Pruebas dirigidas a hosts externos</h1>
+<h3 id="5-fases-de-auditoria-y-desarrollo-auditoria">5. Fases de Auditoría y Desarrollo (<code>#auditoria/</code>)</h3>
+<h1 id="auditoriareconocimiento-recoleccion-pasivaactiva-de-informacion">auditoria/reconocimiento                -&gt; Recolección pasiva/activa de información</h1>
+<h1 id="auditoriareconocimientosubdominios-descubrimiento-de-estructuras-de-dominios">auditoria/reconocimiento/subdominios    -&gt; Descubrimiento de estructuras de dominios</h1>
+<h1 id="auditoriareconocimientogoogle-dorks-uso-de-operadores-de-busqueda-avanzada">auditoria/reconocimiento/google-dorks   -&gt; Uso de operadores de búsqueda avanzada</h1>
+<h1 id="auditoriaenumeracion-identificacion-activa-de-vectores-de-ataque">auditoria/enumeracion                   -&gt; Identificación activa de vectores de ataque</h1>
+<h1 id="auditoriaenumeracionservicios-identificacion-de-software-expuesto">auditoria/enumeracion/servicios         -&gt; Identificación de software expuesto</h1>
+<h1 id="auditoriaenumeracioncms-analisis-de-gestores-de-contenido">auditoria/enumeracion/cms               -&gt; Análisis de gestores de contenido</h1>
+<h1 id="auditoriafuzzing-pruebas-automatizadas-de-fuerza-bruta-web">auditoria/fuzzing                       -&gt; Pruebas automatizadas de fuerza bruta web</h1>
+<h1 id="auditoriaexplotacionmanual-intrusion-manual-sin-scripts-automaticos">auditoria/explotacion/manual            -&gt; Intrusión manual sin scripts automáticos</h1>
+<h1 id="auditoriaexplotacionautomatizada-intrusion-apoyada-por-herramientas-de-terceros">auditoria/explotacion/automatizada      -&gt; Intrusión apoyada por herramientas de terceros</h1>
+<h1 id="auditoriamaquinas-conexion-y-compromiso-de-un-hosttarget">auditoria/maquinas                      -&gt; Conexión y compromiso de un Host/Target</h1>
+<h1 id="auditoriapivoting-movimiento-lateral-y-salto-entre-redes">auditoria/pivoting                      -&gt; Movimiento lateral y salto entre redes</h1>
+<h3 id="6-protocolos-servicios-y-cms-tecnologia">6. Protocolos, Servicios y CMS (<code>#tecnologia/</code>)</h3>
+<h1 id="tecnologiaredes-conceptos-teoricos-de-redes-y-telecomunicaciones">tecnologia/redes                       -&gt; Conceptos teóricos de Redes y Telecomunicaciones</h1>
+<h1 id="tecnologiaprotocolotcp-ip-arquitectura-de-la-suite-tcpip">tecnologia/protocolo/tcp-ip            -&gt; Arquitectura de la suite TCP/IP</h1>
+<h1 id="tecnologiaprotocolomodelo-osi-capas-del-modelo-osi">tecnologia/protocolo/modelo-osi         -&gt; Capas del Modelo OSI</h1>
+<h1 id="tecnologiaservicioftp-auditoria-al-puerto-21-file-transfer-protocol">tecnologia/servicio/ftp                -&gt; Auditoría al puerto 21 (File Transfer Protocol)</h1>
+<h1 id="tecnologiaserviciossh-auditoria-al-puerto-22-secure-shell">tecnologia/servicio/ssh                -&gt; Auditoría al puerto 22 (Secure Shell)</h1>
+<h1 id="tecnologiaserviciohttp-s-auditoria-a-los-puertos-80443-web">tecnologia/servicio/http-s             -&gt; Auditoría a los puertos 80/443 (Web)</h1>
+<h1 id="tecnologiaserviciosmb-auditoria-a-los-puertos-139445-server-message-block">tecnologia/servicio/smb                -&gt; Auditoría a los puertos 139/445 (Server Message Block)</h1>
+<h1 id="tecnologiacmswordpress-explotacion-especifica-en-wordpress">tecnologia/cms/wordpress               -&gt; Explotación específica en WordPress</h1>
+<h1 id="tecnologiacmsjoomla-explotacion-especifica-en-joomla">tecnologia/cms/joomla                  -&gt; Explotación específica en Joomla</h1>
+<h1 id="tecnologiacmsdrupal-explotacion-especifica-en-drupal">tecnologia/cms/drupal                  -&gt; Explotación específica en Drupal</h1>
+<h1 id="tecnologiacmsmagento-explotacion-especifica-en-magento">tecnologia/cms/magento                 -&gt; Explotación específica en Magento</h1>
+<h1 id="tecnologiainfraactive-directory-entornos-de-dominio-corporativo-de-windows-ad">tecnologia/infra/active-directory      -&gt; Entornos de dominio corporativo de Windows / AD</h1>
+<h1 id="tecnologiacloud">tecnologia/cloud</h1>
+<h3 id="7-lenguajes-y-desarrollo-desarrollo">7. Lenguajes y Desarrollo (<code>#desarrollo/</code>)</h3>
+<h1 id="desarrolloprogramacion-contenido-conceptual-de-programacion">desarrollo/programacion                -&gt; Contenido conceptual de programación</h1>
+<h1 id="desarrolloscripting-automatizacion-mediante-scripts">desarrollo/scripting                   -&gt; Automatización mediante Scripts</h1>
+<h1 id="desarrollolenguajebash-desarrollo-o-uso-intensivo-de-scripts-en-bash">desarrollo/lenguaje/bash               -&gt; Desarrollo o uso intensivo de scripts en Bash</h1>
+<h1 id="desarrollolenguajepython-desarrollo-o-uso-intensivo-de-scripts-en-python">desarrollo/lenguaje/python             -&gt; Desarrollo o uso intensivo de scripts en Python</h1>
+<h1 id="desarrollolenguajelua-configuracion-o-scripting-en-lua">desarrollo/lenguaje/lua                -&gt; Configuración o scripting en Lua</h1>
+<h3 id="8-herramientas-y-plataformas-herramientas">8. Herramientas y Plataformas (<code>#herramientas/</code>)</h3>
+<h1 id="herramientasobsidian-uso-u-optimizacion-de-este-editor-de-notas">herramientas/obsidian                  -&gt; Uso u optimización de este editor de notas</h1>
+<h1 id="herramientasnmap-escaneo-y-deteccion-con-nmap">herramientas/nmap                      -&gt; Escaneo y detección con Nmap</h1>
+<h1 id="herramientasfirewall-evasion-o-analisis-de-firewalls-wafs">herramientas/firewall                  -&gt; Evasión o análisis de Firewalls / WAFs</h1>
+<h1 id="herramientasburp-suite-uso-de-burpsuite-para-interceptar-trafico">herramientas/burp-suite                -&gt; Uso de BurpSuite para interceptar tráfico</h1>
+<h1 id="herramientasmetasploit-uso-de-la-suite-metasploit-framework">herramientas/metasploit                -&gt; Uso de la suite Metasploit Framework</h1>
+<h1 id="herramientassqlmap-automatizacion-de-inyecciones-con-sqlmap">herramientas/sqlmap                    -&gt; Automatización de inyecciones con SQLMap</h1>
+<h1 id="herramientasimmunity-debugger-ingenieria-inversa-con-immunity-debugger">herramientas/immunity-debugger         -&gt; Ingeniería inversa con Immunity Debugger</h1>
+<h1 id="herramientasplataformagithub-repositorios-y-control-de-versiones-con-git">herramientas/plataforma/github         -&gt; Repositorios y control de versiones con Git</h1>
+<h1 id="herramientasplataformahackerone-plataforma-de-bug-bounty-hackerone">herramientas/plataforma/hackerone       -&gt; Plataforma de Bug Bounty HackerOne</h1>
+<h1 id="herramientasmultimediaimagenes-manipulacion-o-analisis-de-imagenes-esteganografia">herramientas/multimedia/imagenes       -&gt; Manipulación o análisis de imágenes (Esteganografía)</h1>
+<h3 id="9-tecnicas-y-vectores-de-acceso-vectores">9. Técnicas y Vectores de Acceso (<code>#vectores/</code>)</h3>
+<h1 id="vectoresphishing-ingenieria-social-para-clonacion-o-credenciales">vectores/phishing                      -&gt; Ingeniería social para clonación o credenciales</h1>
+<h1 id="vectoresshellsreverse-establecimiento-de-conexiones-inversas">vectores/shells/reverse                -&gt; Establecimiento de conexiones inversas</h1>
+<h1 id="vectoresshellsbind-establecimiento-de-conexiones-atadas-a-puerto">vectores/shells/bind                   -&gt; Establecimiento de conexiones atadas a puerto</h1>
+<h1 id="vectoresshellsforward-simulacion-de-shell-interactiva-mediante-archivos">vectores/shells/forward                -&gt; Simulación de shell interactiva mediante archivos</h1>
+<h1 id="vectorespayloadsstaged-ejecucion-de-cargas-utiles-por-etapas">vectores/payloads/staged               -&gt; Ejecución de cargas útiles por etapas</h1>
+<h1 id="vectorespayloadsnon-staged-ejecucion-de-cargas-utiles-completas-monoliticas">vectores/payloads/non-staged           -&gt; Ejecución de cargas útiles completas monolíticas</h1>
+<h3 id="10-vulnerabilidades-web-vulnerabilidadesweb">10. Vulnerabilidades Web (<code>#vulnerabilidades/web/</code>)</h3>
+<h1 id="vulnerabilidadeswebsqli-sql-injection">vulnerabilidades/web/sqli              -&gt; SQL Injection</h1>
+<h1 id="vulnerabilidadeswebnosqli-nosql-injection">vulnerabilidades/web/nosqli            -&gt; NoSQL Injection</h1>
+<h1 id="vulnerabilidadeswebxss-cross-site-scripting">vulnerabilidades/web/xss               -&gt; Cross-Site Scripting</h1>
+<h1 id="vulnerabilidadeswebxxe-xml-external-entity-injection">vulnerabilidades/web/xxe               -&gt; XML External Entity Injection</h1>
+<h1 id="vulnerabilidadesweblfi-local-file-inclusion">vulnerabilidades/web/lfi               -&gt; Local File Inclusion</h1>
+<h1 id="vulnerabilidadeswebrfi-remote-file-inclusion">vulnerabilidades/web/rfi               -&gt; Remote File Inclusion</h1>
+<h1 id="vulnerabilidadesweblog-poisoning-inyeccion-de-codigo-en-logs-del-sistema">vulnerabilidades/web/log-poisoning     -&gt; Inyección de código en logs del sistema</h1>
+<h1 id="vulnerabilidadeswebcsrf-cross-site-request-forgery">vulnerabilidades/web/csrf              -&gt; Cross-Site Request Forgery</h1>
+<h1 id="vulnerabilidadeswebssrf-server-side-request-forgery">vulnerabilidades/web/ssrf              -&gt; Server-Side Request Forgery</h1>
+<h1 id="vulnerabilidadeswebssti-server-side-template-injection">vulnerabilidades/web/ssti              -&gt; Server-Side Template Injection</h1>
+<h1 id="vulnerabilidadeswebcsti-client-side-template-injection">vulnerabilidades/web/csti              -&gt; Client-Side Template Injection</h1>
+<h1 id="vulnerabilidadeswebpadding-oracle-descifrado-de-informacion-mediante-padding-oracle">vulnerabilidades/web/padding-oracle    -&gt; Descifrado de información mediante Padding Oracle</h1>
+<h1 id="vulnerabilidadeswebtype-juggling-evasion-de-validaciones-mediante-type-juggling">vulnerabilidades/web/type-juggling    -&gt; Evasión de validaciones mediante Type Juggling</h1>
+<h1 id="vulnerabilidadeswebldapi-ldap-injection">vulnerabilidades/web/ldapi             -&gt; LDAP Injection</h1>
+<h1 id="vulnerabilidadeswebdeserialization-insegura-deserializacion-de-objetos-general">vulnerabilidades/web/deserialization   -&gt; Insegura Deserialización de Objetos general</h1>
+<h1 id="vulnerabilidadeswebdeserializationyaml-deserializacion-insegura-en-yaml-pythonjava">vulnerabilidades/web/deserialization/yaml   -&gt; Deserialización insegura en YAML (Python/Java)</h1>
+<h1 id="vulnerabilidadeswebdeserializationpickle-deserializacion-insegura-en-pickle-python">vulnerabilidades/web/deserialization/pickle -&gt; Deserialización insegura en Pickle (Python)</h1>
+<h1 id="vulnerabilidadesweblatexi-latex-injection">vulnerabilidades/web/latexi            -&gt; LaTeX Injection</h1>
+<h1 id="vulnerabilidadeswebapi-abuse-abuso-de-logica-o-endpoints-en-apis">vulnerabilidades/web/api-abuse         -&gt; Abuso de lógica o endpoints en APIs</h1>
+<h1 id="vulnerabilidadeswebfile-upload-vulnerabilidades-de-subida-de-archivos-insegura">vulnerabilidades/web/file-upload       -&gt; Vulnerabilidades de subida de archivos insegura</h1>
+<h1 id="vulnerabilidadeswebprototype-pollution-abuso-de-la-propiedad-prototipo-en-javascript">vulnerabilidades/web/prototype-pollution -&gt; Abuso de la propiedad prototipo en JavaScript</h1>
+<h1 id="vulnerabilidadeswebaxfr-attack-transferencia-de-zona-dns-no-autorizada">vulnerabilidades/web/axfr-attack       -&gt; Transferencia de zona DNS no autorizada</h1>
+<h1 id="vulnerabilidadeswebmass-assignment-modificacion-masiva-de-parametros-de-objetos">vulnerabilidades/web/mass-assignment   -&gt; Modificación masiva de parámetros de objetos</h1>
+<h1 id="vulnerabilidadeswebopen-redirect-redireccion-abierta-hacia-sitios-maliciosos">vulnerabilidades/web/open-redirect     -&gt; Redirección abierta hacia sitios maliciosos</h1>
+<h1 id="vulnerabilidadeswebwebdav-explotacion-del-protocolo-webdav-mal-configurado">vulnerabilidades/web/webdav            -&gt; Explotación del protocolo WebDAV mal configurado</h1>
+<h1 id="vulnerabilidadeswebsquid-proxy-abuso-y-saltos-mediante-proxies-squid">vulnerabilidades/web/squid-proxy       -&gt; Abuso y saltos mediante Proxies SQUID</h1>
+<h1 id="vulnerabilidadeswebshellshock-explotacion-de-vulnerabilidad-de-entorno-en-bash">vulnerabilidades/web/shellshock        -&gt; Explotación de vulnerabilidad de entorno en Bash</h1>
+<h1 id="vulnerabilidadeswebxpathi-xpath-injection">vulnerabilidades/web/xpathi            -&gt; XPath Injection</h1>
+<h1 id="vulnerabilidadeswebidors-insecure-direct-object-references">vulnerabilidades/web/idors             -&gt; Insecure Direct Object References</h1>
+<h1 id="vulnerabilidadeswebcors-cross-origin-resource-sharing-attack">vulnerabilidades/web/cors              -&gt; Cross-Origin Resource Sharing Attack</h1>
+<h1 id="vulnerabilidadeswebsql-truncation-truncamiento-de-datos-en-bases-de-datos-sql">vulnerabilidades/web/sql-truncation    -&gt; Truncamiento de datos en bases de datos SQL</h1>
+<h1 id="vulnerabilidadeswebsession-fixation-session-puzzling-fixation-overloading">vulnerabilidades/web/session-fixation  -&gt; Session Puzzling / Fixation / Overloading</h1>
+<h1 id="vulnerabilidadeswebjwt-attack-ataques-y-bypasses-a-json-web-tokens">vulnerabilidades/web/jwt-attack        -&gt; Ataques y bypasses a Json Web Tokens</h1>
+<h1 id="vulnerabilidadeswebrace-condition-condicion-de-carrera-en-peticiones-concurrentes">vulnerabilidades/web/race-condition    -&gt; Condición de carrera en peticiones concurrentes</h1>
+<h1 id="vulnerabilidadeswebcssi-css-injection">vulnerabilidades/web/cssi              -&gt; CSS Injection</h1>
+<h1 id="vulnerabilidadeswebgraphql-introspection-exposicion-de-esquemas-por-introspeccion-graphql">vulnerabilidades/web/graphql-introspection -&gt; Exposición de esquemas por introspección GraphQL</h1>
+<h1 id="vulnerabilidadesinfraestructura">vulnerabilidades/infraestructura</h1>
+<h3 id="11-laboratorios-hacking-laboratorio">11. Laboratorios Hacking (<code>#laboratorio/</code>)</h3>
+<h1 id="laboratorioplataformahtb-para-todas-tus-maquinas-de-hackthebox">laboratorio/plataforma/htb -&gt; Para todas tus máquinas de HackTheBox.</h1>
+<h1 id="laboratorioplataformathm-para-tus-salas-y-retos-de-tryhackme">laboratorio/plataforma/thm -&gt; Para tus salas y retos de TryHackMe.</h1>
+<h1 id="laboratorioplataformavulnhub-para-las-maquinas-virtuales-locales-de-vulnhub">laboratorio/plataforma/vulnhub -&gt; Para las máquinas virtuales locales de VulnHub.</h1>
+<h1 id="laboratorioplataformaportswigger-para-los-retos-especificos-de-la-academia-web">laboratorio/plataforma/portswigger -&gt; Para los retos específicos de la academia web.</h1>
+<h1 id="laboratoriodificultadeasy-dificultad-del-laboratorio-facil">laboratorio/dificultad/easy -&gt; Dificultad del laboratorio fácil</h1>
+<h1 id="laboratoriodificultadmedium-dificultad-del-laboratorio-media">laboratorio/dificultad/medium -&gt; Dificultad del laboratorio media</h1>
+<h1 id="laboratoriodificultadhard-dificultad-del-laboratorio-dificil">laboratorio/dificultad/hard -&gt; Dificultad del laboratorio dificil</h1>
+<h1 id="laboratoriodificultadinsane-dificultad-del-laboratorio-muy-dificil">laboratorio/dificultad/insane -&gt; Dificultad del laboratorio muy dificil</h1>
+<h1 id="laboratorioestadosin-empezar-maquina-en-cola-en-lista-de-pendientes">laboratorio/estado/sin-empezar -&gt; Máquina en cola (en lista de pendientes).</h1>
+<h1 id="laboratorioestadoreconocimiento-ya-se-escaneo-los-puertos-con-nmap-y-estas-buscando-el-vector">laboratorio/estado/reconocimiento -&gt; Ya se escaneo los puertos con Nmap y estás buscando el vector.</h1>
+<h1 id="laboratorioestadouser-flag-se-consiguio-intrusion-inicial-y-se-obtuvo-la-flag-de-usuario-de-bajo-privilegio">laboratorio/estado/user-flag -&gt; Se consiguio intrusión inicial y se obtuvo la flag de usuario de bajo privilegio.</h1>
+<h1 id="laboratorioestadoroot-flag-se-escalo-privilegios-con-exito-convirtiendo-root-system-y-la-maquina-esta-100-comprometida">laboratorio/estado/root-flag -&gt; Se escalo privilegios con éxito, convirtiendo root / system y la máquina está 100% comprometida.</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
