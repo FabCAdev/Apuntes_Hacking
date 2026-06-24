@@ -686,33 +686,9 @@
   <h1>💀 INTRODUCCION AL HACKING</h1>
 
 <h3 id="progreso-del-modulo">📊 Progreso del Módulo</h3>
-<pre><code class="language-dataviewjs">const markdown = await dv.io.load(dv.current().file.path);
+<p><strong>📊 Progreso del Módulo: 42% completado (55/131)</strong></p>
+<progress value="42" max="100" style="width: 100%; height: 18px; accent-color: #f38ba8; margin-top: 5px; margin-bottom: 20px;"></progress>
 
-if (markdown) {
-  const allTasks = markdown.match(/^[ \t]*-[ \t]*\[[ xX]\][ \t]*(.*)$/gm) || [];
-  const completedTasks = markdown.match(/^[ \t]*-[ \t]*\[[xX]\][ \t]*(.*)$/gm) || [];
-
-  const total = allTasks.length;
-  const completed = completedTasks.length;
-  const percent = total &gt; 0 ? Math.round((completed / total) * 100) : 0;
-
-  // Creamos el texto del porcentaje de forma nativa
-  dv.el(&quot;div&quot;, `${percent}% completado (${completed}/${total})`, {
-    attr: { style: &quot;font-weight: bold; margin-bottom: 5px;&quot; }
-  });
-
-  // Creamos la barra de progreso de forma nativa para que Obsidian la dibuje sí o sí
-  dv.el(&quot;progress&quot;, &quot;&quot;, {
-    attr: { 
-      value: percent, 
-      max: &quot;100&quot;, 
-      style: &quot;width: 100%; height: 18px; accent-color: #f38ba8;&quot; 
-    }
-  });
-} else {
-  dv.el(&quot;div&quot;, &quot;No se pudo leer el archivo.&quot;);
-}
-</code></pre>
 <h3 id="1-introduccion">⚙️ 1. Introducción</h3>
 <ul>
 <li>[x] 01. Bienvenido/a al curso</li>
@@ -883,11 +859,7 @@ if (markdown) {
 <li>[ ] 130. Examen final de tensión máxima</li>
 <li>[ ] 131. Despedida</li>
 </ul>
-<div style="text-align: left; margin-bottom: 20px;">
-    <a href="💻 CURSOS HACK4U" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver atras
-    </a>
-</div>
+<p><a href="../%F0%9F%90%A7%20INTRODUCCION%20LINUX/">⬅️ Volver a 🐧 INTRODUCCION LINUX</a></p>
 
 
 
