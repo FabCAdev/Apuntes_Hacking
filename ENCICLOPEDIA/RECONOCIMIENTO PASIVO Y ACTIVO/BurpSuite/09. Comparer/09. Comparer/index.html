@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#proposito-operativo-del-modulo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -530,6 +535,122 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-operativo-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Propósito Operativo del Módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-flujo-de-trabajo-e-invocacion-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎛️ 1. Flujo de Trabajo e Invocación del Módulo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎛️ 1. Flujo de Trabajo e Invocación del Módulo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-como-enviar-datos-a-comparer" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Cómo enviar datos a Comparer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-estructura-de-seleccion-paneles-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Estructura de Selección (Paneles Input)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-interfaz-de-analisis-grafico-anatomia-del-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      👁️ 2. Interfaz de Análisis Gráfico (Anatomía del "Diff")
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👁️ 2. Interfaz de Análisis Gráfico (Anatomía del "Diff")">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-comparacion-por-palabras-words-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Comparación por Palabras (Words Diff)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-comparacion-por-bytes-hexadecimal-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Comparación por Bytes (Hexadecimal Diff)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-casos-practicos-de-uso-en-auditorias-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 3. Casos Prácticos de Uso en Auditorías de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 3. Casos Prácticos de Uso en Auditorías de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-identificacion-de-sql-injection-ciega-blind-sqli-basados-en-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 1: Identificación de SQL Injection Ciega (Blind SQLi basados en Contenido)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-enumeracion-del-lado-del-servidor-user-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 2: Enumeración del Lado del Servidor (User Enumeration)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -546,6 +667,52 @@
 
   <h1>09. Comparer</h1>
 
+<h2 id="proposito-operativo-del-modulo">📌 Propósito Operativo del Módulo</h2>
+<p>El <strong>Comparer</strong> es la utilidad de comparación visual (<em>diffing tool</em>) integrada en Burp Suite. Su objetivo principal es aislar y contrastar de manera milimétrica las diferencias estructurales, de texto o de bytes binarios entre dos peticiones o dos respuestas HTTP/S.</p>
+<p>En auditorías web, pequeños cambios en la respuesta del servidor pueden representar la diferencia entre un exploit exitoso y uno fallido (por ejemplo, la sutil variación de un token, el reflejo de un carácter en inyecciones SQL ciegas, o respuestas de enumeración de usuarios). Comparer evita que el auditor tenga que exportar el texto a herramientas externas de terminal como <code>diff</code> o subirlos a plataformas en línea, acelerando el análisis de anomalías de forma nativa y centralizada.</p>
+<hr />
+<h2 id="1-flujo-de-trabajo-e-invocacion-del-modulo">🎛️ 1. Flujo de Trabajo e Invocación del Módulo</h2>
+<p>Al haber sido removido de la barra de pestañas principal en las versiones modernas de Burp Suite, Comparer funciona como un servicio contextual bajo demanda que almacena los paquetes enviados en una cola de espera.</p>
+<p><img alt="Comparer1" src="../Comparer1.png" /></p>
+<h3 id="a-como-enviar-datos-a-comparer">A. Cómo enviar datos a Comparer</h3>
+<p>El auditor puede enviar datos a Comparer desde prácticamente cualquier sección de Burp Suite (Proxy History, Repeater, Intruder, Logger):
+1. Haz <strong>clic derecho</strong> sobre la petición o respuesta HTTP que te interesa analizar.
+2. Selecciona la opción <strong>Send to Comparer</strong>.
+3. Repite el proceso con el segundo paquete con el que deseas realizar el contraste.</p>
+<h3 id="b-estructura-de-seleccion-paneles-input">B. Estructura de Selección (Paneles Input)</h3>
+<p>Al invocar la herramienta, te encontrarás con dos paneles de selección idénticos compuestos por tablas ordenadas:
+* <strong>Select item 1 (Panel Superior):</strong> Lista los fragmentos de datos enviados. Selecciona el primer paquete base de la comparación.
+* <strong>Select item 2 (Panel Inferior):</strong> Lista el mismo historial de datos. Selecciona el segundo paquete contra el cual deseas contrastar.
+* <strong>Botonera de Selección de Motor:</strong>
+    * <code>Words</code>: Ejecuta una comparación basada en cadenas de texto y tokens lógicos (ideal para código HTML, estructuras JSON o cabeceras).
+    * <code>Bytes</code>: Ejecuta una comparación binaria a nivel hexadecimal (indispensable para analizar archivos descargados, imágenes modificadas o respuestas comprimidas).</p>
+<hr />
+<h2 id="2-interfaz-de-analisis-grafico-anatomia-del-diff">👁️ 2. Interfaz de Análisis Gráfico (Anatomía del "Diff")</h2>
+<p>Una vez seleccionada la modalidad de comparación (<code>Words</code> o <code>Bytes</code>), Burp despliega una nueva ventana dividida que resalta las discrepancias utilizando un código de colores estricto.</p>
+<h3 id="a-comparacion-por-palabras-words-diff">A. Comparación por Palabras (Words Diff)</h3>
+<p><img alt="Comparer2" src="../Comparer2.png" /></p>
+<ul>
+<li><strong>🟧 Naranja (Modified):</strong> Indica que el texto existe en ambas respuestas, pero ha sufrido una modificación en su contenido (como el valor de una cookie o un ID).</li>
+<li><strong>🟦 Azul (Added):</strong> Resalta elementos, cabeceras o líneas de código que están presentes en el segundo paquete pero que no existían en el primero.</li>
+<li><strong>🟥 Rosa/Rojo (Deleted):</strong> Muestra los datos que se encontraban en el primer paquete pero que fueron eliminados o ya no se renderizan en el segundo.</li>
+<li><strong>🔗 Synchronized scrolling:</strong> Ubicado en la esquina inferior izquierda. Al estar marcado, fuerza a que ambas ventanas se desplacen de forma idéntica e interactiva, manteniendo la simetría visual del código analizado.</li>
+</ul>
+<h3 id="b-comparacion-por-bytes-hexadecimal-diff">B. Comparación por Bytes (Hexadecimal Diff)</h3>
+<p><img alt="Comparer3" src="../Comparer3.png" /></p>
+<ul>
+<li>Al seleccionar la modalidad por bytes, las estructuras de texto se traducen a su representación puramente hexadecimal.</li>
+<li>Este modo es fundamental para inspeccionar variaciones en flujos binarios, identificar corrupciones de datos deliberadas o encontrar caracteres de control invisibles en formato ASCII (como saltos de línea <code>0x0D 0x0A</code> o bytes nulos <code>0x00</code>) que el motor de texto plano podría pasar por alto o renderizar de manera idéntica.</li>
+</ul>
+<hr />
+<h2 id="3-casos-practicos-de-uso-en-auditorias-de-seguridad">🚀 3. Casos Prácticos de Uso en Auditorías de Seguridad</h2>
+<h3 id="caso-1-identificacion-de-sql-injection-ciega-blind-sqli-basados-en-contenido">Caso 1: Identificación de SQL Injection Ciega (Blind SQLi basados en Contenido)</h3>
+<p>En inyecciones SQL Booleanas a ciegas, el servidor no muestra errores en pantalla; solo altera sutilmente el contenido si la consulta es verdadera o falsa. Al enviar la respuesta de una consulta verdadera (<code>' OR 1=1--</code>) y una falsa (<code>' OR 1=2--</code>) a Comparer:
+* La herramienta te pintará en <strong>azul</strong> o <strong>rojo</strong> palabras específicas que desaparecen (como un mensaje de <em>"Bienvenido"</em> o <em>"Artículo no encontrado"</em>). Esto te permite identificar instantáneamente cuál es la palabra clave exacta que debes usar en tus scripts de automatización para validar la exfiltración de la base de datos.</p>
+<h3 id="caso-2-enumeracion-del-lado-del-servidor-user-enumeration">Caso 2: Enumeración del Lado del Servidor (User Enumeration)</h3>
+<p>Al auditar un formulario de login, pruebas con el usuario <code>admin</code> y luego con el usuario <code>no-existe</code>. Ambas solicitudes devuelven un código <code>200 OK</code> y visualmente el mismo mensaje de error genérico.
+* Al pasarlas por Comparer en modo <code>Words</code>, descubres que la respuesta de <code>admin</code> añade de forma invisible una pequeña variación en una cookie o un espacio extra en el HTML. Esa discrepancia te confirma que el servidor maneja de forma distinta los usuarios válidos de los inválidos, permitiéndote enumerar cuentas reales del sistema.</p>
+<hr />
+<p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
 
 
 
@@ -553,6 +720,8 @@
 
 
 
+  
+  
 
 
 

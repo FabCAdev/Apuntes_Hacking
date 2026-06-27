@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#proposito-operativo-del-modulo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -530,6 +535,122 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-operativo-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Propósito Operativo del Módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-panel-de-visualizacion-historica-y-telemetria-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎛️ 1. Panel de Visualización Histórica y Telemetría de Red
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎛️ 1. Panel de Visualización Histórica y Telemetría de Red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-barra-de-estado-operativo-y-controles-globales-top-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Barra de Estado Operativo y Controles Globales (Top Bar)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-desglose-del-registro-de-trafico-main-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Desglose del Registro de Tráfico (Main Table)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-panel-de-inspeccion-tecnica-y-busqueda-de-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 2. Panel de Inspección Técnica y Búsqueda de Cadenas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 2. Panel de Inspección Técnica y Búsqueda de Cadenas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-consola-de-request-response-lower-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Consola de Request / Response (Lower Panel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-motor-de-busqueda-integrado-bottom-search-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Motor de Búsqueda Integrado (Bottom Search Bar)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-casos-practicos-de-uso-en-auditorias-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 3. Casos Prácticos de Uso en Auditorías de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 3. Casos Prácticos de Uso en Auditorías de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-depuracion-de-extensiones-y-herramientas-automatizadas-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 1: Depuración de Extensiones y Herramientas Automatizadas (Troubleshooting)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-control-de-alcance-operativo-y-evidencia-post-mortem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 2: Control de Alcance Operativo y Evidencia (Post-Mortem)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -546,6 +667,51 @@
 
   <h1>10. Logger</h1>
 
+<h2 id="proposito-operativo-del-modulo">📌 Propósito Operativo del Módulo</h2>
+<p>El <strong>Logger</strong> es la bitácora unificada y el registro cronológico definitivo de Burp Suite. Su función es documentar de manera ininterrumpida cada una de las peticiones y respuestas HTTP/S que fluyen a través de la herramienta, sin importar qué módulo las haya originado.</p>
+<p>A diferencia de la pestaña <em>Proxy History</em> (que solo guarda el tráfico que pasa desde tu navegador web hacia la víctima), el Logger captura <strong>absolutamente todo</strong>: las ráfagas masivas enviadas por el <em>Intruder</em>, las solicitudes controladas del <em>Repeater</em>, las consultas automatizadas de las <em>Extensions</em> (como SQLMap o plugins de la BApp Store) e incluso los escaneos automáticos del propio motor de Burp. Es la herramienta de auditoría de bajo nivel indispensable para depurar fallos en tus propios scripts de ataque, controlar el rendimiento de tus herramientas y garantizar que no estás enviando paquetes fuera del alcance legal (<em>Out of Scope</em>).</p>
+<hr />
+<h2 id="1-panel-de-visualizacion-historica-y-telemetria-de-red">🎛️ 1. Panel de Visualización Histórica y Telemetría de Red</h2>
+<p>La interfaz del Logger proporciona un control centralizado para clasificar, inspeccionar y auditar cada paquete en tiempo real.</p>
+<p><img alt="Logger1" src="../Logger1.png" /></p>
+<h3 id="a-barra-de-estado-operativo-y-controles-globales-top-bar">A. Barra de Estado Operativo y Controles Globales (Top Bar)</h3>
+<ul>
+<li><strong>Logger is [capturing/paused]:</strong> Un interruptor interactivo que te permite detener temporalmente la captura de tráfico para evitar que el registro se sature mientras realizas tareas que no requieran monitoreo.</li>
+<li><strong>Barra de Configuración de Filtros ("Filter"):</strong> Permite definir reglas visuales de exclusión o inclusión mediante expresiones regulares o cadenas de texto estáticas para aislar solicitudes de hosts específicos, extensiones de archivo o códigos de estado HTTP.</li>
+<li><strong>Botón "Clear":</strong> Vacía por completo la tabla del historial acumulado para iniciar una sesión de monitoreo limpia.</li>
+</ul>
+<h3 id="b-desglose-del-registro-de-trafico-main-table">B. Desglose del Registro de Tráfico (Main Table)</h3>
+<p>Cada fila de la tabla representa un evento único de red y detalla los siguientes metadatos críticos:
+* <strong>#:</strong> Identificador numérico correlativo global.
+* <strong>Tool:</strong> Especifica qué módulo exacto de Burp Suite generó la petición (ej: <code>Proxy</code>, <code>Repeater</code>, <code>Intruder</code>, <code>Extensions</code>).
+* <strong>Method &amp; URL:</strong> El método HTTP empleado (<code>GET</code>, <code>POST</code>, etc.) y la ruta absoluta del recurso web auditado.
+* <strong>Status:</strong> El código de estado de respuesta que devolvió el servidor web (ej: <code>200</code>, <code>302</code>, <code>403</code>, <code>404</code>).
+* <strong>Length:</strong> El tamaño exacto en bytes de la respuesta HTTP, esencial para detectar anomalías sutiles de contenido.</p>
+<hr />
+<h2 id="2-panel-de-inspeccion-tecnica-y-busqueda-de-cadenas">🔍 2. Panel de Inspección Técnica y Búsqueda de Cadenas</h2>
+<p>Al seleccionar cualquier fila de la bitácora, el Logger divide el entorno de trabajo para permitir una auditoría profunda del paquete HTTP seleccionado.</p>
+<p><img alt="Logger2" src="../Logger2.png" /></p>
+<h3 id="a-consola-de-request-response-lower-panel">A. Consola de Request / Response (Lower Panel)</h3>
+<ul>
+<li><strong>Visualización Cruda y Formateada:</strong> Permite alternar entre los modos <code>Raw</code>, <code>Pretty</code>, <code>Hex</code> y <code>Render</code> tanto para la solicitud enviada como para la respuesta recibidas por el socket.</li>
+<li><strong>Garantía de Trazabilidad:</strong> Permite verificar con precisión milimétrica si un payload inyectado desde un script externo sufrió alteraciones de codificación (<em>percent-encoding</em>) antes de salir hacia la red.</li>
+</ul>
+<h3 id="b-motor-de-busqueda-integrado-bottom-search-bar">B. Motor de Búsqueda Integrado (Bottom Search Bar)</h3>
+<ul>
+<li><strong>Search / Find:</strong> Ubicado en la base de la pantalla, te permite rastrear palabras clave dentro de las cabeceras o el cuerpo del paquete seleccionado.</li>
+<li><strong>Navegación Interactiva:</strong> Cuenta con botones de dirección (<code>&lt;</code> y <code>&gt;</code>) para saltar directamente entre las coincidencias halladas en el texto crudo.</li>
+<li><strong>Filtros Adicionales:</strong> Incluye la casilla de distinción estricta de mayúsculas y minúsculas (<code>Case sensitive</code>) y el motor de expresiones regulares (<code>Regex</code>).</li>
+</ul>
+<hr />
+<h2 id="3-casos-practicos-de-uso-en-auditorias-de-seguridad">🚀 3. Casos Prácticos de Uso en Auditorías de Seguridad</h2>
+<h3 id="caso-1-depuracion-de-extensiones-y-herramientas-automatizadas-troubleshooting">Caso 1: Depuración de Extensiones y Herramientas Automatizadas (Troubleshooting)</h3>
+<p>Estás utilizando una extensión automatizada para buscar inyecciones SQL (como <em>Bypass WAF</em> o un plugin de la BApp Store), pero notas que la herramienta arroja errores o no encuentra ninguna vulnerabilidad.
+* <strong>Solución con Logger:</strong> Vas a la pestaña Logger y filtras las peticiones generadas por la herramienta (<code>Tool: Extensions</code>). Al analizar los paquetes crudos que está enviando, descubres que la extensión está codificando mal los caracteres especiales o que el servidor web te está respondiendo con un bloqueo <code>403 Forbidden</code> debido al <em>User-Agent</em> que usa el script. El Logger te permite corregir la configuración al instante.</p>
+<h3 id="caso-2-control-de-alcance-operativo-y-evidencia-post-mortem">Caso 2: Control de Alcance Operativo y Evidencia (Post-Mortem)</h3>
+<p>Durante una auditoría de Red Team, necesitas comprobar si accidentalmente alguna de tus herramientas automáticas realizó solicitudes hacia un subdominio que está fuera del alcance acordado (<em>Out of Scope</em>) con el cliente, o necesitas guardar evidencias técnicas de que tu exploit efectivamente causó un código de error <code>500 Internal Server Error</code> en el servidor web de destino.
+* <strong>Solución con Logger:</strong> El Logger guarda el historial completo y transparente de tus ataques con su marca de tiempo exacta. Esto te sirve como bitácora de respaldo irrefutable para justificar tus acciones ante el cliente en el reporte técnico final de auditoría.</p>
+<hr />
+<p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
 
 
 
@@ -553,6 +719,8 @@
 
 
 
+  
+  
 
 
 

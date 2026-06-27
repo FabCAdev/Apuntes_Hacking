@@ -18,7 +18,7 @@
     
     
       
-        <title>📊 01. Dashboard - Torre de Control y Estado del Sistema - Apuntes de Hacking de FabCAdev</title>
+        <title>01. Dashboard - Apuntes de Hacking de FabCAdev</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#01-dashboard-torre-de-control-y-estado-del-sistema" class="md-skip">
+        <a href="#proposito-operativo" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📊 01. Dashboard - Torre de Control y Estado del Sistema
+              01. Dashboard
             
           </span>
         </div>
@@ -534,8 +534,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -568,6 +566,45 @@
       1. ⚙️ Tasks (Tareas)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1. ⚙️ Tasks (Tareas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-una-nueva-tarea-en-vivo-new-live-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Creación de una Nueva Tarea en Vivo (New Live Task)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Creación de una Nueva Tarea en Vivo (New Live Task)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-scan-details-detalles-de-la-tarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 A. Scan Details (Detalles de la Tarea)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-scan-configuration-configuracion-del-escaneo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ B. Scan Configuration (Configuración del Escaneo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -619,39 +656,94 @@
 
 
 
-<h1 id="01-dashboard-torre-de-control-y-estado-del-sistema">📊 01. Dashboard - Torre de Control y Estado del Sistema</h1>
-<h2 id="proposito-operativo">📌 Propósito Operativo</h2>
-<p>El <strong>Dashboard</strong> es la pantalla principal y el centro de monitoreo de Burp Suite. Su función en una auditoría es ofrecerle al auditor una vista panorámica en tiempo real sobre el rendimiento de la suite, el estado de los componentes activos, las tareas automatizadas que se ejecutan en segundo plano y el registro global de eventos del sistema.</p>
-<p><img alt="Dashboard de Burp Suite" src="../Dashboard.png" /></p>
+  <h1>01. Dashboard</h1>
+
+<h3 id="proposito-operativo">📌 Propósito Operativo</h3>
+<p>El Dashboard es la pantalla principal y el centro de monitoreo de Burp Suite. Su función en una auditoría es ofrecerle al auditor una <strong>vista panorámica en tiempo real</strong> sobre el rendimiento de la suite, el estado de los componentes activos, las tareas automatizadas que se ejecutan en segundo plano y el registro global de eventos del sistema.</p>
+<p><img alt="Dashboard" src="../Dashboard.png" /></p>
 <hr />
 <h2 id="anatomia-del-dashboard-secciones-clave">🧩 Anatomía del Dashboard: Secciones Clave</h2>
-<p>La interfaz del Dashboard se divide estructuralmente en tres bloques principales:</p>
+<p>La interfaz del Dashboard se divide estructuralmente en <strong>tres bloques principales</strong>:</p>
 <h3 id="1-tasks-tareas">1. ⚙️ Tasks (Tareas)</h3>
-<p>Es el motor de ejecución. Aquí se gestionan todas las acciones automatizadas que Burp Suite realiza en segundo plano:
-*   <strong>Live Passive Crawl:</strong> (Activo por defecto) Examina de forma silenciosa todo el tráfico HTTP/S que pasa a través del Proxy. Mapea la estructura web y detecta anomalías sin lanzar una sola petición propia. Puedes lanzar nuevas tareas en vivo</p>
+<p>Es el motor de ejecución de la herramienta. Aquí se gestionan y supervisan todas las acciones automatizadas que Burp Suite realiza en segundo plano:</p>
 <ul>
+<li><strong>Live Passive Crawl:</strong> <em>(Activo por defecto)</em> Examina de forma silenciosa todo el tráfico HTTP/S que pasa a través del Proxy. Mapea la estructura web y detecta anomalías sin lanzar una sola petición propia.</li>
 <li><strong>Audits (Versión Pro):</strong> Muestra el progreso de los escaneos automatizados de vulnerabilidades, indicando el porcentaje de avance, la velocidad de peticiones por segundo y el contador de fallos.</li>
 </ul>
+<h4 id="creacion-de-una-nueva-tarea-en-vivo-new-live-task">🚀 Creación de una Nueva Tarea en Vivo (New Live Task)</h4>
+<p>Las tareas en vivo permiten automatizar acciones a medida que navegas o interactúas con los diferentes módulos. Se configuran a través de dos menús principales:</p>
+<h5 id="a-scan-details-detalles-de-la-tarea">📋 A. Scan Details (Detalles de la Tarea)</h5>
+<p>Define el comportamiento básico y el alcance de la interceptación:</p>
+<p><img alt="Dashboard Tarea Nueva" src="../Dashboard_New_Live_Task.png" /></p>
+<ul>
+<li><strong>Task Type (Tipo de Tarea):</strong><ul>
+<li><code>Live passive crawl</code>: Analiza de forma pasiva el tráfico para construir el mapa del sitio sin enviar nuevas peticiones.</li>
+<li><code>Live audit</code>: Escaneo activo de vulnerabilidades <em>(opción exclusiva de la versión Pro)</em>.</li>
+</ul>
+</li>
+<li><strong>Tools Scope (Alcance de Herramientas):</strong> Determina qué módulos alimentarán esta tarea con su tráfico. Se puede seleccionar el flujo proveniente del <strong>Proxy</strong>, <strong>Repeater</strong> o <strong>Intruder</strong>.</li>
+<li><strong>URL Scope (Alcance de URL):</strong> Define qué objetivos o direcciones web serán procesados:<ul>
+<li><code>Everything</code>: Procesa absolutamente todo el tráfico recibido por las herramientas seleccionadas.</li>
+<li><code>Suite scope</code>: Se limita estrictamente a los objetivos definidos globalmente en la pestaña <em>Target &gt; Scope</em>.</li>
+<li><code>Custom scope</code>: Permite configurar un filtrado personalizado con reglas específicas para esta tarea.</li>
+</ul>
+</li>
+<li><strong>Deduplication (Deduplicación):</strong> Al activar <code>Ignore duplicate items based on URL and parameter names</code>, Burp Suite evita procesar peticiones idénticas repetidas veces, optimizando el rendimiento de la máquina y manteniendo limpio el <em>Site Map</em>.</li>
+</ul>
+<h5 id="b-scan-configuration-configuracion-del-escaneo">⚙️ B. Scan Configuration (Configuración del Escaneo)</h5>
+<p>Parametriza la lógica interna que utilizará el motor de rastreo pasivo:</p>
+<p><img alt="Dashboard Tarea Nueva Scan Config" src="../Dashboard_New_Live_Task.png" /></p>
+<ul>
+<li><strong>Types of item to add (Elementos a agregar):</strong> Especifica qué tipo de interacciones guardará automáticamente en el mapa del sitio:<ul>
+<li><code>Links</code>: Extrae y mapea todos los hipervínculos encontrados dentro de las respuestas HTTP.</li>
+<li><code>Form submissions</code>: Mapea y registra los formularios de envío de datos detectados.</li>
+</ul>
+</li>
+<li><strong>URLs to add (URLs a incluir):</strong> Filtros avanzados de almacenamiento. Permite elegir si se añade el elemento consultado (<code>The item itself</code>), contenido que pertenezca al mismo dominio (<code>Items on the same domain</code>) o únicamente si la dirección coincide con el Scope establecido (<code>URLs in scope</code>).</li>
+</ul>
+<hr />
 <h3 id="2-issue-activity-actividad-de-problemas-vulnerabilidades">2. 🚨 Issue Activity (Actividad de Problemas / Vulnerabilidades)</h3>
-<p><em>Nota: Esta sección muestra todo su potencial en la versión Professional mediante el escáner activo.</em>
-*   Muestra un feed cronológico de las vulnerabilidades e inconsistencias que Burp Suite va encontrando.
-*   Clasifica los hallazgos por severidad utilizando un código de colores estándar:
-    *   🔴 <strong>High (Alta):</strong> Inyecciones de código, criticidades severas.
-    *   🟠 <strong>Medium (Media):</strong> Fallos de configuración, falta de cabeceras de seguridad.
-    *   🟡 <strong>Low (Baja):</strong> Divulgación menor de información.
-    *   🔵 <strong>Information (Informativa):</strong> Datos sobre tecnologías expuestas.</p>
+<blockquote>
+<p>💡 <strong>Nota de entorno:</strong> Esta sección es el centro de control de hallazgos. Aunque muestra todo su potencial en la versión <em>Professional</em> mediante el escáner activo (Audits), la versión <em>Community</em> también registra alertas automáticas basadas en el análisis pasivo del tráfico que cruza el Proxy.</p>
+</blockquote>
+<p>Muestra un feed cronológico y en tiempo real de las vulnerabilidades, fallas de configuración e inconsistencias detectadas en el objetivo. Al seleccionar cualquier elemento, la interfaz despliega una descripción detallada, la ruta del impacto, la reproducción de la petición/respuesta HTTP y recomendaciones de remediación.</p>
+<p>Los hallazgos se clasifican mediante un código de colores estándar basado en su severidad e impacto potencial:</p>
+<ul>
+<li><strong>🔴 High (Alta):</strong> Vulnerabilidades críticas que permiten comprometer el servidor o los datos de forma directa.<ul>
+<li><em>Ejemplos comunes:</em> SQL Injection (SQLi), Cross-Site Scripting (XSS) Almacenado/Reflejado, Remote Code Execution (RCE), Local/Remote File Inclusion (LFI/RFI) e Inyecciones de Comandos.</li>
+</ul>
+</li>
+<li><strong>🟠 Medium (Media):</strong> Fallos que exponen la lógica de la aplicación o permiten vectores de ataque indirectos.<ul>
+<li><em>Ejemplos comunes:</em> CSRF (Cross-Site Request Forgery), vulnerabilidades de control de acceso (IDORs), almacenamiento inseguro de cookies (sin flags <code>HttpOnly</code> o <code>Secure</code>), o configuraciones CORS permisivas (<code>Access-Control-Allow-Origin: *</code>).</li>
+</ul>
+</li>
+<li><strong>🟡 Low (Baja):</strong> Brechas menores o configuraciones débiles que facilitan la fase de reconocimiento a un atacante.<ul>
+<li><em>Ejemplos comunes:</em> Divulgación de versiones de software específicas en cabeceras, listado de directorios habilitado, o uso de algoritmos de cifrado SSL/TLS obsoletos en el servidor.</li>
+</ul>
+</li>
+<li><strong>🔵 Information (Informativa):</strong> Datos puramente descriptivos sobre la infraestructura detectada que no representan un riesgo directo, pero mapean la superficie de ataque.<ul>
+<li><em>Ejemplos comunes:</em> Detección de subida de archivos permitida, descubrimiento de paneles de administración de tecnologías conocidas (como <code>/wp-admin</code>), o métodos HTTP inusuales permitidos (OPTIONS, PUT, DELETE).</li>
+</ul>
+</li>
+</ul>
+<hr />
 <h3 id="3-event-log-registro-de-eventos">3. 🪵 Event Log (Registro de Eventos)</h3>
-<p>Es el historial clínico de la aplicación. Registra de forma detallada el comportamiento interno de Burp Suite:
-*   Inicio y detención de servicios (Ej: <em>"Proxy service started on port 8080"</em>).|
-*   Errores de conexión de red o caídas de TLS/SSL con el servidor objetivo.
-*   Alertas de agotamiento de memoria o problemas con la carga de extensiones.</p>
-<p><img alt="Dashboard de Burp Suite" src="../Dashboard2.png" /></p>
+<p>Es el historial clínico y operativo de la herramienta. No registra vulnerabilidades del objetivo, sino el comportamiento, estado y salud interna del propio Burp Suite durante la sesión de auditoría. Es la primera sección a revisar cuando una herramienta o conexión no responde como debería.</p>
+<p>Registra de forma detallada los siguientes eventos críticos:</p>
+<ul>
+<li><strong>⚙️ Estado de los Servicios Core:</strong> Mensajes sobre el ciclo de vida de los oyentes (<em>listeners</em>) del Proxy (Ej: <code>"Proxy service started on 127.0.0.1:8080"</code> o <code>"Failed to bind to port 8080"</code> si el puerto ya está en uso por otro proceso del sistema).</li>
+<li><strong>🌐 Errores de Red y Handshakes:</strong> Alertas detalladas cuando Burp Suite no logra comunicarse con el servidor web. Registra fallas de negociación TLS/SSL, certificados digitales del objetivo que no son de confianza, caídas de conexión por timeout, o bloqueos por parte de firewalls/WAFs intermedios.</li>
+<li><strong>🔌 Gestión de Extensiones (Burp Extensions / BApp Store):</strong> Logs de carga, ejecución y errores de scripts desarrollados en Java, Python o Ruby. Si una extensión de la BApp Store crashea o genera una excepción de memoria, el fallo se reflejará aquí.</li>
+<li><strong>⚠️ Rendimiento del Sistema (System Health):</strong> Alertas críticas del entorno de ejecución de Java (JVM), tales como advertencias de agotamiento de memoria RAM asignada (<em>Out of Memory</em>) o caídas en la velocidad de procesamiento de hilos al procesar payloads pesados en el Intruder.</li>
+</ul>
 <hr />
 <h2 id="buenas-practicas-del-auditor-en-el-dashboard">🛠️ Buenas Prácticas del Auditor en el Dashboard</h2>
-<ol>
-<li><strong>Monitorear el Event Log ante Errores 404/500:</strong> Si al interceptar tráfico notas que las páginas no cargan, revisa el Event Log. Suele avisar si el navegador no confía en el certificado CA de Burp Suite.</li>
-<li><strong>Pausar Tareas Innecesarias:</strong> Si estás auditando desde una máquina con recursos limitados (poca RAM), puedes pausar las tareas de rastreo (<em>Crawl</em>) desde el panel de Tasks para liberar procesamiento para el Intruder o Repeater.</li>
-</ol>
+<ul>
+<li><strong>Monitorear el Event Log ante Errores 404/500:</strong> Si al interceptar tráfico notas que las páginas no cargan o el navegador se queda en blanco, revisa el <em>Event Log</em>. Suele avisar de inmediato si el navegador no confía en el certificado CA de Burp Suite o si hay un fallo en el apretón de manos SSL.</li>
+<li><strong>Pausar Tareas Innecesarias:</strong> Si estás auditando desde una máquina con recursos limitados (poca memoria RAM), puedes pausar las tareas de rastreo (<em>Crawl</em>) desde el panel de <em>Tasks</em> para liberar hilos de procesamiento y priorizar el uso del <em>Intruder</em> o <em>Repeater</em>.
+<img alt="Dashboard Ejemplo" src="../Dashboard2.png" /></li>
+</ul>
+<hr />
 <p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
 
 

@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#proposito-operativo-del-modulo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -530,6 +535,131 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-operativo-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Propósito Operativo del Módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-panel-de-control-y-gestion-de-extensiones-activas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎛️ 1. Panel de Control y Gestión de Extensiones Activas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎛️ 1. Panel de Control y Gestión de Extensiones Activas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-inventario-y-estados-de-carga-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Inventario y Estados de Carga (Installed)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-consola-de-depuracion-de-salidas-y-errores-lower-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Consola de Depuración de Salidas y Errores (Lower Panel)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-tienda-global-de-complementos-bapp-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏬 2. La Tienda Global de Complementos: BApp Store
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-entornos-de-ejecucion-y-configuracion-global-bapp-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ 3. Entornos de Ejecución y Configuración Global (BApp Settings)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 3. Entornos de Ejecución y Configuración Global (BApp Settings)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-configuracion-del-entorno-de-python-jython" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Configuración del Entorno de Python (Jython)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-configuracion-de-entornos-adicionales-y-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Configuración de Entornos Adicionales y Caché
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-casos-practicos-de-uso-en-auditorias-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 4. Casos Prácticos de Uso en Auditorías de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 4. Casos Prácticos de Uso en Auditorías de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-instalacion-de-extensiones-esenciales-para-red-team-mejora-del-escaneo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 1: Instalación de Extensiones Esenciales para Red Team (Mejora del Escaneo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-preparacion-del-entorno-para-plugins-de-terceros-jython-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 2: Preparación del Entorno para Plugins de Terceros (Jython Setup)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -546,6 +676,61 @@
 
   <h1>12. Extensions</h1>
 
+<h2 id="proposito-operativo-del-modulo">📌 Propósito Operativo del Módulo</h2>
+<p>El módulo <strong>Extensions</strong> (anteriormente conocido como <em>Extender</em>) es el motor de orquestación de complementos de Burp Suite. Su propósito fundamental es permitir al auditor añadir herramientas, funcionalidades y automatizaciones desarrolladas por la comunidad o por terceros que no vienen de forma nativa en el núcleo de la aplicación.</p>
+<p>En auditorías reales, las aplicaciones web suelen emplear mecanismos complejos que Burp no siempre sabe procesar por defecto (por ejemplo, firmas criptográficas personalizadas, serializaciones raras u ofuscaciones de tokens). El panel de extensiones permite instalar scripts para decodificar flujos en tiempo real, añadir motores de escaneo especializados (como detectores automáticos de Log4j, bypasses de WAF o integraciones con SQLMap) y personalizar por completo el arsenal del analista sin necesidad de reescribir el software base.</p>
+<hr />
+<h2 id="1-panel-de-control-y-gestion-de-extensiones-activas">🎛️ 1. Panel de Control y Gestión de Extensiones Activas</h2>
+<p>La interfaz principal recopila el estado analítico de los complementos instalados y permite controlar la prioridad de ejecución dentro del flujo de red.</p>
+<p><img alt="Extensions1" src="../Extensions1.png" /></p>
+<h3 id="a-inventario-y-estados-de-carga-installed">A. Inventario y Estados de Carga (Installed)</h3>
+<ul>
+<li><strong>Tabla de Extensiones:</strong> Lista todos los plugins agregados al proyecto. Cuenta con una casilla de verificación (<code>Loaded</code>) para activar o desactivar la extensión al vuelo sin necesidad de borrarla.</li>
+<li><strong>Control de Orden (Priorización):</strong> Los botones <code>Up</code> y <code>Down</code> permiten alterar el orden físico de la lista. Esto es crítico porque las extensiones procesan los paquetes HTTP en cascada; si una extensión modifica una cabecera para evadir un filtro, debe ejecutarse antes de que el paquete sea procesado por la siguiente herramienta.</li>
+</ul>
+<h3 id="b-consola-de-depuracion-de-salidas-y-errores-lower-panel">B. Consola de Depuración de Salidas y Errores (Lower Panel)</h3>
+<p>Al seleccionar una extensión, la mitad inferior de la pantalla desglosa su telemetría en tiempo real:
+* <strong>Output:</strong> Muestra los registros informativos, logs de ejecución o banners de bienvenida creados por el desarrollador de la extensión.
+* <strong>Errors:</strong> Consola de depuración indispensable si un plugin falla. Muestra las excepciones de código (ej: fallos de dependencias en Python o Java), permitiendo identificar por qué la extensión ha dejado de interceptar o modificar paquetes.</p>
+<hr />
+<h2 id="2-la-tienda-global-de-complementos-bapp-store">🏬 2. La Tienda Global de Complementos: BApp Store</h2>
+<p>La <strong>BApp Store</strong> (Burp App Store) es el repositorio integrado y oficial de PortSwigger desde donde se pueden descargar cientos de extensiones preaprobadas y validadas por seguridad.</p>
+<p><img alt="Extensions2" src="../Extensions2.png" /></p>
+<ul>
+<li><strong>Estructura de Navegación:</strong> Muestra una lista alfabética con el nombre de la extensión, una breve descripción técnica de su impacto analítico y su calificación por estrellas basada en el feedback de la comunidad.</li>
+<li><strong>Ficha de Detalles Técnicos:</strong> Al hacer clic sobre cualquier extensión (como <em>Turbo Intruder</em> o <em>Logger++</em>), el panel derecho muestra:<ul>
+<li>El autor del complemento.</li>
+<li>La versión actual y la fecha de su última actualización.</li>
+<li><strong>Estimated impact:</strong> Una métrica visual que indica cuánta memoria RAM o procesamiento consume el plugin (<code>System overhead</code>) y qué tanto altera las peticiones (<code>Loss of control</code>).</li>
+</ul>
+</li>
+<li><strong>Instalación Directa:</strong> El botón <code>Install</code> descarga y acopla la extensión al vuelo directamente en el ecosistema de Burp Suite.</li>
+</ul>
+<hr />
+<h2 id="3-entornos-de-ejecucion-y-configuracion-global-bapp-settings">⚙️ 3. Entornos de Ejecución y Configuración Global (BApp Settings)</h2>
+<p>Para que Burp Suite pueda ejecutar extensiones escritas en lenguajes distintos a Java (el lenguaje nativo de Burp), es necesario indicarle dónde se encuentran los intérpretes correspondientes.</p>
+<p><img alt="Extensions3" src="../Extensions3.png" /></p>
+<h3 id="a-configuracion-del-entorno-de-python-jython">A. Configuración del Entorno de Python (Jython)</h3>
+<ul>
+<li><strong>Python Environment:</strong> Dado que muchas de las mejores extensiones comunitarias están desarrolladas en Python 2/3, Burp Suite requiere el uso de un archivo llamado <strong>Jython</strong> (un intérprete de Python que corre sobre la máquina virtual de Java).</li>
+<li><strong>Location of Jython standalone JAR file:</strong> En esta sección, el auditor debe descargar el archivo <code>.jar</code> de Jython desde su web oficial y cargar la ruta absoluta aquí para habilitar de inmediato la ejecución de complementos <code>.py</code>.</li>
+</ul>
+<h3 id="b-configuracion-de-entornos-adicionales-y-cache">B. Configuración de Entornos Adicionales y Caché</h3>
+<ul>
+<li><strong>Ruby Environment:</strong> Permite configurar el archivo JAR de <em>JRuby</em> para extensiones programadas en Ruby.</li>
+<li><strong>Java Environment:</strong> Opciones para especificar rutas de compilación Java si estás desarrollando tus propios plugins mediante la API de Burp Suite.</li>
+<li><strong>Settings de la BApp Store:</strong> Controla la carpeta temporal donde se almacenan las descargas de la tienda y la frecuencia con la que Burp Suite busca actualizaciones automáticas de los complementos instalados.</li>
+</ul>
+<hr />
+<h2 id="4-casos-practicos-de-uso-en-auditorias-de-seguridad">🚀 4. Casos Prácticos de Uso en Auditorías de Seguridad</h2>
+<h3 id="caso-1-instalacion-de-extensiones-esenciales-para-red-team-mejora-del-escaneo">Caso 1: Instalación de Extensiones Esenciales para Red Team (Mejora del Escaneo)</h3>
+<p>Durante una auditoría, el proxy nativo recopila el tráfico pero necesitas automatizar la búsqueda de fallos complejos que el scanner por defecto no ve (como inyecciones secundarias o vulnerabilidades lógicas de autorización).
+* <strong>Solución operativa:</strong> Vas a la <strong>BApp Store</strong> e instalas extensiones clave como <strong>Autorize</strong> (para detectar vulnerabilidades de control de acceso e IDORs de forma automática mientras navegas) o <strong>Software Vulnerability Scanner</strong> (para contrastar las versiones de software detectadas contra bases de datos de vulnerabilidades conocidas). El módulo se encarga de acoplarlas sin interrumpir tus interceptaciones activas.</p>
+<h3 id="caso-2-preparacion-del-entorno-para-plugins-de-terceros-jython-setup">Caso 2: Preparación del Entorno para Plugins de Terceros (Jython Setup)</h3>
+<p>Descargas desde un repositorio de GitHub una herramienta de ataque especializada en evadir el WAF de un cliente, pero al intentar cargar el archivo <code>.py</code> en Burp, la aplicación arroja un error de ejecución.
+* <strong>Solución operativa:</strong> Dirígeste a la pestaña <strong>Extensions ➡️ Settings</strong>, descargas el JAR de <em>Jython Standalone</em>, y mapeas su ubicación en la sección de Python. Al regresar a la pestaña principal y añadir el plugin, Burp Suite ya contará con el motor necesario para interpretar el script, permitiéndote inyectar las reglas de evasión personalizadas de forma transparente en tus peticiones de Repeater e Intruder.</p>
+<hr />
+<p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
 
 
 
@@ -553,6 +738,8 @@
 
 
 
+  
+  
 
 
 

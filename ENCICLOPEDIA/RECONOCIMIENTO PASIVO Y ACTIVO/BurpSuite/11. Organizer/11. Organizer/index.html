@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#proposito-operativo-del-modulo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -530,6 +535,122 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-operativo-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Propósito Operativo del Módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-panel-de-gestion-de-hallazgos-e-inventario-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎛️ 1. Panel de Gestión de Hallazgos e Inventario de Red
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎛️ 1. Panel de Gestión de Hallazgos e Inventario de Red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-almacenamiento-e-invocacion-contextual" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Almacenamiento e Invocación Contextual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-atributos-de-organizacion-logica-clasificacion-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Atributos de Organización Lógica (Clasificación Manual)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-inspeccion-de-paquetes-y-edicion-de-apuntes-tecnicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 2. Inspección de Paquetes y Edición de Apuntes Técnicos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 2. Inspección de Paquetes y Edición de Apuntes Técnicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-panel-inferior-de-visualizacion-request-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Panel Inferior de Visualización (Request / Response)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-cuadro-de-notas-dedicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Cuadro de Notas Dedicado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-casos-practicos-de-uso-en-auditorias-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 3. Casos Prácticos de Uso en Auditorías de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 3. Casos Prácticos de Uso en Auditorías de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-gestion-de-flujo-de-trabajo-en-reconocimiento-masivo-triaje-de-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 1: Gestión de Flujo de Trabajo en Reconocimiento Masivo (Triaje de Parámetros)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-documentacion-temprana-y-reporte-de-evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 2: Documentación Temprana y Reporte de Evidencias
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -546,6 +667,45 @@
 
   <h1>11. Organizer</h1>
 
+<h2 id="proposito-operativo-del-modulo">📌 Propósito Operativo del Módulo</h2>
+<p>El <strong>Organizer</strong> es una herramienta de gestión de flujo de trabajo e inventariado integrada en las versiones recientes de Burp Suite. Su propósito fundamental es permitir al auditor almacenar, ordenar y anotar peticiones HTTP/S específicas que resulten clave o sospechosas durante la fase de análisis, sin necesidad de enviarlas inmediatamente a módulos activos como Repeater.</p>
+<p>Durante auditorías extensas, es común encontrar decenas de endpoints interesantes que no puedes analizar al mismo tiempo (por ejemplo, varios parámetros que huelen a IDOR, rutas de administración ocultas o puntos de inyección potenciales). En lugar de saturar el historial del Proxy o llenarte de pestañas anónimas en Repeater que olvidarás para qué servían, Organizer actúa como un <strong>"baúl de marcadores" o repositorio táctico</strong> donde guardas las evidencias y defines el orden de prioridad de tu investigación.</p>
+<hr />
+<h2 id="1-panel-de-gestion-de-hallazgos-e-inventario-de-red">🎛️ 1. Panel de Gestión de Hallazgos e Inventario de Red</h2>
+<p>La interfaz de Organizer proporciona una estructura limpia en forma de tabla diseñada para centralizar tus objetivos de análisis pendientes.</p>
+<p><img alt="Organizer1" src="../Organizer1.png" /></p>
+<h3 id="a-almacenamiento-e-invocacion-contextual">A. Almacenamiento e Invocación Contextual</h3>
+<p>Cualquier paquete interceptado en Burp Suite puede ser enviado aquí haciendo <strong>clic derecho ➡️ Send to Organizer</strong>.
+* <strong>Tabla de Tareas en Cola:</strong> Muestra de forma cronológica los paquetes guardados.
+* <strong>Metadatos por Defecto:</strong> Muestra información automática de red como el identificador numérico (<code>#</code>), el método HTTP (<code>Method</code>), la URL del recurso (<code>URL</code>), el código de estado (<code>Status</code>) y la longitud en bytes (<code>Length</code>).</p>
+<h3 id="b-atributos-de-organizacion-logica-clasificacion-manual">B. Atributos de Organización Lógica (Clasificación Manual)</h3>
+<p>Las columnas clave que diferencian a Organizer de un simple registro histórico son:
+* <strong>Notes (Notas):</strong> Un espacio de texto libre donde el auditor apunta la hipótesis de la vulnerabilidad o la razón por la cual guardó el paquete (ej: <em>"Posible LFI en parámetro template"</em>, <em>"Cookie de sesión JWT para descifrar"</em>).
+* <strong>Status Flags / Labels:</strong> Permite asignar etiquetas o estados para coordinar el progreso de la auditoría directamente sobre los paquetes seleccionados.</p>
+<hr />
+<h2 id="2-inspeccion-de-paquetes-y-edicion-de-apuntes-tecnicos">🔍 2. Inspección de Paquetes y Edición de Apuntes Técnicos</h2>
+<p>Al seleccionar cualquier fila de la lista de Organizer, el espacio de trabajo se divide para ofrecer una vista detallada del paquete crudo y sus anotaciones asociadas.</p>
+<p><img alt="Organizer2" src="../Organizer2.png" /></p>
+<h3 id="a-panel-inferior-de-visualizacion-request-response">A. Panel Inferior de Visualización (Request / Response)</h3>
+<ul>
+<li>Permite revisar los paneles <code>Raw</code>, <code>Pretty</code>, <code>Hex</code> y <code>Render</code> de la solicitud original y su respuesta almacenada.</li>
+<li><strong>Acción Diferida:</strong> Los paquetes se guardan en un estado estático (congelados en el tiempo). Si decides que es momento de atacar ese endpoint, puedes hacer clic derecho sobre la petición dentro de Organizer y enviarla directamente a <strong>Repeater</strong> o <strong>Intruder</strong> para iniciar la fase de explotación activa.</li>
+</ul>
+<h3 id="b-cuadro-de-notas-dedicado">B. Cuadro de Notas Dedicado</h3>
+<ul>
+<li>Situado junto al renderizado del paquete, permite escribir descripciones detalladas o payloads preliminares que planeas probar más adelante.</li>
+<li>Facilita el orden en auditorías complejas o auditorías de caja blanca donde necesitas asociar una petición HTTP con una línea de código específica del backend del cliente.</li>
+</ul>
+<hr />
+<h2 id="3-casos-practicos-de-uso-en-auditorias-de-seguridad">🚀 3. Casos Prácticos de Uso en Auditorías de Seguridad</h2>
+<h3 id="caso-1-gestion-de-flujo-de-trabajo-en-reconocimiento-masivo-triaje-de-parametros">Caso 1: Gestión de Flujo de Trabajo en Reconocimiento Masivo (Triaje de Parámetros)</h3>
+<p>Durante una fase de fuzzing o navegación inicial con el Proxy, descubres 15 endpoints diferentes que aceptan parámetros propensos a vulnerabilidades lógicas (como <code>?file=</code>, <code>?redirect=</code>, <code>?id=</code>). No quieres interrumpir tu navegación actual abriendo 15 pestañas de Repeater.
+* <strong>Solución con Organizer:</strong> Envías las 15 peticiones a Organizer. En la columna de notas escribes el tipo de vector sospechoso (<code>Sospecha de LFI</code>, <code>Open Redirect</code>, etc.). Una vez que terminas la navegación global, abres Organizer y vas enviando uno a uno los paquetes a Repeater de forma ordenada, optimizando tu tiempo de auditoría.</p>
+<h3 id="caso-2-documentacion-temprana-y-reporte-de-evidencias">Caso 2: Documentación Temprana y Reporte de Evidencias</h3>
+<p>Estás auditando una aplicación web y localizas peticiones extrañas que alteran el comportamiento del sitio pero necesitas seguir investigando para confirmar el impacto completo. No quieres perder los paquetes exactos que causaron la anomalía.
+* <strong>Solución con Organizer:</strong> Almacenas los flujos limpios en Organizer y redactas notas técnicas sobre el comportamiento observado en ese instante. Si al final de la auditoría confirmas la vulnerabilidad, Organizer conserva la evidencia exacta y tus apuntes de campo listos para ser estructurados e importados en el reporte técnico final para el cliente.</p>
+<hr />
+<p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
 
 
 
@@ -553,6 +713,8 @@
 
 
 
+  
+  
 
 
 
