@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#estado-actual-y-falta-de-caso-de-uso" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -530,6 +535,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estado-actual-y-falta-de-caso-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Estado Actual y Falta de Caso de Uso
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -546,7 +568,18 @@
 
   <h1>07. Sequencer</h1>
 
-
+<blockquote>
+<p>⚠️ <strong>Nota de Estado:</strong> Esta sección se encuentra actualmente <strong>incompleta</strong> y clasificada como <strong>sin empezar</strong>. </p>
+</blockquote>
+<p>A diferencia de los módulos interactivos como el Proxy o el Repeater, <strong>Burp Sequencer</strong> es una herramienta especializada en el análisis estadístico de la calidad de la aleatoriedad en tokens de datos. Su propósito principal es determinar la predictibilidad de elementos críticos de seguridad generados por el servidor web, tales como:</p>
+<ul>
+<li>Cookies de sesión (<code>PHPSESSID</code>, <code>JSESSIONID</code>, etc.).</li>
+<li>Tokens Anti-CSRF.</li>
+<li>Tokens de restablecimiento de contraseña enviados por correo.</li>
+</ul>
+<h3 id="estado-actual-y-falta-de-caso-de-uso">🚫 Estado Actual y Falta de Caso de Uso</h3>
+<p>Durante las pruebas realizadas en el laboratorio local de SQL Injection de Appsecco, <strong>no se identificó ningún escenario práctico</strong> que requiriera el uso del Sequencer. Las vulnerabilidades de inyección de código y bypass de autenticación evaluadas dependen de fallos lógicos y falta de sanitización en el backend, mas no de la debilidad criptográfica o la predictibilidad de los identificadores de sesión.</p>
+<p>Para poder nutrir esta sección con datos reales, gráficas de entropía y análisis de bits, se requiere un entorno o desafío enfocado específicamente en <strong>Session Fixation, Session Prediction o criptografía débil</strong>. Una vez que se interactúe con una aplicación web que genere identificadores vulnerables a patrones estadísticos, se documentará aquí el procedimiento completo de captura de muestras (mínimo 100 tokens recomendado) y la interpretación de los resultados del análisis.</p>
 
 
 
