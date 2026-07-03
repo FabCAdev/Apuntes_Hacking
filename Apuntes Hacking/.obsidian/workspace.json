@@ -50,23 +50,9 @@
               "icon": "lucide-file",
               "title": "Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry"
             }
-          },
-          {
-            "id": "d2836b5bfc239231",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Documentación - Análisis Forense de Campaña Phishing Fraudulenta.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Documentación - Análisis Forense de Campaña Phishing Fraudulenta"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -201,13 +187,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ENCICLOPEDIA/VMs y DOCKER/E4 - VMs y Docker.md",
+                "file": "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de E4 - VMs y Docker"
+              "title": "Esquema de Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry"
             }
           },
           {
@@ -229,13 +215,24 @@
               "icon": "message-square",
               "title": "Copilot"
             }
+          },
+          {
+            "id": "b2d02f938510fb19",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 296.5
+    "width": 296.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -250,10 +247,14 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "d2836b5bfc239231",
+  "active": "57e03c19ce7f57a4",
   "lastOpenFiles": [
-    "copilot/copilot-conversations/puedes_modificar_notas_necesito_que_se_ordene_y_acomode_la@20260702_015438.md",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_3.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_2.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_1.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/SMB_Firewall.png",
     "Documentación - Análisis Forense de Campaña Phishing Fraudulenta.md",
+    "copilot/copilot-conversations/puedes_modificar_notas_necesito_que_se_ordene_y_acomode_la@20260702_015438.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/Herramientas - Auditoría y Análisis Web con Burp Suite.md",
     "AVANCES/CURSOS/HACK4U/CURSO HACK4U/💀 INTRODUCCION AL HACKING.md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
@@ -266,11 +267,8 @@
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry2.0.png",
     "copilot/copilot-conversations/Copilot_Plus_License_Error@20260702_114929.md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry1.0_2.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry1.0.png",
     "copilot/copilot-conversations",
     "copilot",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/ss_window_1782962642.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Cryptolocker.jpg",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/09. Comparer/09. Comparer.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/07. Sequencer/07. Sequencer.md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/1- ANÁLISIS DE AMENAZAS (BLUE TEAM).md",
