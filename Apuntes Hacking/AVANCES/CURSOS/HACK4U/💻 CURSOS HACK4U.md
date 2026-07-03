@@ -21,8 +21,4 @@ tags:
 
 - [[⚙️ ARCH LINUX DESDE CERO]]: Análisis y explotación de vulnerabilidades en aplicaciones web, OWASP Top 10 y auditorías de seguridad en entornos de servidores.
 
-<div style="text-align: left; margin-bottom: 20px;">
-    <a href="🎓 CURSOS" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver atras
-    </a>
-</div>
+[[🎓 CURSOS|⬅️ Volver a 🎓 CURSOS]]

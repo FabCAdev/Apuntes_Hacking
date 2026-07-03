@@ -1,0 +1,804 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/ENCICLOPEDIA/RECONOCIMIENTO%20PASIVO%20Y%20ACTIVO/BurpSuite/01.%20Dashboard/01.%20Dashboard/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>01. Dashboard - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proposito-operativo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              01. Dashboard
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-operativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Propósito Operativo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-del-dashboard-secciones-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Anatomía del Dashboard: Secciones Clave
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Anatomía del Dashboard: Secciones Clave">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tasks-tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ⚙️ Tasks (Tareas)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ⚙️ Tasks (Tareas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-una-nueva-tarea-en-vivo-new-live-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Creación de una Nueva Tarea en Vivo (New Live Task)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Creación de una Nueva Tarea en Vivo (New Live Task)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-scan-details-detalles-de-la-tarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 A. Scan Details (Detalles de la Tarea)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-scan-configuration-configuracion-del-escaneo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ B. Scan Configuration (Configuración del Escaneo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-issue-activity-actividad-de-problemas-vulnerabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 🚨 Issue Activity (Actividad de Problemas / Vulnerabilidades)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-event-log-registro-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 🪵 Event Log (Registro de Eventos)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-del-auditor-en-el-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Buenas Prácticas del Auditor en el Dashboard
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>01. Dashboard</h1>
+
+<h3 id="proposito-operativo">📌 Propósito Operativo</h3>
+<p>El Dashboard es la pantalla principal y el centro de monitoreo de Burp Suite. Su función en una auditoría es ofrecerle al auditor una <strong>vista panorámica en tiempo real</strong> sobre el rendimiento de la suite, el estado de los componentes activos, las tareas automatizadas que se ejecutan en segundo plano y el registro global de eventos del sistema.</p>
+<p><img alt="Dashboard" src="../Dashboard.png" /></p>
+<hr />
+<h2 id="anatomia-del-dashboard-secciones-clave">🧩 Anatomía del Dashboard: Secciones Clave</h2>
+<p>La interfaz del Dashboard se divide estructuralmente en <strong>tres bloques principales</strong>:</p>
+<h3 id="1-tasks-tareas">1. ⚙️ Tasks (Tareas)</h3>
+<p>Es el motor de ejecución de la herramienta. Aquí se gestionan y supervisan todas las acciones automatizadas que Burp Suite realiza en segundo plano:</p>
+<ul>
+<li><strong>Live Passive Crawl:</strong> <em>(Activo por defecto)</em> Examina de forma silenciosa todo el tráfico HTTP/S que pasa a través del Proxy. Mapea la estructura web y detecta anomalías sin lanzar una sola petición propia.</li>
+<li><strong>Audits (Versión Pro):</strong> Muestra el progreso de los escaneos automatizados de vulnerabilidades, indicando el porcentaje de avance, la velocidad de peticiones por segundo y el contador de fallos.</li>
+</ul>
+<h4 id="creacion-de-una-nueva-tarea-en-vivo-new-live-task">🚀 Creación de una Nueva Tarea en Vivo (New Live Task)</h4>
+<p>Las tareas en vivo permiten automatizar acciones a medida que navegas o interactúas con los diferentes módulos. Se configuran a través de dos menús principales:</p>
+<h5 id="a-scan-details-detalles-de-la-tarea">📋 A. Scan Details (Detalles de la Tarea)</h5>
+<p>Define el comportamiento básico y el alcance de la interceptación:</p>
+<p><img alt="Dashboard Tarea Nueva" src="../Dashboard_New_Live_Task.png" /></p>
+<ul>
+<li><strong>Task Type (Tipo de Tarea):</strong><ul>
+<li><code>Live passive crawl</code>: Analiza de forma pasiva el tráfico para construir el mapa del sitio sin enviar nuevas peticiones.</li>
+<li><code>Live audit</code>: Escaneo activo de vulnerabilidades <em>(opción exclusiva de la versión Pro)</em>.</li>
+</ul>
+</li>
+<li><strong>Tools Scope (Alcance de Herramientas):</strong> Determina qué módulos alimentarán esta tarea con su tráfico. Se puede seleccionar el flujo proveniente del <strong>Proxy</strong>, <strong>Repeater</strong> o <strong>Intruder</strong>.</li>
+<li><strong>URL Scope (Alcance de URL):</strong> Define qué objetivos o direcciones web serán procesados:<ul>
+<li><code>Everything</code>: Procesa absolutamente todo el tráfico recibido por las herramientas seleccionadas.</li>
+<li><code>Suite scope</code>: Se limita estrictamente a los objetivos definidos globalmente en la pestaña <em>Target &gt; Scope</em>.</li>
+<li><code>Custom scope</code>: Permite configurar un filtrado personalizado con reglas específicas para esta tarea.</li>
+</ul>
+</li>
+<li><strong>Deduplication (Deduplicación):</strong> Al activar <code>Ignore duplicate items based on URL and parameter names</code>, Burp Suite evita procesar peticiones idénticas repetidas veces, optimizando el rendimiento de la máquina y manteniendo limpio el <em>Site Map</em>.</li>
+</ul>
+<h5 id="b-scan-configuration-configuracion-del-escaneo">⚙️ B. Scan Configuration (Configuración del Escaneo)</h5>
+<p>Parametriza la lógica interna que utilizará el motor de rastreo pasivo:</p>
+<p><img alt="Dashboard Tarea Nueva Scan Config" src="../Dashboard_New_Live_Task.png" /></p>
+<ul>
+<li><strong>Types of item to add (Elementos a agregar):</strong> Especifica qué tipo de interacciones guardará automáticamente en el mapa del sitio:<ul>
+<li><code>Links</code>: Extrae y mapea todos los hipervínculos encontrados dentro de las respuestas HTTP.</li>
+<li><code>Form submissions</code>: Mapea y registra los formularios de envío de datos detectados.</li>
+</ul>
+</li>
+<li><strong>URLs to add (URLs a incluir):</strong> Filtros avanzados de almacenamiento. Permite elegir si se añade el elemento consultado (<code>The item itself</code>), contenido que pertenezca al mismo dominio (<code>Items on the same domain</code>) o únicamente si la dirección coincide con el Scope establecido (<code>URLs in scope</code>).</li>
+</ul>
+<hr />
+<h3 id="2-issue-activity-actividad-de-problemas-vulnerabilidades">2. 🚨 Issue Activity (Actividad de Problemas / Vulnerabilidades)</h3>
+<blockquote>
+<p>💡 <strong>Nota de entorno:</strong> Esta sección es el centro de control de hallazgos. Aunque muestra todo su potencial en la versión <em>Professional</em> mediante el escáner activo (Audits), la versión <em>Community</em> también registra alertas automáticas basadas en el análisis pasivo del tráfico que cruza el Proxy.</p>
+</blockquote>
+<p>Muestra un feed cronológico y en tiempo real de las vulnerabilidades, fallas de configuración e inconsistencias detectadas en el objetivo. Al seleccionar cualquier elemento, la interfaz despliega una descripción detallada, la ruta del impacto, la reproducción de la petición/respuesta HTTP y recomendaciones de remediación.</p>
+<p>Los hallazgos se clasifican mediante un código de colores estándar basado en su severidad e impacto potencial:</p>
+<ul>
+<li><strong>🔴 High (Alta):</strong> Vulnerabilidades críticas que permiten comprometer el servidor o los datos de forma directa.<ul>
+<li><em>Ejemplos comunes:</em> SQL Injection (SQLi), Cross-Site Scripting (XSS) Almacenado/Reflejado, Remote Code Execution (RCE), Local/Remote File Inclusion (LFI/RFI) e Inyecciones de Comandos.</li>
+</ul>
+</li>
+<li><strong>🟠 Medium (Media):</strong> Fallos que exponen la lógica de la aplicación o permiten vectores de ataque indirectos.<ul>
+<li><em>Ejemplos comunes:</em> CSRF (Cross-Site Request Forgery), vulnerabilidades de control de acceso (IDORs), almacenamiento inseguro de cookies (sin flags <code>HttpOnly</code> o <code>Secure</code>), o configuraciones CORS permisivas (<code>Access-Control-Allow-Origin: *</code>).</li>
+</ul>
+</li>
+<li><strong>🟡 Low (Baja):</strong> Brechas menores o configuraciones débiles que facilitan la fase de reconocimiento a un atacante.<ul>
+<li><em>Ejemplos comunes:</em> Divulgación de versiones de software específicas en cabeceras, listado de directorios habilitado, o uso de algoritmos de cifrado SSL/TLS obsoletos en el servidor.</li>
+</ul>
+</li>
+<li><strong>🔵 Information (Informativa):</strong> Datos puramente descriptivos sobre la infraestructura detectada que no representan un riesgo directo, pero mapean la superficie de ataque.<ul>
+<li><em>Ejemplos comunes:</em> Detección de subida de archivos permitida, descubrimiento de paneles de administración de tecnologías conocidas (como <code>/wp-admin</code>), o métodos HTTP inusuales permitidos (OPTIONS, PUT, DELETE).</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="3-event-log-registro-de-eventos">3. 🪵 Event Log (Registro de Eventos)</h3>
+<p>Es el historial clínico y operativo de la herramienta. No registra vulnerabilidades del objetivo, sino el comportamiento, estado y salud interna del propio Burp Suite durante la sesión de auditoría. Es la primera sección a revisar cuando una herramienta o conexión no responde como debería.</p>
+<p>Registra de forma detallada los siguientes eventos críticos:</p>
+<ul>
+<li><strong>⚙️ Estado de los Servicios Core:</strong> Mensajes sobre el ciclo de vida de los oyentes (<em>listeners</em>) del Proxy (Ej: <code>"Proxy service started on 127.0.0.1:8080"</code> o <code>"Failed to bind to port 8080"</code> si el puerto ya está en uso por otro proceso del sistema).</li>
+<li><strong>🌐 Errores de Red y Handshakes:</strong> Alertas detalladas cuando Burp Suite no logra comunicarse con el servidor web. Registra fallas de negociación TLS/SSL, certificados digitales del objetivo que no son de confianza, caídas de conexión por timeout, o bloqueos por parte de firewalls/WAFs intermedios.</li>
+<li><strong>🔌 Gestión de Extensiones (Burp Extensions / BApp Store):</strong> Logs de carga, ejecución y errores de scripts desarrollados en Java, Python o Ruby. Si una extensión de la BApp Store crashea o genera una excepción de memoria, el fallo se reflejará aquí.</li>
+<li><strong>⚠️ Rendimiento del Sistema (System Health):</strong> Alertas críticas del entorno de ejecución de Java (JVM), tales como advertencias de agotamiento de memoria RAM asignada (<em>Out of Memory</em>) o caídas en la velocidad de procesamiento de hilos al procesar payloads pesados en el Intruder.</li>
+</ul>
+<hr />
+<h2 id="buenas-practicas-del-auditor-en-el-dashboard">🛠️ Buenas Prácticas del Auditor en el Dashboard</h2>
+<ul>
+<li><strong>Monitorear el Event Log ante Errores 404/500:</strong> Si al interceptar tráfico notas que las páginas no cargan o el navegador se queda en blanco, revisa el <em>Event Log</em>. Suele avisar de inmediato si el navegador no confía en el certificado CA de Burp Suite o si hay un fallo en el apretón de manos SSL.</li>
+<li><strong>Pausar Tareas Innecesarias:</strong> Si estás auditando desde una máquina con recursos limitados (poca memoria RAM), puedes pausar las tareas de rastreo (<em>Crawl</em>) desde el panel de <em>Tasks</em> para liberar hilos de procesamiento y priorizar el uso del <em>Intruder</em> o <em>Repeater</em>.
+<img alt="Dashboard Ejemplo" src="../Dashboard2.png" /></li>
+</ul>
+<hr />
+<p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

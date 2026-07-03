@@ -18,7 +18,7 @@ Hoja de ruta con las metas profesionales, exámenes validados y certificaciones 
 Espacio dedicado al desarrollo de herramientas propias, scripts de automatización, laboratorios y aplicación práctica del conocimiento.
 
 <div style="text-align: left; margin-bottom: 20px;">
-    <a href="🛡️ HACKING" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
+    <a href="https://fabcadev.github.io/Apuntes_Hacking/" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
         ⬅️ Volver atras
     </a>
 </div>

@@ -33,8 +33,4 @@ Plan de ruta, seguimiento y control de hitos académicos y certificaciones de ci
 ---
 * ➕ [Espacio reservado para futuras certificaciones (Ej: eJPT, CeH, OSCP, BTL1)]*
 
-<div style="text-align: left; margin-bottom: 20px;">
-    <a href="📈 AVANCES" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver atras
-    </a>
-</div>
+[[📈 AVANCES|⬅️ Volver a 📈 AVANCES]]

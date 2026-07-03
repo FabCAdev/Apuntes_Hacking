@@ -16,34 +16,10 @@ tags:
 
 ## 📚 1. Control del Temario Oficial (Dominios de CompTIA)
 
-```dataviewjs
-const markdown = await dv.io.load(dv.current().file.path);
 
-if (markdown) {
-  const allTasks = markdown.match(/^[ \t]*-[ \t]*\[[ xX]\][ \t]*(.*)$/gm) || [];
-  const completedTasks = markdown.match(/^[ \t]*-[ \t]*\[[xX]\][ \t]*(.*)$/gm) || [];
+<strong>📊 Progreso del Módulo: 0% completado (0/5)</strong>
+<progress value="0" max="100" style="width: 100%; height: 18px; accent-color: #f38ba8; margin-top: 5px; margin-bottom: 20px;"></progress>
 
-  const total = allTasks.length;
-  const completed = completedTasks.length;
-  const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
-
-  // Creamos el texto del porcentaje de forma nativa
-  dv.el("div", `${percent}% completado (${completed}/${total})`, {
-    attr: { style: "font-weight: bold; margin-bottom: 5px;" }
-  });
-
-  // Creamos la barra de progreso de forma nativa para que Obsidian la dibuje sí o sí
-  dv.el("progress", "", {
-    attr: { 
-      value: percent, 
-      max: "100", 
-      style: "width: 100%; height: 18px; accent-color: #f38ba8;" 
-    }
-  });
-} else {
-  dv.el("div", "No se pudo leer el archivo.");
-}
-```
 
 - [ ] **Dominio 1.0: Conceptos de Seguridad (12%)**
 	- *Temas:* Confidencialidad, Integridad y Disponibilidad (CIA Triad), Tipos de Controles de Seguridad.
@@ -73,8 +49,4 @@ if (markdown) {
 * **Centro de Evaluación:** Pearson VUE (Presencial u Online)
 * **Código del Váucher:** `[Ingresar código una vez comprado]`
 
-<div style="text-align: left; margin-bottom: 20px;">
-    <a href="🏅 CERTIFICACIONES" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver atras
-    </a>
-</div>
+[[🏅 CERTIFICACIONES|⬅️ Volver a 🏅 CERTIFICACIONES]]

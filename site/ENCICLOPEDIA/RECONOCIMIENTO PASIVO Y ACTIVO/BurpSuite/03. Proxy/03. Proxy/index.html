@@ -1,0 +1,1285 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/ENCICLOPEDIA/RECONOCIMIENTO%20PASIVO%20Y%20ACTIVO/BurpSuite/03.%20Proxy/03.%20Proxy/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>03. Proxy - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proposito-operativo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              03. Proxy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-operativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Propósito Operativo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analisis-exhaustivo-de-las-pestanas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Análisis Exhaustivo de las Pestañas Principales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Análisis Exhaustivo de las Pestañas Principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-intercept-interceptacion-en-tiempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 🛑 Intercept (Interceptación en Tiempo Real)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 🛑 Intercept (Interceptación en Tiempo Real)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#panel-de-control-superior-control-de-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕹️ Panel de Control Superior (Control de Flujo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fila-de-metadatos-de-la-peticion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Fila de Metadatos de la Petición
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizador-del-cuerpo-del-mensaje-panel-inferior-izquierdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Visualizador del Cuerpo del Mensaje (Panel Inferior Izquierdo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-lateral-izquierdo-inspector-analisis-estructurado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Panel Lateral Izquierdo: Inspector (Análisis Estructurado)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-http-history-historial-de-navegacion-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 🪵 HTTP History (Historial de Navegación HTTP/S)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 🪵 HTTP History (Historial de Navegación HTTP/S)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#barra-de-filtros-superior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Barra de Filtros Superior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#columnas-analiticas-de-la-tabla-de-historial" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Columnas Analíticas de la Tabla de Historial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interfaz-tripartita-de-inspeccion-panel-inferior" class="md-nav__link">
+    <span class="md-ellipsis">
+      📐 Interfaz Tripartita de Inspección (Panel Inferior)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 Interfaz Tripartita de Inspección (Panel Inferior)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-panel-de-peticion-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      📥 A. Panel de Petición (Request)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-panel-de-respuesta-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      📤 B. Panel de Respuesta (Response)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-panel-lateral-derecho-inspector-sincronizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 C. Panel Lateral Derecho: Inspector Sincronizado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-websocket-history-trafico-bidireccional-asincrono" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 🔌 WebSocket History (Tráfico Bidireccional Asíncrono)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 🔌 WebSocket History (Tráfico Bidireccional Asíncrono)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#barra-de-filtros-e-historial-superior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Barra de Filtros e Historial Superior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#columnas-tecnicas-del-historial-de-sockets" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Columnas Técnicas del Historial de Sockets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizador-de-cargas-utiles-panel-de-mensaje-inferior" class="md-nav__link">
+    <span class="md-ellipsis">
+      📐 Visualizador de Cargas Útiles (Panel de Mensaje Inferior)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-match-and-replace-reglas-de-reemplazo-automatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 🔀 Match and Replace (Reglas de Reemplazo Automático)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 🔀 Match and Replace (Reglas de Reemplazo Automático)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controles-de-gestion-de-reglas-panel-izquierdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Controles de Gestión de Reglas (Panel Izquierdo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-match-and-replace-rules-bloque-superior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 HTTP Match and Replace Rules (Bloque Superior)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 HTTP Match and Replace Rules (Bloque Superior)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reglas-por-defecto-incluidas-casos-de-uso-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Reglas por Defecto Incluidas (Casos de Uso del Sistema):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-match-and-replace-rules-bloque-inferior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 WebSocket Match and Replace Rules (Bloque Inferior)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectores-tacticos-y-casos-de-uso-comunes-en-red-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Vectores Tácticos y Casos de Uso Comunes en Red Team:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-proxy-settings-configuracion-del-entorno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. ⚙️ Proxy Settings (Configuración del Entorno de Red)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. ⚙️ Proxy Settings (Configuración del Entorno de Red)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gestion-de-interfaces-y-trafico-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 1. Gestión de Interfaces y Tráfico Inicial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 1. Gestión de Interfaces y Tráfico Inicial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-proxy-listeners-oyentes-del-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Proxy listeners (Oyentes del Proxy)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-request-interception-rules-reglas-de-interceptacion-de-peticiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Request interception rules (Reglas de Interceptación de Peticiones)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-response-interception-rules-reglas-de-interceptacion-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Response interception rules (Reglas de Interceptación de Respuestas)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-automatizacion-del-cliente-y-reglas-de-coincidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎛️ 2. Automatización del Cliente y Reglas de Coincidencia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎛️ 2. Automatización del Cliente y Reglas de Coincidencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-websocket-interception-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. WebSocket interception rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-response-modification-rules-reglas-de-modificacion-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Response modification rules (Reglas de Modificación de Respuestas)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-http-websocket-match-and-replace-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. HTTP / WebSocket match and replace rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tuneles-y-modos-de-visualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 3. Túneles y Modos de Visualización
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔒 3. Túneles y Modos de Visualización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-tls-pass-through-pasar-a-traves-de-tls" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. TLS pass through (Pasar a través de TLS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-default-proxy-history-message-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Default Proxy history message display
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-comportamiento-del-sistema-y-miscelanea" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪵 4. Comportamiento del Sistema y Miscelánea
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪵 4. Comportamiento del Sistema y Miscelánea">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-proxy-history-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Proxy history logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-default-proxy-interception-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Default Proxy interception state
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-miscellaneous-miscelanea-y-ajustes-del-protocolo" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Miscellaneous (Miscelánea y Ajustes del Protocolo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-del-auditor-en-el-modulo-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Buenas Prácticas del Auditor en el módulo Proxy
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>03. Proxy</h1>
+
+<h3 id="proposito-operativo">📌 Propósito Operativo</h3>
+<p>El <strong>Proxy</strong> es la herramienta central e icónica de Burp Suite. Actúa como un intermediario (<em>Man-in-the-Middle</em>) situado estratégicamente entre nuestro navegador web (o cliente) y el servidor objetivo. Su función crítica en una auditoría es capturar, inspeccionar y permitir la modificación en tiempo real de todo el tráfico de la capa de aplicación, tanto las peticiones salientes (Requests) como las respuestas entrantes (Responses).</p>
+<p><img alt="Proxy" src="../Proxy.png" /></p>
+<hr />
+<h2 id="analisis-exhaustivo-de-las-pestanas-principales">🧩 Análisis Exhaustivo de las Pestañas Principales</h2>
+<p>La sección de Proxy se segmenta operativamente en cinco sub-pestañas indispensables:</p>
+<h3 id="1-intercept-interceptacion-en-tiempo-real">1. 🛑 Intercept (Interceptación en Tiempo Real)</h3>
+<p><img alt="Proxy_Intercept" src="../Proxy_Intercept.png" /></p>
+<h4 id="panel-de-control-superior-control-de-flujo">🕹️ Panel de Control Superior (Control de Flujo)</h4>
+<ul>
+<li><strong>Botón Intercept (On / Off):</strong> Alterna el estado del proxy. Cuando se encuentra en <code>Intercept on</code>, Burp captura las peticiones y las retiene indefinidamente. Si se desactiva (<code>Intercept off</code>), el tráfico fluye libremente pero se sigue indexando pasivamente en el <em>HTTP History</em>.</li>
+<li><strong>Forward:</strong> Libera la petición que se muestra actualmente en pantalla (incluyendo cualquier modificación manual realizada en sus cabeceras o cuerpo) permitiéndole continuar su camino hacia el backend del servidor.</li>
+<li><strong>Drop:</strong> Destruye el paquete de forma fulminante. El servidor nunca se entera de la existencia de esa petición y el navegador cliente rompe la carga mostrando un error de conexión vacía o cancelada.</li>
+<li><strong>Menú Desplegable Action:</strong> Proporciona un menú contextual de escalado operativo rápido. Permite enviar el flujo de datos exacto a otros módulos (<code>Send to Repeater</code> con <code>Ctrl+R</code>, <code>Send to Intruder</code> con <code>Ctrl+I</code>), cambiar el método HTTP (convertir un <code>GET</code> a <code>POST</code> automáticamente) o forzar la interceptación de la respuesta HTTP asociada a esta petición específica mediante <code>Intercept response to this request</code>.</li>
+<li><strong>Open Browser:</strong> Lanza una instancia integrada de Chromium preconfigurada de forma nativa para enrutar todo su tráfico a través de la interfaz del proxy de Burp, eliminando la necesidad de instalar extensiones de terceros (como FoxyProxy) o alterar los almacenes de certificados del sistema operativo anfitrión.</li>
+</ul>
+<h4 id="fila-de-metadatos-de-la-peticion">📊 Fila de Metadatos de la Petición</h4>
+<p>Situada justo encima del visualizador, muestra la URL base completa del objetivo junto con su dirección IP de resolución y el puerto destino (Ej: <code>Request to https://www.google.com:443 [142.251.155.119]</code>). A su derecha, el icono del lápiz (<code>✏️</code>) permite reescribir manualmente el host de destino sobre la marcha.</p>
+<h4 id="visualizador-del-cuerpo-del-mensaje-panel-inferior-izquierdo">📝 Visualizador del Cuerpo del Mensaje (Panel Inferior Izquierdo)</h4>
+<p>Este subpanel presenta de manera estructurada el contenido en crudo de la petición HTTP interceptada:
+* <strong>Pestaña Pretty:</strong> Aplica un formateo estético automático al código estructurado (JSON, XML, HTML) o payloads kilométricos de parámetros para que la lectura del auditor sea cómoda y rápida.
+* <strong>Pestaña Raw:</strong> Muestra la petición HTTP en su estado más puro y nativo, exponiendo saltos de línea (<code>\r\n</code>), la estructura exacta de la cabecera <code>Host</code>, las directivas de seguridad como <code>Sec-Ch-Ua</code>, los valores de las <code>Cookies</code> de sesión y los tokens de autenticación en texto plano.
+* <strong>Pestaña Hex:</strong> Expone los datos en formato hexadecimal. Es indispensable cuando se auditan subidas de archivos binarios, manipulación de caracteres nulos (<code>%00</code>) o payloads de evasión que requieren la inyección de bytes específicos no imprimibles.</p>
+<h4 id="panel-lateral-izquierdo-inspector-analisis-estructurado">🔍 Panel Lateral Izquierdo: Inspector (Análisis Estructurado)</h4>
+<p>El <strong>Inspector</strong> segmenta matemáticamente los componentes de la petición para realizar análisis analíticos rápidos sin necesidad de buscar entre las líneas del código en crudo:
+* <strong>Request attributes:</strong> Muestra información general del protocolo, como el método empleado (<code>GET</code>), la ruta HTTP solicitada (<code>/async/hpba...</code>) y la versión de HTTP (<code>HTTP/1.1</code>).
+* <strong>Request query parameters:</strong> Desglosa de forma automática todos los parámetros adjuntos en la URL (los valores que siguen al símbolo <code>?</code> separados por <code>&amp;</code>). Permite editar, añadir o borrar variables de forma aislada para buscar inyecciones como SQLi o fallos lógicos.
+* <strong>Request body parameters:</strong> Extrae y lista los parámetros enviados dentro del cuerpo de la petición (típicos en métodos <code>POST</code> con formatos <code>application/x-www-form-urlencoded</code>).
+* <strong>Request cookies:</strong> Mapea de forma individualizada cada una de las cookies enviadas por el navegador (como tokens <code>JWT</code>, variables <code>PHPSESSID</code> o identificadores analíticos), permitiendo alterar valores clave (como cambiar un parámetro de rol de <code>user</code> a <code>admin</code>) sin romper la estructura de la cabecera original.
+* <strong>Request headers:</strong> Almacena de forma ordenada la totalidad de las cabeceras HTTP de la petición (<code>User-Agent</code>, <code>Accept-Language</code>, <code>Authorization</code>, etc.), facilitando la inyección automatizada de cabeceras de suplantación de IP (como <code>X-Forwarded-For</code>).</p>
+<hr />
+<h3 id="2-http-history-historial-de-navegacion-https">2. 🪵 HTTP History (Historial de Navegación HTTP/S)</h3>
+<p>Representa la base de datos cronológica de todo el tráfico que ha cruzado el proxy desde el inicio de la sesión.</p>
+<p><img alt="Proxy_HTTP_History" src="../Proxy_HTTP_History.png" /></p>
+<h4 id="barra-de-filtros-superior">🔍 Barra de Filtros Superior</h4>
+<ul>
+<li><strong>Filter settings:</strong> Situada en la parte alta de la tabla, actúa como el primer escudo contra el ruido visual (Ej: <code>Filter settings: Hiding CSS and image content; hiding specific extensions</code>). Al hacer clic sobre ella, se despliega el menú de configuración que permite aislar objetivos del <em>Scope</em>, ocultar archivos estáticos redundantes o filtrar por códigos de estado específicos.</li>
+<li><strong>Filter on:</strong> Un interruptor rápido deslizable (<code>on/off</code>) situado a la derecha que permite activar o desactivar instantáneamente las reglas de filtrado guardadas sin perder su configuración interna.</li>
+</ul>
+<h4 id="columnas-analiticas-de-la-tabla-de-historial">📊 Columnas Analíticas de la Tabla de Historial</h4>
+<p>Cada fila representa una interacción de red indexada de forma consecutiva con las siguientes columnas de metadatos:
+* <strong><code>#</code> (ID):</strong> El número de índice secuencial e incremental que Burp asigna a cada petición capturada.
+* <strong>Host:</strong> El dominio o dirección IP del servidor destino (Ej: <code>https://www.google.com</code>).
+* <strong>Method:</strong> El verbo o método HTTP empleado en la acción (<code>GET</code>, <code>POST</code>, etc.).
+* <strong>URL:</strong> La ruta o endpoint específico consultado dentro del servidor (Ej: <code>/warmup.html</code>).
+* <strong>Params:</strong> Indica con una marca de verificación (<code>✓</code>) si la petición transporta parámetros en la URL (Query), en el cuerpo (Body) o en formularios multipartes, facilitando la detección rápida de puntos de inyección potenciales.
+* <strong>Edited:</strong> Muestra si el paquete fue alterado manualmente en la pestaña <em>Intercept</em> antes de ser enviado al servidor.
+* <strong>Status code:</strong> El código de respuesta HTTP devuelto por el backend. Es crucial para el mapeo rápido (Ej: <code>200 OK</code> para éxito, <code>301/302</code> para redirecciones, <code>404 Not Found</code> para recursos inexistentes).
+* <strong>Length:</strong> El tamaño en bytes del cuerpo del mensaje de respuesta.
+* <strong>MIME type / Extension:</strong> Identifica el tipo de contenido del recurso (<code>HTML</code>, <code>script</code>, <code>text</code>) junto con su extensión (<code>html</code>, <code>js</code>), ayudando a filtrar rápidamente scripts vulnerables o subidas de archivos.
+* <strong>Title:</strong> Extrae automáticamente la etiqueta HTML <code>&lt;title&gt;</code> de la respuesta, permitiendo al auditor deducir el propósito de la página sin abrirla (Ej: <code>Error 404 (Not Found)!!!</code>).
+* <strong>TLS:</strong> Una marca de verificación (<code>✓</code>) que certifica si la sesión de red viaja cifrada mediante TLS/SSL.
+* <strong>IP:</strong> La dirección IP pública o interna del servidor remoto con el que se estableció la comunicación.
+* <strong>Cookies:</strong> Muestra fragmentos de las cookies enviadas (Ej: <code>__Secure-STRIP=...</code>), útiles para identificar la persistencia de sesiones de usuario.
+* <strong>Time:</strong> La marca de tiempo exacta de la ejecución de la petición.
+* <strong>Listener port:</strong> El puerto local de Burp Suite por donde entró el tráfico (habitualmente <code>8080</code>).</p>
+<hr />
+<h4 id="interfaz-tripartita-de-inspeccion-panel-inferior">📐 Interfaz Tripartita de Inspección (Panel Inferior)</h4>
+<p>Al seleccionar cualquier petición del historial, la interfaz de Burp se divide en tres potentes paneles paralelos para una auditoría exhaustiva en pantalla dividida:</p>
+<h5 id="a-panel-de-peticion-request">📥 A. Panel de Petición (Request)</h5>
+<p>Situado abajo a la izquierda, despliega lo que el cliente envió al servidor. 
+* Cuenta con las sub-pestañas <strong>Pretty</strong>, <strong>Raw</strong> y <strong>Hex</strong> para desglosar de forma integral el método, el host, las cookies de sesión (como <code>__Secure-BUCKET</code>, <code>AEC</code>, <code>NID</code>) y la cadena del <code>User-Agent</code> empleada por el navegador web.</p>
+<h5 id="b-panel-de-respuesta-response">📤 B. Panel de Respuesta (Response)</h5>
+<p>Situado en el centro inferior, muestra de manera sincronizada la contestación exacta entregada por el servidor.
+* Incluye una sub-pestaña adicional llamada <strong>Render</strong>, que emula de forma estática la visualización visual que vería el usuario final en su navegador (muy útil para confirmar de un vistazo páginas de error 404 o paneles administrativos bloqueados). 
+* Permite auditar en crudo las cabeceras de seguridad que envía el backend (<code>Content-Type</code>, <code>Referrer-Policy</code>, <code>Content-Length</code>) y el código fuente estructurado que retorna.</p>
+<h5 id="c-panel-lateral-derecho-inspector-sincronizado">🔍 C. Panel Lateral Derecho: Inspector Sincronizado</h5>
+<p>El <strong>Inspector</strong> actúa aquí como un desglosador analítico automatizado que extrae los datos de la fila seleccionada y los organiza en menús desplegables inteligentes:
+* <strong>Request attributes:</strong> Muestra de forma aislada el protocolo utilizado (<code>HTTP/1</code> o <code>HTTP/2</code>), el método (<code>GET</code>) y la ruta limpia analizada (<code>/warmup.html</code>).
+* <strong>Request cookies:</strong> Extrae de manera individualizada el nombre y valor de cada cookie presente en la petición (<code>__Secure-BUCKET</code>, <code>AEC</code>, <code>NID</code>) para su estudio criptográfico o de sesión.
+* <strong>Request headers:</strong> Agrupa numéricamente el total de cabeceras de la petición cliente (Ej: 30 cabeceras detectadas).
+* <strong>Response headers:</strong> Desglosa de forma quirúrgica las cabeceras emitidas por el servidor web, facilitando la revisión rápida del tamaño exacto del cuerpo (<code>Content-Length: 1572</code>) y la fecha/hora exacta del backend.</p>
+<hr />
+<h3 id="3-websocket-history-trafico-bidireccional-asincrono">3. 🔌 WebSocket History (Tráfico Bidireccional Asíncrono)</h3>
+<p>Sección especializada para el análisis de comunicaciones basadas en el protocolo WebSocket (<code>ws://</code> o <code>wss://</code>).</p>
+<p><img alt="Proxy_WebSocket" src="../Proxy_WebSocket.png" /></p>
+<h4 id="barra-de-filtros-e-historial-superior">🔍 Barra de Filtros e Historial Superior</h4>
+<ul>
+<li><strong>Filter settings (Barra superior):</strong> Permite aislar los canales de sockets por palabras clave o limitar la vista exclusivamente a hosts dentro del <em>Scope</em> global (Ej: <code>Filter settings: Showing all items</code>).</li>
+<li><strong>Filter on:</strong> Interruptor deslizable para activar o mitigar los filtros de visualización sin alterar los parámetros de búsqueda interna de la sesión.</li>
+</ul>
+<h4 id="columnas-tecnicas-del-historial-de-sockets">📊 Columnas Técnicas del Historial de Sockets</h4>
+<p>A diferencia de la tabla HTTP convencional, las interacciones asíncronas se indexan mediante metadatos específicos del flujo continuo:
+* <strong><code>#</code> (ID secuencial):</strong> Identificador numérico e incremental de cada mensaje individual transmitido por el túnel.
+* <strong>URL:</strong> La dirección del endpoint o pasarela de sockets encargada de la persistencia de datos (Ej: <code>https://echo.websocket.org/.ws</code>).
+* <strong>Direction (Dirección del Tráfico):</strong> Campo crítico que clasifica el origen y destino del paquete:
+    * <code>⬅️ To client</code>: Mensaje asíncrono empujado por el backend del servidor hacia el frontend del navegador.
+    * <code>➡️ To server</code>: Payload o parámetro inyectado desde el cliente web hacia los procesos internos del servidor.
+* <strong>Edited:</strong> Muestra si el mensaje sufrió alguna modificación manual previa.
+* <strong>Length:</strong> El tamaño en bytes del payload o mensaje transmitido (Ej: mensajes de 32 y 52 bytes respectivamente en la captura).
+* <strong>Notes:</strong> Comentarios u observaciones automáticas del sistema o de extensiones.
+* <strong>TLS:</strong> Una marca de verificación (<code>✓</code>) que valida si el túnel del socket está operando bajo cifrado TLS de capa de transporte seguro (<code>wss</code>).
+* <strong>Time:</strong> Registro cronológico de milisegundos indicando el instante preciso del envío o la recepción.
+* <strong>Listener port:</strong> El puerto local por el que Burp intercepta y canaliza la sesión de red (comúnmente <code>8080</code>).
+* <strong>WebSocket ID:</strong> El identificador único asignado al canal o túnel persistente. Si abres varias pestañas de chat o conexiones independientes, esta columna te ayuda a distinguir qué mensaje pertenece a qué sesión activa (Ej: ambos pertenecen a la sesión <code>1</code>).</p>
+<hr />
+<h4 id="visualizador-de-cargas-utiles-panel-de-mensaje-inferior">📐 Visualizador de Cargas Útiles (Panel de Mensaje Inferior)</h4>
+<p>Al seleccionar cualquiera de los ítems de la tabla superior, se expone el cuerpo neto del mensaje en el bloque inferior:
+* <strong>Pestaña Message:</strong> Muestra de manera aislada el contenido limpio del paquete. Cuenta con sub-vistas tradicionales (<strong>Pretty</strong>, <strong>Raw</strong>, <strong>Hex</strong>) para analizar cadenas de caracteres inyectadas (como el texto plano en crudo retornando un identificador de servidor: <code>Request served by 4d896d95b55478</code>).
+* <strong>Inspector Lateral Derecho:</strong> Al igual que en el tráfico tradicional, desglosa propiedades atómicas de la comunicación para optimizar los procesos de recolección de información.</p>
+<hr />
+<h3 id="4-match-and-replace-reglas-de-reemplazo-automatico">4. 🔀 Match and Replace (Reglas de Reemplazo Automático)</h3>
+<p>Herramienta de automatización y manipulación de cadenas de texto basada en expresiones regulares (<code>Regex</code>).</p>
+<p><img alt="Proxy_Match_and_Replace" src="../Proxy_Match_and_Replace.png" /></p>
+<h4 id="controles-de-gestion-de-reglas-panel-izquierdo">⚙️ Controles de Gestión de Reglas (Panel Izquierdo)</h4>
+<p>A la izquierda de cada bloque de reglas se sitúa una botonera vertical que gobierna el comportamiento de la base de datos de modificaciones:
+* <strong>Add:</strong> Despliega una ventana emergente para parametrizar una nueva regla personalizada (tipo de datos, string de coincidencia, reemplazo y comentarios).
+* <strong>Edit:</strong> Abre el constructor de la regla seleccionada para alterar sus expresiones regulares o cadenas de texto.
+* <strong>Remove:</strong> Elimina de forma permanente la regla del listado.
+* <strong>Up / Down:</strong> Modifica la jerarquía y el orden de ejecución de las reglas. Burp procesa la lista de arriba hacia abajo; la prioridad es vital cuando una regla depende de la modificación previa de otra cabecera.</p>
+<hr />
+<h4 id="http-match-and-replace-rules-bloque-superior">🌐 HTTP Match and Replace Rules (Bloque Superior)</h4>
+<p>Aplica modificaciones automatizadas sobre paquetes que transitan mediante HTTP o HTTPS tradicionales.
+* <strong>Casilla <code>Only apply to in-scope items</code>:</strong> Filtro crítico. Al marcarse, restringe las sustituciones automáticas únicamente a los dominios declarados en el <em>Scope</em> global, evitando modificar accidentalmente peticiones de fondo del sistema operativo o de webs ajenas al objetivo.
+* <strong>Estructura de la Tabla de Reglas:</strong>
+    * <strong>Enabled:</strong> Casilla de verificación rápida para activar o pausar la regla individual sin necesidad de borrarla.
+    * <strong>Item:</strong> Define la sección exacta del paquete donde buscar (Ej: <code>Request header</code> para cabeceras de petición, <code>Response body</code> para el cuerpo que viene del servidor, etc.).
+    * <strong>Match:</strong> La expresión regular o literal buscada (Ej: <code>^User-Agent.*$</code> o <code>^Referer.*$</code>).
+    * <strong>Replace:</strong> El valor arbitrario o modificado que suplantará a la cadena original (Ej: payloads para emular navegadores móviles o IE).
+    * <strong>Type:</strong> El motor de procesamiento usado (típicamente <code>Regex</code>).
+    * <strong>Comment:</strong> Nota descriptiva de su propósito operativo.</p>
+<h5 id="reglas-por-defecto-incluidas-casos-de-uso-del-sistema">📋 Reglas por Defecto Incluidas (Casos de Uso del Sistema):</h5>
+<ul>
+<li><strong>Emulación de Dispositivos / User-Agent Bypass:</strong> Incluye reglas (desactivadas por defecto) para suplantar la identidad del navegador simulando entornos como <em>Internet Explorer (IE)</em>, <em>iOS (iPhone)</em> o <em>Android</em>. Útil para forzar al servidor a entregar layouts móviles o lógicas simplificadas propensas a fallos.</li>
+<li><strong>Forzar Carga Limpia (<code>Require non-cached response</code>):</strong> Reglas dirigidas a buscar las cabeceras <code>If-Modified-Since</code> e <code>If-None-Match</code> para eliminarlas de la petición saliente (<code>Replace</code> en blanco). Esto obliga al servidor web a responder siempre con el recurso completo actualizado (<code>200 OK</code>) en lugar de una respuesta de caché (<code>304 Not Modified</code>), garantizando que Burp analice código fresco.</li>
+<li><strong>Privacidad y Evasión (<code>Hide Referer header</code>):</strong> Busca la cabecera <code>^Referer.*$</code> y la remueve para evitar que el servidor destino rastree el origen de la navegación del auditor.</li>
+</ul>
+<hr />
+<h4 id="websocket-match-and-replace-rules-bloque-inferior">🔌 WebSocket Match and Replace Rules (Bloque Inferior)</h4>
+<p>Sección homóloga diseñada específicamente para interceptar y alterar los mensajes que viajan a través de canales de comunicación persistentes y bidireccionales (<code>ws://</code> y <code>wss://</code>).
+* Cuenta con su propio control de exclusión para aplicar sustituciones únicamente a elementos en <em>Scope</em> (<code>Only apply to in-scope items</code>).
+* <strong>Columna <code>Direction</code>:</strong> Campo exclusivo en esta tabla que condiciona la regla según la dirección del flujo del socket, permitiendo aplicar el reemplazo automatizado únicamente cuando el mensaje va hacia el servidor (<code>To server</code>) o cuando viaja hacia el navegador del cliente (<code>To client</code>).</p>
+<hr />
+<h4 id="vectores-tacticos-y-casos-de-uso-comunes-en-red-team">🚀 Vectores Tácticos y Casos de Uso Comunes en Red Team:</h4>
+<ul>
+<li><strong>Suplantación de Roles / Escalada de Privilegios:</strong> Crear una regla que busque de forma masiva en las cabeceras de petición (<code>Request header</code>) la cadena <code>Cookie: role=user</code> y la sustituya automáticamente por <code>Cookie: role=admin</code>, forzando accesos sin necesidad de modificar cada paquete en el <em>Intercept</em>.</li>
+<li><strong>Bypass de Validaciones en el Cliente (Client-Side Validation Bypass):</strong> Configurar una regla orientada al cuerpo de la respuesta (<code>Response body</code>) que lofalice funciones restrictivas de JavaScript (Ej: cambiar <code>validateInput(){return true}</code> en lugar de la lógica compleja) eliminando trabas de formularios antes de que impacten en el navegador.</li>
+<li><strong>Inyección de Cabeceras de Suplantación de IP (WAF / Network Bypass):</strong> Añadir una regla que inyecte de manera sistemática en cada petición saliente cabeceras críticas como <code>X-Forwarded-For: 127.0.0.1</code> o <code>X-Client-IP: 127.0.0.1</code> para confundir proxies inversos, evadir geobloqueos o simular que las peticiones se originan desde la red interna del propio servidor.</li>
+</ul>
+<hr />
+<h3 id="5-proxy-settings-configuracion-del-entorno-de-red">5. ⚙️ Proxy Settings (Configuración del Entorno de Red)</h3>
+<p>Permite definir la escucha de interfaces, automatizar la alteración de flujos criptográficos TLS y parametrizar las reglas lógicas que deciden qué paquetes congelar.</p>
+<p><img alt="Proxy_Setting1" src="../Proxy_Setting1.png" /></p>
+<p><img alt="Proxy_Setting2" src="../Proxy_Setting2.png" /></p>
+<p><img alt="Proxy_Setting3" src="../Proxy_Setting3.png" /></p>
+<p><img alt="Proxy_Setting4" src="../Proxy_Setting4.png" /></p>
+<h4 id="1-gestion-de-interfaces-y-trafico-inicial">🌐 1. Gestión de Interfaces y Tráfico Inicial</h4>
+<h5 id="a-proxy-listeners-oyentes-del-proxy">A. Proxy listeners (Oyentes del Proxy)</h5>
+<ul>
+<li><strong>Tabla de Interfaces:</strong> Muestra los sockets activos donde Burp Suite escucha el tráfico. Por defecto se establece en <code>127.0.0.1:8080</code> (bucle de retorno local).<ul>
+<li><code>Running</code>: Casilla de verificación que indica si el puerto está abierto con éxito. Si otra aplicación del sistema ya usa el puerto 8080, se desmarcará automáticamente.</li>
+<li><code>Invisible</code>: Modo especial para interceptar aplicaciones cliente que no admiten proxies de manera nativa (fuerza la redirección a nivel de red).</li>
+<li><code>Certificate</code>: Define la política de generación de certificados TLS (por defecto <code>Per-host</code>).</li>
+<li><code>Support HTTP/2</code>: Habilita la negociación y soporte para peticiones bajo la infraestructura del protocolo HTTP/2.</li>
+</ul>
+</li>
+<li><strong>Import / export CA certificate:</strong> Botón crucial para extraer la llave pública del certificado raíz <code>PortSwigger CA</code>. Al instalarlo en el almacén del sistema o del navegador, se rompe el cifrado HTTPS de forma controlada sin alertas de seguridad.</li>
+<li><strong>Regenerate CA certificate:</strong> Genera un certificado raíz completamente nuevo. Es la solución recomendada cuando el certificado previo expira o genera conflictos de confianza.</li>
+</ul>
+<h5 id="b-request-interception-rules-reglas-de-interceptacion-de-peticiones">B. Request interception rules (Reglas de Interceptación de Peticiones)</h5>
+<p>Gobierna qué peticiones se detendrán en la pestaña <em>Intercept</em>.
+* <strong>Regla por defecto (File extension):</strong> Viene activa una regla tipo <em>Regex</em> que descarta (<code>Does not match</code>) extensiones comunes de archivos estáticos: <code>(^gif$|^jpg$|^png$|^css$|^js$|...)</code>. Esto evita que la interfaz se congele de forma molesta con imágenes u hojas de estilo.
+* <strong>Casillas de control inferiores:</strong>
+    * <code>Automatically fix missing or superfluous new lines at end of request</code>: Corrige automáticamente la sintaxis HTTP al final de los paquetes agregando los saltos de línea reglamentarios (<code>\r\n</code>).
+    * <code>Automatically update Content-Length header when the request is edited</code>: <em>(Activa por defecto)</em> Si modificas manualmente el tamaño de un payload dentro de <em>Intercept</em>, Burp recalcula y actualiza la cabecera <code>Content-Length</code> para que el servidor no descarte la petición por corrupción de tamaño.</p>
+<h5 id="c-response-interception-rules-reglas-de-interceptacion-de-respuestas">C. Response interception rules (Reglas de Interceptación de Respuestas)</h5>
+<ul>
+<li>Condiciona la detención de paquetes que viajan de regreso desde el servidor hacia el cliente. Por defecto, incluye reglas lógicas para interceptar únicamente respuestas cuyo tipo de contenido (<code>Content type header</code>) coincida con el formato <code>text</code> (HTML, scripts, etc.), ignorando binarios o descargas pesadas.</li>
+</ul>
+<hr />
+<h4 id="2-automatizacion-del-cliente-y-reglas-de-coincidencia">🎛️ 2. Automatización del Cliente y Reglas de Coincidencia</h4>
+<h5 id="a-websocket-interception-rules">A. WebSocket interception rules</h5>
+<ul>
+<li>Controla el comportamiento de congelación en canales de comunicación persistentes. Cuenta con dos casillas independientes para interceptar de forma aislada los mensajes del cliente al servidor (<code>Intercept client-to-server messages</code>) o del servidor al cliente (<code>Intercept server-to-client messages</code>).</li>
+</ul>
+<h5 id="b-response-modification-rules-reglas-de-modificacion-de-respuestas">B. Response modification rules (Reglas de Modificación de Respuestas)</h5>
+<p>Automatizaciones brutas de seguridad defensiva aplicadas sobre las respuestas del servidor antes de que impacten al navegador:
+* <code>Unhide hidden form fields</code>: Fuerza a que todos los campos ocultos de los formularios (<code>type="hidden"</code>) se rendericen visibles. Excelente vector para identificar parámetros de control de precios o roles que los desarrolladores ocultan al usuario común.
+* <code>Enable disabled form fields</code>: Elimina el atributo <code>disabled</code> de los elementos de formularios, permitiendo interactuar con botones o campos restringidos desde la interfaz visual.
+* <code>Remove input field length limits</code>: Borra las restricciones de longitud máxima (<code>maxlength</code>) en los campos de entrada de texto, facilitando la inserción de payloads kilométricos de <em>XSS</em> o <em>SQLi</em> directamente desde la web.
+* <code>Remove JavaScript form validation</code>: Deshabilita los scripts de validación del lado del cliente.
+* <code>Remove all JavaScript</code>: Remueve por completo las etiquetas <code>&lt;script&gt;</code> de los sitios web consultados.
+* <code>Remove &lt;object&gt; tags</code> / <code>Convert HTTPS links to HTTP</code>: Opciones heredadas para auditorías de compatibilidad y rebaja de cifrado (SSL Striping).
+* <code>Remove secure flag from cookies</code>: Remueve la bandera <code>Secure</code> de las cookies transmitidas, lo que permite su viaje a través de canales HTTP no cifrados para vectorizar secuestros de sesión.</p>
+<h5 id="c-http-websocket-match-and-replace-rules">C. HTTP / WebSocket match and replace rules</h5>
+<ul>
+<li>Espejo de configuración global para añadir o editar las reglas de expresiones regulares (<code>Regex</code>) automatizadas descritas en el bloque principal del módulo.</li>
+</ul>
+<hr />
+<h4 id="3-tuneles-y-modos-de-visualizacion">🔒 3. Túneles y Modos de Visualización</h4>
+<h5 id="a-tls-pass-through-pasar-a-traves-de-tls">A. TLS pass through (Pasar a través de TLS)</h5>
+<ul>
+<li>Permite definir una lista de dominios o rangos IP específicos hacia los cuales Burp Suite transmitirá las conexiones TLS/SSL de forma directa, <strong>sin descifrar el tráfico</strong>.</li>
+<li><strong>Propósito táctico:</strong> Si una aplicación implementa esquemas estrictos de <em>SSL Pinning</em> que bloquean el funcionamiento del proxy, o si deseas omitir el tráfico masivo hacia plataformas de actualización del sistema operativo (como servidores de Windows Update), añades el host a esta tabla para aliviar el procesamiento de la CPU.</li>
+</ul>
+<h5 id="b-default-proxy-history-message-display">B. Default Proxy history message display</h5>
+<p>Establece qué versión del paquete se renderizará de forma predeterminada al consultar el <em>HTTP History</em> o el <em>WebSocket History</em>:
+* <code>Original</code>: Muestra el paquete tal y como fue concebido en primera instancia.
+* <code>Edited</code>: Muestra las modificaciones manuales inyectadas durante la interceptación.
+* <code>Auto-modified</code>: Muestra el estado final del paquete tras haber sido procesado por las reglas automáticas de <em>Match and Replace</em>.</p>
+<hr />
+<h4 id="4-comportamiento-del-sistema-y-miscelanea">🪵 4. Comportamiento del Sistema y Miscelánea</h4>
+<h5 id="a-proxy-history-logging">A. Proxy history logging</h5>
+<ul>
+<li>Define las directivas de almacenamiento cuando se trabaja con el Scope del proyecto. Cuenta con la opción interactiva <code>Ask me what to do each time</code> (<em>Preguntarme qué hacer cada vez</em>), la cual despliega una alerta al auditor si detecta que se están indexando URLs que quedan fuera de los límites autorizados de la auditoría.</li>
+</ul>
+<h5 id="b-default-proxy-interception-state">B. Default Proxy interception state</h5>
+<ul>
+<li>Dictamina si Burp Suite debe iniciar con la pestaña <em>Intercept</em> encendida o apagada cada vez que abras el software. La buena práctica dicta dejarlo configurado en <code>Disable interception</code> para evitar bloqueos indeseados de red en el arranque.</li>
+</ul>
+<h5 id="c-miscellaneous-miscelanea-y-ajustes-del-protocolo">C. Miscellaneous (Miscelánea y Ajustes del Protocolo)</h5>
+<p>Colección de selectores avanzados de ingeniería de bajo nivel sobre las conexiones HTTP/1:
+* <code>Use HTTP/1.0 in requests to server</code> / <code>responses to client</code>: Degradan la versión del protocolo a HTTP/1.0 para entornos antiguos.
+* <code>Use keep-alive for HTTP/1 if the server supports it</code>: <em>(Activa por defecto)</em> Mantiene abiertos los canales de red TCP para agilizar la transmisión y ahorrar recursos del sistema operativo.
+* <code>Strip Proxy-* headers in incoming requests</code>: <em>(Activa por defecto)</em> Remueve cabeceras de proxy intermedias para limpiar las peticiones salientes hacia el objetivo.
+* <code>Remove unsupported encodings from Accept-Encoding headers</code>: Modifica la cabecera cliente para indicarle al servidor que no envíe formatos de compresión extraños que Burp no pueda decompressar en las pestañas <em>Pretty</em> o <em>Raw</em>.
+* <code>Unpack compressed responses</code>: <em>(Activa por defecto)</em> Descomprime automáticamente payloads en formatos GZIP/Deflate para que el código fuente de las respuestas siempre aparezca visible en texto claro.
+* <code>Don't send items to Proxy history or live tasks, if out of scope</code>: Restringe de forma drástica el uso de memoria RAM evitando procesar o guardar datos de cualquier host que no esté explícitamente añadido al Scope operativo.</p>
+<hr />
+<h2 id="buenas-practicas-del-auditor-en-el-modulo-proxy">🛠️ Buenas Prácticas del Auditor en el módulo Proxy</h2>
+<ul>
+<li><strong>Mantener Apagado el Intercept por Defecto:</strong> Para evitar cuellos de botella e interrupciones molestas durante la exploración inicial, navega con la pestaña <em>Intercept en OFF</em>. Deja que todo se registre fluidamente en el <em>HTTP History</em> y, posteriormente, envía las peticiones específicas de tu interés hacia el <em>Repeater</em> para su explotación controlada.</li>
+<li><strong>Uso Riguroso del Scope:</strong> El <em>HTTP History</em> puede llenarse rápidamente con cientos de peticiones a servicios en segundo plano de tu sistema operativo (telemetría de navegadores, actualizaciones de sistema). Aplica el filtro <code>Show only in-scope items</code> de inmediato para centrar tu atención exclusivamente en los activos autorizados de la auditoría.</li>
+</ul>
+<hr />
+<p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

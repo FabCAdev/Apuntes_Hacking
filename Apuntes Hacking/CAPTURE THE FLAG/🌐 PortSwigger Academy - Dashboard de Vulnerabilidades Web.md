@@ -28,8 +28,4 @@ Creada por los desarrolladores de **Burp Suite**, esta academia es el estándar 
 | [[PortSwigger - File Inclusion]]       | Parámetro `filename` | Linux Server | #laboratorio/dificultad/media | Path Traversal (`../../etc/passwd`) / LFI manual | Log Poisoning mediante cabecera User-Agent         | #laboratorio/estado/sin-empezar |
 
 ---
-<div style="text-align: left; margin-top: 20px;">
-    <a href="CAPTURE THE FLAG" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver a Capture The Flag
-    </a>
-</div>
+[[CAPTURE THE FLAG|⬅️ Volver a CAPTURE THE FLAG]]

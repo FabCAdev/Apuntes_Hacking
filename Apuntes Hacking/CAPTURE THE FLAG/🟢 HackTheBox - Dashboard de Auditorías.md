@@ -35,8 +35,4 @@ HackTheBox es un entorno altamente competitivo y de nivel profesional enfocado e
 | [[HTB - Máquina Blue]]    | `10.10.10.40` | Windows       | #laboratorio/dificultad/facil | Pentesting de SMB / Escaneo e inyección de MS17-010 | Ejecución directa de payload en memoria     | #laboratorio/estado/reconocimiento |
 
 ---
-<div style="text-align: left; margin-top: 20px;">
-    <a href="CAPTURE THE FLAG" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver a Capture The Flag
-    </a>
-</div>
+[[CAPTURE THE FLAG|⬅️ Volver a CAPTURE THE FLAG]]

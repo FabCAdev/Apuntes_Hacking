@@ -24,7 +24,7 @@ Repositorio modular de metodologías ofensivas, administración de sistemas, exp
 
 ### 🔍 Fase 2: Reconocimiento y Enumeración (Infraestructura y Web)
 * **[[E3 - Reconocimiento Pasivo y Activo]]**
-	- *Contenido:* Nmap, Wireshark, Wappalyzer, WhatWeb, BuiltWith, Subdominios, Fuzzing con wFuzz, Hunter.io, Intelligence X, Phonebook.cz, Clearbit Connect, PimEyes y DeHashed.
+	- *Contenido:* Nmap, Wireshark, BurpSuite, Wappalyzer, WhatWeb, BuiltWith, Subdominios, Fuzzing con wFuzz, Hunter.io, Intelligence X, Phonebook.cz, Clearbit Connect, PimEyes y DeHashed.
 	- *Recurso:* Uso de la suite web **Pentest-Tools** para recolección pasiva automatizada.
 * **[[E6 - Enumeración de Servicios y CMS]]**
 	- *Contenido:* Auditoría de protocolos comunes (FTP, SSH, HTTP/S, SMB) y vectores de ataque en gestores de contenido (WordPress, Joomla, Drupal, Magento).
@@ -54,7 +54,7 @@ Repositorio modular de metodologías ofensivas, administración de sistemas, exp
 [[Uso de markdown]]
 
 <div style="text-align: left; margin-bottom: 20px;">
-    <a href="🛡️ HACKING" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
+    <a href="https://fabcadev.github.io/Apuntes_Hacking/" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
         ⬅️ Volver atras
     </a>
 </div>

@@ -44,8 +44,4 @@ Panel central de enrutamiento para proyectos prácticos, laboratorios e investig
 
 ---
 
-<div style="text-align: left; margin-bottom: 20px;">
-    <a href="📈 AVANCES" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver atrás
-    </a>
-</div>
+[[📈 AVANCES|⬅️ Volver a 📈 AVANCES]]

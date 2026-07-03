@@ -1,0 +1,790 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/ENCICLOPEDIA/RECONOCIMIENTO%20PASIVO%20Y%20ACTIVO/BurpSuite/12.%20Extensions/12.%20Extensions/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>12. Extensions - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proposito-operativo-del-modulo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              12. Extensions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-operativo-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Propósito Operativo del Módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-panel-de-control-y-gestion-de-extensiones-activas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎛️ 1. Panel de Control y Gestión de Extensiones Activas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎛️ 1. Panel de Control y Gestión de Extensiones Activas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-inventario-y-estados-de-carga-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Inventario y Estados de Carga (Installed)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-consola-de-depuracion-de-salidas-y-errores-lower-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Consola de Depuración de Salidas y Errores (Lower Panel)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-tienda-global-de-complementos-bapp-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏬 2. La Tienda Global de Complementos: BApp Store
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-entornos-de-ejecucion-y-configuracion-global-bapp-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ 3. Entornos de Ejecución y Configuración Global (BApp Settings)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ 3. Entornos de Ejecución y Configuración Global (BApp Settings)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-configuracion-del-entorno-de-python-jython" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Configuración del Entorno de Python (Jython)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-configuracion-de-entornos-adicionales-y-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Configuración de Entornos Adicionales y Caché
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-casos-practicos-de-uso-en-auditorias-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 4. Casos Prácticos de Uso en Auditorías de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 4. Casos Prácticos de Uso en Auditorías de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-instalacion-de-extensiones-esenciales-para-red-team-mejora-del-escaneo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 1: Instalación de Extensiones Esenciales para Red Team (Mejora del Escaneo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-preparacion-del-entorno-para-plugins-de-terceros-jython-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso 2: Preparación del Entorno para Plugins de Terceros (Jython Setup)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>12. Extensions</h1>
+
+<h2 id="proposito-operativo-del-modulo">📌 Propósito Operativo del Módulo</h2>
+<p>El módulo <strong>Extensions</strong> (anteriormente conocido como <em>Extender</em>) es el motor de orquestación de complementos de Burp Suite. Su propósito fundamental es permitir al auditor añadir herramientas, funcionalidades y automatizaciones desarrolladas por la comunidad o por terceros que no vienen de forma nativa en el núcleo de la aplicación.</p>
+<p>En auditorías reales, las aplicaciones web suelen emplear mecanismos complejos que Burp no siempre sabe procesar por defecto (por ejemplo, firmas criptográficas personalizadas, serializaciones raras u ofuscaciones de tokens). El panel de extensiones permite instalar scripts para decodificar flujos en tiempo real, añadir motores de escaneo especializados (como detectores automáticos de Log4j, bypasses de WAF o integraciones con SQLMap) y personalizar por completo el arsenal del analista sin necesidad de reescribir el software base.</p>
+<hr />
+<h2 id="1-panel-de-control-y-gestion-de-extensiones-activas">🎛️ 1. Panel de Control y Gestión de Extensiones Activas</h2>
+<p>La interfaz principal recopila el estado analítico de los complementos instalados y permite controlar la prioridad de ejecución dentro del flujo de red.</p>
+<p><img alt="Extensions1" src="../Extensions1.png" /></p>
+<h3 id="a-inventario-y-estados-de-carga-installed">A. Inventario y Estados de Carga (Installed)</h3>
+<ul>
+<li><strong>Tabla de Extensiones:</strong> Lista todos los plugins agregados al proyecto. Cuenta con una casilla de verificación (<code>Loaded</code>) para activar o desactivar la extensión al vuelo sin necesidad de borrarla.</li>
+<li><strong>Control de Orden (Priorización):</strong> Los botones <code>Up</code> y <code>Down</code> permiten alterar el orden físico de la lista. Esto es crítico porque las extensiones procesan los paquetes HTTP en cascada; si una extensión modifica una cabecera para evadir un filtro, debe ejecutarse antes de que el paquete sea procesado por la siguiente herramienta.</li>
+</ul>
+<h3 id="b-consola-de-depuracion-de-salidas-y-errores-lower-panel">B. Consola de Depuración de Salidas y Errores (Lower Panel)</h3>
+<p>Al seleccionar una extensión, la mitad inferior de la pantalla desglosa su telemetría en tiempo real:
+* <strong>Output:</strong> Muestra los registros informativos, logs de ejecución o banners de bienvenida creados por el desarrollador de la extensión.
+* <strong>Errors:</strong> Consola de depuración indispensable si un plugin falla. Muestra las excepciones de código (ej: fallos de dependencias en Python o Java), permitiendo identificar por qué la extensión ha dejado de interceptar o modificar paquetes.</p>
+<hr />
+<h2 id="2-la-tienda-global-de-complementos-bapp-store">🏬 2. La Tienda Global de Complementos: BApp Store</h2>
+<p>La <strong>BApp Store</strong> (Burp App Store) es el repositorio integrado y oficial de PortSwigger desde donde se pueden descargar cientos de extensiones preaprobadas y validadas por seguridad.</p>
+<p><img alt="Extensions2" src="../Extensions2.png" /></p>
+<ul>
+<li><strong>Estructura de Navegación:</strong> Muestra una lista alfabética con el nombre de la extensión, una breve descripción técnica de su impacto analítico y su calificación por estrellas basada en el feedback de la comunidad.</li>
+<li><strong>Ficha de Detalles Técnicos:</strong> Al hacer clic sobre cualquier extensión (como <em>Turbo Intruder</em> o <em>Logger++</em>), el panel derecho muestra:<ul>
+<li>El autor del complemento.</li>
+<li>La versión actual y la fecha de su última actualización.</li>
+<li><strong>Estimated impact:</strong> Una métrica visual que indica cuánta memoria RAM o procesamiento consume el plugin (<code>System overhead</code>) y qué tanto altera las peticiones (<code>Loss of control</code>).</li>
+</ul>
+</li>
+<li><strong>Instalación Directa:</strong> El botón <code>Install</code> descarga y acopla la extensión al vuelo directamente en el ecosistema de Burp Suite.</li>
+</ul>
+<hr />
+<h2 id="3-entornos-de-ejecucion-y-configuracion-global-bapp-settings">⚙️ 3. Entornos de Ejecución y Configuración Global (BApp Settings)</h2>
+<p>Para que Burp Suite pueda ejecutar extensiones escritas en lenguajes distintos a Java (el lenguaje nativo de Burp), es necesario indicarle dónde se encuentran los intérpretes correspondientes.</p>
+<p><img alt="Extensions3" src="../Extensions3.png" /></p>
+<h3 id="a-configuracion-del-entorno-de-python-jython">A. Configuración del Entorno de Python (Jython)</h3>
+<ul>
+<li><strong>Python Environment:</strong> Dado que muchas de las mejores extensiones comunitarias están desarrolladas en Python 2/3, Burp Suite requiere el uso de un archivo llamado <strong>Jython</strong> (un intérprete de Python que corre sobre la máquina virtual de Java).</li>
+<li><strong>Location of Jython standalone JAR file:</strong> En esta sección, el auditor debe descargar el archivo <code>.jar</code> de Jython desde su web oficial y cargar la ruta absoluta aquí para habilitar de inmediato la ejecución de complementos <code>.py</code>.</li>
+</ul>
+<h3 id="b-configuracion-de-entornos-adicionales-y-cache">B. Configuración de Entornos Adicionales y Caché</h3>
+<ul>
+<li><strong>Ruby Environment:</strong> Permite configurar el archivo JAR de <em>JRuby</em> para extensiones programadas en Ruby.</li>
+<li><strong>Java Environment:</strong> Opciones para especificar rutas de compilación Java si estás desarrollando tus propios plugins mediante la API de Burp Suite.</li>
+<li><strong>Settings de la BApp Store:</strong> Controla la carpeta temporal donde se almacenan las descargas de la tienda y la frecuencia con la que Burp Suite busca actualizaciones automáticas de los complementos instalados.</li>
+</ul>
+<hr />
+<h2 id="4-casos-practicos-de-uso-en-auditorias-de-seguridad">🚀 4. Casos Prácticos de Uso en Auditorías de Seguridad</h2>
+<h3 id="caso-1-instalacion-de-extensiones-esenciales-para-red-team-mejora-del-escaneo">Caso 1: Instalación de Extensiones Esenciales para Red Team (Mejora del Escaneo)</h3>
+<p>Durante una auditoría, el proxy nativo recopila el tráfico pero necesitas automatizar la búsqueda de fallos complejos que el scanner por defecto no ve (como inyecciones secundarias o vulnerabilidades lógicas de autorización).
+* <strong>Solución operativa:</strong> Vas a la <strong>BApp Store</strong> e instalas extensiones clave como <strong>Autorize</strong> (para detectar vulnerabilidades de control de acceso e IDORs de forma automática mientras navegas) o <strong>Software Vulnerability Scanner</strong> (para contrastar las versiones de software detectadas contra bases de datos de vulnerabilidades conocidas). El módulo se encarga de acoplarlas sin interrumpir tus interceptaciones activas.</p>
+<h3 id="caso-2-preparacion-del-entorno-para-plugins-de-terceros-jython-setup">Caso 2: Preparación del Entorno para Plugins de Terceros (Jython Setup)</h3>
+<p>Descargas desde un repositorio de GitHub una herramienta de ataque especializada en evadir el WAF de un cliente, pero al intentar cargar el archivo <code>.py</code> en Burp, la aplicación arroja un error de ejecución.
+* <strong>Solución operativa:</strong> Dirígeste a la pestaña <strong>Extensions ➡️ Settings</strong>, descargas el JAR de <em>Jython Standalone</em>, y mapeas su ubicación en la sección de Python. Al regresar a la pestaña principal y añadir el plugin, Burp Suite ya contará con el motor necesario para interpretar el script, permitiéndote inyectar las reglas de evasión personalizadas de forma transparente en tus peticiones de Repeater e Intruder.</p>
+<hr />
+<p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

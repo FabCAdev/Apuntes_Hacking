@@ -29,8 +29,8 @@ Repositorio centralizado para el control de progreso, writeups y explotación de
 	- *Estatus:* #gestion/estado/sin-empezar
 
 ---
-<div style="text-align: left; margin-top: 20px;">
-    <a href="🛡️ HACKING" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver a Hacking
+<div style="text-align: left; margin-bottom: 20px;">
+    <a href="https://fabcadev.github.io/Apuntes_Hacking/" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
+        ⬅️ Volver atras
     </a>
 </div>

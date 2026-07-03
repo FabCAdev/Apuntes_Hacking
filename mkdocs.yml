@@ -1,0 +1,38 @@
+site_name: Apuntes de Hacking de FabCAdev
+site_url: https://FabCAdev.github.io/Apuntes_Hacking/
+
+docs_dir: 'Apuntes Hacking'
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+  features:
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+
+# ENLAZAMOS LAS PESTAÑAS DIRECTAMENTE A ARCHIVOS REALES QUE TIENES EN TU USB
+nav:
+  - '🛡️ HACKING': 'index.md'
+  - '📈 AVANCES': 
+      - 'Mis Avances': 'AVANCES/📈 AVANCES.md'  # <-- O cambia por cualquier archivo .md que esté dentro de AVANCES
+  - '🚩 CTF': 
+      - 'Laboratorios': 'CAPTURE THE FLAG/CAPTURE THE FLAG.md' # <-- Cambia 'Laboratorios.md' por una nota real que tengas dentro de CTF
+  - '📖 ENCICLOPEDIA': 
+      - 'Enciclopedia Principal': 'ENCICLOPEDIA/📖 ENCICLOPEDIA.md'
+
+plugins:
+  - search
+  - roamlinks
+
+markdown_extensions:
+  - attr_list

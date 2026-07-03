@@ -18,8 +18,4 @@ Proyectos con un enfoque colaborativo integral. Cada auditoría documenta el cic
 * ➕ [Espacio reservado para futuras auditorías mixtas (Ej: Auditorías completas OWASP Top 10 con parches de seguridad)]*
 
 
-<div style="text-align: left; margin-bottom: 20px;">
-    <a href="💻 PROYECTOS PERSONALES" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver a Proyectos
-    </a>
-</div>
+[[💻 PROYECTOS PERSONALES|⬅️ Volver a 💻 PROYECTOS PERSONALES]]

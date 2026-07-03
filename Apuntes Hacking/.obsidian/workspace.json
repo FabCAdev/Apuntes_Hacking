@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "61d24bc6abf9e334",
+            "id": "395bb6dd020fc4ab",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -36,33 +36,33 @@
             }
           },
           {
-            "id": "3eb070f21c8295fe",
+            "id": "57e03c19ce7f57a4",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CAPTURE THE FLAG/CAPTURE THE FLAG.md",
+                "file": "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
                 "mode": "source",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "CAPTURE THE FLAG"
+              "title": "Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry"
             }
           },
           {
-            "id": "e9f90ec3c80c00f4",
+            "id": "d2836b5bfc239231",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ENCICLOPEDIA/VMs y DOCKER/E4 - VMs y Docker.md",
+                "file": "Documentación - Análisis Forense de Campaña Phishing Fraudulenta.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E4 - VMs y Docker"
+              "title": "Documentación - Análisis Forense de Campaña Phishing Fraudulenta"
             }
           }
         ],
@@ -123,7 +123,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 392.5
+    "width": 409.5
   },
   "right": {
     "id": "1a2ff338de512431",
@@ -139,6 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Documentación - Análisis Forense de Campaña Phishing Fraudulenta.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +149,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de Documentación - Análisis Forense de Campaña Phishing Fraudulenta"
             }
           },
           {
@@ -208,64 +209,94 @@
               "icon": "lucide-list",
               "title": "Esquema de E4 - VMs y Docker"
             }
+          },
+          {
+            "id": "75fb0cb841c44a43",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "a3e0a6a2ab2eb496",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 296.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "bases:Crear nueva base": false,
+      "obsidian-git:Open Git source control": false,
+      "copilot:Open Copilot Chat": false
     }
   },
-  "active": "e9f90ec3c80c00f4",
+  "active": "d2836b5bfc239231",
   "lastOpenFiles": [
-    "Sin título.base",
-    "ENCICLOPEDIA/VMs y DOCKER/E4 - VMs y Docker.md",
-    "AVANCES/PROYECTOS PERSONALES/💻 PROYECTOS PERSONALES.md",
-    "AVANCES/CERTIFICACIONES/CERTIFICACIÓN - COMPTIA SECURITY+.md",
-    "CAPTURE THE FLAG/CAPTURE THE FLAG.md",
-    "CAPTURE THE FLAG/🌐 PortSwigger Academy - Dashboard de Vulnerabilidades Web.md",
-    "CAPTURE THE FLAG/🔵 VulnHub - Dashboard de Máquinas Locales.md",
-    "CAPTURE THE FLAG/🔴 TryHackMe - Dashboard de Salas Guiadas.md",
-    "CAPTURE THE FLAG/🟢 HackTheBox - Dashboard de Auditorías.md",
+    "copilot/copilot-conversations/puedes_modificar_notas_necesito_que_se_ordene_y_acomode_la@20260702_015438.md",
+    "Documentación - Análisis Forense de Campaña Phishing Fraudulenta.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/Herramientas - Auditoría y Análisis Web con Burp Suite.md",
+    "AVANCES/CURSOS/HACK4U/CURSO HACK4U/💀 INTRODUCCION AL HACKING.md",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry3.0.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/DoublePulsar.jpg",
     "Por Organizar/Etiquetas.md",
-    "Por Organizar/Apuntes (copia 1).md",
-    "🛡️ HACKING.md",
-    "ENCICLOPEDIA/📖 ENCICLOPEDIA.md",
-    "ENCICLOPEDIA/ACTIVE DIRECTORY/E13 - Active Directory y Hacking Corporativo.md",
-    "ENCICLOPEDIA/PROGRAMACION Y SCRIPTING/E12 - Programación y Scripting.md",
-    "ENCICLOPEDIA/SEGURIDAD Y HACKING EN LA NUBE/E14 - Seguridad y Hacking en la Nube (Cloud & Kubernetes).md",
-    "ENCICLOPEDIA/PIVOTING Y ENRUTAMIENTO/E11 - Pivoting y Enrutamiento.md",
-    "ENCICLOPEDIA/ENUMERACION DEL SISTEMA Y ESCALADA PRIVILEGIOS/E9 - Enumeración del Sistema y Escalada de Privilegios.md",
-    "ENCICLOPEDIA/BUFFER OVERFLOW/E10 - Buffer Overflow.md",
-    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/E8 - Vulnerabilidades y OWASP Top 10.md",
-    "ENCICLOPEDIA/CONCEPTOS BASICOS DE EXPLOTACION/E7 - Conceptos Básicos de Explotación.md",
-    "ENCICLOPEDIA/ENUMERACION DE SERVICIOS Y CMS/E6 - Enumeración de Servicios y CMS.md",
-    "ENCICLOPEDIA/TECNOLOGIAS CLAVE/E2 - Tecnologías Clave y Plataformas.md",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/US-CERT-CVE-2017-0144.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry2.0_2.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry2.0.png",
+    "copilot/copilot-conversations/Copilot_Plus_License_Error@20260702_114929.md",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry1.0_2.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry1.0.png",
+    "copilot/copilot-conversations",
+    "copilot",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/ss_window_1782962642.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Cryptolocker.jpg",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/09. Comparer/09. Comparer.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/07. Sequencer/07. Sequencer.md",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/1- ANÁLISIS DE AMENAZAS (BLUE TEAM).md",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry",
+    "index.md",
+    "AVANCES/PROYECTOS PERSONALES/💻 PROYECTOS PERSONALES.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/E3 - Reconocimiento Pasivo y Activo.md",
-    "ENCICLOPEDIA/GITHUB/E5 - GitHub.md",
-    "ENCICLOPEDIA/CONCEPTOS BASE/E1 - Conceptos Base (Sistemas y Fundamentos de Redes).md",
-    "ENCICLOPEDIA/ACTIVE DIRECTORY",
-    "ENCICLOPEDIA/PROGRAMACION Y SCRIPTING",
-    "ENCICLOPEDIA/SEGURIDAD Y HACKING EN LA NUBE",
-    "ENCICLOPEDIA/PIVOTING Y ENRUTAMIENTO",
-    "ENCICLOPEDIA/ENUMERACION DEL SISTEMA Y ESCALADA PRIVILEGIOS",
-    "ENCICLOPEDIA/BUFFER OVERFLOW",
-    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10",
-    "ENCICLOPEDIA/CONCEPTOS BASICOS DE EXPLOTACION",
-    "ENCICLOPEDIA/ENUMERACION DE SERVICIOS Y CMS",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/01. Dashboard/01. Dashboard.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/15. Caracteristicas pago/15. Características de la versión de pago.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/14. Caso Practico/14. Caso Practica - Auditoria Web de practica de SQLI.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/13. Learn/13. Learn.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/12. Extensions/12. Extensions.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/11. Organizer/11. Organizer.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/10. Logger/10. Logger.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/08. Decoder/08. Decoder.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/06. Collaborator/06. Collaborator.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/03. Proxy/03. Proxy.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/04. Intruder/04. Intruder.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/05. Repeater/05. Repeater.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/14. Caso Practico",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/15. Caracteristicas pago",
+    "Sin título.base",
+    "Apuntes_Hacking/enciclopedia/reconocimiento-pasivo-y-activo",
+    "Apuntes_Hacking/enciclopedia",
+    "Apuntes_Hacking/ENCICLOPEDIA",
+    "Apuntes_Hacking",
     "Sin título.canvas"
   ]
 }

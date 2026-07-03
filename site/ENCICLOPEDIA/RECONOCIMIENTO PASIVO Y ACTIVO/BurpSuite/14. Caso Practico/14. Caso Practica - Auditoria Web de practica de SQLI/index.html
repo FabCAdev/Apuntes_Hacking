@@ -1,0 +1,819 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/ENCICLOPEDIA/RECONOCIMIENTO%20PASIVO%20Y%20ACTIVO/BurpSuite/14.%20Caso%20Practico/14.%20Caso%20Practica%20-%20Auditoria%20Web%20de%20practica%20de%20SQLI/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>14. Caso Practica Auditoria Web de practica de SQLI - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proposito-del-laboratorio" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              14. Caso Practica   Auditoria Web de practica de SQLI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito-del-laboratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Propósito del Laboratorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-fase-de-despliegue-y-configuracion-del-alcance-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ 1. Fase de Despliegue y Configuración del Alcance (Scope)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mapeo-del-laboratorio-vectores-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 2. Mapeo del Laboratorio: Vectores Disponibles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-interceptacion-registro-tecnico-y-triaje-proxy-logger-y-organizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪝 3. Interceptación, Registro Técnico y Triaje (Proxy, Logger y Organizer)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪝 3. Interceptación, Registro Técnico y Triaje (Proxy, Logger y Organizer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomia-del-paquete-interceptado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧐 Anatomía del Paquete Interceptado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ingenieria-inversa-de-peticiones-mediante-repeater" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 4. Ingeniería Inversa de Peticiones mediante Repeater
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-automatizacion-con-proxy-match-and-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎛️ 5. Automatización con Proxy Match and Replace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-attacks-de-fuerza-bruta-automatizados-mediante-intruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 6. Attacks de Fuerza Bruta Automatizados mediante Intruder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tecnicas-de-evasion-de-filtros-utilizando-decoder" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔏 7. Técnicas de Evasión de Filtros utilizando Decoder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-analisis-forense-y-diferenciacion-de-paquetes-con-comparer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 8. Análisis Forense y Diferenciación de Paquetes con Comparer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusiones-de-la-fase-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Conclusiones de la Fase Inicial
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>14. Caso Practica   Auditoria Web de practica de SQLI</h1>
+
+<h2 id="proposito-del-laboratorio">📌 Propósito del Laboratorio</h2>
+<p>El objetivo de esta práctica es consolidar los conocimientos adquiridos sobre los módulos esenciales de <strong>Burp Suite Community Edition</strong> mediante un entorno controlado. Se utiliza la aplicación de entrenamiento de SQL Injection desarrollada por <strong>Appsecco</strong>, la cual proporciona múltiples escenarios para evaluar técnicas de explotación manual y automatizada. En esta sesión inicial se ejecuta el mapeo del entorno, la captura de tráfico base y el análisis inicial del flujo de autenticación mediante manipulación controlada de peticiones.</p>
+<hr />
+<h2 id="1-fase-de-despliegue-y-configuracion-del-alcance-scope">🛠️ 1. Fase de Despliegue y Configuración del Alcance (Scope)</h2>
+<p>El laboratorio se obtiene desde el repositorio oficial de Appsecco. Tras levantar el contenedor utilizando Docker Compose, la aplicación queda expuesta de manera local en el puerto 8000.</p>
+<p><img alt="BurpSuite_Practica1" src="../BurpSuite_Practica1.png" /></p>
+<p>Al interactuar con la página por primera vez, el tráfico comienza a fluir a través de Burp Suite, nutriendo de forma automática el <strong>Site Map</strong>. Para focalizar la auditoría y evitar ruido de fondo, se define la dirección <code>127.0.0.1:8000</code> estrictamente como nuestro <strong>Scope</strong>.</p>
+<p><img alt="BurpSuite_Practica2" src="../BurpSuite_Practica2.png" /></p>
+<p>Una vez establecido el Scope, el <strong>Dashboard</strong> empieza a reflejar una vista general limpia de las métricas operativas y las tareas del proyecto.</p>
+<p><img alt="BurpSuite_Practica3" src="../BurpSuite_Practica3.png" /></p>
+<hr />
+<h2 id="2-mapeo-del-laboratorio-vectores-disponibles">🧭 2. Mapeo del Laboratorio: Vectores Disponibles</h2>
+<p>La aplicación cuenta con 5 secciones críticas diseñadas para entrenar diferentes subtipos de inyecciones SQL:</p>
+<ol>
+<li><strong><code>login1.php</code> y <code>login2.php</code> (Bypass de Autenticación):</strong> Formularios propensos a cortocircuitos lógicos. Devuelven errores detallados (<em>Verbose Errors</em>), ideales para identificar la estructura interna de la consulta (ej. uso de comillas simples o cierres con paréntesis).</li>
+<li><strong><code>searchproducts.php</code> (Extracción con UNION):</strong> Buscador reflejado en pantalla. Permite alterar la lógica para concatenar datos de tablas internas (como credenciales) mediante sentencias <code>UNION SELECT</code>.</li>
+<li><strong><code>secondorder_register.php</code> y <code>secondorder_changepass.php</code> (Segundo Orden):</strong> Inyecciones almacenadas. El payload malicioso se registra de forma "segura" en la base de datos y se detona posteriormente cuando otra función de la aplicación (el cambio de contraseña) invoca el dato guardado sin sanitizar.</li>
+<li><strong><code>blindsqli.php</code> (Inyección Ciega):</strong> Escenario sin errores ni datos reflejados en pantalla. Requiere inferencia lógica mediante variaciones de contenido (<em>Content-based</em>) o retrasos temporales provocados en el servidor (<em>Time-based</em>).</li>
+<li><strong><code>os_sqli.php</code> (Toma de Control):</strong> Explotación avanzada donde se abusa de privilegios altos de la base de datos para interactuar con el sistema operativo subyacente mediante funciones como <code>INTO OUTFILE</code> o <code>LOAD_FILE()</code>.</li>
+</ol>
+<blockquote>
+<p>📝 <strong>Nota de Enfoque:</strong> Debido a que el objetivo actual es asimilar las funciones básicas de Burp Suite, esta sección se centrará en el flujo inicial de acceso para posteriormente auditar el endpoint <strong><code>searchproducts.php</code></strong>.</p>
+</blockquote>
+<hr />
+<h2 id="3-interceptacion-registro-tecnico-y-triaje-proxy-logger-y-organizer">🪝 3. Interceptación, Registro Técnico y Triaje (Proxy, Logger y Organizer)</h2>
+<p>Para capturar la petición de login, nos dirigimos a la interfaz web y nos aseguramos de activar el botón <strong>Intercept is on</strong> dentro de la pestaña del Proxy.</p>
+<p><img alt="BurpSuite_Practica4" src="../BurpSuite_Practica4.png" />
+<img alt="BurpSuite_Practica5" src="../BurpSuite_Practica5.png" /></p>
+<p>Introducimos credenciales de prueba arbitrarias en el formulario (<code>admin</code> / <code>admin</code>) y presionamos <em>Submit</em>. El Proxy captura de forma inmediata la siguiente solicitud estructurada:</p>
+<p><img alt="BurpSuite_Practica6" src="../BurpSuite_Practica6.png" /></p>
+<h3 id="anatomia-del-paquete-interceptado">🧐 Anatomía del Paquete Interceptado</h3>
+<ul>
+<li><strong><code>POST /login1.php?msg=1 HTTP/1.1</code>:</strong> Indica el envío de datos mediante método POST hacia el recurso de autenticación básica. El parámetro <code>msg=1</code> en la URL se encarga de gestionar alertas visuales en la interfaz del cliente.</li>
+<li><strong><code>Content-Type: application/x-www-form-urlencoded</code>:</strong> Define que los datos viajan codificados bajo la estructura estándar de formularios web interconectados por símbolos <code>&amp;</code> e <code>=</code>.</li>
+<li><strong><code>Cookie: PHPSESSID=37a5219f6ebcdd26...</code>:</strong> Identificador único de sesión asignado por el servidor para el seguimiento de nuestro estado de navegación.</li>
+<li><strong><code>uid=admin&amp;password=admin</code>:</strong> Cuerpo de la petición que almacena directamente los inputs ingresados en los campos de texto de la aplicación.</li>
+</ul>
+<p>En paralelo, el módulo <strong>Logger</strong> ha registrado cronológicamente cada una de las interacciones previas de red para su posterior consulta y depuración.</p>
+<p><img alt="BurpSuite_Practica7" src="../BurpSuite_Practica7.png" /></p>
+<p>Como esta petición representa nuestro punto de entrada crítico de análisis, hacemos <strong>clic derecho ➡️ Send to Organizer</strong> para archivarla en nuestro baúl de marcadores estáticos, asegurando su persistencia y permitiendo añadir notas de campo.</p>
+<p><img alt="BurpSuite_Practica8" src="../BurpSuite_Practica8.png" /></p>
+<p>Hasta este momento, el flujo operativo ha involucrado exitosamente las siguientes secciones:
+* <strong>Target:</strong> Configuración del Site Map y delimitación del alcance (<em>Scope</em>).
+* <strong>Dashboard:</strong> Supervisión del estado general de la tarea.
+* <strong>Proxy:</strong> Interceptación en tiempo real del vector de autenticación.
+* <strong>Logger:</strong> Registro histórico global de eventos.
+* <strong>Organizer:</strong> Almacenamiento y documentación diferida de hallazgos.</p>
+<hr />
+<h2 id="4-ingenieria-inversa-de-peticiones-mediante-repeater">🔄 4. Ingeniería Inversa de Peticiones mediante Repeater</h2>
+<p>Para iniciar las pruebas de manipulación, enviamos el paquete capturado al <strong>Repeater</strong> utilizando el menú contextual.</p>
+<p><img alt="BurpSuite_Practica9" src="../BurpSuite_Practica9.png" /></p>
+<p>Al procesar la petición original con credenciales válidas o evaluar el comportamiento básico, observamos que el servidor responde con un código de estado <strong><code>302 Found</code></strong>. Esto significa que la solicitud fue procesada con éxito y el servidor web nos redirige internamente hacia el panel correspondiente, en este caso, encaminando el flujo hacia <code>searchproducts.php</code>.</p>
+<p><img alt="BurpSuite_Practica10" src="../BurpSuite_Practica10.png" /></p>
+<p>Con el paquete aislado en el entorno controlado de Repeater, el auditor puede alterar manualmente los campos de datos, inyectar payloads de evasión o modificar la estructura de las respuestas para forzar un comportamiento anómalo. </p>
+<p>Por ejemplo, si necesitáramos forzar o simular una respuesta específica (como un error de sintaxis del cliente cambiándolo a un status code <code>400 Bad Request</code>), podríamos clonar la estructura, editar la cabecera directamente y analizar de qué manera reacciona la lógica del lado del cliente ante códigos de control inesperados del servidor web.</p>
+<hr />
+<h2 id="5-automatizacion-con-proxy-match-and-replace">🎛️ 5. Automatización con Proxy Match and Replace</h2>
+<p>Para fuerza la alteración de las respuestas de manera automatizada sin necesidad de detener cada paquete manualmente en el Proxy, empleamos la subpestaña <strong>Match and Replace</strong> ubicada en las configuraciones del Proxy.</p>
+<p><img alt="BurpSuite_Practica11" src="../BurpSuite_Practica11.png" /></p>
+<p>Dado que el código de estado HTTP es un parámetro estructural que se define exclusivamente en la cabecera del mensaje, configuramos una regla bajo el tipo <strong>Response Header</strong>. Definimos que cuando el motor detecte la cadena correspondiente a una redirección exitosa <code>HTTP/1.1 302 Found</code>, la reemplace automáticamente por un código de error de cliente <code>HTTP/1.1 400 Bad Request</code>. Adicionalmente, se introduce un comentario descriptivo para facilitar el control de la regla.</p>
+<p>Al volver a ejecutar la petición, el impacto de la regla automatizada se refleja directamente en la captura:</p>
+<p><img alt="BurpSuite_Practica12" src="../BurpSuite_Practica12.png" /></p>
+<p>Al recibir de forma forzada un estado <code>400 Bad Request</code> en lugar del <code>302 Found</code>, el navegador web interpreta que la solicitud sufrió un fallo y no ejecuta la redirección hacia el endpoint <code>searchproducts.php</code>, manteniéndonos estáticos dentro de la interfaz de inicio de sesión. </p>
+<p>Si bien en este escenario específico esta modificación no compromete directamente la lógica, la manipulación automatizada de cabeceras de respuesta y estados HTTP es una técnica habitual para saltarse controles del lado del cliente, analizar la resiliencia del software o evadir mecanismos superficiales de autenticación que dependen de las respuestas que devuelve el servidor.</p>
+<hr />
+<h2 id="6-attacks-de-fuerza-bruta-automatizados-mediante-intruder">🎯 6. Attacks de Fuerza Bruta Automatizados mediante Intruder</h2>
+<p>Simulando un escenario real en el que no conocemos las credenciales del usuario <code>admin</code>, recurrimos al módulo <strong>Intruder</strong> para automatizar el descubrimiento de la contraseña mediante un ataque de diccionario.</p>
+<p>A partir del análisis previo del cuerpo de la petición POST (<code>uid=admin&amp;password=admin</code>), seleccionamos el valor asignado a la variable <code>password</code> y la encapsulamos como nuestro vector objetivo presionando el botón <strong>Add position</strong>.</p>
+<p><img alt="BurpSuite_Practica13" src="../BurpSuite_Practica13.png" /></p>
+<p>Definimos un tipo de ataque <strong>Sniper</strong> debido a que únicamente contamos con una posición de payload activa y buscamos evaluar una sola lista secuencial de datos. Para alimentar el ataque, cargamos el diccionario estándar de las 10,000 contraseñas más comunes a nivel mundial, extraído de la suite de seguridad <strong>SecLists</strong>.</p>
+<p><img alt="BurpSuite_Practica14" src="../BurpSuite_Practica14.png" />
+<img alt="BurpSuite_Practica15" src="../BurpSuite_Practica15.png" /></p>
+<p>Tras lanzar el ataque, la tabla de resultados de Intruder nos proporciona métricas analíticas fundamentales para identificar la credencial válida:</p>
+<p><img alt="BurpSuite_Practica16" src="../BurpSuite_Practica16.png" /></p>
+<p>El análisis comparativo del output revela dos anomalías clave:
+* <strong>Status Code:</strong> Las contraseñas incorrectas devuelven un estado estático <code>200 OK</code>, lo que significa que el servidor renderiza el formulario de error genérico. En contraste, el payload <code>admin</code> provoca un estado <code>302 Found</code>, indicando que el proceso de autenticación fue completado y ordenó una redirección.
+* <strong>Length (Longitud):</strong> Mientras que los intentos fallidos mantienen un tamaño uniforme en bytes de <code>1697</code> y <code>1698</code>, el intento exitoso arroja un tamaño menor de <code>1654 bytes</code>. Esta discrepancia de tamaño en las respuestas confirma el cambio estructural del HTML devuelto al validar la cuenta. El Length vendría siendo el tamaño de una petición o respuesta en específico y su unidad de medición es en bytes.</p>
+<hr />
+<h2 id="7-tecnicas-de-evasion-de-filtros-utilizando-decoder">🔏 7. Técnicas de Evasión de Filtros utilizando Decoder</h2>
+<p>Durante auditorías web avanzadas, los sistemas de seguridad perimetral como los WAF (Web Application Firewalls) suelen filtrar cadenas de texto plano peligrosas. Para saltarse estas restricciones, utilizamos el módulo <strong>Decoder</strong> para transformar los payloads a formatos equivalentes que el backend sea capaz de procesar pero el filtro no reconozca.</p>
+<p><img alt="BurpSuite_Practica17" src="../BurpSuite_Practica17.png" /></p>
+<p>Al anteponer el prefijo <code>0x</code> a la cadena hexadecimal, el motor de bases de datos (en este caso, el contenedor MySQL) interpreta y traduce automáticamente este flujo binario de forma interna, ejecutando el término <code>admin</code> directamente en la consulta SQL y neutralizando los filtros de validación basados en texto plano de la aplicación.</p>
+<hr />
+<h2 id="8-analisis-forense-y-diferenciacion-de-paquetes-con-comparer">🔍 8. Análisis Forense y Diferenciación de Paquetes con Comparer</h2>
+<p>Como parte de los procedimientos de análisis y documentación de evidencias, el contraste milimétrico de las respuestas correctas e incorrectas nos permite mapear de forma exacta el comportamiento del backend. Para ello, enviamos los flujos de respuesta de los payloads evaluados al módulo <strong>Comparer</strong>.</p>
+<p><img alt="BurpSuite_Practica18" src="../BurpSuite_Practica18.png" />
+<img alt="BurpSuite_Practica19" src="../BurpSuite_Practica19.png" /></p>
+<p>Al ejecutar la comparación por palabras (<strong>Words</strong>), el entorno gráfico resalta de forma inmediata las discrepancias exactas en las respuestas:</p>
+<p><img alt="BurpSuite_Practica20" src="../BurpSuite_Practica20.png" /></p>
+<p>El código de colores nos permite aislar los cambios del servidor: la respuesta exitosa elimina las cadenas de error o los formularios repetitivos presentes en el intento fallido (resaltado en <strong>rojo</strong>), modificando las cabeceras de localización del recurso y los parámetros de las cookies de sesión (resaltado en <strong>naranja</strong>). Esto provee un flujo visual transparente para verificar el éxito de la explotación.</p>
+<hr />
+<h2 id="conclusiones-de-la-fase-inicial">📝 Conclusiones de la Fase Inicial</h2>
+<p>Con este flujo se ha logrado abarcar el uso práctico de casi todas las secciones esenciales de Burp Suite. Cabe destacar que herramientas como <strong>Collaborator</strong> no fueron implementadas por ser exclusivas de la versión <em>Professional Edition</em>, mientras que para las características de este laboratorio de SQLi no se requirió la medición estadística de aleatoriedad del módulo <strong>Sequencer</strong>. </p>
+<p>Los ejemplos plasmados mantienen una estructura simplificada de forma intencional, cumpliendo con el propósito de esta guía enfocada al uso básico y didáctico del ecosistema de Burp Suite. Las metodologías de explotación avanzada y cadenas de ataque complejas se documentarán de forma individual conforme se ejecuten auditorías en escenarios reales y entornos de producción.</p>
+<hr />
+<p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

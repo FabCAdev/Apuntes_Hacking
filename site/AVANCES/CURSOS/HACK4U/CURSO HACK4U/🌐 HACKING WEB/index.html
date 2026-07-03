@@ -1,0 +1,1410 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/AVANCES/CURSOS/HACK4U/CURSO%20HACK4U/%F0%9F%8C%90%20HACKING%20WEB/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>🌐 HACKING WEB - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#progreso-del-modulo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🌐 HACKING WEB
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#progreso-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Progreso del Módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-al-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 1. Introducción al curso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sql-injection-sqli" class="md-nav__link">
+    <span class="md-ellipsis">
+      💉 2. SQL Injection (SQLi)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cross-site-scripting-xss" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ 3. Cross-site Scripting (XSS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cross-site-request-forgery-csrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔀 4. Cross-site Request Forgery (CSRF)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-clickjacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      👁️ 5. Clickjacking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-vulnerabilidades-basadas-en-el-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌳 6. Vulnerabilidades basadas en el DOM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-comparticion-de-recursos-entre-origenes-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 7. Compartición de recursos entre orígenes (CORS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-xml-external-entity-xxe-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      📑 8. XML external entity (XXE) injection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-server-side-request-forgery-ssrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗺️ 9. Server-side request forgery (SSRF)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-http-request-smuggling" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚇 10. HTTP request smuggling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-inyeccion-de-comandos-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 11. Inyección de comandos del sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-server-side-template-injection-ssti" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 12. Server-side template injection (SSTI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-path-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      📂 13. Path Traversal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-vulnerabilidades-de-control-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚪 14. Vulnerabilidades de Control de Acceso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-gestion-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 15. Gestión de Autenticación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-websockets" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 16. WebSockets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-web-cache-poisoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧼 17. Web Cache Poisoning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-deserializacion-insegura" class="md-nav__link">
+    <span class="md-ellipsis">
+      💀 18. Deserialización Insegura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-divulgacion-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📢 19. Divulgación de Información
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-vulnerabilidades-de-logica-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      👔 20. Vulnerabilidades de lógica de negocio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-ataques-mediante-cabecera-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 21. Ataques mediante cabecera Host
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-autenticacion-con-oauth" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔑 22. Autenticación con OAuth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-vulnerabilidades-en-subida-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📤 23. Vulnerabilidades en subida de archivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-jwt-json-web-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪙 24. JWT (Json Web Tokens)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-habilidades-esenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎒 25. Habilidades esenciales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-prototype-pollution" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 26. Prototype Pollution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-vulnerabilidades-en-apis-graphql" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕸️ 27. Vulnerabilidades en APIs GraphQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-condiciones-de-carrera-race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏃‍♂️ 28. Condiciones de Carrera (Race Condition)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-inyecciones-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 29. Inyecciones NoSQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-pruebas-de-seguridad-en-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 30. Pruebas de seguridad en APIs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-explotacion-de-llms-en-entornos-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 31. Explotación de LLMs en entornos web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-engano-a-la-cache-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 32. Engaño a la caché web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-cuestionario-de-tensada-maxima" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥 33. Cuestionario de Tensada Máxima
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-despedida" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 34. Despedida
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>🌐 HACKING WEB</h1>
+
+<h3 id="progreso-del-modulo">📊 Progreso del Módulo</h3>
+<p><strong>📊 Progreso del Módulo: 0% completado (1/370)</strong></p>
+<progress value="0" max="100" style="width: 100%; height: 18px; accent-color: #f38ba8; margin-top: 5px; margin-bottom: 20px;"></progress>
+
+<h3 id="1-introduccion-al-curso">🌐 1. Introducción al curso</h3>
+<ul>
+<li>[x] 01. Bienvenido/a al curso</li>
+</ul>
+<h3 id="2-sql-injection-sqli">💉 2. SQL Injection (SQLi)</h3>
+<ul>
+<li>[ ] 02. Introducción a la inyección SQL en cláusulas WHERE [1/2]</li>
+<li>[ ] 03. Introducción a la inyección SQL en cláusulas WHERE [2/2]</li>
+<li>[ ] 04. Bypass de login mediante inyección SQL</li>
+<li>[ ] 05. Identificación de versión y motor de base de datos (Oracle)</li>
+<li>[ ] 06. Identificación de versión y motor de base de datos (MySQL y MSSQL)</li>
+<li>[ ] 07. Enumeración de bases de datos en motores no Oracle</li>
+<li>[ ] 08. Enumeración de bases de datos en Oracle</li>
+<li>[ ] 09. Ataque UNION: descubriendo número de columnas</li>
+<li>[ ] 10. Ataque UNION: encontrando columnas con texto</li>
+<li>[ ] 11. Ataque UNION: extrayendo datos de otras tablas</li>
+<li>[ ] 12. Ataque UNION: múltiples valores en una sola columna</li>
+<li>[ ] 13. Inyección SQL ciega con respuestas condicionales [1/3]</li>
+<li>[ ] 14. Inyección SQL ciega con respuestas condicionales [2/3]</li>
+<li>[ ] 15. Inyección SQL ciega con respuestas condicionales [3/3]</li>
+<li>[ ] 16. Inyección SQL ciega con errores condicionales [1/2]</li>
+<li>[ ] 17. Inyección SQL ciega con errores condicionales [2/2]</li>
+<li>[ ] 18. Inyección SQL basada en errores visibles</li>
+<li>[ ] 19. Inyección SQL ciega mediante retrasos temporales</li>
+<li>[ ] 20. Inyección SQL ciega con retrasos y exfiltración de datos [1/2]</li>
+<li>[ ] 21. Inyección SQL ciega con retrasos y exfiltración de datos [2/2]</li>
+<li>[ ] 22. Inyección SQL ciega con interacción out-of-band (OOB)</li>
+<li>[ ] 23. Exfiltración de datos por canal OOB en inyección SQL</li>
+<li>[ ] 24. Bypass de filtros con codificación XML en inyección SQL</li>
+<li>[ ] 25. Cuestionario de SQL Injection</li>
+</ul>
+<h3 id="3-cross-site-scripting-xss">🛡️ 3. Cross-site Scripting (XSS)</h3>
+<ul>
+<li>[ ] 26. XSS reflejado en HTML sin codificación</li>
+<li>[ ] 27. XSS almacenado en HTML sin codificación</li>
+<li>[ ] 28. XSS DOM con 'document.write' y 'location.search'</li>
+<li>[ ] 29. XSS DOM con 'innerHTML' y 'location.search'</li>
+<li>[ ] 30. XSS DOM en 'href' con jQuery y 'location.search'</li>
+<li>[ ] 31. XSS DOM con jQuery y evento 'hashchange'</li>
+<li>[ ] 32. XSS reflejado en atributo con corchetes codificados</li>
+<li>[ ] 33. XSS almacenado en 'href' con comillas codificadas</li>
+<li>[ ] 34. XSS reflejado en string JS con corchetes codificados</li>
+<li>[ ] 35. XSS DOM con 'document.write' dentro de 'select'</li>
+<li>[ ] 36. XSS DOM en AngularJS con comillas codificadas</li>
+<li>[ ] 37. XSS DOM reflejado</li>
+<li>[ ] 38. XSS DOM almacenado</li>
+<li>[ ] 39. XSS reflejado en HTML con etiquetas bloqueadas</li>
+<li>[ ] 40. XSS reflejado con solo etiquetas personalizadas</li>
+<li>[ ] 41. XSS reflejado con etiquetas SVG permitidas</li>
+<li>[ ] 42. XSS reflejado en etiqueta canonical</li>
+<li>[ ] 43. XSS en string JS con comilla y backslash escapados</li>
+<li>[ ] 44. XSS en JS con comillas, corchetes y comilla escapada</li>
+<li>[ ] 45. XSS almacenado en 'onclick' con codificación completa</li>
+<li>[ ] 46. XSS en template literal con caracteres unicode escapados</li>
+<li>[ ] 47. Robo de cookies mediante XSS</li>
+<li>[ ] 48. Captura de contraseñas mediante XSS</li>
+<li>[ ] 49. Evasión de CSRF usando XSS [1/2]</li>
+<li>[ ] 50. Evasión de CSRF usando XSS [2/2]</li>
+<li>[ ] 51. Escape de sandbox AngularJS sin cadenas [1/2]</li>
+<li>[ ] 52. Escape de sandbox AngularJS sin cadenas [2/2]</li>
+<li>[ ] 53. Escape de sandbox AngularJS con CSP</li>
+<li>[ ] 54. XSS con eventos y atributos bloqueados</li>
+<li>[ ] 55. XSS en javascript con caracteres limitados [1/2]</li>
+<li>[ ] 56. XSS en javascript con caracteres limitados [2/2]</li>
+<li>[ ] 57. XSS con CSP estricto y marcado colgante [1/2]</li>
+<li>[ ] 58. XSS con CSP estricto y marcado colgante [2/2]</li>
+<li>[ ] 59. XSS con CSP y técnica de bypass</li>
+<li>[ ] 60. Cuestionario de XSS</li>
+</ul>
+<h3 id="4-cross-site-request-forgery-csrf">🔀 4. Cross-site Request Forgery (CSRF)</h3>
+<ul>
+<li>[ ] 61. CSRF sin ningún tipo de defensa</li>
+<li>[ ] 62. CSRF con token validado según el método HTTP</li>
+<li>[ ] 63. CSRF con validación solo si hay token presente</li>
+<li>[ ] 64. CSRF con token no vinculado a la sesión</li>
+<li>[ ] 65. CSRF con token atado a cookie sin sesión [1/2]</li>
+<li>[ ] 66. CSRF con token atado a cookie sin sesión [2/2]</li>
+<li>[ ] 67. CSRF con token duplicado en cookie</li>
+<li>[ ] 68. Bypass de SameSite Lax con method override</li>
+<li>[ ] 69. Bypass de SameSite Strict con redirección cliente</li>
+<li>[ ] 70. Bypass de SameSite Strict con dominio hermano [1/2]</li>
+<li>[ ] 71. Bypass de SameSite Strict con dominio hermano [2/2]</li>
+<li>[ ] 72. Bypass de SameSite Lax con refresco de cookie</li>
+<li>[ ] 73. CSRF con validación Referer si el header existe</li>
+<li>[ ] 74. CSRF con validación Referer vulnerable</li>
+<li>[ ] 75. Cuestionario de CSRF</li>
+</ul>
+<h3 id="5-clickjacking">👁️ 5. Clickjacking</h3>
+<ul>
+<li>[ ] 76. Clickjacking básico con token CSRF</li>
+<li>[ ] 77. Clickjacking con datos precargados por parámetro</li>
+<li>[ ] 78. Clickjacking con script anti-frame</li>
+<li>[ ] 79. Explotación de clickjacking para XSS DOM</li>
+<li>[ ] 80. Clickjacking en múltiples pasos</li>
+<li>[ ] 81. Cuestionario de Clickjacking</li>
+</ul>
+<h3 id="6-vulnerabilidades-basadas-en-el-dom">🌳 6. Vulnerabilidades basadas en el DOM</h3>
+<ul>
+<li>[ ] 82. XSS DOM usando Web Messages</li>
+<li>[ ] 83. XSS DOM con Web Messages y URL JavaScript</li>
+<li>[ ] 84. XSS DOM con Web Messages y 'JSON.parse'</li>
+<li>[ ] 85. Redirección abierta basada en el DOM</li>
+<li>[ ] 86. Manipulación de cookies vía DOM</li>
+<li>[ ] 87. XSS mediante clobbering en el DOM [1/2]</li>
+<li>[ ] 88. XSS mediante clobbering en el DOM [2/2]</li>
+<li>[ ] 89. Bypass de filtros HTML con clobbering DOM [1/2]</li>
+<li>[ ] 90. Bypass de filtros HTML con clobbering DOM [2/2]</li>
+<li>[ ] 91. Cuestionario de vulnerabilidades en DOM</li>
+</ul>
+<h3 id="7-comparticion-de-recursos-entre-origenes-cors">🌐 7. Compartición de recursos entre orígenes (CORS)</h3>
+<ul>
+<li>[ ] 92. CORS con reflexión básica del origen [1/2]</li>
+<li>[ ] 93. CORS con reflexión básica del origen [2/2]</li>
+<li>[ ] 94. CORS con origen null marcado como confiable</li>
+<li>[ ] 95. CORS con protocolos inseguros confiables [1/2]</li>
+<li>[ ] 96. CORS con protocolos inseguros confiables [2/2]</li>
+<li>[ ] 97. Cuestionario de CORS</li>
+</ul>
+<h3 id="8-xml-external-entity-xxe-injection">📑 8. XML external entity (XXE) injection</h3>
+<ul>
+<li>[ ] 98. XXE para leer archivos con entidades externas</li>
+<li>[ ] 99. XXE para realizar ataques SSRF</li>
+<li>[ ] 100. XXE ciego con interacción out-of-band</li>
+<li>[ ] 101. XXE ciego con entidades XML externas (OOB)</li>
+<li>[ ] 102. XXE ciego con exfiltración vía DTD externa [1/2]</li>
+<li>[ ] 103. XXE ciego con exfiltración vía DTD externa [2/2]</li>
+<li>[ ] 104. XXE ciego para filtrar datos con errores</li>
+<li>[ ] 105. XInclude para leer archivos</li>
+<li>[ ] 106. XXE vía subida de imagen maliciosa</li>
+<li>[ ] 107. XXE usando DTD local para extraer datos [1/2]</li>
+<li>[ ] 108. XXE usando DTD local para extraer datos [2/2]</li>
+<li>[ ] 109. Cuestionario de XXE</li>
+</ul>
+<h3 id="9-server-side-request-forgery-ssrf">🗺️ 9. Server-side request forgery (SSRF)</h3>
+<ul>
+<li>[ ] 110. SSRF básico contra servidor local [1/2]</li>
+<li>[ ] 111. SSRF básico contra servidor local [2/2]</li>
+<li>[ ] 112. SSRF básico contra sistema interno</li>
+<li>[ ] 113. SSRF ciego con detección out-of-band</li>
+<li>[ ] 114. SSRF con filtro basado en blacklist</li>
+<li>[ ] 115. Bypass SSRF con redirección abierta</li>
+<li>[ ] 116. SSRF ciego explotando Shellshock</li>
+<li>[ ] 117. SSRF con filtro basado en whitelist</li>
+<li>[ ] 118. Cuestionario de SSRF</li>
+</ul>
+<h3 id="10-http-request-smuggling">🚇 10. HTTP request smuggling</h3>
+<ul>
+<li>[ ] 119. Confirmación de CL.TE por respuestas diferenciales [1/3]</li>
+<li>[ ] 120. Confirmación de CL.TE por respuestas diferenciales [2/3]</li>
+<li>[ ] 121. Confirmación de CL.TE por respuestas diferenciales [3/3]</li>
+<li>[ ] 122. Confirmación de TE.CL por respuestas diferenciales</li>
+<li>[ ] 123. Bypass de seguridad front-end (CL.TE)</li>
+<li>[ ] 124. Bypass de seguridad front-end (TE.CL)</li>
+<li>[ ] 125. Descubrimiento de reescritura en front-end</li>
+<li>[ ] 126. Captura de peticiones de otros usuarios [1/2]</li>
+<li>[ ] 127. Captura de peticiones de otros usuarios [2/2]</li>
+<li>[ ] 128. Entrega de XSS reflejado por smuggling</li>
+<li>[ ] 129. Response queue poisoning con H2.TE [1/2]</li>
+<li>[ ] 130. Response queue poisoning con H2.TE [2/2]</li>
+<li>[ ] 131. Smuggling H2.CL</li>
+<li>[ ] 132. Smuggling HTTP/2 por inyección CRLF</li>
+<li>[ ] 133. Splitting HTTP/2 por inyección CRLF</li>
+<li>[ ] 134. Smuggling con CL.0</li>
+<li>[ ] 135. Vulnerabilidad básica CL.TE</li>
+<li>[ ] 136. Vulnerabilidad básica TE.CL</li>
+<li>[ ] 137. Smuggling ocultando el header TE</li>
+<li>[ ] 138. Poisoning de caché web con smuggling</li>
+<li>[ ] 139. Decepción de caché web con smuggling</li>
+<li>[ ] 140. Bypass de control con túnel HTTP/2 [1/3]</li>
+<li>[ ] 141. Bypass de control con túnel HTTP/2 [2/3]</li>
+<li>[ ] 142. Bypass de control con túnel HTTP/2 [3/3]</li>
+<li>[ ] 143. Poisoning de caché con túnel HTTP/2 [1/2]</li>
+<li>[ ] 144. Poisoning de caché con túnel HTTP/2 [2/2]</li>
+<li>[ ] 145. Desincronización en cliente (client-side desync) [1/3]</li>
+<li>[ ] 146. Desincronización en cliente (client-side desync) [2/3]</li>
+<li>[ ] 147. Desincronización en cliente (client-side desync) [3/3]</li>
+<li>[ ] 148. Smuggling por pausa del servidor [1/3]</li>
+<li>[ ] 149. Smuggling por pausa del servidor [2/3]</li>
+<li>[ ] 150. Smuggling por pausa del servidor [3/3]</li>
+<li>[ ] 151. Cuestionario de HTTP Request Smuggling</li>
+</ul>
+<h3 id="11-inyeccion-de-comandos-del-sistema">💻 11. Inyección de comandos del sistema</h3>
+<ul>
+<li>[ ] 152. Inyección de comandos, caso simple</li>
+<li>[ ] 153. Inyección ciega con retrasos temporales</li>
+<li>[ ] 154. Inyección ciega con redirección de salida</li>
+<li>[ ] 155. Inyección ciega con interacción OOB</li>
+<li>[ ] 156. Inyección ciega con exfiltración vía OOB</li>
+<li>[ ] 157. Cuestionario de Inyección de Comandos</li>
+</ul>
+<h3 id="12-server-side-template-injection-ssti">🎨 12. Server-side template injection (SSTI)</h3>
+<ul>
+<li>[ ] 158. SSTI básica en plantilla del servidor</li>
+<li>[ ] 159. SSTI básica en contexto de código</li>
+<li>[ ] 160. SSTI usando la documentación del motor</li>
+<li>[ ] 161. SSTI en lenguaje desconocido con exploit público</li>
+<li>[ ] 162. SSTI con filtrado de info vía objetos del usuario</li>
+<li>[ ] 163. SSTI en entorno con sandbox</li>
+<li>[ ] 164. SSTI con exploit personalizado [1/2]</li>
+<li>[ ] 165. SSTI con exploit personalizado [2/2]</li>
+<li>[ ] 166. Cuestionario de SSTI</li>
+</ul>
+<h3 id="13-path-traversal">📂 13. Path Traversal</h3>
+<ul>
+<li>[ ] 167. Path traversal, caso simple</li>
+<li>[ ] 168. Bypass absoluto con secuencias bloqueadas</li>
+<li>[ ] 169. Secuencias traversal eliminadas sin recursión</li>
+<li>[ ] 170. Bypass con doble decodificación en URL</li>
+<li>[ ] 171. Validación del inicio de la ruta</li>
+<li>[ ] 172. Bypass con null byte y validación de extensión</li>
+<li>[ ] 173. Cuestionario de Path Traversal</li>
+</ul>
+<h3 id="14-vulnerabilidades-de-control-de-acceso">🚪 14. Vulnerabilidades de Control de Acceso</h3>
+<ul>
+<li>[ ] 174. Funcionalidad admin sin protección</li>
+<li>[ ] 175. Funcionalidad admin con URL Impredecible</li>
+<li>[ ] 176. Rol de usuario controlado por parámetro</li>
+<li>[ ] 177. Modificación del rol en el perfil de usuario</li>
+<li>[ ] 178. ID de usuario controlado por parámetro</li>
+<li>[ ] 179. ID de usuario impredecible controlado por parámetro</li>
+<li>[ ] 180. Filtración de datos en redirección con ID por parámetro</li>
+<li>[ ] 181. Filtración de contraseña con ID por parámetro</li>
+<li>[ ] 182. Referencias directas inseguras a objetos (IDOR)</li>
+<li>[ ] 183. Bypass de control por URL</li>
+<li>[ ] 184. Bypass de control por método HTTP</li>
+<li>[ ] 185. Paso sin control de acceso en proceso múltiple</li>
+<li>[ ] 186. Control de acceso basado en Referer</li>
+<li>[ ] 187. Cuestionario de Control de Acceso</li>
+</ul>
+<h3 id="15-gestion-de-autenticacion">🔐 15. Gestión de Autenticación</h3>
+<ul>
+<li>[ ] 188. Enumeración de usuarios por respuestas distintas</li>
+<li>[ ] 189. Bypass básico de 2FA</li>
+<li>[ ] 190. Lógica rota en reseteo de contraseña</li>
+<li>[ ] 191. Enumeración por respuestas sutilmente distintas</li>
+<li>[ ] 192. Enumeración de usuario por tiempo de respuesta</li>
+<li>[ ] 193. Protección rota: bloqueo por IP</li>
+<li>[ ] 194. Enumeración de usuario por bloqueo de cuenta</li>
+<li>[ ] 195. Lógica rota en 2FA</li>
+<li>[ ] 196. Fuerza bruta de cookie de sesión persistente</li>
+<li>[ ] 197. Cracking offline de contraseñas [1/2]</li>
+<li>[ ] 198. Cracking offline de contraseñas [2/2]</li>
+<li>[ ] 199. Poisoning en reset de contraseña vía middleware</li>
+<li>[ ] 200. Fuerza bruta de contraseña en cambio de clave</li>
+<li>[ ] 201. Protección rota: múltiples credenciales por petición</li>
+<li>[ ] 202. Bypass de 2FA por ataque de fuerza bruta [1/2]</li>
+<li>[ ] 203. Bypass de 2FA por ataque de fuerza bruta [2/2]</li>
+<li>[ ] 204. Cuestionario de gestión de autenticación</li>
+</ul>
+<h3 id="16-websockets">🔌 16. WebSockets</h3>
+<ul>
+<li>[ ] 205. Manipulación de mensajes WebSocket</li>
+<li>[ ] 206. Secuestro de WebSocket entre sitios (CSWSH)</li>
+<li>[ ] 207. Manipulación del handshake de WebSocket</li>
+<li>[ ] 208. Cuestionario de WebSockets</li>
+</ul>
+<h3 id="17-web-cache-poisoning">🧼 17. Web Cache Poisoning</h3>
+<ul>
+<li>[ ] 209. Poisoning con header no indexado [1/2]</li>
+<li>[ ] 210. Poisoning con header no indexado [2/2]</li>
+<li>[ ] 211. Poisoning con cookie no indexada</li>
+<li>[ ] 212. Poisoning con múltiples headers</li>
+<li>[ ] 213. Poisoning dirigido con header desconocido</li>
+<li>[ ] 214. Poisoning con query string no indexado</li>
+<li>[ ] 215. Poisoning con parámetro de query no indexado</li>
+<li>[ ] 216. Parameter cloaking</li>
+<li>[ ] 217. Poisoning con petición GET anómala</li>
+<li>[ ] 218. Normalización de URL</li>
+<li>[ ] 219. Poisoning para explotar XSS DOM con caché estricta</li>
+<li>[ ] 220. Combinación de vulnerabilidades de poisoning [1/3]</li>
+<li>[ ] 221. Combinación de vulnerabilidades de poisoning [2/3]</li>
+<li>[ ] 222. Combinación de vulnerabilidades de poisoning [3/3]</li>
+<li>[ ] 223. Inyección en clave de caché [1/4]</li>
+<li>[ ] 224. Inyección en clave de caché [2/4]</li>
+<li>[ ] 225. Inyección en clave de caché [3/4]</li>
+<li>[ ] 226. Inyección en clave de caché [4/4]</li>
+<li>[ ] 227. Poisoning de caché interna</li>
+<li>[ ] 228. Cuestionario de Cache Poisoning</li>
+</ul>
+<h3 id="18-deserializacion-insegura">💀 18. Deserialización Insegura</h3>
+<ul>
+<li>[ ] 229. Modificación de objetos serializados</li>
+<li>[ ] 230. Modificación de tipos de datos serializados</li>
+<li>[ ] 231. Explotación vía funciones de la aplicación</li>
+<li>[ ] 232. Inyección de objetos arbitrarios en PHP</li>
+<li>[ ] 233. Deserialización Java con Apache Commons</li>
+<li>[ ] 234. Deserialización PHP con gadget predefinido [1/2]</li>
+<li>[ ] 235. Deserialización PHP con gadget predefinido [2/2]</li>
+<li>[ ] 236. Deserialización Ruby con gadget documentado [1/2]</li>
+<li>[ ] 237. Deserialización Ruby con gadget documentado [2/2]</li>
+<li>[ ] 238. Cadena personalizada en deserialización Java [1/3]</li>
+<li>[ ] 239. Cadena personalizada en deserialización Java [2/3]</li>
+<li>[ ] 240. Cadena personalizada en deserialización Java [3/3]</li>
+<li>[ ] 241. Cadena personalizada en deserialización PHP [1/2]</li>
+<li>[ ] 242. Cadena personalizada en deserialización PHP [2/2]</li>
+<li>[ ] 243. Deserialización PHAR con cadena personalizada [1/3]</li>
+<li>[ ] 244. Deserialización PHAR con cadena personalizada [2/3]</li>
+<li>[ ] 245. Deserialización PHAR con cadena personalizada [3/3]</li>
+<li>[ ] 246. Cuestionario de deserialización insegura</li>
+</ul>
+<h3 id="19-divulgacion-de-informacion">📢 19. Divulgación de Información</h3>
+<ul>
+<li>[ ] 247. Divulgación en mensajes de error</li>
+<li>[ ] 248. Divulgación en página de depuración</li>
+<li>[ ] 249. Código fuente expuesto por archivos backup</li>
+<li>[ ] 250. Bypass de login por divulgación de info</li>
+<li>[ ] 251. Divulgación en historial de control de versiones</li>
+<li>[ ] 252. Cuestionario de divulgación de información</li>
+</ul>
+<h3 id="20-vulnerabilidades-de-logica-de-negocio">👔 20. Vulnerabilidades de lógica de negocio</h3>
+<ul>
+<li>[ ] 253. Confianza excesiva en el lado del cliente</li>
+<li>[ ] 254. Vulnerabilidad lógica de alto nivel</li>
+<li>[ ] 255. Controles de seguridad inconsistentes</li>
+<li>[ ] 256. Reglas de negocio mal aplicadas</li>
+<li>[ ] 257. Fallo lógico de bajo nivel [1/2]</li>
+<li>[ ] 258. Fallo lógico de bajo nivel [2/2]</li>
+<li>[ ] 259. Gestión inconsistente de entradas atípicas</li>
+<li>[ ] 260. Aislamiento débil en endpoint de doble uso</li>
+<li>[ ] 261. Validación insuficiente del flujo de trabajo</li>
+<li>[ ] 262. Bypass por máquina de estados rota</li>
+<li>[ ] 263. Fallo lógico para generar dinero infinito [1/2]</li>
+<li>[ ] 264. Fallo lógico para generar dinero infinito [2/2]</li>
+<li>[ ] 265. Bypass por oráculo de cifrado [1/2]</li>
+<li>[ ] 266. Bypass por oráculo de cifrado [2/2]</li>
+<li>[ ] 267. Bypass por parsing inconsistente de email [1/3]</li>
+<li>[ ] 268. Bypass por parsing inconsistente de email [2/3]</li>
+<li>[ ] 269. Bypass por parsing inconsistente de email [3/3]</li>
+<li>[ ] 270. Cuestionario de Business Logic</li>
+</ul>
+<h3 id="21-ataques-mediante-cabecera-host">🚀 21. Ataques mediante cabecera Host</h3>
+<ul>
+<li>[ ] 271. Poisoning básico en reseteo de contraseña</li>
+<li>[ ] 272. Bypass de autenticación por cabecera Host</li>
+<li>[ ] 273. Web cache poisoning por petición ambigua</li>
+<li>[ ] 274. SSRF por fallo en enrutamiento</li>
+<li>[ ] 275. SSRF por parsing incorrecto de la petición</li>
+<li>[ ] 276. Bypass de validación por estado de conexión</li>
+<li>[ ] 277. Poisoning de reset con markup colgante</li>
+<li>[ ] 278. Cuestionario de Host Header Injection</li>
+</ul>
+<h3 id="22-autenticacion-con-oauth">🔑 22. Autenticación con OAuth</h3>
+<ul>
+<li>[ ] 279. Bypass de login usando flujo implícito de OAuth</li>
+<li>[ ] 280. SSRF vía registro dinámico de cliente OpenID</li>
+<li>[ ] 281. Forzado de enlace entre perfiles OAuth</li>
+<li>[ ] 282. Secuestro de cuenta por 'redirect_uri' en OAuth</li>
+<li>[ ] 283. Robo de token OAuth con redirección abierta [1/2]</li>
+<li>[ ] 284. Robo de token OAuth con redirección abierta [2/2]</li>
+<li>[ ] 285. Robo de token de acceso con página proxy [1/3]</li>
+<li>[ ] 286. Robo de token de acceso con página proxy [2/3]</li>
+<li>[ ] 287. Robo de token de acceso con página proxy [3/3]</li>
+<li>[ ] 288. Cuestionario de OAuth</li>
+</ul>
+<h3 id="23-vulnerabilidades-en-subida-de-archivos">📤 23. Vulnerabilidades en subida de archivos</h3>
+<ul>
+<li>[ ] 289. Ejecución remota con web shell subida</li>
+<li>[ ] 290. Web shell por bypass de Content-Type</li>
+<li>[ ] 291. Web shell por path traversal</li>
+<li>[ ] 292. Web shell por bypass de blacklist de extensiones</li>
+<li>[ ] 293. Web shell con extensión de archivo ofuscada</li>
+<li>[ ] 294. Ejecución remota con web shell multi-formato</li>
+<li>[ ] 295. Web shell por condición de carrera</li>
+<li>[ ] 296. Cuestionario de subida de archivos</li>
+</ul>
+<h3 id="24-jwt-json-web-tokens">🪙 24. JWT (Json Web Tokens)</h3>
+<ul>
+<li>[ ] 297. Bypass de autenticación JWT sin verificar la firma</li>
+<li>[ ] 298. Bypass de autenticación JWT por verificación defectuosa</li>
+<li>[ ] 299. Bypass de autenticación JWT con clave débil</li>
+<li>[ ] 300. Bypass de autenticación JWT por inyección en jwk</li>
+<li>[ ] 301. Bypass de autenticación JWT por inyección en jku</li>
+<li>[ ] 302. Bypass de autenticación JWT con traversal en kid [1/3]</li>
+<li>[ ] 303. Bypass de autenticación JWT por confusión de algoritmo [2/3]</li>
+<li>[ ] 304. Confusión de algoritmo JWT sin clave expuesta [3/3]</li>
+<li>[ ] 305. Cuestionario de JWT [1/3]</li>
+</ul>
+<h3 id="25-habilidades-esenciales">🎒 25. Habilidades esenciales</h3>
+<ul>
+<li>[ ] 306. Detección rápida con escaneo dirigido [2/3]</li>
+<li>[ ] 307. Escaneo de estructuras de datos no estándar [3/3]</li>
+</ul>
+<h3 id="26-prototype-pollution">🧪 26. Prototype Pollution</h3>
+<ul>
+<li>[ ] 308. Prototype pollution en el lado cliente usando APIs del navegador [1/2]</li>
+<li>[ ] 309. Prototype pollution en el lado cliente usando APIs del navegador [2/2]</li>
+<li>[ ] 310. XSS en el DOM por prototype pollution en cliente</li>
+<li>[ ] 311. XSS en el DOM con vector alternativo de pollution</li>
+<li>[ ] 312. Prototype pollution en cliente por mala sanitización</li>
+<li>[ ] 313. Prototype pollution en librerías de terceros [1/3]</li>
+<li>[ ] 314. Prototype pollution en librerías de terceros [2/3]</li>
+<li>[ ] 315. Prototype pollution en librerías de terceros [3/3]</li>
+<li>[ ] 316. Escalada de privilegios por pollution en el servidor</li>
+<li>[ ] 317. Detección sin reflejo de propiedades modificadas</li>
+<li>[ ] 318. Bypass de filtros para pollution en servidor</li>
+<li>[ ] 319. Ejecución remota por pollution en servidor</li>
+<li>[ ] 320. Exfiltración de datos sensibles por pollution en servidor</li>
+<li>[ ] 321. Cuestionario de Prototype Pollution</li>
+</ul>
+<h3 id="27-vulnerabilidades-en-apis-graphql">🕸️ 27. Vulnerabilidades en APIs GraphQL</h3>
+<ul>
+<li>[ ] 322. Acceso a publicaciones privadas en GraphQL [1/6]</li>
+<li>[ ] 323. Exposición accidental de campos privados [2/6]</li>
+<li>[ ] 324. Descubrimiento de endpoint GraphQL oculto [3/6]</li>
+<li>[ ] 325. Bypass de protección contra fuerza bruta en GraphQL [4/6]</li>
+<li>[ ] 326. Explotación CSRF a través de GraphQL [5/6]</li>
+<li>[ ] 327. Cuestionario de GraphQL [6/6]</li>
+</ul>
+<h3 id="28-condiciones-de-carrera-race-condition">🏃‍♂️ 28. Condiciones de Carrera (Race Condition)</h3>
+<ul>
+<li>[ ] 328. Condición de carrera superando límites [1/2] [1/13]</li>
+<li>[ ] 329. Condición de carrera superando límites [2/2] [2/13]</li>
+<li>[ ] 330. Bypass de limitación por condición de carrera [3/13]</li>
+<li>[ ] 331. Condiciones de carrera en múltiples endpoints [4/13]</li>
+<li>[ ] 332. Condiciones de carrera en un único endpoint [1/2] [5/13]</li>
+<li>[ ] 333. Condiciones de carrera en un único endpoint [2/2] [6/13]</li>
+<li>[ ] 334. Explotación de vulnerabilidades sensibles al tiempo [1/2] [7/13]</li>
+<li>[ ] 335. Explotación de vulnerabilidades sensibles al tiempo [2/2] [8/13]</li>
+<li>[ ] 336. Condición de carrera en construcción parcial [1/4] [9/13]</li>
+<li>[ ] 337. Condición de carrera en construcción parcial [2/4] [10/13]</li>
+<li>[ ] 338. Condición de carrera en construcción parcial [3/4] [11/13]</li>
+<li>[ ] 339. Condición de carrera en construcción parcial [4/4] [12/13]</li>
+<li>[ ] 340. Cuestionario de Race Condition [13/13]</li>
+</ul>
+<h3 id="29-inyecciones-nosql">🚫 29. Inyecciones NoSQL</h3>
+<ul>
+<li>[ ] 341. Detección de inyección NoSQL [1/2] [1/8]</li>
+<li>[ ] 342. Detección de inyección NoSQL [2/2] [2/8]</li>
+<li>[ ] 343. Bypass de login con inyección de operadores [3/8]</li>
+<li>[ ] 344. Extracción de datos con inyección NoSQL [1/2] [4/8]</li>
+<li>[ ] 345. Extracción de datos con inyección NoSQL [2/2] [5/8]</li>
+<li>[ ] 346. Extracción de campos desconocidos con operadores NoSQL [1/2] [6/8]</li>
+<li>[ ] 347. Extracción de campos desconocidos con operadores NoSQL [2/2] [7/8]</li>
+<li>[ ] 348. Cuestionario de Inyecciones NoSQL [8/8]</li>
+</ul>
+<h3 id="30-pruebas-de-seguridad-en-apis">🧮 30. Pruebas de seguridad en APIs</h3>
+<ul>
+<li>[ ] 349. Explotación de un endpoint usando la documentación [1/6]</li>
+<li>[ ] 350. Parameter pollution en query string del servidor [2/6]</li>
+<li>[ ] 351. Descubrimiento y explotación de un endpoint no usado [3/6]</li>
+<li>[ ] 352. Explotación de Mass Assignment [4/6]</li>
+<li>[ ] 353. Parameter pollution en URL REST del servidor [5/6]</li>
+<li>[ ] 354. Cuestionario de APIs [6/6]</li>
+</ul>
+<h3 id="31-explotacion-de-llms-en-entornos-web">🤖 31. Explotación de LLMs en entornos web</h3>
+<ul>
+<li>[ ] 355. Explotación de LLMs con agencia excesiva [1/8]</li>
+<li>[ ] 356. Explotación de vulnerabilidades en APIs de LLM [2/8]</li>
+<li>[ ] 357. Inyección indirecta de prompts [1/3] [3/8]</li>
+<li>[ ] 358. Inyección indirecta de prompts [2/3] [4/8]</li>
+<li>[ ] 359. Inyección indirecta de prompts [3/3] [5/8]</li>
+<li>[ ] 360. Explotación por manejo inseguro de salidas en LLMs [1/2] [6/8]</li>
+<li>[ ] 361. Explotación por manejo inseguro de salidas en LLMs [2/2] [7/8]</li>
+<li>[ ] 362. Cuestionario de LLMs [8/8]</li>
+</ul>
+<h3 id="32-engano-a-la-cache-web">📦 32. Engaño a la caché web</h3>
+<ul>
+<li>[ ] 363. Engaño a la caché por manipulación de rutas [1/6]</li>
+<li>[ ] 364. Engaño a la caché usando delimitadores en la ruta [2/6]</li>
+<li>[ ] 365. Engaño a la caché por normalización en el servidor origen [3/6]</li>
+<li>[ ] 366. Engaño a la caché por normalización en el servidor de caché [4/6]</li>
+<li>[ ] 367. Engaño a la caché con reglas de coincidencia exacta [5/6]</li>
+<li>[ ] 368. Cuestionario de caché web [6/6]</li>
+</ul>
+<h3 id="33-cuestionario-de-tensada-maxima">🔥 33. Cuestionario de Tensada Máxima</h3>
+<ul>
+<li>[ ] 369. Cuestionario de Tensada Máxima [1/1]</li>
+</ul>
+<h3 id="34-despedida">🎓 34. Despedida</h3>
+<ul>
+<li>[ ] 370. Clase final y certificado [1/1]</li>
+</ul>
+<p><a href="../../%F0%9F%92%BB%20CURSOS%20HACK4U/">⬅️ Volver a 💻 CURSOS HACK4U</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

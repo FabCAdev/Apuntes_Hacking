@@ -20,12 +20,11 @@ tags:
 	- *Descripción:* Captura, filtrado e inspección de paquetes en tránsito.
 - [[Herramientas - Escaneo de Infraestructura con Nmap]]
 	- *Descripción:* Descubrimiento de puertos, versiones de servicios y uso del motor de scripts (NSE).
+- [[Herramientas - Auditoría y Análisis Web con Burp Suite]]
+	- *Descripción:* Interceptación de tráfico HTTP/S, mapeo de aplicaciones, pruebas repetitivas de peticiones y automatización de vectores de ataque mediante Intruder.
 - [[Herramientas - Subdominios y Fuzzing con wFuzz]]
 	- *Descripción:* Enumeración por fuerza bruta de directorios, archivos y subdominios ocultos.
 
 ---
-<div style="text-align: left; margin-top: 20px;">
-    <a href="📖 ENCICLOPEDIA" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver a ENCICLOPEDIA
-    </a>
-</div>
+
+[⬅️ Volver a Enciclopedia](../📖 ENCICLOPEDIA.md)
