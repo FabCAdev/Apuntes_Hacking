@@ -202,8 +202,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           },
           {
@@ -212,8 +212,8 @@
             "state": {
               "type": "copilot-chat-view",
               "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
+              "icon": "lucide-ghost",
+              "title": "copilot-chat-view"
             }
           },
           {
@@ -222,8 +222,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ],
@@ -249,6 +249,10 @@
   },
   "active": "57e03c19ce7f57a4",
   "lastOpenFiles": [
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_5.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_4.png",
+    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/1- ANÁLISIS DE AMENAZAS (BLUE TEAM).md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_3.png",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_2.png",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_1.png",
@@ -257,21 +261,16 @@
     "copilot/copilot-conversations/puedes_modificar_notas_necesito_que_se_ordene_y_acomode_la@20260702_015438.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/Herramientas - Auditoría y Análisis Web con Burp Suite.md",
     "AVANCES/CURSOS/HACK4U/CURSO HACK4U/💀 INTRODUCCION AL HACKING.md",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0.png",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry3.0.png",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/DoublePulsar.jpg",
     "Por Organizar/Etiquetas.md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/US-CERT-CVE-2017-0144.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry2.0_2.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry2.0.png",
     "copilot/copilot-conversations/Copilot_Plus_License_Error@20260702_114929.md",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry1.0_2.png",
     "copilot/copilot-conversations",
     "copilot",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/09. Comparer/09. Comparer.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/07. Sequencer/07. Sequencer.md",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/1- ANÁLISIS DE AMENAZAS (BLUE TEAM).md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry",
     "index.md",
     "AVANCES/PROYECTOS PERSONALES/💻 PROYECTOS PERSONALES.md",
