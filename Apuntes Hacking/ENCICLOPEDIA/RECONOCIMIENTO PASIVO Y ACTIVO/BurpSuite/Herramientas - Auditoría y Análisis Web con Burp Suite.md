@@ -61,4 +61,6 @@ Tomando como base la barra de herramientas de la suite, dividiremos la documenta
 
 ---
 
+![Burp-Suite](Burp-Suite.png)
+
 [[E3 - Reconocimiento Pasivo y Activo|⬅️ Volver a Reconocimiento Pasivo y Activo]]

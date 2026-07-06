@@ -36,19 +36,17 @@
             }
           },
           {
-            "id": "57e03c19ce7f57a4",
+            "id": "ebed40580125d8c9",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
+                "file": "Por Organizar/Publicacion diaria linkedln.md",
                 "mode": "source",
                 "source": false
               },
-              "pinned": true,
               "icon": "lucide-file",
-              "title": "Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry"
+              "title": "Publicacion diaria linkedln"
             }
           }
         ],
@@ -109,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 409.5
+    "width": 409.5,
+    "collapsed": true
   },
   "right": {
     "id": "1a2ff338de512431",
@@ -187,13 +186,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
+                "file": "Por Organizar/Publicacion diaria linkedln.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry"
+              "title": "Esquema de Publicacion diaria linkedln"
             }
           },
           {
@@ -222,17 +221,16 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 296.5,
-    "collapsed": true
+    "width": 296.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -247,53 +245,53 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "57e03c19ce7f57a4",
+  "active": "ebed40580125d8c9",
   "lastOpenFiles": [
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/Herramientas - Auditoría y Análisis Web con Burp Suite.md",
+    "Por Organizar/Publicacion diaria linkedln.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/07. Sequencer/Burp-Suite_Sequencer.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/06. Collaborator/Burp-Suite_Collaborator.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/05. Repeater/Burp-Suite_Repeater.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/04. Intruder/Burp-Suite_Intruder.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/03. Proxy/Burp-Suite_Proxy.png",
+    "Por Organizar/Sin nombre",
+    "index.md",
+    "ENCICLOPEDIA/📖 ENCICLOPEDIA.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/E3 - Reconocimiento Pasivo y Activo.md",
+    "AVANCES/📈 AVANCES.md",
+    "AVANCES/PROYECTOS PERSONALES/💻 PROYECTOS PERSONALES.md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/1- ANÁLISIS DE AMENAZAS (BLUE TEAM).md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/Herramientas - Auditoría y Análisis Web con Burp Suite.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/E3 - Reconocimiento Pasivo y Activo.md",
+    "Por Organizar/Documentación - Análisis Forense de Campaña Phishing Fraudulenta.md",
     "Por Organizar/Etiquetas.md",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/US-CERT-Alert_Wannacry.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_5.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_4.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_3.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_2.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0_1.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/SMB_Firewall.png",
-    "Documentación - Análisis Forense de Campaña Phishing Fraudulenta.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/02. Target/02. Target.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/01. Dashboard/01. Dashboard.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/02. Target/Burp-Suite_Target.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/02. Target/Designer (2).png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/Burp-Suite.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/01. Dashboard/Burp-Suite_Dashboard.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/01. Dashboard/Designer (1).png",
+    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/SQL Injection/Vulnerabilidad - SQL Injection (SQLi).md",
+    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/SQL Injection",
+    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/E8 - Vulnerabilidades y OWASP Top 10.md",
     "copilot/copilot-conversations/puedes_modificar_notas_necesito_que_se_ordene_y_acomode_la@20260702_015438.md",
     "AVANCES/CURSOS/HACK4U/CURSO HACK4U/💀 INTRODUCCION AL HACKING.md",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry4.0.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Wannacry3.0.png",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/DoublePulsar.jpg",
     "copilot/copilot-conversations/Copilot_Plus_License_Error@20260702_114929.md",
     "copilot/copilot-conversations",
     "copilot",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/09. Comparer/09. Comparer.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/07. Sequencer/07. Sequencer.md",
     "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry",
-    "index.md",
-    "AVANCES/PROYECTOS PERSONALES/💻 PROYECTOS PERSONALES.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/01. Dashboard/01. Dashboard.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/15. Caracteristicas pago/15. Características de la versión de pago.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/14. Caso Practico/14. Caso Practica - Auditoria Web de practica de SQLI.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/13. Learn/13. Learn.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/12. Extensions/12. Extensions.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/11. Organizer/11. Organizer.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/10. Logger/10. Logger.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/08. Decoder/08. Decoder.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/06. Collaborator/06. Collaborator.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/03. Proxy/03. Proxy.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/04. Intruder/04. Intruder.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/05. Repeater/05. Repeater.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/14. Caso Practico",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/15. Caracteristicas pago",
     "Sin título.base",
     "Apuntes_Hacking/enciclopedia/reconocimiento-pasivo-y-activo",
     "Apuntes_Hacking/enciclopedia",
-    "Apuntes_Hacking/ENCICLOPEDIA",
-    "Apuntes_Hacking",
     "Sin título.canvas"
   ]
 }
