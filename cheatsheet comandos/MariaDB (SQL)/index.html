@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/Por%20Organizar/Publicacion%20diaria%20linkedln/">
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/cheatsheet%20comandos/MariaDB%20%28SQL%29/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Publicacion diaria linkedln - Apuntes de Hacking de FabCAdev</title>
+        <title>MariaDB Cheatsheet - Apuntes de Hacking de FabCAdev</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mariadb-cheatsheet" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -99,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Publicacion diaria linkedln
+              MariaDB Cheatsheet
             
           </span>
         </div>
@@ -529,6 +534,79 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-y-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios y acceso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bases de datos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultas-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultas (SELECT)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificacion-de-datos-insert-update-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificación de datos (INSERT / UPDATE / DELETE)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuarios-y-privilegios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usuarios y privilegios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilidades-varias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilidades varias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -544,67 +622,268 @@
 
 
 
-  <h1>Publicacion diaria linkedln</h1>
-
-<p>Julio 2026:</p>
-<ul>
-<li>[x] 03: Mostrar certifiaciones cursos ya hechos hack4u</li>
-<li>
-<p>[x] 04: Mostrar certificacion introduccion al Hacking</p>
-</li>
-<li>
-<p>[x] D 05: Platica sobre mi decision de ISSC</p>
-</li>
-<li>[x] L 06: Noticia Semanal: Brecha de datos</li>
-<li>[x] Ma 07: Presentar documentacion Wannacry</li>
-<li>[x] Mi 08: Explciacion general Burp Suite</li>
-<li>[x] J 09: Explicacion Dashboard Burp Suite</li>
-<li>[x] V 10: Explicacion Target Burp Suite</li>
-<li>
-<p>[x] S 11: Mi resumen semanal</p>
-</li>
-<li>
-<p>[x] D 12: Platica sobre mi decision de ciberseguridad</p>
-</li>
-<li>[ ] L 13: Noticia Semanal: </li>
-<li>[ ] Ma 14: ¿?</li>
-<li>[x] Mi 15: Explicacion Proxy Burp Suite</li>
-<li>[x] J 16: Explicacion Intruder Burp Suite</li>
-<li>[x] V 17: Explicacion Repeater Burp Suite</li>
-<li>
-<p>[ ] S 18: Mi resumen semanal</p>
-</li>
-<li>
-<p>[x] D 19: Platica sobre mi decision de estudiar en ULSB</p>
-</li>
-<li>[ ] L 20: Noticia Semanal:</li>
-<li>[ ] Ma 21: ¿?</li>
-<li>[x] Mi 22: Explicacion Collaborator Burp Suite</li>
-<li>[x] J 23: Explicacion Sequencer Burp Suite</li>
-<li>[x] V 24: Explicacion Decoder Burp Suite</li>
-<li>
-<p>[ ] S 25: Mi resumen semanal</p>
-</li>
-<li>
-<p>[x] D 26: Platica sobre mi meta de conseguir Comptia Security+</p>
-</li>
-<li>[ ] L 27: Noticia Semanal:</li>
-<li>[ ] Ma 28: ¿?</li>
-<li>[x] Mi 29: Explicacion Comparer Burp Suite</li>
-<li>[x] J 30: Explicacion Logger Burp Suite</li>
-<li>[x] V 31: Explicacion Organizer Burp Suite</li>
-<li>[ ] S 01: Mi resumen semanal</li>
-</ul>
-<p>Agosto 2025</p>
-<ul>
-<li>[ ] D 02: Platica</li>
-<li>[ ] L 03: Noticia Semanal</li>
-<li>[ ] Ma 04: ¿?</li>
-<li>[x] Mi 05: Explicacion Extensions Burp Suite</li>
-<li>[ ] J 06: ¿?</li>
-<li>[ ] V 07: ¿?</li>
-<li>[ ] S 08: Mi resumen semanal</li>
-</ul>
+<h1 id="mariadb-cheatsheet">MariaDB Cheatsheet</h1>
+<h2 id="servicios-y-acceso">Servicios y acceso</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>service mysql start</code></td>
+<td>Inicia servicio de mysql</td>
+</tr>
+<tr>
+<td><code>service apache2 start</code></td>
+<td>Inicia servicio de apache</td>
+</tr>
+<tr>
+<td><code>sudo mysql -u root</code></td>
+<td>Entrar en la consola de MariaDB como usuario root</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bases-de-datos">Bases de datos</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>show databases;</code></td>
+<td>Muestra las bases de datos</td>
+</tr>
+<tr>
+<td><code>use [nombre];</code><br><code>use mysql;</code></td>
+<td>Usar una bd<br>Usar la bd de mysql</td>
+</tr>
+<tr>
+<td><code>create database [nombre];</code><br><code>create database SQLI;</code></td>
+<td>Crea una base de datos<br>Crea una base de datos llamada SQLI</td>
+</tr>
+<tr>
+<td><code>drop database [nombre];</code><br><code>drop database SQLI;</code></td>
+<td>Elimina una base de datos completa<br>Elimina la base de datos SQLI</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tablas">Tablas</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>show tables;</code></td>
+<td>Muestra las tablas de la bd actual</td>
+</tr>
+<tr>
+<td><code>describe [tabla];</code><br><code>describe user;</code></td>
+<td>Ver la descripción/estructura de una tabla<br>Ver la descripción de la tabla user</td>
+</tr>
+<tr>
+<td><code>create table [nombre]([valores]);</code><br><code>create table users(id int(32), username varchar(32), password varchar(32));</code></td>
+<td>Crea una tabla con sus columnas y tipos de dato<br>Crea la tabla users con columnas id, username, password</td>
+</tr>
+<tr>
+<td><code>alter table [tabla] add [campo] [tipo];</code><br><code>alter table users add email varchar(64);</code></td>
+<td>Agrega una nueva columna a una tabla existente<br>Agrega la columna email a users</td>
+</tr>
+<tr>
+<td><code>alter table [tabla] drop column [campo];</code><br><code>alter table users drop column email;</code></td>
+<td>Elimina una columna de una tabla<br>Elimina la columna email de users</td>
+</tr>
+<tr>
+<td><code>alter table [tabla] modify [campo] [nuevo_tipo];</code><br><code>alter table users modify username varchar(64);</code></td>
+<td>Cambia el tipo de dato de una columna<br>Cambia username a varchar(64)</td>
+</tr>
+<tr>
+<td><code>alter table [tabla] rename to [nuevo_nombre];</code><br><code>alter table users rename to usuarios;</code></td>
+<td>Renombra una tabla<br>Renombra users a usuarios</td>
+</tr>
+<tr>
+<td><code>drop table [tabla];</code><br><code>drop table users;</code></td>
+<td>Elimina una tabla completa (estructura y datos)<br>Elimina la tabla users</td>
+</tr>
+</tbody>
+</table>
+<h2 id="consultas-select">Consultas (SELECT)</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>select [campo1][, campo2] from [tabla];</code><br><code>select user,password from user;</code></td>
+<td>Selecciona una o más columnas de una tabla<br>Selecciona user y password de la tabla user</td>
+</tr>
+<tr>
+<td><code>select * from [tabla];</code><br><code>select * from users;</code></td>
+<td>Selecciona todos los campos de una tabla<br>Selecciona la tabla users completa</td>
+</tr>
+<tr>
+<td><code>select [campo] from [tabla] where [campo]='[valor]';</code><br><code>select user,password from user where user = 'root';</code></td>
+<td>Busca un valor específico en una columna<br>Muestra user y password del usuario "root"</td>
+</tr>
+<tr>
+<td><code>select * from [tabla] where [campo] like '%valor%';</code><br><code>select * from users where username like '%admin%';</code></td>
+<td>Busca coincidencias parciales en un campo<br>Busca usernames que contengan "admin"</td>
+</tr>
+<tr>
+<td><code>select * from [tabla] where [campo] in ([valor1],[valor2]);</code><br><code>select * from users where id in (1,2,3);</code></td>
+<td>Busca registros que coincidan con varios valores<br>Muestra usuarios con id 1, 2 o 3</td>
+</tr>
+<tr>
+<td><code>select * from [tabla] where [campo] between [valor1] and [valor2];</code><br><code>select * from users where id between 1 and 10;</code></td>
+<td>Busca registros dentro de un rango<br>Muestra usuarios con id entre 1 y 10</td>
+</tr>
+<tr>
+<td><code>select * from [tabla] where [campo] is null;</code><br><code>select * from users where email is null;</code></td>
+<td>Busca registros donde un campo esté vacío (nulo)<br>Muestra usuarios sin email</td>
+</tr>
+<tr>
+<td><code>select * from [tabla] where [campo] is not null;</code><br><code>select * from users where email is not null;</code></td>
+<td>Busca registros donde un campo NO esté vacío<br>Muestra usuarios con email registrado</td>
+</tr>
+<tr>
+<td><code>select distinct [campo] from [tabla];</code><br><code>select distinct username from users;</code></td>
+<td>Muestra valores únicos, sin repetir<br>Muestra usernames sin duplicados</td>
+</tr>
+<tr>
+<td><code>select * from [tabla] order by [campo] asc/desc;</code><br><code>select * from users order by id desc;</code></td>
+<td>Ordena resultados ascendente o descendente<br>Muestra usuarios ordenados por id descendente</td>
+</tr>
+<tr>
+<td><code>select * from [tabla] limit [n];</code><br><code>select * from users limit 5;</code></td>
+<td>Limita el número de resultados mostrados<br>Muestra solo los primeros 5 registros</td>
+</tr>
+<tr>
+<td><code>select count(*) from [tabla];</code><br><code>select count(*) from users;</code></td>
+<td>Cuenta el número de registros<br>Cuenta cuántos usuarios hay</td>
+</tr>
+<tr>
+<td><code>select [campo], count(*) from [tabla] group by [campo];</code><br><code>select username, count(*) from logins group by username;</code></td>
+<td>Agrupa resultados y cuenta por grupo<br>Cuenta cuántos logins tiene cada username</td>
+</tr>
+</tbody>
+</table>
+<h2 id="modificacion-de-datos-insert-update-delete">Modificación de datos (INSERT / UPDATE / DELETE)</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>insert into [tabla]([campo1],[campo2]...) values ([valor1],[valor2]...);</code><br><code>insert into users(id, username, password) values(1, 'admin', 'admin123$!p@$$');</code></td>
+<td>Inserta datos en las columnas de una tabla<br>Inserta id, username y password en users</td>
+</tr>
+<tr>
+<td><code>update [tabla] set [campo]=[valor] where [campo2]=[valor2];</code><br><code>update users set id = 2 where username = 'FabCA06';</code></td>
+<td>Modifica un registro de una tabla<br>Modifica el id del usuario FabCA06</td>
+</tr>
+<tr>
+<td><code>delete from [tabla] where [campo] = [valor];</code><br><code>delete from users where username = 'FabCA06';</code></td>
+<td>Elimina un registro de una tabla<br>Elimina el registro donde username = FabCA06</td>
+</tr>
+<tr>
+<td><code>truncate table [tabla];</code><br><code>truncate table users;</code></td>
+<td>Elimina todos los registros de una tabla, sin borrar la estructura<br>Vacía la tabla users</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usuarios-y-privilegios">Usuarios y privilegios</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>create user '[nombre]'@'[ip]' identified by '[contraseña]';</code><br><code>create user 'FabCA06'@'localhost' identified by 'FABRICIO06';</code></td>
+<td>Crea un usuario con contraseña para acceder al servidor<br>Crea el usuario FabCA06 con contraseña FABRICIO06</td>
+</tr>
+<tr>
+<td><code>grant all privileges on [base_de_datos].* to '[nombre]'@'[ip]';</code><br><code>grant all privileges on SQLI.* to 'FabCA06'@'localhost';</code></td>
+<td>Da todos los permisos a un usuario sobre una bd<br>Da todos los permisos a FabCA06 en la bd SQLI</td>
+</tr>
+<tr>
+<td><code>grant select,insert on [base_de_datos].* to '[nombre]'@'[ip]';</code><br><code>grant select,insert on SQLI.* to 'FabCA06'@'localhost';</code></td>
+<td>Da permisos específicos a un usuario<br>Da permisos de select e insert a FabCA06</td>
+</tr>
+<tr>
+<td><code>revoke all privileges on [base_de_datos].* from '[nombre]'@'[ip]';</code><br><code>revoke all privileges on SQLI.* from 'FabCA06'@'localhost';</code></td>
+<td>Quita permisos a un usuario<br>Quita todos los permisos a FabCA06 en SQLI</td>
+</tr>
+<tr>
+<td><code>flush privileges;</code></td>
+<td>Recarga los privilegios para que los cambios surtan efecto</td>
+</tr>
+<tr>
+<td><code>show grants for '[nombre]'@'[ip]';</code><br><code>show grants for 'FabCA06'@'localhost';</code></td>
+<td>Muestra los privilegios de un usuario<br>Muestra los privilegios de FabCA06</td>
+</tr>
+<tr>
+<td><code>drop user '[nombre]'@'[ip]';</code><br><code>drop user 'FabCA06'@'localhost';</code></td>
+<td>Elimina un usuario<br>Elimina al usuario FabCA06</td>
+</tr>
+<tr>
+<td><code>select user();</code></td>
+<td>Muestra el usuario actualmente conectado</td>
+</tr>
+<tr>
+<td><code>select version();</code></td>
+<td>Muestra la versión de MariaDB</td>
+</tr>
+</tbody>
+</table>
+<h2 id="utilidades-varias">Utilidades varias</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status;</code></td>
+<td>Muestra el estado de la conexión y del servidor</td>
+</tr>
+<tr>
+<td><code>\q</code> o <code>exit;</code></td>
+<td>Sale de la consola de MariaDB</td>
+</tr>
+<tr>
+<td><code>source [ruta_archivo.sql];</code></td>
+<td>Ejecuta un archivo .sql (útil para importar dumps)</td>
+</tr>
+<tr>
+<td><code>mysqldump -u [usuario] -p [bd] &gt; backup.sql</code></td>
+<td>Exporta (respalda) una base de datos a un archivo .sql (desde la terminal, no desde la consola de MariaDB)</td>
+</tr>
+<tr>
+<td><code>mysql -u [usuario] -p [bd] &lt; backup.sql</code></td>
+<td>Importa una base de datos desde un archivo .sql (desde la terminal)</td>
+</tr>
+</tbody>
+</table>
 
 
 
