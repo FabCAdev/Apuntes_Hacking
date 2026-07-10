@@ -31,6 +31,5 @@ Plan de ruta, seguimiento y control de hitos académicos y certificaciones de ci
 	- *Estatus actual:* #gestion/estado/sin-empezar
 
 ---
-* ➕ [Espacio reservado para futuras certificaciones (Ej: eJPT, CeH, OSCP, BTL1)]*
 
 [[📈 AVANCES|⬅️ Volver a 📈 AVANCES]]

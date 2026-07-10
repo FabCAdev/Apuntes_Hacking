@@ -14,8 +14,4 @@ tags:
 	- *Descripción:* Uso de frameworks (Metasploit) vs modificación manual de código fuente de Exploit-DB.
 
 ---
-<div style="text-align: left; margin-top: 20px;">
-    <a href="📖 ENCICLOPEDIA" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver a ENCICLOPEDIA
-    </a>
-</div>
+[[📖 ENCICLOPEDIA|⬅️ Volver a 📖 ENCICLOPEDIA]]

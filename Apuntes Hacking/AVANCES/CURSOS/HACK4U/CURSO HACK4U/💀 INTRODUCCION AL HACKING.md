@@ -86,7 +86,7 @@ tags:
 - [x] 56. Introducción a BurpSuite
 
 ### 🌐 7. OWASP TOP 10 y vulnerabilidades web
-- [ ] 57. SQL Injection (SQLi)
+- [x] 57. SQL Injection (SQLi)
 - [ ] 58. Cross-Site Scripting (XSS) (1/2)
 - [ ] 59. Cross-Site Scripting (XSS) (2/2)
 - [ ] 60. XML External Entity Injection (XXE)

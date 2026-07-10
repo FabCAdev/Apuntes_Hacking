@@ -24,23 +24,23 @@ Julio 2026:
 - [ ] Ma 21: ¿?
 - [x] Mi 22: Explicacion Collaborator Burp Suite
 - [x] J 23: Explicacion Sequencer Burp Suite
-- [ ] V 24: Explicacion Decoder Burp Suite (falta imagen)
+- [x] V 24: Explicacion Decoder Burp Suite
 - [ ] S 25: Mi resumen semanal
 
 - [x] D 26: Platica sobre mi meta de conseguir Comptia Security+
 - [ ] L 27: Noticia Semanal:
 - [ ] Ma 28: ¿?
-- [ ] Mi 29: Explicacion Comparer Burp Suite (falta imagen)
-- [ ] J 30: Explicacion Logger Burp Suite (faltan imagen)
-- [ ] V 31: Explicacion Organizer Burp Suite (faltan imagen)
+- [x] Mi 29: Explicacion Comparer Burp Suite
+- [x] J 30: Explicacion Logger Burp Suite
+- [x] V 31: Explicacion Organizer Burp Suite
 - [ ] S 01: Mi resumen semanal
 
 Agosto 2025
 
-D 02: Platica
-L 03: Noticia Semanal
-Ma 04: ¿?
-Mi 05: Explicacion Extensions Burp Suite (falta imagen)
-J 06: ¿?
-V 07: ¿?
-S 08: Mi resumen semanal
+- [ ] D 02: Platica
+- [ ] L 03: Noticia Semanal
+- [ ] Ma 04: ¿?
+- [x] Mi 05: Explicacion Extensions Burp Suite
+- [ ] J 06: ¿?
+- [ ] V 07: ¿?
+- [ ] S 08: Mi resumen semanal

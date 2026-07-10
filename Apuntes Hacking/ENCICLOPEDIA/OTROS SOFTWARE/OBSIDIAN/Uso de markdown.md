@@ -77,8 +77,4 @@ Se usa barras verticales, separando con "-"
 
 [[Ejemplo nota markdown]]
 
-<div style="text-align: left; margin-bottom: 20px;">
-    <a href="ENCICLOPEDIA" class="internal-link" style="background-color: var(--interactive-accent); color: var(--text-on-accent); padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 5px;">
-        ⬅️ Volver atras
-    </a>
-</div>
+[[📖 ENCICLOPEDIA|⬅️ Volver a 📖 ENCICLOPEDIA]]

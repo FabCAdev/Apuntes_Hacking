@@ -27,4 +27,4 @@ tags:
 
 ---
 
-[⬅️ Volver a Enciclopedia](../📖 ENCICLOPEDIA.md)
+[[📖 ENCICLOPEDIA|⬅️ Volver a 📖 ENCICLOPEDIA]]

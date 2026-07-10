@@ -683,6 +683,7 @@
 3. Al resultado obtenido, le vuelves a aplicar <strong>Encode as... ➡️ URL</strong> en el segundo bloque.</p>
 <p>Esto generará una codificación URL doble (<code>%253Cscript%253E...</code>). Si el WAF del objetivo solo decodifica una capa de la petición para analizarla, verá texto inofensivo y dejará pasar el paquete; posteriormente, cuando el backend de la aplicación realice la segunda decodificación interna para procesar el parámetro, ejecutará tu payload malicioso con éxito.</p>
 <hr />
+<p><img alt="Burp-Suite_Decoder" src="../Burp-Suite_Decoder.png" /></p>
 <p><a href="../../Herramientas%20-%20Auditor%C3%ADa%20y%20An%C3%A1lisis%20Web%20con%20Burp%20Suite/">⬅️ Volver a Burp Suite</a></p>
 
 

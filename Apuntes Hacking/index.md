@@ -31,6 +31,9 @@ tags:
 > [!NOTE] Últimas Incorporaciones al Baúl
 > Sección dedicada a los recursos, investigaciones y guías añadidas recientemente al entorno.
 
+* **💉 Guía sobre SQL Injection (09/07/26)** 
+	* *Ubicación:* `Enciclopedia > E8 - Vulnerabilidades y OWASP Top 10` 
+	* *Descripción:* Informe técnico y laboratorio práctico sobre la explotación manual y automatizada de SQLi. Cubre inyecciones basadas en errores, `UNION`, técnicas a ciegas (booleanas y basadas en tiempo), sanitización de código PHP y desarrollo de scripts de automatización en Python.
 * **🛡️ Análisis de WannaCry (04/07/26)** 
 	* *Ubicación:* `Avances > Proyectos Personales > Analisis de Amenazas (Blue Team)`
 	* *Descripción:* Documentación clínica e histórica exhaustiva sobre la crisis global de 2017. Incluye análisis estático/dinámico en laboratorio VMware, funcionamiento de los exploits *EternalBlue* y *DoublePulsar*, lógica del *kill-switch* y contramedidas criptográficas avanzadas.

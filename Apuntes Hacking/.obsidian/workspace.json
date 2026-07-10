@@ -36,21 +36,35 @@
             }
           },
           {
-            "id": "ebed40580125d8c9",
+            "id": "a12093795f8848a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Por Organizar/Publicacion diaria linkedln.md",
+                "file": "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/ExamCompass/Cuestionario por Temas/ExamCompass - Cuestionarios por Temas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Publicacion diaria linkedln"
+              "title": "ExamCompass - Cuestionarios por Temas"
+            }
+          },
+          {
+            "id": "0f095ae383f30df5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cuestionario sobre controles de seguridad.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cuestionario sobre controles de seguridad"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -107,8 +121,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 409.5,
-    "collapsed": true
+    "width": 409.5
   },
   "right": {
     "id": "1a2ff338de512431",
@@ -186,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Por Organizar/Publicacion diaria linkedln.md",
+                "file": "cheatsheet comandos/MariaDB (SQL).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Publicacion diaria linkedln"
+              "title": "Esquema de MariaDB (SQL)"
             }
           },
           {
@@ -230,7 +243,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296.5
+    "width": 296.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -245,53 +259,54 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "ebed40580125d8c9",
+  "active": "0f095ae383f30df5",
   "lastOpenFiles": [
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/ExamCompass/Cuestionario por Temas/ExamCompass - Cuestionarios por Temas.md",
+    "Cuestionario sobre controles de seguridad.md",
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/ExamCompass/ExamCompass - Security+ (SY0-701).md",
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/ExamCompass/Cuestionario por Temas",
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/ExamCompass/Cuestionario de Acronimos",
+    "Sin nombre",
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/ExamCompass/Pruebas de Practica",
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/CERTIFICACIÓN - COMPTIA SECURITY+.md",
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/ExamCompass",
+    "AVANCES/CERTIFICACIONES/🏅 CERTIFICACIONES.md",
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+",
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/ExamCompass/Cuestionario de Acronimos/ExamCompass - Cuestionarios de Acrónimos.md",
+    "AVANCES/CERTIFICACIONES/COMPTIA SECURITY+/ExamCompass/Pruebas de Practica/ExamCompass - Pruebas de Practica.md",
+    "AVANCES/📈 AVANCES.md",
+    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/SQL Injection/Vulnerabilidad - SQL Injection (SQLi).md",
+    "Por Organizar/Etiquetas.md",
+    "AVANCES/CURSOS/HACK4U/CURSO HACK4U/💀 INTRODUCCION AL HACKING.md",
+    "AVANCES/CURSOS/HACK4U/💻 CURSOS HACK4U.md",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/Herramientas - Auditoría y Análisis Web con Burp Suite.md",
-    "Por Organizar/Publicacion diaria linkedln.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/12. Extensions/12. Extensions.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/11. Organizer/11. Organizer.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/10. Logger/10. Logger.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/09. Comparer/09. Comparer.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/08. Decoder/08. Decoder.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/07. Sequencer/07. Sequencer.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/06. Collaborator/06. Collaborator.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/05. Repeater/05. Repeater.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/04. Intruder/04. Intruder.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/03. Proxy/03. Proxy.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/02. Target/02. Target.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/01. Dashboard/01. Dashboard.md",
+    "index.md",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/12. Extensions/Burp-Suite_Extensions.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/11. Organizer/Burp-Suite_Organizer.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/10. Logger/Burp-Suite_Logger.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/09. Comparer/Burp-Suite_Comparer.png",
+    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/08. Decoder/Burp-Suite_Decoder.png",
+    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/SQL Injection/SQLI_CreacionBD.png",
+    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/SQL Injection/SQLI_Injection_CreacionBD",
+    "cheatsheet comandos",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/07. Sequencer/Burp-Suite_Sequencer.png",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/06. Collaborator/Burp-Suite_Collaborator.png",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/05. Repeater/Burp-Suite_Repeater.png",
     "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/04. Intruder/Burp-Suite_Intruder.png",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/03. Proxy/Burp-Suite_Proxy.png",
     "Por Organizar/Sin nombre",
-    "index.md",
-    "ENCICLOPEDIA/📖 ENCICLOPEDIA.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/E3 - Reconocimiento Pasivo y Activo.md",
-    "AVANCES/📈 AVANCES.md",
-    "AVANCES/PROYECTOS PERSONALES/💻 PROYECTOS PERSONALES.md",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/1- ANÁLISIS DE AMENAZAS (BLUE TEAM).md",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry/Documentación - Análisis Técnico de Malware y Comportamiento de WannaCry.md",
-    "Por Organizar/Documentación - Análisis Forense de Campaña Phishing Fraudulenta.md",
-    "Por Organizar/Etiquetas.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/02. Target/02. Target.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/01. Dashboard/01. Dashboard.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/02. Target/Burp-Suite_Target.png",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/02. Target/Designer (2).png",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/Burp-Suite.png",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/01. Dashboard/Burp-Suite_Dashboard.png",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/01. Dashboard/Designer (1).png",
-    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/SQL Injection/Vulnerabilidad - SQL Injection (SQLi).md",
     "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/SQL Injection",
-    "ENCICLOPEDIA/VULNERABILIDADES Y OWASP TOP 10/E8 - Vulnerabilidades y OWASP Top 10.md",
-    "copilot/copilot-conversations/puedes_modificar_notas_necesito_que_se_ordene_y_acomode_la@20260702_015438.md",
-    "AVANCES/CURSOS/HACK4U/CURSO HACK4U/💀 INTRODUCCION AL HACKING.md",
-    "copilot/copilot-conversations/Copilot_Plus_License_Error@20260702_114929.md",
-    "copilot/copilot-conversations",
-    "copilot",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/09. Comparer/09. Comparer.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/07. Sequencer/07. Sequencer.md",
-    "AVANCES/PROYECTOS PERSONALES/ANALISIS DE AMENAZAS/Analisis WannaCry",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/15. Caracteristicas pago/15. Características de la versión de pago.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/14. Caso Practico/14. Caso Practica - Auditoria Web de practica de SQLI.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/13. Learn/13. Learn.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/12. Extensions/12. Extensions.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/11. Organizer/11. Organizer.md",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/14. Caso Practico",
-    "ENCICLOPEDIA/RECONOCIMIENTO PASIVO Y ACTIVO/BurpSuite/15. Caracteristicas pago",
-    "Sin título.base",
-    "Apuntes_Hacking/enciclopedia/reconocimiento-pasivo-y-activo",
-    "Apuntes_Hacking/enciclopedia",
     "Sin título.canvas"
   ]
 }
