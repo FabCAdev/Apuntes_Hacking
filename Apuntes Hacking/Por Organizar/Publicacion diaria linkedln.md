@@ -12,7 +12,7 @@ Julio 2026:
 - [x] S 11: Mi resumen semanal
 
 - [x] D 12: Platica sobre mi decision de ciberseguridad
-- [ ] L 13: Noticia Semanal: 
+- [x] L 13: Noticia Semanal: 
 - [ ] Ma 14: ¿?
 - [x] Mi 15: Explicacion Proxy Burp Suite
 - [x] J 16: Explicacion Intruder Burp Suite
