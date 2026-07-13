@@ -1,0 +1,3773 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/Cuestionario%20sobre%20cifrado/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Cuestionario sobre cifrado - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pregunta-1-cifrado-a-nivel-de-hardware-hardware-level-encryption" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cuestionario sobre cifrado
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-1-cifrado-a-nivel-de-hardware-hardware-level-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 1: Cifrado a nivel de hardware / Hardware-level encryption
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 1: Cifrado a nivel de hardware / Hardware-level encryption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-2-confidencialidad-para-todo-el-dispositivo-full-device-confidentiality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 2: Confidencialidad para todo el dispositivo / Full device confidentiality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 2: Confidencialidad para todo el dispositivo / Full device confidentiality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-3-cifrado-granular-en-windows-granular-windows-file-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 3: Cifrado granular en Windows / Granular Windows file encryption
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 3: Cifrado granular en Windows / Granular Windows file encryption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-4-cifrado-hibrido-multiuso-multi-purpose-hybrid-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 4: Cifrado híbrido multiuso / Multi-purpose hybrid encryption
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 4: Cifrado híbrido multiuso / Multi-purpose hybrid encryption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-5-seguridad-en-trafico-web-web-traffic-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 5: Seguridad en Tráfico Web / Web Traffic Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 5: Seguridad en Tráfico Web / Web Traffic Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-6-transferencia-de-archivos-sobre-ssh-file-transfer-over-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 6: Transferencia de archivos sobre SSH / File transfer over SSH
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 6: Transferencia de archivos sobre SSH / File transfer over SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-7-mitos-y-realidades-de-los-protocolos-de-archivos-file-protocol-myths-and-realities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 7: Mitos y realidades de los protocolos de archivos / File protocol myths and realities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 7: Mitos y realidades de los protocolos de archivos / File protocol myths and realities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-8-acceso-remoto-a-terminal-remote-terminal-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 8: Acceso remoto a terminal / Remote terminal access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 8: Acceso remoto a terminal / Remote terminal access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-9-confidencialidad-en-la-capa-de-red-network-layer-confidentiality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 9: Confidencialidad en la Capa de Red / Network Layer Confidentiality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 9: Confidencialidad en la Capa de Red / Network Layer Confidentiality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-10-extension-segura-de-redes-secure-network-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 10: Extensión Segura de Redes / Secure Network Extension
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 10: Extensión Segura de Redes / Secure Network Extension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-11-criptografia-en-tiempo-real-real-time-cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 11: Criptografía en tiempo real / Real-time cryptography
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 11: Criptografía en tiempo real / Real-time cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-12-blindaje-inalambrico-estandar-standard-wireless-shielding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 12: Blindaje Inalámbrico Estándar / Standard Wireless Shielding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 12: Blindaje Inalámbrico Estándar / Standard Wireless Shielding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-13-el-sucesor-de-ssl-the-successor-to-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 13: El Sucesor de SSL / The Successor to SSL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 13: El Sucesor de SSL / The Successor to SSL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-14-conceptos-basicos-invertidos-inverted-ciphers-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 14: Conceptos Básicos Invertidos / Inverted Ciphers Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 14: Conceptos Básicos Invertidos / Inverted Ciphers Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-15-relacion-del-par-asimetrico-asymmetric-pair-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 15: Relación del Par Asimétrico / Asymmetric Pair Relationship
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 15: Relación del Par Asimétrico / Asymmetric Pair Relationship">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-16-clasificacion-de-simetricos-symmetric-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 16: Clasificación de Simétricos / Symmetric Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 16: Clasificación de Simétricos / Symmetric Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-17-clasificacion-de-asimetricos-asymmetric-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 17: Clasificación de Asimétricos / Asymmetric Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 17: Clasificación de Asimétricos / Asymmetric Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-18-proteccion-de-llaves-key-wrapping-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 18: Protección de Llaves / Key Wrapping Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 18: Protección de Llaves / Key Wrapping Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-19-algoritmos-eficientes-en-moviles-efficient-mobile-cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 19: Algoritmos Eficientes en Móviles / Efficient Mobile Cryptography
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 19: Algoritmos Eficientes en Móviles / Efficient Mobile Cryptography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-20-acronimo-de-curvas-elipticas-elliptic-curve-acronym" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 20: Acrónimo de Curvas Elípticas / Elliptic Curve Acronym
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 20: Acrónimo de Curvas Elípticas / Elliptic Curve Acronym">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-21-el-concepto-de-llaves-efimeras-ephemeral-keys-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 21: El Concepto de Llaves Efímeras / Ephemeral Keys Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 21: El Concepto de Llaves Efímeras / Ephemeral Keys Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-22-algoritmos-de-intercambio-de-llaves-key-exchange-paradigms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 22: Algoritmos de Intercambio de Llaves / Key Exchange Paradigms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 22: Algoritmos de Intercambio de Llaves / Key Exchange Paradigms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-23-propiedades-del-secreto-perfecto-perfect-forward-secrecy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 23: Propiedades del Secreto Perfecto / Perfect Forward Secrecy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 23: Propiedades del Secreto Perfecto / Perfect Forward Secrecy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-24-escondiendo-datos-en-archivos-hiding-data-inside-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 24: Escondiendo Datos en Archivos / Hiding Data Inside Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 24: Escondiendo Datos en Archivos / Hiding Data Inside Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-25-ataques-de-fuerza-bruta-en-bloques-block-cipher-exhaustive-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 25: Ataques de Fuerza Bruta en Bloques / Block Cipher Exhaustive Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 25: Ataques de Fuerza Bruta en Bloques / Block Cipher Exhaustive Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-26-el-concepto-clave-de-colision-hash-collision-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 26: El Concepto Clave de Colisión / Hash Collision Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 26: El Concepto Clave de Colisión / Hash Collision Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-27-explotando-la-paradoja-matematica-exploiting-probability-paradox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 27: Explotando la Paradoja Matemática / Exploiting Probability Paradox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 27: Explotando la Paradoja Matemática / Exploiting Probability Paradox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-28-degradacion-de-seguridad-forcing-vulnerable-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 28: Degradación de Seguridad / Forcing Vulnerable Protocols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 28: Degradación de Seguridad / Forcing Vulnerable Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-29-introduccion-a-la-computacion-cuantica-intro-to-quantum-threat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 29: Introducción a la Computación Cuántica / Intro to Quantum Threat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 29: Introducción a la Computación Cuántica / Intro to Quantum Threat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-30-blindaje-para-la-era-cuantica-shielding-for-the-quantum-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 30: Blindaje para la Era Cuántica / Shielding for the Quantum Era
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 30: Blindaje para la Era Cuántica / Shielding for the Quantum Era">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-31-concepto-fundamental-del-no-repudio-non-repudiation-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 31: Concepto Fundamental del No Repudio / Non-Repudiation Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 31: Concepto Fundamental del No Repudio / Non-Repudiation Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-32-autenticacion-e-integridad-web-web-cryptographic-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 32: Autenticación e Integridad Web / Web Cryptographic Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 32: Autenticación e Integridad Web / Web Cryptographic Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-33-cifrado-granular-del-correo-secure-email-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 33: Cifrado Granular del Correo / Secure Email Standard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 33: Cifrado Granular del Correo / Secure Email Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-34-el-ciclo-de-vida-de-los-certificados-certs-lifecycle-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 34: El Ciclo de Vida de los Certificados / Certs Lifecycle Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 34: El Ciclo de Vida de los Certificados / Certs Lifecycle Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-35-comprobacion-rapida-de-estado-real-time-certs-status-checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 35: Comprobación Rápida de Estado / Real-Time Certs Status Checking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 35: Comprobación Rápida de Estado / Real-Time Certs Status Checking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-36-el-ecosistema-completo-de-llaves-the-complete-management-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 36: El Ecosistema Completo de Llaves / The Complete Management Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 36: El Ecosistema Completo de Llaves / The Complete Management Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Cuestionario sobre cifrado</h1>
+
+<p>Este apunte contiene el análisis detallado del cuestionario temático sobre controles de seguridad de la plataforma ExamCompass para la certificación CompTIA Security+ (SY0-701), alineado con las respuestas oficiales del simulador.</p>
+<hr />
+<h2 id="pregunta-1-cifrado-a-nivel-de-hardware-hardware-level-encryption">Pregunta 1: Cifrado a nivel de hardware / Hardware-level encryption</h2>
+<h3 id="english-version">English Version</h3>
+<p>Which of the following answers refers to a data storage device equipped with hardware-level encryption functionality?
+* [ ] HSM (Hardware Security Module)
+* [ ] TPM (Trusted Platform Module)
+* [✅] <strong>SED (Self-Encrypting Drive)</strong>
+* [ ] EFS (Encrypting File System)</p>
+<h3 id="version-en-espanol">Versión en Español</h3>
+<p>¿Cuál de las siguientes respuestas se refiere a un dispositivo de almacenamiento de datos equipado con funcionalidad de cifrado a nivel de hardware?
+* [ ] HSM (Módulo de Seguridad de Hardware)
+* [ ] TPM (Módulo de Plataforma de Confianza)
+* [✅] <strong>SED (Unidad con Cifrado Automático)</strong>
+* [ ] EFS (Sistema de Archivos Cifrados)</p>
+<h3 id="1-explicacion-general">1. Explicación General</h3>
+<p>El cifrado de datos en reposo puede realizarse mediante software o directamente integrado en el silicio del hardware. Cuando el propio dispositivo de almacenamiento físico procesa criptográficamente los datos sin depender del sistema operativo ni de recursos de la CPU principal, el rendimiento es óptimo y el aislamiento de seguridad es máximo frente a manipulaciones lógicas.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[SED (Self-Encrypting Drive)]</code> es un disco duro (HDD) o unidad de estado sólido (SSD) que contiene un chip criptográfico especializado en su propia placa controladora. Cifra automáticamente cada bit al escribirse y lo descifra al leerse, de manera completamente invisible y transparente para el usuario y el sistema operativo.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>HSM:</em> Un Módulo de Seguridad de Hardware es un dispositivo de red externo o tarjeta PCIe dedicada a generar y administrar claves criptográficas corporativas, no es un disco de almacenamiento para archivos.</li>
+<li><em>TPM:</em> El Módulo de Plataforma de Confianza es un microchip soldado a la placa madre que almacena llaves y asiste en el arranque seguro, pero no es un medio de almacenamiento masivo.</li>
+<li><em>EFS:</em> Es un componente de software integrado exclusivamente en el sistema de archivos NTFS de Windows, por lo que no es un dispositivo físico de hardware.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701">3. Clave para el Examen SY0-701</h3>
+<p>Recordar la relación conceptual directa: "Data storage device" + "hardware-level encryption" = <code>SED</code>.</p>
+<hr />
+<h2 id="pregunta-2-confidencialidad-para-todo-el-dispositivo-full-device-confidentiality">Pregunta 2: Confidencialidad para todo el dispositivo / Full device confidentiality</h2>
+<h3 id="english-version_1">English Version</h3>
+<p>Which of the answers listed below refers to a software technology designed to provide confidentiality for an entire data storage device?
+* [ ] TPM (Trusted Platform Module)
+* [ ] HSM (Hardware Security Module)
+* [ ] EFS (Encrypting File System)
+* [✅] <strong>FDE (Full Disk Encryption)</strong></p>
+<h3 id="version-en-espanol_1">Versión en Español</h3>
+<p>¿Cuál de las respuestas listadas abajo se refiere a una tecnología de software diseñada para proporcionar confidencialidad a todo un dispositivo de almacenamiento de datos?
+* [ ] TPM (Módulo de Plataforma de Confianza)
+* [ ] HSM (Módulo de Seguridad de Hardware)
+* [ ] EFS (Sistema de Archivos Cifrados)
+* [✅] <strong>FDE (Cifrado de Disco Completo)</strong></p>
+<h3 id="1-explicacion-general_1">1. Explicación General</h3>
+<p>Para mitigar el impacto del robo físico de computadoras portátiles o discos duros, es necesario un sistema que selle el volumen de almacenamiento completo de extremo a extremo. Esto vuelve ilegible el sistema operativo, los archivos temporales de paginación y todos los datos de usuario si no se introduce la clave de pre-arranque correcta.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_1">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[FDE (Full Disk Encryption)]</code> es la categoría tecnológica basada en software (como BitLocker en Windows o FileVault en macOS) que cifra cada sector de la unidad de almacenamiento ("entire data storage device"), impidiendo que un atacante extraiga el disco e intente leer los datos montándolo en otra máquina.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>TPM:</em> Es un chip físico de hardware en la tarjeta madre, no una tecnología o solución basada en software para el cifrado de sectores.</li>
+<li><em>HSM:</em> Es un hardware empresarial para la gestión centralizada de llaves y firmas de servidores, no una solución de software para discos locales.</li>
+<li><em>EFS:</em> Aunque es software de Windows, trabaja de forma granular únicamente a nivel de archivos y carpetas individuales, dejando el resto del disco desprotegido.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_1">3. Clave para el Examen SY0-701</h3>
+<p>Asociación rápida para el examen: "Software technology" + "entire data storage device" = <code>FDE</code>.</p>
+<hr />
+<h2 id="pregunta-3-cifrado-granular-en-windows-granular-windows-file-encryption">Pregunta 3: Cifrado granular en Windows / Granular Windows file encryption</h2>
+<h3 id="english-version_2">English Version</h3>
+<p>A component of MS Windows that allows encryption of individual files is called:
+* [ ] BitLocker
+* [✅] <strong>EFS (Encrypting File System)</strong>
+* [ ] TPM (Trusted Platform Module)
+* [ ] HSM (Hardware Security Module)</p>
+<h3 id="version-en-espanol_2">Versión en Español</h3>
+<p>Un componente de MS Windows que permite el cifrado de archivos individuales se llama:
+* [ ] BitLocker
+* [✅] <strong>EFS (Sistema de Archivos Cifrados)</strong>
+* [ ] TPM (Módulo de Plataforma de Confianza)
+* [ ] HSM (Módulo de Seguridad de Hardware)</p>
+<h3 id="1-explicacion-general_2">1. Explicación General</h3>
+<p>Windows ofrece dos esquemas criptográficos nativos complementarios: uno protege el volumen completo contra intrusos físicos mediante FDE y el otro opera de forma interna y lógica, aislando archivos específicos para que otros usuarios locales con acceso a la misma máquina encendida no puedan husmear en información confidencial ajena.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_2">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[EFS (Encrypting File System)]</code> permite a los usuarios de Windows cifrar directorios o archivos individuales (<em>individual files</em>) directamente sobre particiones NTFS, ligando el acceso al certificado y credenciales del usuario que lo activó.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>BitLocker:</em> Es la solución para FDE. BitLocker desbloquea el disco completo en el arranque; una vez que el sistema operativo inicia, no restringe el acceso a archivos individuales entre diferentes usuarios locales.</li>
+<li><em>TPM:</em> Es el chip de la tarjeta madre que asiste a BitLocker guardando sus claves de volcado, no una herramienta de software para archivos individuales.</li>
+<li><em>HSM:</em> Es un dispositivo de hardware corporativo que no tiene relación directa con las funciones del explorador de archivos de Windows.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_2">3. Clave para el Examen SY0-701</h3>
+<p>Diferenciación crucial en Windows: "Individual files" = <code>EFS</code>. "Entire volume/drive" = <strong>BitLocker</strong>.</p>
+<hr />
+<h2 id="pregunta-4-cifrado-hibrido-multiuso-multi-purpose-hybrid-encryption">Pregunta 4: Cifrado híbrido multiuso / Multi-purpose hybrid encryption</h2>
+<h3 id="english-version_3">English Version</h3>
+<p>Which of the following software tools are specifically designed to implement encryption algorithms that protect data communication and storage? (Select 2 answers)
+* [ ] IPsec
+* [✅] <strong>PGP (Pretty Good Privacy)</strong>
+* [ ] SSH
+* [✅] <strong>GPG (GNU Privacy Guard)</strong>
+* [ ] VPN</p>
+<h3 id="version-en-espanol_3">Versión en Español</h3>
+<p>¿Cuáles de las siguientes herramientas de software están diseñadas específicamente para implementar algoritmos de cifrado que protegen la comunicación y el almacenamiento de datos? (Seleccione 2 respuestas)
+* [ ] IPsec
+* [✅] <strong>PGP (Pretty Good Privacy)</strong>
+* [ ] SSH
+* [✅] <strong>GPG (GNU Privacy Guard)</strong>
+* [ ] VPN</p>
+<h3 id="1-explicacion-general_3">1. Explicación General</h3>
+<p>La mayoría de los protocolos criptográficos protegen datos exclusivamente mientras viajan por la red (en tránsito). Sin embargo, existen herramientas de software basadas en criptografía híbrida que permiten firmar y cifrar tanto un archivo estático en un disco duro (<strong>almacenamiento / storage</strong>) como empaquetar de forma segura un correo electrónico antes de enviarlo (<strong>comunicación / communication</strong>).</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_3">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opciones Correctas:</strong> <code>[PGP y GPG]</code> debido a que <em>Pretty Good Privacy</em> y su contraparte de código abierto <em>GNU Privacy Guard</em> (estándar OpenPGP) permiten cifrar archivos locales o discos virtuales (storage) y, a su vez, correos electrónicos completos de extremo a extremo antes de transmitirse (communication).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>IPsec:</em> Suite de protocolos de red para asegurar tráfico IP a nivel de capa de red. No puede usarse para guardar un archivo cifrado estático.</li>
+<li><em>SSH:</em> Protocolo de acceso remoto interactivo. Asegura el canal de comunicación en tránsito, pero no cifra archivos en almacenamiento local.</li>
+<li><em>VPN:</em> Concepto de túnel de red para conectar infraestructuras sobre internet; no cifra datos en reposo (storage).</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_3">3. Clave para el Examen SY0-701</h3>
+<p>Herramientas de software con doble propósito para "communication AND storage" = <code>PGP</code> y <code>GPG</code>.</p>
+<hr />
+<h2 id="pregunta-5-seguridad-en-trafico-web-web-traffic-security">Pregunta 5: Seguridad en Tráfico Web / Web Traffic Security</h2>
+<h3 id="english-version_4">English Version</h3>
+<p>What is the name of the network protocol that secures web traffic using SSL/TLS encryption?
+* [ ] SFTP
+* [✅] <strong>HTTPS</strong>
+* [ ] FTPS
+* [ ] SHTTP</p>
+<h3 id="version-en-espanol_4">Versión en Español</h3>
+<p>¿Cuál es el nombre del protocolo de red que asegura el tráfico web utilizando cifrado SSL/TLS?
+* [ ] SFTP
+* [✅] <strong>HTTPS</strong>
+* [ ] FTPS
+* [ ] SHTTP</p>
+<h3 id="1-explicacion-general_4">1. Explicación General</h3>
+<p>El protocolo web tradicional (HTTP) envía las páginas web, contraseñas y datos de formularios en texto plano por el puerto 80. Para evitar ataques de espionaje, se envuelve este tráfico dentro de un canal cifrado por un protocolo de capa de transporte seguro, validando también la identidad del servidor remoto.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_4">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[HTTPS (Hypertext Transfer Protocol Secure)]</code> es la implementación de HTTP sobre un túnel seguro <code>[[TLS]]</code> (o históricamente SSL) utilizando por defecto el puerto 443, asegurando confidencialidad, integridad y autenticación.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>SFTP:</em> Protocolo de transferencia de archivos que corre montado sobre SSH (puerto 22), no se usa para cargar páginas web en navegadores.</li>
+<li><em>FTPS:</em> Protocolo de transferencia de archivos FTP tradicional parchado con capas SSL/TLS (puertos 989/990), ajeno al tráfico web.</li>
+<li><em>SHTTP:</em> <em>Secure HTTP</em> es un protocolo obsoleto que cifraba los mensajes web de forma individual en lugar de crear un túnel completo. Nunca prosperó frente a HTTPS.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_4">3. Clave para el Examen SY0-701</h3>
+<p>Asociación directa e inmediata: "Secures web traffic" + "SSL/TLS" = <code>HTTPS</code>.</p>
+<hr />
+<h2 id="pregunta-6-transferencia-de-archivos-sobre-ssh-file-transfer-over-ssh">Pregunta 6: Transferencia de archivos sobre SSH / File transfer over SSH</h2>
+<h3 id="english-version_5">English Version</h3>
+<p>Which of the network protocols listed below allows for secure file transfer over an SSH connection?
+* [ ] TFTP
+* [✅] <strong>SFTP</strong>
+* [ ] FTP
+* [ ] FTPS</p>
+<h3 id="version-en-espanol_5">Versión en Español</h3>
+<p>¿Cuál de los protocolos de red enumerados a continuación permite la transferencia segura de archivos a través de una conexión SSH?
+* [ ] TFTP
+* [✅] <strong>SFTP</strong>
+* [ ] FTP
+* [ ] FTPS</p>
+<h3 id="1-explicacion-general_5">1. Explicación General</h3>
+<p>Cuando un administrador necesita transferir scripts, parches o archivos de configuración a un servidor remoto de manera segura, busca reutilizar la misma infraestructura criptográfica que ya usa para las sesiones de comandos remotos, consolidando puertos abiertos en el firewall y credenciales.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_5">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[SFTP (SSH File Transfer Protocol)]</code> es un protocolo diseñado desde cero que ejecuta todas sus operaciones de movimiento de archivos encapsuladas de forma nativa dentro de una sesión criptográfica <code>[[SSH]]</code> segura a través del puerto 22.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>TFTP:</em> <em>Trivial FTP</em> es un protocolo ultra simple que no ofrece ningún tipo de cifrado ni autenticación; envía todo en texto plano sobre UDP.</li>
+<li><em>FTP:</em> Es el protocolo clásico de transferencia de archivos que transmite contraseñas y datos expuestos en texto plano, altamente vulnerable.</li>
+<li><em>FTPS:</em> Es FTP respaldado con SSL/TLS. Aunque es seguro, no tiene ninguna relación operativa con SSH; usa puertos diferentes (989/990).</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_5">3. Clave para el Examen SY0-701</h3>
+<p>Conector conceptual: "File transfer" + "over SSH" = <code>SFTP</code>.</p>
+<hr />
+<h2 id="pregunta-7-mitos-y-realidades-de-los-protocolos-de-archivos-file-protocol-myths-and-realities">Pregunta 7: Mitos y realidades de los protocolos de archivos / File protocol myths and realities</h2>
+<h3 id="english-version_6">English Version</h3>
+<p>SFTP is an extension to the FTP protocol that adds Support for Transport Layer Security (TLS) and Secure Sockets Layer (SSL). True or False?
+* [ ] True
+* [✅] <strong>False</strong></p>
+<h3 id="version-en-espanol_6">Versión en Español</h3>
+<p>SFTP es una extensión del protocolo FTP que añade soporte para Transport Layer Security (TLS) y Secure Sockets Layer (SSL). ¿Verdadero o Falso?
+* [ ] True
+* [✅] <strong>False</strong></p>
+<h3 id="1-explicacion-general_6">1. Explicación General</h3>
+<p>Existe una confusión muy común debido a la similitud de los acrónimos en los protocolos de transferencia de archivos seguros. Sin embargo, los mecanismos subyacentes de seguridad y las arquitecturas de red que utilizan son completamente diferentes e incompatibles entre sí.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_6">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[False]</code> porque el enunciado describe con total precisión técnica a <strong>FTPS</strong> (FTP Secure), el cual es la extensión directa del FTP clásico sobre capas SSL/TLS. <strong>SFTP</strong> no es una extensión de FTP; es un protocolo completamente independiente derivado y encapsulado dentro de SSH.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>True:</em> Es incorrecto porque aceptar el enunciado implicaría confundir SFTP (basado en SSH) con FTPS (basado en SSL/TLS).</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_6">3. Clave para el Examen SY0-701</h3>
+<p>Si el texto dice "FTP extension + SSL/TLS" se refiere a <strong>FTPS</strong>. Si dice "SSH connection" se refiere a <code>SFTP</code>. Por tanto, cruzar los conceptos siempre dará como resultado <code>False</code>.</p>
+<hr />
+<h2 id="pregunta-8-acceso-remoto-a-terminal-remote-terminal-access">Pregunta 8: Acceso remoto a terminal / Remote terminal access</h2>
+<h3 id="english-version_7">English Version</h3>
+<p>A type of cryptographic network protocol for secure data communication, remote command-line login, remote command execution, and other secure network services is known as:
+* [ ] Telnet
+* [ ] RDP
+* [✅] <strong>SSH</strong>
+* [ ] SCP</p>
+<h3 id="version-en-espanol_7">Versión en Español</h3>
+<p>Un tipo de protocolo de red criptográfico para la comunicación segura de datos, inicio de sesión remoto por línea de comandos, ejecución remota de comandos y otros servicios de red seguros se conoce como:
+* [ ] Telnet
+* [ ] RDP
+* [✅] <strong>SSH</strong>
+* [ ] SCP</p>
+<h3 id="1-explicacion-general_7">1. Explicación General</h3>
+<p>La administración diaria de servidores y dispositivos de red requiere que los ingenieros ejecuten comandos directamente en los sistemas remotos. Para evitar que actores maliciosos intercepten las contraseñas administrativas, se necesita un canal cifrado que reemplace a las terminales clásicas de texto plano.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_7">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[SSH (Secure Shell)]</code> proporciona una consola de comandos remota segura en el puerto 22, empleando criptografía asimétrica para autenticar el host y criptografía simétrica para proteger los comandos e información introducida.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Telnet:</em> Era el antiguo estándar de inicio de sesión remoto, pero carece de criptografía y transmite las credenciales en texto plano a través del puerto 23.</li>
+<li><em>RDP:</em> <em>Remote Desktop Protocol</em> se usa para la administración remota a través de una interfaz gráfica de usuario completa (GUI), no de línea de comandos pura.</li>
+<li><em>SCP:</em> <em>Secure Copy</em> usa SSH por detrás, pero sirve únicamente para transferir un archivo de un punto a otro de forma directa, no permite abrir una sesión interactiva de comandos (<em>remote login</em>).</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_7">3. Clave para el Examen SY0-701</h3>
+<p>Mapeo rápido: "Remote command-line login" + "Secure network services" = <code>SSH</code>.</p>
+<hr />
+<h2 id="pregunta-9-confidencialidad-en-la-capa-de-red-network-layer-confidentiality">Pregunta 9: Confidencialidad en la Capa de Red / Network Layer Confidentiality</h2>
+<h3 id="english-version_8">English Version</h3>
+<p>Which part of IPsec provides authentication, integrity, and confidentiality?
+* [ ] AH (Authentication Header)
+* [✅] <strong>ESP (Encapsulating Security Payload)</strong>
+* [ ] SPD (Security Policy Database)
+* [ ] PFS (Perfect Forward Secrecy)</p>
+<h3 id="version-en-espanol_8">Versión en Español</h3>
+<p>¿Qué parte de IPsec proporciona autenticación, integridad y confidencialidad?
+* [ ] AH (Encabezado de Autenticación)
+* [✅] <strong>ESP (Carga Útil de Seguridad Encapsulada)</strong>
+* [ ] SPD (Base de Datos de Políticas de Seguridad)
+* [ ] D) PFS (Secreto Perfecto hacia Adelante)</p>
+<h3 id="1-explicacion-general_8">1. Explicación General</h3>
+<p>La suite <code>[[IPsec]]</code> asegura el tráfico IP dividiendo el trabajo entre sus componentes: uno se encarga puramente de verificar quién envía el paquete y que nadie lo altere, mientras que otro se encarga específicamente de ocultar el contenido de los datos empaquetándolos bajo algoritmos de cifrado simétrico.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_8">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[ESP]</code> cifra la carga útil (los datos) del paquete IP, cumpliendo con la <strong>confidencialidad</strong>. Adicionalmente, incluye mecanismos para autenticar el origen y validar que el contenido no fue manipulado en tránsito (integridad).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>AH:</em> El Encabezado de Autenticación ofrece integridad y autenticación de todo el paquete, pero <strong>no cifra nada</strong>. Por ende, carece por completo de confidencialidad.</li>
+<li><em>SPD:</em> Es una tabla lógica de políticas dentro del dispositivo de red que decide si un paquete debe pasar por el túnel IPsec o no; no es un protocolo operativo.</li>
+<li><em>PFS:</em> Es una propiedad o cualidad de los sistemas de intercambio de claves, no un componente estructural de empaquetado de datos.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_8">3. Clave para el Examen SY0-701</h3>
+<p>Ecuación criptográfica en IPsec: IPsec + "confidentiality" (o encryption) = <code>ESP</code>. IPsec + "NO confidentiality" = <strong>AH</strong>.</p>
+<hr />
+<h2 id="pregunta-10-extension-segura-de-redes-secure-network-extension">Pregunta 10: Extensión Segura de Redes / Secure Network Extension</h2>
+<h3 id="english-version_9">English Version</h3>
+<p>A system that uses a public network (such as the Internet) as a means to create encrypted private connections between remote locations is called:
+* [ ] VLAN
+* [ ] PAN
+* [✅] <strong>VPN</strong>
+* [ ] WWAN</p>
+<h3 id="version-en-espanol_9">Versión en Español</h3>
+<p>Un sistema que utiliza una red pública (como Internet) como medio para crear conexiones privadas cifradas entre ubicaciones remotas se llama:
+* [ ] VLAN
+* [ ] PAN
+* [✅] <strong>VPN</strong>
+* [ ] WWAN</p>
+<h3 id="1-explicacion-general_9">1. Explicación General</h3>
+<p>En lugar de rentar costosas líneas físicas dedicadas para interconectar oficinas geográficamente dispersas, las organizaciones modernas montan canales lógicos hiperseguros y fuertemente cifrados aprovechando la infraestructura pública existente de internet.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_9">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[VPN (Virtual Private Network)]</code> encapsula y cifra el tráfico de datos simulando un enlace directo y privado (<em>encrypted private connections</em>) a través de un medio inseguro como el internet global (<em>public network</em>).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>VLAN:</em> Una Red de Área Local Virtual segmenta el tráfico de manera lógica dentro de un Switch local (Capa 2), pero no cifra datos ni opera a través de internet de forma nativa.</li>
+<li><em>PAN:</em> Una Red de Área Personal cubre distancias cortas en torno a un individuo (como conexiones Bluetooth entre un teléfono y audífonos).</li>
+<li><em>WWAN:</em> Una Red de Área Amplia Inalámbrica hace referencia a la infraestructura celular de datos móviles (como 4G o 5G), no a una conexión privada cifrada punto a punto.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_9">3. Clave para el Examen SY0-701</h3>
+<p>Frase clave para el examen: "Public network" + "encrypted private connections" = <code>VPN</code>.</p>
+<hr />
+<h2 id="pregunta-11-criptografia-en-tiempo-real-real-time-cryptography">Pregunta 11: Criptografía en tiempo real / Real-time cryptography</h2>
+<h3 id="english-version_10">English Version</h3>
+<p>Which protocol allows secure, real-time transmission of audio and video over an IP network?
+* [ ] RTP
+* [ ] SIP
+* [✅] <strong>SRTP</strong>
+* [ ] S/MIME</p>
+<h3 id="version-en-espanol_10">Versión en Español</h3>
+<p>¿Qué protocolo permite la transmisión segura y en tiempo real de audio y video a través de una red IP?
+* [ ] RTP
+* [ ] SIP
+* [✅] <strong>SRTP</strong>
+* [ ] S/MIME</p>
+<h3 id="1-explicacion-general_10">1. Explicación General</h3>
+<p>Los flujos de Voz sobre IP (VoIP) y las videoconferencias corporativas son altamente vulnerables a la interceptación ilegal. Sin embargo, los algoritmos de cifrado tradicionales añaden demasiado retraso (latencia), por lo que se requiere un protocolo optimizado para proteger flujos continuos multimedia en tiempo real sin romper la fluidez de la llamada.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_10">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[SRTP (Secure Real-time Transport Protocol)]</code> provee cifrado (confidencialidad), protección contra reajuste de paquetes y autenticación al flujo multimedia crudo de audio y video que viaja por la red IP.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>RTP:</em> Es el protocolo original estándar para audio/video, pero carece por completo de mecanismos de seguridad; el contenido viaja expuesto en texto plano.</li>
+<li><em>SIP:</em> El Protocolo de Iniciación de Sesión se encarga exclusivamente de la señalización telefónica (establecer la llamada, timbrar, colgar), pero no transporta los datos multimedia de la voz humana.</li>
+<li><em>S/MIME:</em> Protocolo diseñado específicamente para firmar y cifrar correos electrónicos con archivos adjuntos, no tiene aplicación en multimedia interactiva.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_10">3. Clave para el Examen SY0-701</h3>
+<p>Conceptos encadenados: "Real-time transmission" + "audio and video" + secure = <code>SRTP</code>.</p>
+<hr />
+<h2 id="pregunta-12-blindaje-inalambrico-estandar-standard-wireless-shielding">Pregunta 12: Blindaje Inalámbrico Estándar / Standard Wireless Shielding</h2>
+<h3 id="english-version_11">English Version</h3>
+<p>An encryption protocol primarily used in Wi-Fi networks implementing the WPA2 security standard is known as:
+* [ ] TKIP
+* [✅] <strong>CCMP</strong>
+* [ ] WEP
+* [ ] AES</p>
+<h3 id="version-en-espanol_11">Versión en Español</h3>
+<p>Un protocolo de cifrado utilizado principalmente en redes Wi-Fi que implementan el estándar de seguridad WPA2 se conoce como:
+* [ ] TKIP
+* [✅] <strong>CCMP</strong>
+* [ ] WEP
+* [ ] AES</p>
+<h3 id="1-explicacion-general_11">1. Explicación General</h3>
+<p>La seguridad de las transmisiones de ondas de radio en redes inalámbricas requiere protocolos que cifren los paquetes de datos en el aire. Con el lanzamiento de WPA2, la industria necesitaba un protocolo robusto basado en cifrados por bloques modernos para enterrar las debilidades del pasado.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_11">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[CCMP]</code> es el protocolo criptográfico obligatorio estándar de WPA2. Emplea el algoritmo AES operando en modo contador con CBC-MAC para blindar los paquetes de Wi-Fi con máxima seguridad.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>TKIP:</em> Fue un protocolo de cifrado temporal lanzado para WPA1 con el fin de parchar el viejo WEP a través de actualizaciones de software, pero hoy está obsoleto y se considera inseguro debido a vulnerabilidades de RC4.</li>
+<li><em>WEP:</em> El protocolo original de Wi-Fi de los años 90; está completamente roto y se puede vulnerar en segundos. No pertenece a WPA2.</li>
+<li><em>AES:</em> Es el algoritmo matemático simétrico base subyacente, pero la pregunta pide explícitamente el <em>protocolo inalámbrico completo</em> que implementa dicho algoritmo, el cual es CCMP.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_11">3. Clave para el Examen SY0-701</h3>
+<p>Igualdad obligatoria para redes inalámbricas: "Wi-Fi networks" + "WPA2 security standard" = <code>CCMP</code>.</p>
+<hr />
+<h2 id="pregunta-13-el-sucesor-de-ssl-the-successor-to-ssl">Pregunta 13: El Sucesor de SSL / The Successor to SSL</h2>
+<h3 id="english-version_12">English Version</h3>
+<p>Which cryptographic protocol is designed to provide secure communications over a computer network and is the successor to SSL?
+* [ ] CCMP
+* [✅] <strong>TLS</strong>
+* [ ] AES
+* [ ] HTTPS</p>
+<h3 id="version-en-espanol_12">Versión en Español</h3>
+<p>¿Qué protocolo criptográfico está diseñado para proporcionar comunicaciones seguras a través de una red informática y es el sucesor de SSL?
+* [ ] CCMP
+* [✅] <strong>TLS</strong>
+* [ ] AES
+* [ ] HTTPS</p>
+<h3 id="1-explicacion-general_12">1. Explicación General</h3>
+<p>Secure Sockets Layer (SSL) fue el pionero en asegurar el tráfico de internet, pero sus versiones originales acumularon fallas críticas de diseño. El organismo internacional IETF tomó el control de la tecnología, reescribiendo y estandarizando el protocolo bajo una nueva denominación técnica.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_12">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[TLS (Transport Layer Security)]</code> es el heredero directo y evolución de SSL. Las versiones modernas de hoy (TLS 1.2 y 1.3) son las encargadas de asegurar las conexiones mundiales de la capa de transporte.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>CCMP:</em> Es un protocolo criptográfico restringido al ámbito de las tramas inalámbricas Wi-Fi (Capa 2), no un protocolo general de transporte de red.</li>
+<li><em>AES:</em> Es un algoritmo de cifrado simétrico puro (matemáticas), no un protocolo completo de comunicación de red para negociación de sesiones.</li>
+<li><em>HTTPS:</em> Es el protocolo de aplicación web que <em>utiliza</em> un túnel TLS por debajo para asegurar los datos, pero no es el sucesor directo del protocolo de transporte SSL en sí mismo.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_12">3. Clave para el Examen SY0-701</h3>
+<p>Si la pregunta pide textualmente al "successor to SSL", la única respuesta correcta de la industria es <code>TLS</code>.</p>
+<hr />
+<h2 id="pregunta-14-conceptos-basicos-invertidos-inverted-ciphers-concepts">Pregunta 14: Conceptos Básicos Invertidos / Inverted Ciphers Concepts</h2>
+<h3 id="english-version_13">English Version</h3>
+<p>Examples of techniques used to encrypt information include symmetric encryption (also called public-key encryption) and asymmetric encryption. True or False?
+* [ ] True
+* [✅] <strong>False</strong></p>
+<h3 id="version-en-espanol_13">Versión en Español</h3>
+<p>Los ejemplos de técnicas utilizadas para cifrar información incluyen el cifrado simétrico (también llamado cifrado de clave pública) y el cifrado asimétrico. ¿Verdadero o Falso?
+* [ ] True
+* [✅] <strong>False</strong></p>
+<h3 id="1-explicacion-general_13">1. Explicación General</h3>
+<p>Para aprobar la certificación, es crucial mapear de manera exacta los nombres técnicos alternativos de los dos paradigmas de la criptografía moderna sin confundir sus mecánicas de llaves compartidas o divididas.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_13">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[False]</code> debido a que el enunciado afirma falsamente que el cifrado simétrico es el mismo que el de clave pública. La reality técnica es al revés: El cifrado <strong>Simétrico</strong> es de clave secreta/única (<em>secret-key</em>), y el cifrado <strong>Asimétrico</strong> es el que se denomina criptografía de clave pública (<em>public-key</em>).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>True:</em> Es incorrecto debido a que dar por verdadero el texto validaría una definición teórica errónea que reprobaría el examen.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_13">3. Clave para el Examen SY0-701</h3>
+<p>Memoriza las parejas correctas: Simétrico = Llave única = Clave secreta (<em>Secret Key</em>). Asimétrico = Par de llaves = Clave pública / privada (<em>Public Key</em>). Cualquier cruce de estos términos es <code>False</code>.</p>
+<hr />
+<h2 id="pregunta-15-relacion-del-par-asimetrico-asymmetric-pair-relationship">Pregunta 15: Relación del Par Asimétrico / Asymmetric Pair Relationship</h2>
+<h3 id="english-version_14">English Version</h3>
+<p>In asymmetric encryption, any message encrypted with a public key can only be decrypted by applying the same algorithm and a matching private key (and vice versa).
+* [✅] <strong>True</strong>
+* [ ] False</p>
+<h3 id="version-en-espanol_14">Versión en Español</h3>
+<p>En el cifrado asimétrico, cualquier mensaje cifrado con una clave pública solo puede descifrarse aplicando el mismo algoritmo y una clave privada correspondiente (y viceversa).
+* [✅] <strong>True</strong>
+* [ ] False</p>
+<h3 id="1-explicacion-general_14">1. Explicación General</h3>
+<p>El núcleo de la criptografía asimétrica es que las llaves operan como un candado y una llave física única. Están vinculadas matemáticamente mediante funciones trampa unidireccionales: lo que una de las llaves bloquea, únicamente la otra llave del mismo par exacto lo puede desbloquear.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_14">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[True]</code> porque el enunciado es una verdad fundamental. Si uso la <strong>clave pública</strong> de un destinatario para cifrar un mensaje, garantizo la <em>confidencialidad</em>, ya que solo su <strong>clave privada</strong> correspondiente puede descifrarlo. El "viceversa" también es real: si cifro con mi clave privada, cualquiera con mi clave pública lo descifra, verificando mi identidad (<em>firma digital</em>).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>False:</em> Sería incorrecto ya que negaría el principio operativo básico sobre el cual se construyen los certificados digitales de todo el planeta.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_14">3. Clave para el Examen SY0-701</h3>
+<p>Principio rector asimétrico: "Encrypted with public -&gt; Decrypted ONLY with matching private" o viceversa es siempre una afirmación verdadera (<code>True</code>).</p>
+<hr />
+<h2 id="pregunta-16-clasificacion-de-simetricos-symmetric-classification">Pregunta 16: Clasificación de Simétricos / Symmetric Classification</h2>
+<h3 id="english-version_15">English Version</h3>
+<p>Which of the following answers are NOT examples of symmetric encryption algorithms? (Select all that apply)
+* [✅] <strong>DHE</strong>
+* [ ] AES
+* [✅] <strong>ECC</strong>
+* [ ] DES
+* [✅] <strong>RSA</strong></p>
+<h3 id="version-en-espanol_15">Versión en Español</h3>
+<p>¿Cuáles de las siguientes respuestas NO son ejemplos de algoritmos de cifrado simétrico? (Seleccione todas las que correspondan)
+* [✅] <strong>DHE</strong>
+* [ ] AES
+* [✅] <strong>ECC</strong>
+* [ ] DES
+* [✅] <strong>RSA</strong></p>
+<h3 id="1-explicacion-general_15">1. Explicación General</h3>
+<p>Una de las habilidades más evaluadas en el examen CompTIA Security+ es la capacidad de clasificar una lista de siglas criptográficas en sus categorías correctas (Simétricos vs. Asimétricos / Algoritmos de Intercambio).</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_15">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opciones Correctas:</strong> <code>[DHE, ECC, y RSA]</code> porque la pregunta pide identificar los que <strong>NO</strong> son simétricos. Estos tres pertenecen estrictamente a la familia de criptografía asimétrica o protocolos de acuerdo de claves públicas.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>AES:</em> Es un algoritmo de cifrado simétrico por bloques (el estándar de la industria), por lo que no se selecciona.</li>
+<li><em>DES:</em> Es un algoritmo de cifrado simétrico por bloques antiguo de 56 bits, por ende queda descartado de la selección.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_15">3. Clave para el Examen SY0-701</h3>
+<p>Memoriza los asimétricos principales para descartar rápido en listas: <code>RSA</code>, <code>ECC</code>, <code>DH</code> / <code>DHE</code> / <code>ECDHE</code> y <code>DSA</code>. Los demás suelen ser simétricos o hashes.</p>
+<hr />
+<h2 id="pregunta-17-clasificacion-de-asimetricos-asymmetric-classification">Pregunta 17: Clasificación de Asimétricos / Asymmetric Classification</h2>
+<h3 id="english-version_16">English Version</h3>
+<p>Which of the answers listed below are NOT examples of asymmetric encryption algorithms? (Select all that apply)
+* [✅] <strong>AES</strong>
+* [ ] RSA
+* [✅] <strong>DES</strong>
+* [ ] D) ECC
+* [✅] <strong>IDEA</strong>
+* [✅] <strong>RC4</strong></p>
+<h3 id="version-en-espanol_16">Versión en Español</h3>
+<p>¿Cuáles de las respuestas enumeradas a continuación NO son ejemplos de algoritmos de cifrado asimétrico? (Seleccione todas las que correspondan)
+* [✅] <strong>AES</strong>
+* [ ] RSA
+* [✅] <strong>DES</strong>
+* [ ] ECC
+* [✅] <strong>IDEA</strong>
+* [✅] <strong>RC4</strong></p>
+<h3 id="1-explicacion-general_16">1. Explicación General</h3>
+<p>Caso inverso al ítem anterior. Aquí el objetivo es depurar la lista removiendo los algoritmos basados en pares de claves públicas/privadas y aislando los algoritmos de clave compartida única.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_16">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opciones Correctas:</strong> <code>[AES, DES, IDEA, y RC4]</code> son correctas porque <strong>NO</strong> son asimétricos. Todos ellos son algoritmos de cifrado simétrico (AES, DES e IDEA procesan bloques de datos; RC4 procesa flujos continuos de bits).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>RSA:</em> Es el algoritmo asimétrico clásico por excelencia basado en factorización de números primos, por ende no se selecciona.</li>
+<li><em>ECC:</em> Criptografía de Curvas Elípticas, paradigma asimétrico moderno de llaves públicas de alta eficiencia, descartado de la selección.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_16">3. Clave para el Examen SY0-701</h3>
+<p><code>AES</code>, <code>DES</code>, <code>3DES</code>, <code>IDEA</code>, <code>Blowfish</code>, <code>Twofish</code> y <code>RC4</code> son todos miembros del club <strong>Simétrico</strong>.</p>
+<hr />
+<h2 id="pregunta-18-proteccion-de-llaves-key-wrapping-concepts">Pregunta 18: Protección de Llaves / Key Wrapping Concepts</h2>
+<h3 id="english-version_17">English Version</h3>
+<p>The term "KEK" refers to a type of cryptographic key used frequently in key management systems to add an extra layer of security by encrypting and decrypting other cryptographic keys. True or False?
+* [✅] <strong>True</strong>
+* [ ] False</p>
+<h3 id="version-en-espanol_17">Versión en Español</h3>
+<p>El término "KEK" se refiere a un tipo de clave criptográfica utilizada frecuentemente en los sistemas de gestión de claves para añadir una capa adicional de seguridad al cifrar y descifrar otras claves criptográficas. ¿Verdadero o Falso?
+* [✅] <strong>True</strong>
+* [ ] False</p>
+<h3 id="1-explicacion-general_17">1. Explicación General</h3>
+<p>En infraestructuras de almacenamiento masivo o nubes de datos, existen miles de llaves que cifran archivos locales (llamadas DEK o <em>Data Encryption Keys</em>). Almacenar estas llaves en texto plano dentro del mismo servidor es peligroso, por lo que se implementa una jerarquía donde una llave maestra sella a las demás.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_17">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[True]</code> porque el enunciado es completamente verdadero. <strong>KEK</strong> significa <em>Key Encryption Key</em> (Clave de Cifrado de Clave). Su función exclusiva en seguridad es realizar el envoltorio de llaves (<em>key wrapping</em>), cifrando las llaves operativas de datos para que puedan ser almacenadas o movidas de forma segura.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>False:</em> Es incorrecto porque rechazaría una definición de arquitectura de almacenamiento criptográfico que está totalmente estandarizada por la industria.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_17">3. Clave para el Examen SY0-701</h3>
+<p>Si el enunciado describe una clave cuyo rol es explícitamente "encrypting and decrypting other cryptographic keys", la respuesta siempre será <code>True</code> bajo el acrónimo de <code>KEK</code>.</p>
+<hr />
+<h2 id="pregunta-19-algoritmos-eficientes-en-moviles-efficient-mobile-cryptography">Pregunta 19: Algoritmos Eficientes en Móviles / Efficient Mobile Cryptography</h2>
+<h3 id="english-version_18">English Version</h3>
+<p>Which of the following asymmetric cryptographic algorithms provides the same level of security as RSA but with smaller key sizes?
+* [ ] AES
+* [✅] <strong>ECC (Elliptic-Curve Cryptography)</strong>
+* [ ] Diffie-Hellman
+* [ ] RSA</p>
+<h3 id="version-en-espanol_18">Versión en Español</h3>
+<p>¿Cuál de los siguientes algoritmos criptográficos asimétricos proporciona el mismo nivel de seguridad que RSA pero con tamaños de clave más pequeños?
+* [ ] AES
+* [✅] <strong>ECC (Criptografía de Curvas Elípticas)</strong>
+* [ ] Diffie-Hellman
+* [ ] RSA</p>
+<h3 id="1-explicacion-general_18">1. Explicación General</h3>
+<p>Los dispositivos móviles, sensores IoT y tarjetas inteligentes tienen recursos de hardware limitados (batería y CPU). Usar algoritmos asimétricos tradicionales como RSA requiere llaves muy largas (ej. 3072 bits) que ralentizan los cálculos. Para resolver esto, la industria adoptó matemáticas basadas en la estructura algebraica de curvas elípticas sobre campos finitos, logrando la misma resistencia con una fracción del esfuerzo de cómputo.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_18">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[ECC]</code> es la respuesta porque una clave ECC de solo 256 bits ofrece una resistencia matemática equivalente a una clave RSA de 3072 bits. Esto reduce drásticamente el consumo de energía y el ancho de banda necesario para negociar conexiones seguras.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>AES:</em> Aunque usa llaves pequeñas (128/256 bits), es un algoritmo simétrico, por lo que no puede sustituir funcionalmente el rol asimétrico de RSA.</li>
+<li><em>Diffie-Hellman:</em> Es un protocolo dedicado estrictamente al intercambio de claves a través de un canal inseguro, no un algoritmo de cifrado general con optimización de llaves frente a RSA.</li>
+<li><em>RSA:</em> Es el algoritmo base con el que se está comparando el enunciado, por lo que autoseleccionarse carece de sentido lógico.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_18">3. Clave para el Examen SY0-701</h3>
+<p>Relación matemática directa para el examen: "Asymmetric" + "smaller key sizes" (mismo nivel de seguridad que RSA) = <code>ECC</code>.</p>
+<hr />
+<h2 id="pregunta-20-acronimo-de-curvas-elipticas-elliptic-curve-acronym">Pregunta 20: Acrónimo de Curvas Elípticas / Elliptic Curve Acronym</h2>
+<h3 id="english-version_19">English Version</h3>
+<p>What is the acronym used for Elliptic-Curve Cryptography?
+* [ ] EFS
+* [✅] <strong>ECC</strong>
+* [ ] Ephemeral
+* [ ] ESP</p>
+<h3 id="version-en-espanol_19">Versión en Español</h3>
+<p>¿Cuál es el acrónimo utilizado para la Criptografía de Curvas Elípticas?
+* [ ] EFS
+* [✅] <strong>ECC</strong>
+* [ ] Ephemeral
+* [ ] ESP</p>
+<h3 id="1-explicacion-general_19">1. Explicación General</h3>
+<p>El examen Security+ requiere memorizar con total precisión los acrónimos estándar de la industria para evitar confusiones básicas durante las preguntas de escenarios complejos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_19">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[ECC]</code> corresponde exactamente a las siglas en inglés de <em>Elliptic-Curve Cryptography</em>.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>EFS:</em> Corresponde al <em>Encrypting File System</em> de Microsoft Windows (cifrado local de archivos).</li>
+<li><em>Ephemeral:</em> Es un término técnico (efímero) que describe llaves criptográficas temporales que se destruyen tras terminar una sesión, no un algoritmo en sí.</li>
+<li><em>ESP:</em> Significa <em>Encapsulating Security Payload</em>, un componente de la suite de protocolos IPsec.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_19">3. Clave para el Examen SY0-701</h3>
+<p>Pregunta de reconocimiento directo: Elliptic-Curve Cryptography = <code>ECC</code>.</p>
+<hr />
+<h2 id="pregunta-21-el-concepto-de-llaves-efimeras-ephemeral-keys-definition">Pregunta 21: El Concepto de Llaves Efímeras / Ephemeral Keys Definition</h2>
+<h3 id="english-version_20">English Version</h3>
+<p>In cryptography, a cryptographic key that is generated for each execution of a key-establishment process is called:
+* [✅] <strong>Ephemeral key</strong>
+* [ ] Symmetric key
+* [ ] Static key
+* [ ] Asymmetric key</p>
+<h3 id="version-en-espanol_20">Versión en Español</h3>
+<p>En criptografía, una clave criptográfica que se genera para cada ejecución de un proceso de establecimiento de claves se llama:
+* [✅] <strong>Clave efímera (Ephemeral key)</strong>
+* [ ] Clave simétrica
+* [ ] Clave estática
+* [ ] Clave asimétrica</p>
+<h3 id="1-explicacion-general_20">1. Explicación General</h3>
+<p>Si una organización usa la misma clave privada de su certificado de servidor para cifrar todo el tráfico web a lo largo de los años, y un atacante logra robar esa clave en el futuro, podría descifrar de manera retroactiva todas las comunicaciones pasadas grabadas de la red. Para evitar esto, los protocolos modernos generan llaves de sesión temporales que se destruyen inmediatamente después de usarse.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_20">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Ephemeral key]</code> es la definición técnica exacta de una clave de corta vida útil que se genera bajo demanda únicamente para una sesión específica (<em>each execution</em>), garantizando el Secreto Perfecto hacia Adelante (PFS).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Symmetric key:</em> Describe la naturaleza de la llave (que es igual para cifrar y descifrar), pero no implica que deba ser temporal o destruirse tras el proceso.</li>
+<li><em>Static key:</em> Es el opuesto directo; una clave estática se mantiene fija y se reutiliza a lo largo de múltiples sesiones durante meses o años.</li>
+<li><em>Asymmetric key:</em> Describe un par de llaves pública/privada que típicamente son estáticas y persistentes en un certificado digital.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_20">3. Clave para el Examen SY0-701</h3>
+<p>Indicador textual en el examen: "Generated for each execution" / "temporary" = <code>Ephemeral key</code>.</p>
+<hr />
+<h2 id="pregunta-22-algoritmos-de-intercambio-de-llaves-key-exchange-paradigms">Pregunta 22: Algoritmos de Intercambio de Llaves / Key Exchange Paradigms</h2>
+<h3 id="english-version_21">English Version</h3>
+<p>Which of the cryptographic algorithms listed below is used for secure sharing of cryptographic keys over an insecure channel?
+* [ ] AES
+* [ ] RSA
+* [✅] <strong>Diffie-Hellman</strong>
+* [ ] ECC</p>
+<h3 id="version-en-espanol_21">Versión en Español</h3>
+<p>¿Cuál de los algoritmos criptográficos enumerados a continuación se utiliza para compartir de forma segura claves criptográficas a través de un canal inseguro?
+* [ ] AES
+* [ ] RSA
+* [✅] <strong>Diffie-Hellman</strong>
+* [ ] ECC</p>
+<h3 id="1-explicacion-general_21">1. Explicación General</h3>
+<p>Dos extraños en internet necesitan comunicarse usando cifrado simétrico (el cual es muy rápido), pero no tienen una forma segura de acordar cuál será la contraseña secreta sin que un espía en la red la intercepte. Para resolver este problema, se requiere un método matemático que permita a ambas partes calcular el mismo secreto compartido de manera independiente sin enviar la clave directamente a través de la red.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_21">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Diffie-Hellman]</code> es un protocolo diseñado específicamente para el acuerdo de claves (<em>key exchange</em>). Utiliza aritmética modular para que ambos extremos computen la misma llave secreta simétrica final a la vista de todos, sin que los atacantes puedan deducirla.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>AES:</em> Es el algoritmo simétrico que utilizará la llave una vez acordada, pero no tiene la capacidad matemática de crear un canal inicial para compartirla.</li>
+<li><em>RSA:</em> Aunque se puede usar para el transporte de claves (cifrando la llave simétrica con la clave pública del servidor), su función primaria es el cifrado general y las firmas digitales, no es un protocolo puro de acuerdo simétrico como DH.</li>
+<li><em>ECC:</em> Es una familia matemática de criptografía asimétrica, no un algoritmo de intercambio de claves por sí solo (se requeriría específicamente su variante ECDH).</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_21">3. Clave para el Examen SY0-701</h3>
+<p>Conexión de conceptos clásica de CompTIA: "Sharing cryptographic keys" + "over an insecure channel" = <code>Diffie-Hellman</code>.</p>
+<hr />
+<h2 id="pregunta-23-propiedades-del-secreto-perfecto-perfect-forward-secrecy">Pregunta 23: Propiedades del Secreto Perfecto / Perfect Forward Secrecy</h2>
+<h3 id="english-version_22">English Version</h3>
+<p>Which of the following terms refers to a cryptographic property that ensures that a compromise of long-term keys does not compromise past session keys?
+* [ ] Non-repudiation
+* [✅] <strong>PFS (Perfect Forward Secrecy)</strong>
+* [ ] Key wrapping
+* [ ] Obfuscation</p>
+<h3 id="version-en-espanol_22">Versión en Español</h3>
+<p>¿Cuál de los siguientes términos se refiere a una propiedad criptográfica que garantiza que el compromiso de claves a largo plazo no comprometa las claves de sesión pasadas?
+* [ ] No repudio
+* [✅] <strong>PFS (Secreto Perfecto hacia Adelante)</strong>
+* [ ] Envoltorio de claves (Key wrapping)
+* [ ] Ofuscación</p>
+<h3 id="1-explicacion-general_22">1. Explicación General</h3>
+<p>En el pasado, si un gobierno confiscaba la clave privada principal de una empresa, podía descifrar gigabytes de tráfico de red capturado años atrás. Los criptógrafos crearon una regla de diseño: la clave maestra de largo plazo de un servidor solo debe servir para autenticar la identidad, mientras que el cifrado del tráfico debe depender de llaves efímeras independientes para cada sesión.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_22">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[PFS (Perfect Forward Secrecy)]</code> es la propiedad de seguridad exacta que asegura que si un atacante roba la clave privada del servidor hoy, los datos que interceptó la semana pasada siguen estando completamente seguros porque las llaves de sesión pasadas no se derivaron de esa clave robada.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Non-repudiation:</em> El no repudio garantiza que una entidad no pueda negar haber firmado un mensaje o haber realizado una transacción.</li>
+<li><em>Key wrapping:</em> Es el acto de cifrar una clave con otra (usando una KEK) para almacenamiento seguro, no una propiedad de aislamiento temporal de sesiones.</li>
+<li><em>Obfuscation:</em> Es el proceso de hacer que el código fuente o un mensaje sea difícil de entender para los humanos, careciendo de propiedades criptográficas matemáticas avanzadas.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_22">3. Clave para el Examen SY0-701</h3>
+<p>Definición de oro para el examen: "Compromise of long-term keys does not compromise past session keys" = <code>PFS</code>.</p>
+<hr />
+<h2 id="pregunta-24-escondiendo-datos-en-archivos-hiding-data-inside-files">Pregunta 24: Escondiendo Datos en Archivos / Hiding Data Inside Files</h2>
+<h3 id="english-version_23">English Version</h3>
+<p>The practice of hiding a secret message inside a conventional file (such as a digital image) is called:
+* [ ] Stegomalware
+* [ ] Salt
+* [✅] <strong>Steganography</strong>
+* [ ] Obfuscation</p>
+<h3 id="version-en-espanol_23">Versión en Español</h3>
+<p>La práctica de ocultar un mensaje secreto dentro de un archivo convencional (como una imagen digital) se llama:
+* [ ] Stegomalware
+* [ ] Sal (Salt)
+* [✅] <strong>Esteganografía (Steganography)</strong>
+* [ ] Ofuscación</p>
+<h3 id="1-explicacion-general_23">1. Explicación General</h3>
+<p>Mientras que el cifrado altera el contenido de un mensaje para que sea incomprensible (llamando la atención sobre su existencia), esta disciplina busca pasar desapercibida por completo ocultando el mensaje dentro de los bits menos significativos de un archivo ordinario que parece inofensivo.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_23">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Steganography]</code> es la ciencia de ocultar información para que no se detecte que hay algo oculto en el medio portador (por ejemplo, meter un archivo de texto con contraseñas dentro de los pixeles de una foto <code>.jpg</code> de un paisaje).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Stegomalware:</em> Es un término que describe al código malicioso que explota la esteganografía para descargar comandos sin activar las alarmas del antivirus, pero no es el nombre general de la práctica de ocultación de datos.</li>
+<li><em>Salt:</em> Son datos aleatorios que se inyectan a una contraseña antes de procesarla con un hash para evitar ataques de tablas arcoíris.</li>
+<li><em>Obfuscation:</em> Hace el contenido confuso y difícil de analizar, pero el archivo sigue siendo visible y sospechoso en su naturaleza, no oculto dentro de otro objeto.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_23">3. Clave para el Examen SY0-701</h3>
+<p>Mapeo rápido de examen: "Hiding a secret message inside a conventional file / digital image" = <code>Steganography</code>.</p>
+<hr />
+<h2 id="pregunta-25-ataques-de-fuerza-bruta-en-bloques-block-cipher-exhaustive-search">Pregunta 25: Ataques de Fuerza Bruta en Bloques / Block Cipher Exhaustive Search</h2>
+<h3 id="english-version_24">English Version</h3>
+<p>Which of the terms listed below refers to a cryptographic attack where the attacker tries every possible key until the correct one is found?
+* [ ] Rainbow table
+* [ ] Replay attack
+* [✅] <strong>Brute-force attack</strong>
+* [ ] Birthday attack</p>
+<h3 id="version-en-espanol_24">Versión en Español</h3>
+<p>¿Cuál de los términos enumerados a continuación se refiere a un ataque criptográfico en el que el atacante prueba todas las claves posibles hasta encontrar la correcta?
+* [ ] Tabla Arcoíris (Rainbow table)
+* [ ] Ataque de denegación/reproducción (Replay attack)
+* [✅] <strong>Ataque de fuerza bruta (Brute-force attack)</strong>
+* [ ] Ataque de cumpleaños (Birthday attack)</p>
+<h3 id="1-explicacion-general_24">1. Explicación General</h3>
+<p>Cuando un atacante no encuentra vulnerabilidades de diseño ni errores matemáticos en un algoritmo criptográfico, se ve obligado a recurrir al método de prueba y error a gran escala, probando combinaciones una por una de forma exhaustiva hasta dar con la clave exacta.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_24">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Brute-force attack]</code> define la técnica de adivinación exhaustiva que recorre todo el espacio de claves posibles (<em>tries every possible key</em>) de manera secuencial o aleatoria hasta romper el descifrado.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Rainbow table:</em> Es una base de datos precomputada con hashes de contraseñas comunes utilizada para acelerar el descifrado de credenciales, no un intento en vivo de probar todas las llaves posibles de un algoritmo.</li>
+<li><em>Replay attack:</em> Consiste en capturar un paquete de red legítimo y retransmitirlo después para engañar a un sistema, no involucra adivinación de llaves.</li>
+<li><em>Birthday attack:</em> Explota la paradoja matemática del cumpleaños para encontrar colisiones en funciones hash (dos entradas distintas que generan el mismo hash), no busca adivinar una clave simétrica por fuerza bruta pura.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_24">3. Clave para el Examen SY0-701</h3>
+<p>Frase clave: "Tries every possible key" = <code>Brute-force attack</code>.</p>
+<hr />
+<h2 id="pregunta-26-el-concepto-clave-de-colision-hash-collision-definition">Pregunta 26: El Concepto Clave de Colisión / Hash Collision Definition</h2>
+<h3 id="english-version_25">English Version</h3>
+<p>A situation where two different inputs produce the same hash output is known as:
+* [ ] Coincidence
+* [✅] <strong>Collision</strong>
+* [ ] Interception
+* [ ] Clustering</p>
+<h3 id="version-en-espanol_25">Versión en Español</h3>
+<p>Una situación en la que dos entradas diferentes producen el mismo resultado hash se conoce como:
+* [ ] Coincidencia
+* [✅] <strong>Colisión (Collision)</strong>
+* [ ] Interceptación
+* [ ] Agrupamiento (Clustering)</p>
+<h3 id="1-explicacion-general_25">1. Explicación General</h3>
+<p>Una función hash ideal toma un bloque de datos de cualquier tamaño y genera una huella digital única de longitud fija. Si dos archivos completamente distintos (por ejemplo, un contrato legítimo y un virus) generan la misma huella hash exacta, el algoritmo se considera comprometido y no apto para validar la integridad de los datos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_25">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Collision]</code> es el término técnico estandarizado globalmente para describir este fallo en la propiedad de resistencia de una función hash. Algoritmos viejos como MD5 y SHA-1 fueron retirados porque los atacantes aprendieron a forzar colisiones de manera controlada.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Coincidence:</em> Es una palabra del lenguaje común que carece de precisión y rigor dentro del vocabulario de la seguridad informática profesional.</li>
+<li><em>Interception:</em> Es la acción de capturar datos en tránsito por la red, no tiene relación matemática con las propiedades de los hashes.</li>
+<li><em>Clustering:</em> En bases de datos o analítica se refiere al agrupamiento de datos similares, no al fallo criptográfico de coincidencia de hashes.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_25">3. Clave para el Examen SY0-701</h3>
+<p>Relación fundamental: "Two different inputs = same hash output" = <code>Collision</code>.</p>
+<hr />
+<h2 id="pregunta-27-explotando-la-paradoja-matematica-exploiting-probability-paradox">Pregunta 27: Explotando la Paradoja Matemática / Exploiting Probability Paradox</h2>
+<h3 id="english-version_26">English Version</h3>
+<p>Which cryptographic attack exploits the mathematics behind the probability of finding two random inputs that generate the same hash output?
+* [ ] Replay attack
+* [ ] Brute-force attack
+* [ ] Downgrade attack
+* [✅] <strong>Birthday attack</strong></p>
+<h3 id="version-en-espanol_26">Versión en Español</h3>
+<p>¿Qué ataque criptográfico explota las matemáticas detrás de la probabilidad de encontrar dos entradas aleatorias que generen el mismo resultado hash?
+* [ ] Ataque de reproducción (Replay attack)
+* [ ] Ataque de fuerza bruta (Brute-force attack)
+* [ ] Ataque de degradación (Downgrade attack)
+* [✅] <strong>Ataque de cumpleaños (Birthday attack)</strong></p>
+<h3 id="1-explicacion-general_26">1. Explicación General</h3>
+<p>La paradoja del cumpleaños demuestra que en un grupo de solo 23 personas, la probabilidad de que al menos dos de ellas compartan el mismo día de cumpleaños supera el 50%. En criptografía, esto significa que es mucho más fácil encontrar <em>dos archivos aleatorios cualesquiera</em> que tengan el mismo hash, que intentar adivinar qué archivo específico coincide con un hash predeterminado.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_26">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Birthday attack]</code> es el nombre del ataque matemático diseñado específicamente para romper la integridad de las funciones hash buscando colisiones de forma acelerada basándose en estas leyes de probabilidad.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Replay attack:</em> No involucra cálculos matemáticos ni hashes; solo copia y vuelve a enviar tráfico capturado.</li>
+<li><em>Brute-force attack:</em> Busca adivinar una contraseña o clave simétrica específica probando de forma lineal, no se enfoca en la probabilidad de colisiones cruzadas.</li>
+<li><em>Downgrade attack:</em> Fuerza a un servidor a abandonar un protocolo seguro (ej. TLS 1.3) y rebajarse a usar una versión antigua y vulnerable (ej. SSL 3.0).</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_26">3. Clave para el Examen SY0-701</h3>
+<p>Conector de examen: "Probability of finding two random inputs with same hash" = <code>Birthday attack</code>.</p>
+<hr />
+<h2 id="pregunta-28-degradacion-de-seguridad-forcing-vulnerable-protocols">Pregunta 28: Degradación de Seguridad / Forcing Vulnerable Protocols</h2>
+<h3 id="english-version_27">English Version</h3>
+<p>A cryptographic attack where an attacker forces a system to abandon a secure mode of operation and resort to an older, less secure protocol is called:
+* [✅] <strong>Downgrade attack</strong>
+* [ ] Birthday attack
+* [ ] Replay attack
+* [ ] Brute-force attack</p>
+<h3 id="version-en-espanol_27">Versión en Español</h3>
+<p>Un ataque criptográfico en el que un atacante obliga a un sistema a abandonar un modo de operación seguro y recurrir a un protocolo más antiguo y menos seguro se llama:
+* [✅] <strong>Ataque de degradación (Downgrade attack)</strong>
+* [ ] Ataque de cumpleaños (Birthday attack)
+* [ ] Ataque de reproducción (Replay attack)
+* [ ] Ataque de fuerza bruta (Brute-force attack)</p>
+<h3 id="1-explicacion-general_27">1. Explicación General</h3>
+<p>Muchos sistemas modernos mantienen compatibilidad con versiones antiguas para no romper la comunicación con clientes obsoletos. Un atacante metido en medio de la red puede interceptar la negociación inicial y alterar los mensajes para engañar a ambas partes, haciéndoles creer que el otro no soporta los estándares modernos de cifrado y forzándolos a usar un protocolo viejo que el atacante ya sabe cómo romper.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_27">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Downgrade attack]</code> (o ataque de retroceso) describe perfectamente esta manipulación de la negociación donde se fuerza la transición desde un estado seguro hacia uno obsoleto (<em>older, less secure protocol</em>). Un ejemplo clásico es forzar conexiones HTTPS a usar versiones vulnerables de TLS o SSL (como en el ataque POODLE).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Birthday attack:</em> Enfocado en colisiones de hashes, no altera configuraciones de protocolos activos en red.</li>
+<li><em>Replay attack:</em> Reenvía tramas de red guardadas, pero no altera los parámetros criptográficos de la sesión actual de soporte.</li>
+<li><em>Brute-force attack:</em> Intento masivo de adivinar llaves por medio de cómputo repetitivo, sin modificar capacidades del servidor.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_27">3. Clave para el Examen SY0-701</h3>
+<p>Asociación rápida: "Forces a system to abandon a secure mode" + "older, less secure protocol" = <code>Downgrade attack</code>.</p>
+<hr />
+<h2 id="pregunta-29-introduccion-a-la-computacion-cuantica-intro-to-quantum-threat">Pregunta 29: Introducción a la Computación Cuántica / Intro to Quantum Threat</h2>
+<h3 id="english-version_28">English Version</h3>
+<p>Which of the following terms refers to a type of computing technology that utilizes qubits and has the potential to break many of the cryptographic algorithms currently in use?
+* [ ] Centralized computing
+* [ ] Edge computing
+* [✅] <strong>Quantum computing</strong>
+* [ ] Distributed computing</p>
+<h3 id="version-en-espanol_28">Versión en Español</h3>
+<p>¿Cuál de los siguientes términos se refiere a un tipo de tecnología informática que utiliza qubits y tiene el potencial de romper muchos de los algoritmos criptográficos que se utilizan actualmente?
+* [ ] Computación centralizada
+* [ ] Computación perimetral (Edge computing)
+* [✅] <strong>Computación cuántica (Quantum computing)</strong>
+* [ ] Computación distribuida</p>
+<h3 id="1-explicacion-general_28">1. Explicación General</h3>
+<p>Las computadoras tradicionales procesan la información usando bits binarios convencionales (que solo pueden ser 0 o 1). Una nueva generación de tecnología de procesamiento aprovecha la física cuántica, permitiendo que sus unidades lógicas existan en múltiples estados al mismo tiempo, lo que les permite resolver ciertos problemas matemáticos complejos a una velocidad inimaginable para la informática clásica.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_28">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Quantum computing]</code> utiliza la superposición y el entrelazamiento cuántico a través de bits cuánticos o <em>qubits</em>. Algoritmos cuánticos especializados (como el algoritmo de Shor) pueden factorizar números primos gigantescos en minutos, lo que destruirá la base matemática de algoritmos de clave pública actuales como RSA y ECC.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Centralized computing:</em> Modelo clásico donde un solo servidor central realiza todo el procesamiento de datos ordinarios.</li>
+<li><em>Edge computing:</em> Paradigma que procesa los datos cerca del lugar donde se generan (en el perímetro de la red) para ahorrar ancho de banda, usando hardware tradicional.</li>
+<li><em>Distributed computing:</em> Red de computadoras tradicionales que dividen una tarea grande en partes más pequeñas compartiendo carga de trabajo, pero sin capacidades cuánticas.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_28">3. Clave para el Examen SY0-701</h3>
+<p>Indicador de cambio tecnológico: "Utilizes qubits" + "break cryptographic algorithms" = <code>Quantum computing</code>.</p>
+<hr />
+<h2 id="pregunta-30-blindaje-para-la-era-cuantica-shielding-for-the-quantum-era">Pregunta 30: Blindaje para la Era Cuántica / Shielding for the Quantum Era</h2>
+<h3 id="english-version_29">English Version</h3>
+<p>What is the name of a cryptographic standard currently being developed to counter the threat of quantum computing?
+* [ ] PKI
+* [✅] <strong>PQC (Post-Quantum Cryptography)</strong>
+* [ ] HSM
+* [ ] ASLR</p>
+<h3 id="version-en-espanol_29">Versión en Español</h3>
+<p>¿Cuál es el nombre de un estándar criptográfico que se está desarrollando actualmente para contrarrestar la amenaza de la computación cuántica?
+* [ ] PKI
+* [✅] <strong>PQC (Criptografía Post-Cuántica)</strong>
+* [ ] HSM
+* [ ] ASLR</p>
+<h3 id="1-explicacion-general_29">1. Explicación General</h3>
+<p>Debido a que las computadoras cuánticas del futuro cercano podrán romper los algoritmos de clave pública que protegen los bancos, gobiernos e internet hoy en día, agencias internacionales como el NIST están liderando un proceso global para estandarizar nuevos algoritmos matemáticos que sigan siendo seguros tanto frente a computadoras convencionales como frente a ataques cuánticos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_29">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[PQC (Post-Quantum Cryptography)]</code> (también conocida como criptografía segura contra el análisis cuántico) engloba los nuevos algoritmos criptográficos basados en problemas matemáticos hipercomplejos (como la criptografía basada en retículos) que las computadoras cuánticas no pueden resolver de manera eficiente.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>PKI:</em> La Infraestructura de Claves Públicas es el marco actual que gestiona certificados digitales ordinarios y que precisamente necesita ser actualizado para usar algoritmos PQC.</li>
+<li><em>HSM:</em> Dispositivo físico de hardware corporativo que almacena llaves tradicionales, no un estándar criptográfico de algoritmos de nueva generación.</li>
+<li><em>ASLR:</em> <em>Address Space Layout Randomization</em> es una defensa a nivel de sistema operativo para prevenir ataques de desbordamiento de búfer en la memoria RAM, sin relación alguna con la criptografía de red.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_29">3. Clave para el Examen SY0-701</h3>
+<p>Mapeo cronológico: "Counter the threat of quantum computing" = <code>PQC</code>.</p>
+<hr />
+<h2 id="pregunta-31-concepto-fundamental-del-no-repudio-non-repudiation-definition">Pregunta 31: Concepto Fundamental del No Repudio / Non-Repudiation Definition</h2>
+<h3 id="english-version_30">English Version</h3>
+<p>Which architectural term describes a security service that provides proof of the origin and integrity of data, making it impossible for a sender to deny having sent a message?
+* [ ] Accountability
+* [ ] Confidentiality
+* [ ] Availability
+* [✅] <strong>Non-repudiation</strong></p>
+<h3 id="version-en-espanol_30">Versión en Español</h3>
+<p>¿Qué término arquitectónico describe un servicio de seguridad que proporciona prueba del origen y la integridad de los datos, haciendo imposible que un remitente niegue haber enviado un mensaje?
+* [ ] Rendición de cuentas (Accountability)
+* [ ] Confidencialidad (Confidentiality)
+* [ ] Disponibilidad (Availability)
+* [✅] <strong>No repudio (Non-repudiation)</strong></p>
+<h3 id="1-explicacion-general_30">1. Explicación General</h3>
+<p>En transacciones comerciales, contratos digitales o transferencias bancarias, es vital contar con un mecanismo legal e informático que impida que una persona firme un documento en línea y más tarde intente retractarse afirmando que ella no fue quien realizó dicha acción.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_30">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Non-repudiation]</code> es la propiedad criptográfica lograda a través de las firmas digitales (usando clave privada del autor) que enlaza indisolublemente la identidad de un individuo con el mensaje enviado, otorgando validez legal y técnica absoluta frente a reclamos de falsificación (<em>impossible for a sender to deny</em>).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Accountability:</em> Asegura que las acciones de una entidad puedan ser rastreadas e identificadas en los registros de auditoría, pero no ofrece la prueba criptográfica dura de no retractación que ofrece el no repudio.</li>
+<li><em>Confidencialidad:</em> Se encarga únicamente de ocultar la información ante miradas no autorizadas mediante el cifrado, pero no valida quién la envió.</li>
+<li><em>Disponibilidad:</em> Garantiza que los sistemas y datos estén listos y accesibles para los usuarios autorizados cuando lo requieran.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_30">3. Clave para el Examen SY0-701</h3>
+<p>Frase clave para identificar la propiedad: "Impossible for a sender to deny having sent a message" = <code>Non-repudiation</code>.</p>
+<hr />
+<h2 id="pregunta-32-autenticacion-e-integridad-web-web-cryptographic-validation">Pregunta 32: Autenticación e Integridad Web / Web Cryptographic Validation</h2>
+<h3 id="english-version_31">English Version</h3>
+<p>Digital signatures provide: (Select 2 answers)
+* [✅] <strong>Authentication</strong>
+* [ ] Confidentiality
+* [ ] Availability
+* [✅] <strong>Integrity</strong>
+* [ ] Obfuscation</p>
+<h3 id="version-en-espanol_31">Versión en Español</h3>
+<p>Las firmas digitales proporcionan: (Seleccione 2 respuestas)
+* [✅] <strong>Autenticación (Authentication)</strong>
+* [ ] Confidencialidad (Confidentiality)
+* [ ] Disponibilidad (Availability)
+* [✅] <strong>Integridad (Integrity)</strong>
+* [ ] Ofuscación (Obfuscation)</p>
+<h3 id="1-explicacion-general_31">1. Explicación General</h3>
+<p>Una firma digital no oculta el contenido de un archivo. Su funcionamiento consiste en calcular el hash del documento y cifrar ese hash usando la clave privada del autor. Cualquier persona que reciba el archivo puede usar la clave pública del autor para verificar que el contenido coincide perfectamente y saber con total certeza quién lo generó.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_31">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opciones Correctas:</strong> <code>[Authentication e Integrity]</code> porque la firma digital valida la identidad del emisor (<strong>Autenticación</strong>) y garantiza que el archivo no fue modificado por un tercero en el camino (<strong>Integridad</strong>), ya que cualquier cambio alteraría el hash final invalidando la firma.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Confidencialidad:</em> Una firma digital por sí sola deja el texto del mensaje a la vista de cualquiera; se requiere cifrado complementario para lograr confidencialidad.</li>
+<li><em>Disponibilidad:</em> No influye en el tiempo de actividad o acceso a los servicios de red.</li>
+<li><em>Ofuscación:</em> No altera la legibilidad del código ni busca esconder datos mediante confusión de sintaxis.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_31">3. Clave para el Examen SY0-701</h3>
+<p>Pilares que sostiene una firma digital: Firma digital = <code>Authentication</code> + <code>Integrity</code> (+ No repudio). Nunca confidencialidad.</p>
+<hr />
+<h2 id="pregunta-33-cifrado-granular-del-correo-secure-email-standard">Pregunta 33: Cifrado Granular del Correo / Secure Email Standard</h2>
+<h3 id="english-version_32">English Version</h3>
+<p>A protocol that allows for encrypting and digitally signing email messages is called:
+* [ ] HTTPS
+* [ ] SRTP
+* [✅] <strong>S/MIME</strong>
+* [ ] IPsec</p>
+<h3 id="version-en-espanol_32">Versión en Español</h3>
+<p>Un protocolo que permite cifrar y firmar digitalmente mensajes de correo electrónico se llama:
+* [ ] HTTPS
+* [ ] SRTP
+* [✅] <strong>S/MIME (Secure/Multipurpose Internet Mail Extensions)</strong>
+* [ ] IPsec</p>
+<h3 id="1-explicacion-general_32">1. Explicación General</h3>
+<p>El correo electrónico tradicional viaja por internet en texto plano a través del protocolo SMTP. Para enviar información confidencial (como datos financieros o médicos) de extremo a extremo entre usuarios específicos, se necesita un estándar que empaquete de forma criptográfica el contenido y los archivos adjuntos dentro del propio cliente de correo.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_32">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[S/MIME]</code> es el estándar técnico integrado en la mayoría de los clientes de correo empresarial (como Outlook). Utiliza certificados digitales X.509 para permitir tanto la firma digital (autenticación) como el cifrado (confidencialidad) del cuerpo del correo y sus anexos de forma directa.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>HTTPS:</em> Asegura el canal de comunicación entre el navegador web y el servidor, protegiendo la sesión de webmail, pero no cifra el mensaje de forma individual una vez que se guarda o se transfiere entre servidores de correo externos.</li>
+<li><em>SRTP:</em> Está diseñado exclusivamente para la transmisión en tiempo real de flujos de audio y video en redes IP (VoIP), ajeno al correo electrónico.</li>
+<li><em>IPsec:</em> Suite de seguridad para túneles a nivel de capa de red (Capa 3); cifra todo el tráfico entre dos routers de sucursal, pero no gestiona firmas ni cifrado individual de mensajes de correo electrónico en la capa de aplicación.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_32">3. Clave para el Examen SY0-701</h3>
+<p>Asociación directa para el examen: "Encrypting and digitally signing email" = <code>S/MIME</code>.</p>
+<hr />
+<h2 id="pregunta-34-el-ciclo-de-vida-de-los-certificados-certs-lifecycle-validation">Pregunta 34: El Ciclo de Vida de los Certificados / Certs Lifecycle Validation</h2>
+<h3 id="english-version_33">English Version</h3>
+<p>Which of the following answers refers to a trusted third party that issues digital certificates?
+* [ ] RA (Registration Authority)
+* [ ] CRL (Certificate Revocation List)
+* [✅] <strong>CA (Certificate Authority)</strong>
+* [ ] PKI (Public Key Infrastructure)</p>
+<h3 id="version-en-espanol_33">Versión en Español</h3>
+<p>¿Cuál de las siguientes respuestas se refiere a un tercero de confianza que emite certificados digitales?
+* [ ] RA (Autoridad de Registro)
+* [ ] CRL (Lista de Revocación de Certificados)
+* [✅] <strong>CA (Autoridad de Certificación)</strong>
+* [ ] PKI (Infraestructura de Claves Públicas)</p>
+<h3 id="1-explicacion-general_33">1. Explicación General</h3>
+<p>Para que las transacciones en internet sean seguras, los navegadores web necesitan una forma de verificar que un sitio de comercio electrónico realmente pertenece a la empresa legítima y no a un estafador. Se delega esta verificación en entidades globales altamente auditadas que actúan como "notarios digitales" de confianza para certificar las llaves públicas del mundo.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_33">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[CA (Certificate Authority)]</code> es la organización responsable de validar las identidades y firmar digitalmente los certificados para darles validez oficial ante los sistemas operativos del planeta (ej. DigiCert, Let's Encrypt).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>RA:</em> La Autoridad de Registro ayuda a la CA validando los documentos y la identidad de los solicitantes, pero la RA <strong>no tiene permitido firmar ni emitir</strong> los certificados finales directamente.</li>
+<li><em>CRL:</em> Es simplemente un archivo de texto publicado por la CA que contiene el listado de certificados que han sido cancelados o anulados antes de su fecha de vencimiento original.</li>
+<li><em>PKI:</em> Es el ecosistema global completo (compuesto por leyes, servidores, CAs, RAs, tokens y certificados) encargado de la gestión criptográfica, no la entidad emisora específica por sí misma.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_33">3. Clave para el Examen SY0-701</h3>
+<p>Vínculo conceptual inmediato: "Trusted third party that issues digital certificates" = <code>CA</code>.</p>
+<hr />
+<h2 id="pregunta-35-comprobacion-rapida-de-estado-real-time-certs-status-checking">Pregunta 35: Comprobación Rápida de Estado / Real-Time Certs Status Checking</h2>
+<h3 id="english-version_34">English Version</h3>
+<p>Which of the answers listed below refers to a method for checking the validity of a digital certificate in real-time?
+* [ ] CSR
+* [ ] CRL
+* [✅] <strong>OCSP (Online Certificate Status Protocol)</strong>
+* [ ] CA</p>
+<h3 id="version-en-espanol_34">Versión en Español</h3>
+<p>¿Cuál de las respuestas enumeradas a continuación se refiere a un método para verificar la validez de un certificado digital en tiempo real?
+* [ ] CSR (Solicitud de Firma de Certificado)
+* [ ] CRL (Lista de Revocación de Certificados)
+* [✅] <strong>OCSP (Protocolo de Estado de Certificados en Línea)</strong>
+* [ ] CA (Autoridad de Certificación)</p>
+<h3 id="1-explicacion-general_34">1. Explicación General</h3>
+<p>Cuando tu navegador web entra a un banco en línea, debe verificar al instante que el certificado digital de ese sitio no haya sido cancelado por robo de claves o hackeo de la empresa. Descargar listas gigantescas de certificados revocados consume demasiado ancho de banda y tiempo, por lo que se requiere un método de consulta rápida y directa.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_34">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[OCSP]</code> permite al navegador enviar una consulta ligera con el número de serie del certificado directamente a un servidor respondedor de la CA. Este responde de inmediato con un estado simple: "Válido", "Revocado" o "Desconocido" (<em>checking in real-time</em>).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>CSR:</em> Es el archivo de solicitud inicial que genera un administrador para pedirle a una CA que le cree un certificado nuevo; no sirve para validar estados de certificados existentes.</li>
+<li><em>CRL:</em> Aunque sirve para verificar si un certificado fue cancelado, requiere descargar una lista pesada completa de forma periódica, por lo que no se considera una consulta interactiva optimizada en tiempo real.</li>
+<li><em>CA:</em> Es la entidad que emite el certificado, no el protocolo tecnológico específico de consulta de estado en tiempo real solicitado.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_34">3. Clave para el Examen SY0-701</h3>
+<p>Conector de infraestructura clave: "Checking the validity" + "in real-time" = <code>OCSP</code>.</p>
+<hr />
+<h2 id="pregunta-36-el-ecosistema-completo-de-llaves-the-complete-management-framework">Pregunta 36: El Ecosistema Completo de Llaves / The Complete Management Framework</h2>
+<h3 id="english-version_35">English Version</h3>
+<p>A system composed of hardware, software, people, policies, and procedures needed to create, manage, distribute, use, store, and revoke digital certificates is called:
+* [ ] CA (Certificate Authority)
+* [ ] RA (Registration Authority)
+* [ ] CRL (Certificate Revocation List)
+* [✅] <strong>PKI (Public Key Infrastructure)</strong></p>
+<h3 id="version-en-espanol_35">Versión en Español</h3>
+<p>Un sistema compuesto por hardware, software, personas, políticas y procedimientos necesarios para crear, administrar, distribuir, usar, almacenar y revocar certificados digitales se llama:
+* [ ] CA (Autoridad de Certificación)
+* [ ] RA (Autoridad de Registro)
+* [ ] CRL (Lista de Revocación de Certificados)
+* [✅] <strong>PKI (Infraestructura de Claves Públicas)</strong></p>
+<h3 id="1-explicacion-general_35">1. Explicación General</h3>
+<p>La seguridad basada en criptografía asimétrica no funciona de manera aislada con solo instalar un software. Requiere un marco estructural integral que abarque desde los servidores físicos ultra seguros que guardan las claves raíz, hasta las normativas legales, los ingenieros encargados de la administración y las herramientas de software de los sistemas operativos que confían en ellos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_35">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[PKI]</code> es el término global definitivo que representa a toda la infraestructura (<em>system composed of hardware, software, people, policies...</em>) encargada de gobernar el ciclo de vida completo de las claves públicas y los certificados a nivel mundial.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>CA:</em> Es simplemente una pieza (la entidad emisora) que opera dentro de toda la gran maquinaria de la PKI.</li>
+<li><em>RA:</em> Es otro componente secundario de apoyo para la validación de identidades dentro del sistema PKI.</li>
+<li><em>CRL:</em> Es solo uno de los tantos tipos de archivos o entregables generados por la infraestructura para publicar revocaciones.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_35">3. Clave para el Examen SY0-701</h3>
+<p>Definición holística para recordar: "System composed of hardware, software, people, policies..." = <code>PKI</code>.</p>
+<hr />
+<p><a href="../AVANCES/CERTIFICACIONES/COMPTIA%20SECURITY%2B/ExamCompass/Cuestionario%20por%20Temas/ExamCompass%20-%20Cuestionarios%20por%20Temas/">⬅️ Volver a Cuestionarios por Temas</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

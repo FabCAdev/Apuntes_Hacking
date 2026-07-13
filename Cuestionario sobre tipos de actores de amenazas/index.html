@@ -1,0 +1,1141 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/Cuestionario%20sobre%20tipos%20de%20actores%20de%20amenazas/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Cuestionario sobre tipos de actores de amenazas - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pregunta-1-matriz-de-vectores-de-ataque-threat-actor-attack-vectors-matching" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cuestionario sobre tipos de actores de amenazas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AVANCES/%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-1-matriz-de-vectores-de-ataque-threat-actor-attack-vectors-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 1: Matriz de Vectores de Ataque / Threat Actor Attack Vectors (Matching)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 1: Matriz de Vectores de Ataque / Threat Actor Attack Vectors (Matching)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-2-matriz-de-recursos-y-financiacion-threat-actor-resources-and-funding-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 2: Matriz de Recursos y Financiación / Threat Actor Resources and Funding (Matching)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 2: Matriz de Recursos y Financiación / Threat Actor Resources and Funding (Matching)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-3-matriz-de-nivel-de-sofisticacion-tecnica-threat-actor-sophistication-levels-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 3: Matriz de Nivel de Sofisticación Técnica / Threat Actor Sophistication Levels (Matching)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 3: Matriz de Nivel de Sofisticación Técnica / Threat Actor Sophistication Levels (Matching)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-4-matriz-de-motivaciones-tipicas-threat-actor-motivations-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 4: Matriz de Motivaciones Típicas / Threat Actor Motivations (Matching)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 4: Matriz de Motivaciones Típicas / Threat Actor Motivations (Matching)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-5-campanas-de-ataques-prolongados-advanced-persistent-threats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 5: Campañas de Ataques Prolongados / Advanced Persistent Threats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 5: Campañas de Ataques Prolongados / Advanced Persistent Threats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-6-concepto-fundamental-de-ti-en-la-sombra-shadow-it-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 6: Concepto Fundamental de TI en la Sombra / Shadow IT Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 6: Concepto Fundamental de TI en la Sombra / Shadow IT Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Cuestionario sobre tipos de actores de amenazas</h1>
+
+<p>Este apunte contiene el análisis detallado del cuestionario temático sobre actores de amenazas, vectores de ataque y perfiles de riesgo de la plataforma ExamCompass para la certificación CompTIA Security+ (SY0-701), alineado con las respuestas oficiales del simulador.</p>
+<hr />
+<h2 id="pregunta-1-matriz-de-vectores-de-ataque-threat-actor-attack-vectors-matching">Pregunta 1: Matriz de Vectores de Ataque / Threat Actor Attack Vectors (Matching)</h2>
+<h3 id="english-version">English Version</h3>
+<p>The reader must match each type of threat actor with its corresponding common attack vector attribute (the source location from which the risk is introduced).
+* Nation-state: <strong>External</strong>
+* Script Kiddie: <strong>Internal/External</strong>
+* Hacktivist: <strong>External</strong>
+* Insider Threat: <strong>Internal</strong>
+* Organized Crime: <strong>External</strong>
+* Shadow IT: <strong>Internal</strong></p>
+<h3 id="version-en-espanol">Versión en Español</h3>
+<p>El lector debe relacionar cada tipo de actor de amenazas con su atributo de vector de ataque común correspondiente (ubicación de origen desde donde se introduce el riesgo).
+* Estado-nación: <strong>Externo</strong>
+* Atacante inexperto (Script Kiddie): <strong>Interno/Externo</strong>
+* Hacktivista: <strong>Externo</strong>
+* Amenaza interna (Insider Threat): <strong>Interno</strong>
+* Delincuencia organizada: <strong>Externo</strong>
+* Tecnología de la sombra (Shadow IT): <strong>Interno</strong></p>
+<h3 id="1-explicacion-general">1. Explicación General</h3>
+<p>El vector de ataque define el punto de origen desde el cual un actor de amenazas inicia sus actividades de riesgo con respecto al perímetro de la organización. Los actores se clasifican en externos (fuera del perímetro), internos (con acceso legítimo dentro de la red) o híbridos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Script Kiddie (Interno/Externo):</strong> Es el único actor de naturaleza dual en esta matriz. La mayoría actúa de forma externa lanzando scripts automatizados desde internet, pero un estudiante dentro de una red escolar o un empleado menor en su cubículo representa un vector interno.</li>
+<li><strong>Hacktivistas, Estado-nación y Delincuencia organizada:</strong> Carecen de credenciales o accesos autorizados, por lo que atacan obligatoriamente desde el exterior a través de redes públicas.</li>
+<li><strong>Insider Threat y Shadow IT:</strong> El riesgo proviene de personal que ya se encuentra contratado por la organización. Aunque las herramientas de Shadow IT residan en nubes públicas, el vector es interno porque es el propio empleado quien introduce el riesgo a los activos corporativos.</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701">3. Clave para el Examen SY0-701</h3>
+<p>Para el examen, el único actor que comparte de forma explícita ambas ubicaciones en la definición de vectores es el Script Kiddie (Interno/Externo). Recordar esta excepción permite descartar el resto de las opciones de forma inmediata.</p>
+<hr />
+<h2 id="pregunta-2-matriz-de-recursos-y-financiacion-threat-actor-resources-and-funding-matching">Pregunta 2: Matriz de Recursos y Financiación / Threat Actor Resources and Funding (Matching)</h2>
+<h3 id="english-version_1">English Version</h3>
+<p>The reader must associate each type of threat actor with its corresponding material resources and financial backing attribute.
+* Nation-state: <strong>High resources and funding</strong>
+* Script Kiddie: <strong>Low resources and funding</strong>
+* Hacktivist: <strong>Low-to-medium resources and funding</strong>
+* Insider Threat: <strong>Low-to-high resources and funding</strong>
+* Organized Crime: <strong>Medium-to-high resources and funding</strong>
+* Shadow IT: <strong>Low-to-medium resources and funding</strong></p>
+<h3 id="version-en-espanol_1">Versión en Español</h3>
+<p>El lector debe asociar cada tipo de actor de amenazas con su atributo de recursos materiales y respaldo financiero correspondiente.
+* Estado-nación: <strong>Altos recursos y financiación</strong>
+* Atacante inexperto (Script Kiddie): <strong>Escasos recursos y financiación</strong>
+* Hacktivista: <strong>Recursos y financiación bajos a medios</strong>
+* Amenaza interna (Insider Threat): <strong>Recursos y financiación de bajos a altos</strong>
+* Delincuencia organizada: <strong>Recursos y financiación de nivel medio a alto</strong>
+* Tecnología de la sombra (Shadow IT): <strong>Recursos y financiación bajos a medios</strong></p>
+<h3 id="1-explicacion-general_1">1. Explicación General</h3>
+<p>La matriz de financiamiento mide la capacidad económica que respalda las actividades de un actor. Los presupuestos determinan el alcance de la infraestructura de ataque, la adquisición de exploits comerciales y el tiempo que pueden sostener una operación.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_1">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Nation-state (Altos):</strong> Cuenta de forma exclusiva con el presupuesto gubernamental de un país soberano, lo que le otorga recursos masivos.</li>
+<li><strong>Script Kiddie (Escasos):</strong> Carece de capital de inversión y depende de utilidades gratuitas disponibles en internet.</li>
+<li><strong>Insider Threat (Bajos a altos):</strong> El rango es amplio debido a que el actor puede ser un usuario administrativo común (recursos bajos) o un directivo de TI con control total sobre presupuestos y sistemas críticos (recursos altos).</li>
+<li><strong>Organized Crime (Medio a alto):</strong> Financian sus operaciones de manera corporativa mediante las ganancias obtenidas de extorsiones y fraudes electrónicos previos.</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_1">3. Clave para el Examen SY0-701</h3>
+<p>El concepto de Estado-nación es el único vinculado al término "Altos" (High) de manera exclusiva y absoluta. Ninguna corporación criminal o amenaza interna iguala el nivel presupuestal de un gobierno en los escenarios de CompTIA.</p>
+<hr />
+<h2 id="pregunta-3-matriz-de-nivel-de-sofisticacion-tecnica-threat-actor-sophistication-levels-matching">Pregunta 3: Matriz de Nivel de Sofisticación Técnica / Threat Actor Sophistication Levels (Matching)</h2>
+<h3 id="english-version_2">English Version</h3>
+<p>The reader must assign the attribute of technical knowledge, programming skills, and defense evasion capabilities to each type of threat actor.
+* Nation-state: <strong>High sophistication level</strong>
+* Script Kiddie: <strong>Low sophistication level</strong>
+* Hacktivist: <strong>Low-to-medium sophistication level</strong>
+* Insider Threat: <strong>Low-to-high sophistication level</strong>
+* Organized Crime: <strong>Medium-to-high sophistication level</strong>
+* Shadow IT: <strong>Low-to-medium sophistication level</strong></p>
+<h3 id="version-en-espanol_2">Versión en Español</h3>
+<p>El lector debe asignar el atributo de nivel de conocimientos técnicos, habilidades de programación y evasión de defensas a cada tipo de actor de amenazas.
+* Estado-nación: <strong>Alto nivel de sofisticación</strong>
+* Atacante inexperto (Script Kiddie): <strong>Bajo nivel de sofisticación</strong>
+* Hacktivista: <strong>Nivel de sofisticación bajo a medio</strong>
+* Amenaza interna (Insider Threat): <strong>Nivel de sofisticación de bajo a alto</strong>
+* Delincuencia organizada: <strong>Nivel de sofisticación medio a alto</strong>
+* Tecnología de la sombra (Shadow IT): <strong>Nivel de sofisticación bajo a medio</strong></p>
+<h3 id="1-explicacion-general_2">1. Explicación General</h3>
+<p>El nivel de sofisticación técnica evalúa la capacidad de un actor para desarrollar herramientas personalizadas, descubrir fallos de día cero (Zero-days) y eludir sistemas de detección avanzados (como EDR o SIEM).</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_2">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Hacktivist y Shadow IT (Bajo a medio):</strong> Los hacktivistas se enfocan en ataques ruidosos de denegación de servicio (DDoS) o modificaciones estéticas web (defacement) usando software público. Los usuarios de Shadow IT son empleados que despliegan servicios comerciales (SaaS) legítimos por comodidad laboral; no desarrollan malware ni vulneran defensas.</li>
+<li><strong>Insider Threat (Bajo a alto):</strong> El rango abarca desde el extremo más bajo (un empleado que conecta un USB infectado por accidente) hasta el más alto (un ingeniero principal de infraestructura que conoce las debilidades exactas del sistema).</li>
+<li><strong>Organized Crime (Medio a alto):</strong> Contratan a desarrolladores profesionales del mercado negro para empaquetar y modificar malware existente con el fin de evadir soluciones antivirus tradicionales.</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_2">3. Clave para el Examen SY0-701</h3>
+<p>En las preguntas desplegables, la descripción de sofisticación que cubre todo el espectro de Bajo a Alto (Low-to-high) le pertenece de forma única a la Amenaza interna (Insider Threat), debido a la diversidad de roles que pueden existir dentro de una plantilla laboral.</p>
+<hr />
+<h2 id="pregunta-4-matriz-de-motivaciones-tipicas-threat-actor-motivations-matching">Pregunta 4: Matriz de Motivaciones Típicas / Threat Actor Motivations (Matching)</h2>
+<h3 id="english-version_3">English Version</h3>
+<p>The reader must select the set of motivations and incentives driving the illicit or risky actions of each type of threat agent.
+* Nation-state: <strong>Espionage, political/philosophical beliefs, disruption/chaos, warfare</strong>
+* Script Kiddie: <strong>Disruption/chaos, financial gain, revenge</strong>
+* Hacktivist: <strong>Ethical beliefs, philosophical/political beliefs, disruption/chaos</strong>
+* Insider Threat: <strong>Revenge, financial gain, service disruption</strong>
+* Organized Crime: <strong>Financial gain, data breach, extortion</strong>
+* Shadow IT: <strong>Convenience, lack of awareness of security risks, fulfilling specific needs</strong></p>
+<h3 id="version-en-espanol_3">Versión en Español</h3>
+<p>El lector debe seleccionar el conjunto de motivaciones e incentivos que impulsan las acciones ilícitas o riesgosas de cada tipo de agente de amenaza.
+* Estado-nación: <strong>Espionaje, creencias políticas/filosóficas, perturbación/caos, guerra</strong>
+* Atacante inexperto (Script Kiddie): <strong>Disrupción/caos, beneficio económico, venganza</strong>
+* Hacktivista: <strong>Creencias éticas, creencias filosóficas/políticas, disrupción/caos</strong>
+* Amenaza interna (Insider Threat): <strong>Venganza, beneficio económico, interrupción del servicio</strong>
+* Delincuencia organizada: <strong>Beneficio económico, filtración de datos, extorsión</strong>
+* Tecnología de la sombra (Shadow IT): <strong>Conveniencia, falta de conocimiento de los riesgos de seguridad, satisfacción de necesidades específicas</strong></p>
+<h3 id="1-explicacion-general_3">1. Explicación General</h3>
+<p>La motivación identifica el "por qué" del ataque, lo que permite a los defensores anticipar cuáles activos de información serán el blanco principal del adversario.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_3">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Shadow IT (Conveniencia):</strong> Se diferencia drásticamente de los demás porque el usuario no tiene intenciones maliciosas contra la empresa; actúa motivado por la comodidad operativa y la agilidad para cumplir sus labores específicas.</li>
+<li><strong>Delincuencia organizada (Extorsión):</strong> Su único motor es el financiero y el robo de datos corporativos para la posterior demanda de un rescate económico (Ransomware).</li>
+<li><strong>Insider Threat (Venganza/Saboteo):</strong> Se asocia con empleados descontentos que buscan dañar la reputación o la continuidad del servicio de la organización como represalia.</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_3">3. Clave para el Examen SY0-701</h3>
+<p>Para resolver correctamente el cruce de opciones en los menús desplegables, se deben memorizar estas asociaciones directas de palabras clave: Conveniencia = Shadow IT; Extorsión = Delincuencia organizada; Venganza = Amenaza interna; Espionaje/Guerra = Estado-nación.</p>
+<hr />
+<h2 id="pregunta-5-campanas-de-ataques-prolongados-advanced-persistent-threats">Pregunta 5: Campañas de Ataques Prolongados / Advanced Persistent Threats</h2>
+<h3 id="english-version_4">English Version</h3>
+<p>Which of the following terms is used to describe sophisticated, prolonged cyberattacks typically conducted by highly funded and structured groups, such as nation-states?
+* [ ] MitM
+* [✅] <strong>APT</strong>
+* [ ] XSRF
+* [ ] DDoS</p>
+<h3 id="version-en-espanol_4">Versión en Español</h3>
+<p>¿Cuál de los siguientes términos se utiliza para describir los ciberataques sofisticados y prolongados, a menudo llevados a cabo por grupos bien financiados y organizados, como los estados nación?
+* [ ] MitM
+* [✅] <strong>APT</strong>
+* [ ] XSRF
+* [ ] DDoS</p>
+<h3 id="1-explicacion-general_4">1. Explicación General</h3>
+<p>Las Amenazas Avanzadas Persistentes (APT) son operaciones cibernéticas dirigidas y continuas. A diferencia de los ataques oportunistas, una APT busca infiltrarse silenciosamente en una red y mantener el acceso a largo plazo para recolectar información e inteligencia estratégica de forma sostenida.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_4">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[APT]</code> debido a que cumple de manera exacta con las tres características del enunciado: Sofisticación técnica (Avanzada), permanencia en el tiempo (Persistente) y patrocinio de organizaciones de alto presupuesto como estados-nación.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>MitM (Man-in-the-Middle):</em> Es una técnica específica de interceptación de comunicaciones en tránsito, no un tipo de campaña militar o estatal.</li>
+<li><em>XSRF (Cross-Site Request Forgery):</em> Corresponde a una vulnerabilidad de seguridad en aplicaciones web.</li>
+<li><em>DDoS (Distributed Denial of Service):</em> Es un ataque de saturación masiva de tráfico que busca la interrupción inmediata y visible de un servicio, lo opuesto al sigilo y persistencia de una APT.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_4">3. Clave para el Examen SY0-701</h3>
+<p>Cuando un escenario del examen resalte las palabras "Prolongado" (Prolonged), "Sigiloso" (Stealthy) o mencione el robo continuo de propiedad intelectual por parte de un Estado-nación, el término técnico que se debe seleccionar siempre es APT.</p>
+<hr />
+<h2 id="pregunta-6-concepto-fundamental-de-ti-en-la-sombra-shadow-it-definition">Pregunta 6: Concepto Fundamental de TI en la Sombra / Shadow IT Definition</h2>
+<h3 id="english-version_5">English Version</h3>
+<p>In computer security, the term "Shadow IT" is used to describe the practice of using systems, software, or services within an organization without the explicit approval or oversight of the organization's IT department.
+* [✅] <strong>True</strong>
+* [ ] False</p>
+<h3 id="version-en-espanol_5">Versión en Español</h3>
+<p>En seguridad informática, el término "TI en la sombra" se utiliza para describir la práctica de usar sistemas, software o servicios informáticos dentro de una organización sin la aprobación o supervisión explícita del departamento de TI de la organización.
+* [✅] <strong>Verdadero</strong>
+* [ ] Falso</p>
+<h3 id="1-explicacion-general_5">1. Explicación General</h3>
+<p>Shadow IT abarca cualquier solución tecnológica (aplicaciones en la nube, dispositivos de almacenamiento, hardware) introducida en el entorno corporativo por empleados o departamentos sin el conocimiento del equipo de seguridad informática. Esta práctica genera serios problemas de cumplimiento y pérdida de control de datos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_5">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[True / Verdadero]</code> dado que define textualmente el principio de falta de visibilidad y control gubernamental que caracteriza al Shadow IT dentro del marco de seguridad de CompTIA.</li>
+<li><strong>Análisis del distractor:</strong> Se descarta debido a que contradice la terminología oficial y los estándares de gestión de activos de la industria.</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_5">3. Clave para el Examen SY0-701</h3>
+<p>Si el escenario describe a un grupo de usuarios que decide utilizar herramientas de comunicación externas o nubes de almacenamiento personales para facilitar el intercambio de archivos de trabajo porque consideran que los sistemas oficiales de la empresa son lentos o restrictivos, se está ejemplificando un caso de Shadow IT.</p>
+<hr />
+<p><a href="../AVANCES/CERTIFICACIONES/COMPTIA%20SECURITY%2B/ExamCompass/Cuestionario%20por%20Temas/ExamCompass%20-%20Cuestionarios%20por%20Temas/">⬅️ Volver a Cuestionarios por Temas</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
