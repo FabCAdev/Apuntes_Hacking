@@ -13,11 +13,11 @@ Julio 2026:
 
 - [x] D 12: Platica sobre mi decision de ciberseguridad
 - [x] L 13: Noticia Semanal: 
-- [ ] Ma 14: ¿?
+- [x] Ma 14: ¿?
 - [x] Mi 15: Explicacion Proxy Burp Suite
 - [x] J 16: Explicacion Intruder Burp Suite
 - [x] V 17: Explicacion Repeater Burp Suite
-- [ ] S 18: Mi resumen semanal
+- [x] S 18: Mi resumen semanal
 
 - [x] D 19: Platica sobre mi decision de estudiar en ULSB
 - [ ] L 20: Noticia Semanal:

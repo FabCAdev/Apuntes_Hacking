@@ -8,7 +8,6 @@ tags:
   - "gestion/dificultad/facil"
   - "hacking/fundamental"
 ---
-
 # 🧠 Ecosistema ExamCompass: CompTIA Security+ (SY0-701)
 
 ExamCompass es una plataforma de evaluación estática ideal para consolidar el vocabulario técnico, memorizar acrónimos clave y machacar los conceptos teóricos puros exigidos por CompTIA. Para mantener un control estricto sin saturar la navegación, el entrenamiento se divide en tres metodologías de estudio independientes:

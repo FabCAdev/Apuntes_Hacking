@@ -1,0 +1,1914 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/AVANCES/CERTIFICACIONES/COMPTIA%20SECURITY%2B/ExamCompass/Cuestionario%20por%20Temas/Cuestionario%20sobre%20firmas%20digitales/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Cuestionario sobre firmas digitales - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pregunta-1-concepto-de-certificado-digital-digital-certificate-fundamentals" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cuestionario sobre firmas digitales
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-1-concepto-de-certificado-digital-digital-certificate-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 1: Concepto de Certificado Digital / Digital Certificate Fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 1: Concepto de Certificado Digital / Digital Certificate Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-2-el-rol-de-la-ra-en-pki-registration-authority-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 2: El rol de la RA en PKI / Registration Authority Role
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 2: El rol de la RA en PKI / Registration Authority Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-3-tercero-de-confianza-ca-certificate-authority-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 3: Tercero de confianza (CA) / Certificate Authority Core
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 3: Tercero de confianza (CA) / Certificate Authority Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-4-publicacion-periodica-de-revocaciones-crl-certificate-revocation-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 4: Publicación periódica de revocaciones (CRL) / Certificate Revocation Lists
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 4: Publicación periódica de revocaciones (CRL) / Certificate Revocation Lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-5-consulta-de-revocacion-bajo-demanda-ocsp-online-certificate-status-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 5: Consulta de revocación bajo demanda (OCSP) / Online Certificate Status Protocol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 5: Consulta de revocación bajo demanda (OCSP) / Online Certificate Status Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-6-la-forma-mas-rapida-de-validar-un-certificado-fast-validation-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 6: La forma más rápida de validar un certificado / Fast Validation Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 6: La forma más rápida de validar un certificado / Fast Validation Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-7-caracteristicas-de-certificados-autofirmados-self-signed-certificates-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 7: Características de Certificados Autofirmados / Self-Signed Certificates Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 7: Características de Certificados Autofirmados / Self-Signed Certificates Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-8-otro-nombre-para-certificados-autofirmados-terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 8: Otro nombre para Certificados Autofirmados / Terminology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 8: Otro nombre para Certificados Autofirmados / Terminology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-and-no-el-resto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta and no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-9-certificados-comerciales-vs-autofirmados-ca-issued-vs-self-signed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 9: Certificados Comerciales vs. Autofirmados / CA-Issued vs. Self-Signed
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 9: Certificados Comerciales vs. Autofirmados / CA-Issued vs. Self-Signed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-10-raiz-de-confianza-root-of-trust-root-ca-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 10: Raíz de Confianza (Root of Trust) / Root CA Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 10: Raíz de Confianza (Root of Trust) / Root CA Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-11-modelos-de-confianza-pki-trust-models-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 11: Modelos de Confianza PKI / Trust Models Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 11: Modelos de Confianza PKI / Trust Models Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-12-solicitud-de-certificado-csr-certificate-signing-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 12: Solicitud de Certificado (CSR) / Certificate Signing Requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 12: Solicitud de Certificado (CSR) / Certificate Signing Requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-13-subdominios-dentro-de-un-dominio-primario-wildcard-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 13: Subdominios dentro de un dominio primario / Wildcard Certificates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 13: Subdominios dentro de un dominio primario / Wildcard Certificates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-14-multiples-nombres-de-dominios-diferentes-subject-alternative-name-san" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 14: Múltiples nombres de dominios diferentes / Subject Alternative Name (SAN)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 14: Múltiples nombres de dominios diferentes / Subject Alternative Name (SAN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-15-identificador-de-objetos-pki-oid-object-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 15: Identificador de objetos PKI (OID) / Object Identifiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 15: Identificador de objetos PKI (OID) / Object Identifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Cuestionario sobre firmas digitales</h1>
+
+<p>Este apunte contiene el análisis detallado del cuestionario temático sobre certificados digitales e infraestructura PKI de la plataforma ExamCompass para la certificación CompTIA Security+ (SY0-701), alineado con las respuestas oficiales del simulador.</p>
+<hr />
+<h2 id="pregunta-1-concepto-de-certificado-digital-digital-certificate-fundamentals">Pregunta 1: Concepto de Certificado Digital / Digital Certificate Fundamentals</h2>
+<h3 id="english-version">English Version</h3>
+<p>A type of digital document that verifies the identity of an individual, device, service, or organization in online communications is known as:
+* [ ] Encryption key
+* [✅] <strong>Digital certificate</strong>
+* [ ] Identity token
+* [ ] Digital signature</p>
+<h3 id="version-en-espanol">Versión en Español</h3>
+<p>Un tipo de documento digital que verifica la identidad de un individuo, dispositivo, servicio u organización en las comunicaciones en línea se conoce como:
+* [ ] Clave de cifrado
+* [✅] <strong>Certificado digital</strong>
+* [ ] Token de identidad
+* [ ] Firma digital</p>
+<h3 id="1-explicacion-general">1. Explicación General</h3>
+<p>Un certificado digital es el equivalente a un documento de identidad oficial en el entorno cibernético. Su único propósito técnico es vincular una clave pública con la identidad real de una entidad (un servidor web, una persona o un dispositivo) bajo el estándar internacional X.509, garantizando que la llave pertenece a quien dice ser.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Digital certificate / Certificado digital]</code> debido a que constituye el único documento estructurado y firmado por una entidad de confianza (CA) que da fe de la titularidad de una llave pública.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Encryption key:</em> Representa únicamente el componente matemático para cifrar o descifrar datos, careciendo de metadatos de identidad.</li>
+<li><em>Identity token:</em> Se utiliza para mantener sesiones activas de usuarios autenticados en aplicaciones web (como un token JWT), no para validar la infraestructura de llaves.</li>
+<li><em>Digital signature:</em> Es el resultado de la acción criptográfica de validar un mensaje o documento, no el documento de identidad en sí mismo.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701">3. Clave para el Examen SY0-701</h3>
+<p>Cuando el enunciado mencione un "documento digital", el "estándar X.509" o la acción de "vincular una clave pública a una identidad", la respuesta de examen siempre es un Certificado Digital.</p>
+<hr />
+<h2 id="pregunta-2-el-rol-de-la-ra-en-pki-registration-authority-role">Pregunta 2: El rol de la RA en PKI / Registration Authority Role</h2>
+<h3 id="english-version_1">English Version</h3>
+<p>What is the role of RA in PKI? (Select 2 answers)
+* [✅] <strong>Accepting requests for digital certificates</strong>
+* [ ] Validating digital certificates
+* [✅] <strong>Authenticating the entity making the request</strong>
+* [ ] Providing backup source for cryptographic keys
+* [ ] Issuing digital certificates</p>
+<h3 id="version-en-espanol_1">Versión en Español</h3>
+<p>¿Cuál de las respuestas que aparecen a continuación se refiere a un protocolo que permite consultar bajo demanda el estado de revocación de un certificado digital?
+* [✅] <strong>Aceptar solicitudes de certificados digitales</strong>
+* [ ] Validar certificados digitales
+* [✅] <strong>Autenticar a la entidad que realiza la solicitud</strong>
+* [ ] Proporcionar una fuente de respaldo para claves criptográficas
+* [ ] Emitir certificados digitales</p>
+<h3 id="1-explicacion-general_1">1. Explicación General</h3>
+<p>La RA (Registration Authority) actúa como el brazo administrativo u oficina de atención dentro de la infraestructura PKI. Su función consiste en verificar que los documentos y la identidad del solicitante sean reales y legítimos antes de pasar la petición a la CA. Al ser solo un intermediario de validación, carece de la facultad de fabricar o firmar certificados.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_1">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opciones Correctas:</strong> <code>[Accepting requests... / Authenticating the entity...]</code> debido a que la RA opera como el filtro inicial de seguridad. Recibe la petición, valida la identidad del solicitante cara a cara o mediante documentos oficiales y aprueba el trámite.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Validating digital certificates:</em> La validación de certificados vigentes en tiempo real corresponde a los clientes finales (como los navegadores web) mediante tecnologías como CRL o consultas OCSP.</li>
+<li><em>Providing backup source...:</em> El respaldo de claves criptográficas (Key Escrow) es ejecutado por servidores de almacenamiento seguro o módulos HSM.</li>
+<li><em>Issuing digital certificates:</em> La emisión (fabricación y firma) de certificados es una facultad exclusiva de la CA.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_1">3. Clave para el Examen SY0-701</h3>
+<p>Utiliza la analogía de que la RA es la oficina gubernamental local donde entregas tus papeles físicos, mientras que la CA es la fábrica central que imprime tu pasaporte. La RA nunca emite (<em>issue</em>) ni firma certificados.</p>
+<hr />
+<h2 id="pregunta-3-tercero-de-confianza-ca-certificate-authority-core">Pregunta 3: Tercero de confianza (CA) / Certificate Authority Core</h2>
+<h3 id="english-version_2">English Version</h3>
+<p>Which of the answers listed below refers to a trusted third party responsible for issuing, revoking, and managing digital certificates?
+* [ ] RA
+* [ ] DN
+* [✅] <strong>CA</strong>
+* [ ] CSP</p>
+<h3 id="version-en-espanol_2">Versión en Español</h3>
+<p>¿Cuál de las respuestas que aparecen a continuación se refiere a un tercero de confianza responsable de emitir, revocar y gestionar certificados digitales?
+* [ ] RA
+* [ ] DN
+* [✅] <strong>CA</strong>
+* [ ] CSP</p>
+<h3 id="1-explicacion-general_2">1. Explicación General</h3>
+<p>La CA (Certificate Authority) representa la máxima autoridad y el núcleo de confianza dentro de una infraestructura PKI. Es la entidad encargada de gestionar el ciclo de vida completo de los certificados: desde su creación mediante firma criptográfica hasta su eventual revocación si las llaves se ven comprometidas.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_2">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[CA]</code> por ser el tercero de confianza (<em>trusted third party</em>) que firma digitalmente los certificados utilizando su propia clave privada para otorgarles validez global ante cualquier sistema operativo.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>RA:</em> Se limita a registrar y verificar las identidades, sin poseer capacidad de firma de infraestructura.</li>
+<li><em>DN (Distinguished Name):</em> Es una cadena de texto estructurada (como <code>CN=www.google.com</code>) utilizada para identificar un objeto único dentro del certificado.</li>
+<li><em>CSP (Cryptographic Service Provider):</em> Hace referencia a una librería de software o proveedor que contiene funciones criptográficas para el sistema operativo.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_2">3. Clave para el Examen SY0-701</h3>
+<p>Si la pregunta del examen incluye expresiones clave como "Issuing" (Emitir), "Revoking" (Revocar) o "Trusted third party" (Tercero de confianza), la respuesta obligatoria es la CA.</p>
+<hr />
+<h2 id="pregunta-4-publicacion-periodica-de-revocaciones-crl-certificate-revocation-lists">Pregunta 4: Publicación periódica de revocaciones (CRL) / Certificate Revocation Lists</h2>
+<h3 id="english-version_3">English Version</h3>
+<p>Which of the following answers refers to a means for periodic publication of all digital certificates that have been revoked?
+* [✅] <strong>CRL</strong>
+* [ ] OSPF
+* [ ] RA
+* [ ] CSR</p>
+<h3 id="version-en-espanol_3">Versión en Español</h3>
+<p>¿Cuál de las siguientes respuestas se refiere a un medio para la publicación periódica de todos los certificados digitales que han sido revocados?
+* [✅] <strong>CRL</strong>
+* [ ] OSPF
+* [ ] RA
+* [ ] CSR</p>
+<h3 id="1-explicacion-general_3">1. Explicación General</h3>
+<p>Cuando la clave privada de un certificado es robada, el certificado debe cancelarse inmediatamente antes de su fecha de vencimiento original. La CRL (Certificate Revocation List) es una "lista negra" que la CA publica en internet con todos los certificados revocados para que los navegadores sepan en quién no confiar.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_3">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[CRL]</code> debido a que el enunciado especifica una <em>"periodic publication"</em> (publicación periódica). Consiste en un archivo completo que los clientes descargan para revisar si el certificado del sitio web al que acceden se encuentra cancelado.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>OSPF:</em> Es un protocolo de enrutamiento dinámico de redes en Capa 3, ajeno a la seguridad PKI.</li>
+<li><em>RA:</em> Es la entidad administrativa encargada del registro de identidades.</li>
+<li><em>CSR:</em> Es la solicitud técnica inicial para pedir un certificado a la CA, no un medio de revocación.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_3">3. Clave para el Examen SY0-701</h3>
+<p>Debes asociar el término CRL con "List" (Lista completa/archivo masivo) y "Periodic" (Actualización por intervalos de tiempo). Su gran desventaja es el periodo de latencia (si se actualiza cada 24 horas, un certificado robado hace 1 hora pasará como válido).</p>
+<hr />
+<h2 id="pregunta-5-consulta-de-revocacion-bajo-demanda-ocsp-online-certificate-status-protocol">Pregunta 5: Consulta de revocación bajo demanda (OCSP) / Online Certificate Status Protocol</h2>
+<h3 id="english-version_4">English Version</h3>
+<p>Which of the answers listed below refers to a protocol that enables on-demand querying of the revocation status of a digital certificate?
+* [ ] CSP
+* [✅] <strong>OCSP</strong>
+* [ ] DN
+* [ ] CRL</p>
+<h3 id="version-en-espanol_4">Versión en Español</h3>
+<p>¿Cuál de las respuestas que aparecen a continuación se refiere a un protocolo que permite consultar bajo demanda el estado de revocación de un certificado digital?
+* [ ] CSP
+* [✅] <strong>OCSP</strong>
+* [ ] DN
+* [ ] CRL</p>
+<h3 id="1-explicacion-general_4">1. Explicación General</h3>
+<p>Debido a que descargar la lista completa (CRL) se volvió ineficiente por el crecimiento de internet, se diseñó OCSP. En lugar de bajarse todo el archivo de la lista negra, el navegador web realiza una consulta rápida en tiempo real al servidor de la CA sobre un certificado específico y este le responde inmediatamente su estado.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_4">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[OCSP]</code> porque el enunciado resalta <em>"on-demand querying"</em> (consulta bajo demanda o en tiempo real). Permite una verificación rápida mediante peticiones individuales, devolviendo respuestas puntuales como "Válido" o "Revocado".</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>CSP:</em> Es una librería de funciones criptográficas de software.</li>
+<li><em>DN:</em> Es el nombre distintivo que compone los campos de identidad del certificado.</li>
+<li><em>CRL:</em> No opera bajo demanda interactiva, sino que consiste en un archivo estático que se descarga por completo de forma periódica.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_4">3. Clave para el Examen SY0-701</h3>
+<p>Si el escenario plantea la verificación del estado de un certificado utilizando un protocolo basado en consultas en tiempo real (Query) de manera interactiva y veloz, la respuesta correcta es OCSP.</p>
+<hr />
+<h2 id="pregunta-6-la-forma-mas-rapida-de-validar-un-certificado-fast-validation-options">Pregunta 6: La forma más rápida de validar un certificado / Fast Validation Options</h2>
+<h3 id="english-version_5">English Version</h3>
+<p>What is the fastest way to check the validity of a single digital certificate?
+* [ ] CSR
+* [ ] DN
+* [ ] CRL
+* [✅] <strong>OCSP</strong></p>
+<h3 id="version-en-espanol_5">Versión en Español</h3>
+<p>¿Cuál es la forma más rápida de comprobar la validez de un único certificado digital?
+* [ ] CSR
+* [ ] DN
+* [ ] CRL
+* [✅] <strong>OCSP</strong></p>
+<h3 id="1-explicacion-general_5">1. Explicación General</h3>
+<p>Esta pregunta evalúa el rendimiento práctico de OCSP frente a la arquitectura de CRL. Descargar un archivo masivo (CRL) para validar una sola firma o sitio web resulta muy lento, mientras que enviar un paquete de red mínimo para verificar un único certificado toma milisegundos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_5">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[OCSP]</code> por representar la optimización más moderna para realizar verificaciones de certificados individuales sin penalizar el tráfico de red ni la velocidad de carga de la página.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>CRL:</em> Es un método más lento debido a que requiere la descarga y el procesamiento de toda la lista acumulada de exclusiones.</li>
+<li><em>CSR y DN:</em> No constituyen herramientas ni protocolos de validación de revocación; el primero es una solicitud de firma y el segundo es un campo de identidad.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_5">3. Clave para el Examen SY0-701</h3>
+<p>Domina también el concepto de OCSP Stapling (Grapado OCSP). Es una optimización donde el propio servidor web solicita la validación firmada a la CA con antelación y se la "grapa" directamente al navegador del usuario durante el saludo TLS, ahorrando conexiones adicionales.</p>
+<hr />
+<h2 id="pregunta-7-caracteristicas-de-certificados-autofirmados-self-signed-certificates-features">Pregunta 7: Características de Certificados Autofirmados / Self-Signed Certificates Features</h2>
+<h3 id="english-version_6">English Version</h3>
+<p>Which of the following answers can be used to describe self-signed digital certificates? (Select 3 answers)
+* [ ] Backed by a well-known and trusted third party
+* [✅] <strong>Not trusted by default by web browsers and other applications</strong>
+* [✅] <strong>Used in trusted environments, such as internal networks and development environments</strong>
+* [ ] Suitable for websites and other applications that are accessible to the public
+* [ ] Trusted by default by web browsers and other applications
+* [✅] <strong>Not backed by a well-known and trusted third party</strong></p>
+<h3 id="version-en-espanol_6">Versión en Español</h3>
+<p>¿Cuáles de las siguientes respuestas pueden utilizarse para describir los certificados digitales autofirmados? (Seleccione 3 respuestas)
+* [ ] Respaldado por un tercero de confianza y bien conocido
+* [✅] <strong>No son confiables por defecto por los navegadores web y otras aplicaciones</strong>
+* [✅] <strong>Utilizados en entornos de confianza, como redes internas y entornos de desarrollo</strong>
+* [ ] Adecuados para sitios web y otras aplicaciones accesibles al público
+* [ ] Confiables por defecto por los navegadores web y otras aplicaciones
+* [✅] <strong>No están respaldados por un tercero de confianza y bien conocido</strong></p>
+<h3 id="1-explicacion-general_6">1. Explicación General</h3>
+<p>Un certificado autofirmado (Self-signed) es aquel generado y firmado por la propia entidad o servidor, sin recurrir a una CA externa oficial. Equivale a una credencial de identificación de fabricación propia: es útil para entornos internos, pero los sistemas externos no la aceptarán por defecto al carecer de un respaldo institucional precargado.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_6">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opciones Correctas:</strong> Describen con precisión la naturaleza de la autofirma. Al no encontrarse en el almacén de confianza de los sistemas operativos, provocan advertencias de seguridad en los navegadores, pero resultan idóneos para implementar conexiones cifradas HTTPS de forma interna y sin costos.</li>
+<li><strong>Análisis de los distractores:</strong> Se descartan debido a que describen la operación de los certificados comerciales o de PKI pública emitidos por una CA acreditada.</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_6">3. Clave para el Examen SY0-701</h3>
+<p>Si un escenario indica que una empresa busca reducir costos en servidores de prueba, laboratorios de investigación o entornos de desarrollo interno (<em>testing/development/lab</em>), la solución adecuada son los Certificados Autofirmados.</p>
+<hr />
+<h2 id="pregunta-8-otro-nombre-para-certificados-autofirmados-terminology">Pregunta 8: Otro nombre para Certificados Autofirmados / Terminology</h2>
+<h3 id="english-version_7">English Version</h3>
+<p>A self-signed digital certificate is also referred to as:
+* [ ] Client certificate
+* [ ] EV certificate
+* [ ] Server certificate
+* [ ] Wildcard certificate
+* [✅] <strong>None of the above</strong></p>
+<h3 id="version-en-espanol_7">Versión en Español</h3>
+<p>Un certificado digital autofirmado también se conoce como:
+* [ ] Certificado de cliente
+* [ ] Certificado EV
+* [ ] Certificado de servidor
+* [ ] Certificado comodín
+* [✅] <strong>Ninguno de los anteriores</strong></p>
+<h3 id="1-explicacion-general_7">1. Explicación General</h3>
+<p>Los certificados se clasifican habitualmente en la industria por su función técnica (Client, Server), su alcance de nombres (Wildcard) o por sus niveles de validación legal (EV). Ninguno de estos términos describe de forma inherente la identidad de la entidad firmante o la naturaleza matemática de la autofirma.</p>
+<h3 id="2-por-que-es-la-correcta-and-no-el-resto">2. ¿Por qué es la correcta and no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[None of the above / Ninguno de los anteriores]</code> porque, aunque un certificado autofirmado puede cumplir la función de un certificado de servidor, no es un sinónimo directo de este. El término técnico preciso en la arquitectura de seguridad cuando se habla del anclaje maestro es <em>Self-signed Root Certificate</em>.</li>
+<li><strong>Análisis de los distractores:</strong> <em>Client, EV, Server, Wildcard</em> describen tipos funcionales o niveles de validación de certificados que, por norma general, son emitidos por una CA legítima y no autofirmados por un sistema local de forma genérica.</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_7">3. Clave para el Examen SY0-701</h3>
+<p>No confundas el rol del certificado (su propósito de uso, como un <em>Server Certificate</em> para HTTPS) con la entidad que lo firmó. Un certificado puede ser de servidor y estar autofirmado, pero un concepto no equivale al otro.</p>
+<hr />
+<h2 id="pregunta-9-certificados-comerciales-vs-autofirmados-ca-issued-vs-self-signed">Pregunta 9: Certificados Comerciales vs. Autofirmados / CA-Issued vs. Self-Signed</h2>
+<h3 id="english-version_8">English Version</h3>
+<p>Third-party digital certificates, issued by trusted CAs, are automatically trusted by most browsers and operating systems, involve a cost, and require validation of the applicant's identity. In contrast, self-signed certificates, issued by the entity to itself, are not automatically trusted, are free to create and use, and do not require validation by a CA.
+* [✅] <strong>True</strong>
+* [ ] False</p>
+<h3 id="version-en-espanol_8">Versión en Español</h3>
+<p>Los certificados digitales de terceros, emitidos por CAs de confianza, son confiables automáticamente por la mayoría de los navegadores y sistemas operativos, implican un costo y requieren la validación de la identidad del solicitante. En cambio, los certificados autofirmados, emitidos por la propia entidad para sí misma, no son confiables automáticamente, son gratuitos de crear y usar, y no requieren la validación de una CA.
+* [✅] <strong>Verdadero</strong>
+* [ ] Falso</p>
+<h3 id="1-explicacion-general_8">1. Explicación General</h3>
+<p>Esta pregunta delimita el alcance operativo, el nivel de confianza que otorgan de manera automatizada los sistemas informáticos y el impacto financiero de ambas opciones criptográficas dentro de la industria.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_7">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[True / Verdadero]</code> dado que plasma con precisión el funcionamiento del ecosistema: los certificados de CA pública tienen un costo, validan la identidad del solicitante y son transparentes para el usuario final. Los autofirmados son gratuitos y rápidos de generar, pero disparan alertas de seguridad si se exponen al público.</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_8">3. Clave para el Examen SY0-701</h3>
+<p>Para el examen, se deben asociar siempre los certificados emitidos por CAs comerciales con entornos de Producción (Production) y aplicaciones de cara al cliente público (<em>Public-facing</em>).</p>
+<hr />
+<h2 id="pregunta-10-raiz-de-confianza-root-of-trust-root-ca-concepts">Pregunta 10: Raíz de Confianza (Root of Trust) / Root CA Concepts</h2>
+<h3 id="english-version_9">English Version</h3>
+<p>In the context of digital certificates, the term "Root of trust" refers to the highest level of trust within a PKI system. It is typically represented by a root CA, which is a trusted third party that serves as the foundation for the entire PKI. All other entities in the PKI hierarchy, including intermediate CAs and end-entities (such as web servers, email servers, user devices, IoT devices, and individual users), derive their trust from this root...
+* [✅] <strong>True</strong>
+* [ ] False</p>
+<h3 id="version-en-espanol_9">Versión en Español</h3>
+<p>En el contexto de los certificados digitales, el término "Raíz de confianza" se refiere al nivel más alto de confianza dentro de un sistema PKI. Normalmente está representado por una CA raíz, que es un tercero de confianza que sirve como base para toda la PKI. Todas las demás entidades de la jerarquía de la PKI, incluidas las CA intermedias y las entidades finales (como servidores web, servidores de correo electrónico, dispositivos de usuario, dispositivos IoT e usuarios individuales), derivan su confianza de esta raíz...
+* [✅] <strong>Verdadero</strong>
+* [ ] Falso</p>
+<h3 id="1-explicacion-general_9">1. Explicación General</h3>
+<p>El modelo jerárquico de la PKI se basa en el principio de "herencia de confianza". En la cúspide de la pirámide estructural se ubica la Root CA. Si el sistema operativo o navegador confía en dicha Root CA, por extensión confiará automáticamente en las entidades descendientes (Intermediate CAs) y en los certificados finales.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_8">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[True / Verdadero]</code> porque describe fielmente cómo se hereda y se traza la validez criptográfica hacia atrás hasta alcanzar el anclaje principal (Root CA) a través de la Cadena de Confianza (<em>Chain of Trust</em>).</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_9">3. Clave para el Examen SY0-701</h3>
+<p>Para proteger la validez absoluta de esta infraestructura, las organizaciones implementan una Offline Root CA. Esta máquina raíz se mantiene completamente desconectada de la red y resguardada bajo estricta seguridad física para evitar que un ataque remoto comprometa toda la empresa.</p>
+<hr />
+<h2 id="pregunta-11-modelos-de-confianza-pki-trust-models-architecture">Pregunta 11: Modelos de Confianza PKI / Trust Models Architecture</h2>
+<h3 id="english-version_10">English Version</h3>
+<p>Which of the answers listed below refers to a PKI trust model?
+* [ ] Single CA model
+* [ ] Hierarchical model (root CA + intermediate CAs)
+* [ ] Mesh model (cross-certifying CAs)
+* [ ] Web of trust model (all CAs function as root CAs)
+* [ ] Chain of trust model (multiple CAs in a sequential chain)
+* [ ] Bridge model (cross-certifying between separate PKIs)
+* [ ] Hybrid model (combining aspects of different models)
+* [✅] <strong>All of the above</strong></p>
+<h3 id="version-en-espanol_10">Versión en Español</h3>
+<p>¿Cuál de las respuestas que aparecen a continuación se refiere a un modelo de confianza PKI?
+* [ ] Modelo de CA única
+* [ ] Modelo jerárquico (<em>Hierarchical model</em>)
+* [ ] Modelo de malla (<em>Mesh model</em>)
+* [ ] Modelo de red de confianza (<em>Web of trust model</em>)
+* [ ] Modelo de cadena de confianza (<em>Chain of trust model</em>)
+* [ ] Modelo de puente (<em>Bridge model</em>)
+* [ ] Modelo híbrido (<em>Hybrid model</em>)
+* [✅] <strong>Todos los anteriores</strong></p>
+<h3 id="1-explicacion-general_10">1. Explicación General</h3>
+<p>Dependiendo de la escala de una corporación, de si se están unificando los sistemas de dos empresas distintas tras una fusión, o de si se trabaja en un entorno descentralizado, el diseño de las relaciones de confianza de la PKI cambia para adaptarse a las necesidades del negocio.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_9">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[All of the above / Todos los anteriores]</code> porque todos los modelos listados existen formalmente en la arquitectura de seguridad. El <em>Hierarchical</em> es el estándar web. El modelo <em>Web of Trust</em> es el modelo descentralizado típico de PGP/GPG donde los propios usuarios se firman entre sí.</li>
+<li><strong>El modelo Bridge:</strong> Está diseñado para interconectar de forma cruzada dos PKIs corporativas independientes a través de una CA "puente".</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_10">3. Clave para el Examen SY0-701</h3>
+<p>Presta especial atención al <em>Bridge Model</em>. Si CompTIA plantea un escenario de fusión (<em>merger</em>) entre dos empresas que necesitan confiar en los certificados mutuos sin alterar o subordinar sus CAs raíces individuales, la respuesta técnica clave es el modelo de puente.</p>
+<hr />
+<h2 id="pregunta-12-solicitud-de-certificado-csr-certificate-signing-requests">Pregunta 12: Solicitud de Certificado (CSR) / Certificate Signing Requests</h2>
+<h3 id="english-version_11">English Version</h3>
+<p>Which of the following answers refers to a cryptographic file generated by an entity requesting a digital certificate from a CA?
+* [ ] OID
+* [✅] <strong>CSR</strong>
+* [ ] DN
+* [ ] CRL</p>
+<h3 id="version-en-espanol_11">Versión en Español</h3>
+<p>¿Cuál de las siguientes respuestas se refiere a un archivo criptográfico generado por una entidad que solicita un certificado digital a una CA?
+* [ ] OID
+* [✅] <strong>CSR</strong>
+* [ ] DN
+* [ ] CRL</p>
+<h3 id="1-explicacion-general_11">1. Explicación General</h3>
+<p>Para habilitar HTTPS en un servidor web, el paso inicial consiste en configurar un paquete estructurado de datos de forma local. Este bloque empaqueta los datos de la organización junto con la clave pública generada por el servidor, y se envía firmado electrónicamente a la CA para que valide la información.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_10">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[CSR - Certificate Signing Request]</code> por tratarse del formato estandarizado (PKCS#10) que contiene los metadatos de identidad del solicitante y su clave pública listos para ser procesados por la CA.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>OID:</em> Consiste en un identificador de objetos criptográficos representado por números separados por puntos.</li>
+<li><em>CRL:</em> Es el archivo que contiene la lista negra de revocación.</li>
+<li><em>DN:</em> Es el nombre distinguido en texto legible que compone los campos de identidad individuales dentro de la solicitud.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_11">3. Clave para el Examen SY0-701</h3>
+<p>Principio vital de seguridad: Al generar un CSR, la clave privada <strong>NUNCA sale del servidor local</strong>. El archivo CSR únicamente distribuye la clave pública e información de identidad. Si un escenario insinúa que debes transferir la clave privada a la CA, descarta esa opción de inmediato.</p>
+<hr />
+<h2 id="pregunta-13-subdominios-dentro-de-un-dominio-primario-wildcard-certificates">Pregunta 13: Subdominios dentro de un dominio primario / Wildcard Certificates</h2>
+<h3 id="english-version_12">English Version</h3>
+<p>A type of digital certificate that can be used to secure multiple subdomains within a primary domain is called:
+* [ ] Root signing certificate
+* [ ] Subject Alternative Name (SAN) certificate
+* [ ] Extended Validation (EV) certificate
+* [✅] <strong>Wildcard certificate</strong></p>
+<h3 id="version-en-espanol_12">Versión en Español</h3>
+<p>Un tipo de certificado digital que se puede utilizar para asegurar múltiples subdominios dentro de un dominio primario se denomina:
+* [ ] Certificado de firma raíz
+* [ ] Certificado de Nombre Alternativo del Sujeto (SAN)
+* [ ] Certificado de Validación Extendida (EV)
+* [✅] <strong>Certificado comodín (Wildcard)</strong></p>
+<h3 id="1-explicacion-general_12">1. Explicación General</h3>
+<p>Un certificado Wildcard (comodín) implementa un carácter expansivo (un asterisco <code>*</code>) en su diseño de nombre. Al emitirse para un dominio base con la estructura <code>*.tuempresa.com</code>, protegerá automáticamente cualquier subdominio directo de primer nivel bajo esa misma raíz, evitando la necesidad de adquirir o gestionar certificados individuales.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_11">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Wildcard certificate]</code> debido a que cubre de forma automatizada entornos que compartan la misma raíz, como <code>correo.tuempresa.com</code> o <code>dev.tuempresa.com</code>.</li>
+<li><strong>Análisis de los distractores:</strong> <em>Subject Alternative Name (SAN)</em> se descarta porque, aunque un certificado SAN técnicamente puede dar soporte a subdominios listándolos manualmente uno a uno, la clave del enunciado radica en cubrir subdominios que cuelgan del mismo árbol raíz de manera dinámica e ilimitada.</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_12">3. Clave para el Examen SY0-701</h3>
+<p>Si la pregunta en CompTIA exige proteger una cantidad indeterminada, dinámica o creciente de subdominios que comparten exactamente la misma raíz de dominio (ej. <code>*.dominio.com</code>), la opción correcta es un Wildcard Certificate.</p>
+<hr />
+<h2 id="pregunta-14-multiples-nombres-de-dominios-diferentes-subject-alternative-name-san">Pregunta 14: Múltiples nombres de dominios diferentes / Subject Alternative Name (SAN)</h2>
+<h3 id="english-version_13">English Version</h3>
+<p>Which digital certificate type allows to secure multiple domain names or subdomains with a single certificate?
+* [ ] Extended Validation (EV) certificate
+* [ ] Wildcard certificate
+* [✅] <strong>Subject Alternative Name (SAN) certificate</strong>
+* [ ] Root signing certificate</p>
+<h3 id="version-en-espanol_13">Versión en Español</h3>
+<p>¿Qué tipo de certificado digital permite asegurar múltiples nombres de dominio o subdominios con un solo certificado?
+* [ ] Certificado de Validación Extendida (EV)
+* [ ] Certificado comodín (Wildcard)
+* [✅] <strong>Certificado de Nombre Alternativo del Sujeto (SAN)</strong>
+* [ ] Certificado de firma raíz</p>
+<h3 id="1-explicacion-general_13">1. Explicación General</h3>
+<p>Los certificados SAN (Subject Alternative Name) permiten insertar un listado estructurado de múltiples dominios, nombres de host o subdominios completamente diferentes dentro del campo de extensiones de un único certificado digital X.509, ideal para unificar la gestión criptográfica de infraestructuras corporativas diversas.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_12">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[Subject Alternative Name (SAN) certificate]</code> puesto que el enunciado especifica <em>"multiple domain names"</em> (múltiples nombres de dominio diferentes). Un certificado SAN puede listar dominios totalmente inconexos en el mismo documento (ej. <code>empresaA.com</code>, <code>empresaB.net</code>, <code>tiendita.org</code>).</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>Extended Validation (EV):</em> Describe el nivel de escrutinio e investigación legal exhaustiva que la CA realiza sobre la empresa antes de la emisión, pero no define la cantidad técnica de dominios.</li>
+<li><em>Wildcard certificate:</em> Está estrictamente limitado a una sola raíz; no puede proteger marcas o extensiones distintas de manera simultánea.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_13">3. Clave para el Examen SY0-701</h3>
+<p>Regla de diferenciación definitiva en el examen: Si se solicita proteger subdominios ilimitados de un mismo dominio base $\rightarrow$ Wildcard. Si se solicita proteger dominios completamente distintos en un solo certificado $\rightarrow$ SAN (Multi-Domain).</p>
+<hr />
+<h2 id="pregunta-15-identificador-de-objetos-pki-oid-object-identifiers">Pregunta 15: Identificador de objetos PKI (OID) / Object Identifiers</h2>
+<h3 id="english-version_14">English Version</h3>
+<p>Which of the answers listed below refers to an identifier used for PKI objects?
+* [✅] <strong>OID</strong>
+* [ ] DN
+* [ ] SAN
+* [ ] GUID</p>
+<h3 id="version-en-espanol_14">Versión en Español</h3>
+<p>¿Cuál de las respuestas listadas a continuación se refiere a un identificador utilizado para objetos PKI?
+* [✅] <strong>OID</strong>
+* [ ] DN
+* [ ] SAN
+* [ ] GUID</p>
+<h3 id="1-explicacion-general_14">1. Explicación General</h3>
+<p>Un OID (Object Identifier) es una cadena estandarizada de números enteros separados por puntos (como por ejemplo <code>2.5.4.3</code>) que opera como un identificador universal e inequívoco en criptografía, certificados X.509 y directorios LDAP para definir tipos de objetos y atributos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_13">2. ¿Por qué es la correcta y no el resto?</h3>
+<ul>
+<li><strong>Opción Correcta:</strong> <code>[OID]</code> porque garantiza que cualquier sistema operativo o navegador interprete con exactitud qué elemento técnico se está describiendo dentro de un certificado, independientemente del idioma. Existen OIDs asignados globalmente para indicar que un campo contiene el Common Name (CN) o que el algoritmo es SHA-256.</li>
+<li><strong>Análisis de los distractores:</strong><ul>
+<li><em>DN:</em> Es el nombre distinguido en texto legible, no el identificador numérico de registro del objeto.</li>
+<li><em>GUID:</em> Es un identificador único global utilizado principalmente por sistemas operativos de Microsoft para componentes de software, no para la arquitectura interna de objetos PKI.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-clave-para-el-examen-sy0-701_14">3. Clave para el Examen SY0-701</h3>
+<p>Si en el examen se presenta una pregunta sobre la arquitectura interna de un certificado digital que describa una cadena jerárquica de números separados por puntos, la respuesta correcta hace referencia a un OID.</p>
+<hr />
+<p><a href="../ExamCompass%20-%20Cuestionarios%20por%20Temas/">⬅️ Volver a Cuestionarios por Temas</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
