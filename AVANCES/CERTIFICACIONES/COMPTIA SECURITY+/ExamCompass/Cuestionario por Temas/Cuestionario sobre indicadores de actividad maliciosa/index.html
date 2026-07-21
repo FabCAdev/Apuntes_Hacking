@@ -1,0 +1,1177 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/AVANCES/CERTIFICACIONES/COMPTIA%20SECURITY%2B/ExamCompass/Cuestionario%20por%20Temas/Cuestionario%20sobre%20indicadores%20de%20actividad%20maliciosa/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Cuestionario sobre indicadores de actividad maliciosa - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pregunta-1-evidencia-forense-e-indicadores-de-compromiso-ioc" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cuestionario sobre indicadores de actividad maliciosa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-1-evidencia-forense-e-indicadores-de-compromiso-ioc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 1: Evidencia Forense e Indicadores de Compromiso (IoC)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 1: Evidencia Forense e Indicadores de Compromiso (IoC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-2-interpretacion-de-bloqueos-de-cuenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 2: Interpretación de Bloqueos de Cuenta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 2: Interpretación de Bloqueos de Cuenta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-3-control-de-accesos-simultaneos-concurrent-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 3: Control de Accesos Simultáneos (Concurrent Sessions)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 3: Control de Accesos Simultáneos (Concurrent Sessions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-4-mitigacion-perimetral-y-contenido-bloqueado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 4: Mitigación Perimetral y Contenido Bloqueado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 4: Mitigación Perimetral y Contenido Bloqueado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-fallo-tu-respuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué falló tu respuesta?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-5-deteccion-geoespacial-viaje-imposible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 5: Detección Geoespacial: Viaje Imposible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 5: Detección Geoespacial: Viaje Imposible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-6-telemetria-y-registro-fuera-de-ciclo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 6: Telemetría y Registro Fuera de Ciclo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 6: Telemetría y Registro Fuera de Ciclo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-7-tecnicas-de-evasion-registros-faltantes-missing-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 7: Técnicas de Evasión: Registros Faltantes (Missing Logs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 7: Técnicas de Evasión: Registros Faltantes (Missing Logs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Cuestionario sobre indicadores de actividad maliciosa</h1>
+
+<p>Este apunte contiene el análisis detallado del sexto bloque del cuestionario temático sobre análisis forense, indicadores de compromiso y detección de anomalías en logs de la plataforma ExamCompass para la certificación CompTIA Security+ (SY0-701), alineado con las respuestas oficiales del simulador.</p>
+<hr />
+<h2 id="pregunta-1-evidencia-forense-e-indicadores-de-compromiso-ioc">Pregunta 1: Evidencia Forense e Indicadores de Compromiso (IoC)</h2>
+<h3 id="english-version">English Version</h3>
+<p>A type of forensic evidence that can be used to detect unauthorized access attempts or other malicious activities is called:
+* [ ] CVE
+* [✅] <strong>IoC</strong>
+* [ ] AIS
+* [ ] OSINT</p>
+<h3 id="version-en-espanol">Versión en Español</h3>
+<p>Un tipo de evidencia forense que puede utilizarse para detectar intentos de acceso no autorizado u otras actividades maliciosas se denomina:
+* [ ] CVE
+* [✅] <strong>IoC (Indicador de Compromiso)</strong>
+* [ ] AIS
+* [ ] OSINT</p>
+<h3 id="1-explicacion-general">1. Explicación General</h3>
+<p>Un IoC (<em>Indicator of Compromise</em> / Indicador de Compromiso) es cualquier rastro o evidencia digital residual en una red o sistema operativo que sugiere, con un alto nivel de confianza, que se ha producido una intrusión o una actividad maliciosa. Ejemplos de IoC incluyen firmas de archivos conocidos (hashes MD5/SHA256 de malware), direcciones IP sospechosas, URLs de servidores de comando y control (C2) o entradas de registro de Windows alteradas.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>IoC</strong> es el término forense exacto para "pistas o evidencias de intrusión". <em>CVE (Common Vulnerabilities and Exposures)</em> es un catálogo público de vulnerabilidades de software conocidas. <em>AIS (Automated Indicator Sharing)</em> es una tecnología que sirve para compartir estos indicadores rápidamente entre organizaciones de forma automatizada. <em>OSINT (Open Source Intelligence)</em> es la metodología de recolectar datos de fuentes de acceso público para ciberinteligencia.</p>
+<h3 id="3-clave-para-el-examen-sy0-701">3. Clave para el Examen SY0-701</h3>
+<p>Para el examen, piensa en los IoCs como "la escena del crimen digital". Si un analista de seguridad de un SOC encuentra un hash de archivo malicioso en un servidor, ese hash es un IoC que sirve para buscar otras máquinas comprometidas dentro de la infraestructura.</p>
+<hr />
+<h2 id="pregunta-2-interpretacion-de-bloqueos-de-cuenta">Pregunta 2: Interpretación de Bloqueos de Cuenta</h2>
+<h3 id="english-version_1">English Version</h3>
+<p>What type of malicious activity could an account lockout indicate?
+* [ ] Attempting to deliver malicious content
+* [ ] DoS attack
+* [ ] Account compromise
+* [✅] <strong>Password brute-force attempt</strong></p>
+<h3 id="version-en-espanol_1">Versión en Español</h3>
+<p>¿Qué tipo de actividad maliciosa podría indicar el bloqueo de una cuenta?
+* [ ] Intentar entregar contenido malicioso
+* [ ] Ataque DoS
+* [ ] Compromiso de cuenta
+* [✅] <strong>Intento de fuerza bruta de contraseña</strong></p>
+<h3 id="1-explicacion-general_1">1. Explicación General</h3>
+<p>Las políticas de bloqueo de cuenta (<em>Account Lockout Policies</em>) son medidas de seguridad pasivas en los sistemas operativos y servicios de identidad (como Active Directory). Bloquean temporalmente una cuenta de usuario tras un número predeterminado de intentos fallidos de inicio de sesión (por ejemplo, 3 o 5 intentos).</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_1">2. ¿Por qué es la correcta y no el resto?</h3>
+<p>Un aumento repentino en los eventos de bloqueo de cuentas de usuarios es un indicador clásico de que un atacante (o un script automatizado) está ejecutando un ataque de fuerza bruta o de adivinación de contraseñas contra el portal de login. No indica compromiso de cuenta, ya que el hecho de que esté bloqueada significa que el atacante precisamente falló en entrar y el sistema lo contuvo de manera preventiva.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_1">3. Clave para el Examen SY0-701</h3>
+<p>En Security+, la política de <em>Account Lockout</em> es un control de seguridad preventivo que frena los ataques de adivinación de contraseñas de manera eficiente, pero a su vez puede ser explotada de forma maliciosa para causar una denegación de servicio (DoS) a los usuarios legítimos al bloquearles sus cuentas de trabajo a propósito.</p>
+<hr />
+<h2 id="pregunta-3-control-de-accesos-simultaneos-concurrent-sessions">Pregunta 3: Control de Accesos Simultáneos (Concurrent Sessions)</h2>
+<h3 id="english-version_2">English Version</h3>
+<p>Which of the terms listed below most accurately describes a situation where a single account is used from multiple locations/devices at the same time?
+* [ ] Spraying attack
+* [✅] <strong>Concurrent session usage</strong>
+* [ ] Single Sign-On (SSO)
+* [ ] Impossible travel</p>
+<h3 id="version-en-espanol_2">Versión en Español</h3>
+<p>¿Cuál de los términos que se enumeran a continuación describe con mayor precisión una situación en la que se utiliza una sola cuenta desde múltiples ubicaciones/dispositivos al mismo tiempo?
+* [ ] Ataque de rociado (Spraying attack)
+* [✅] <strong>Uso de sesiones concurrentes (Concurrent session usage)</strong>
+* [ ] Inicio de sesión único (SSO)
+* [ ] Viaje imposible (Impossible travel)</p>
+<h3 id="1-explicacion-general_2">1. Explicación General</h3>
+<p>Las sesiones concurrentes ocurren cuando una misma credencial o identidad mantiene conexiones activas simultáneamente desde diferentes terminales o direcciones IP de manera paralela.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_2">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Uso de sesiones concurrentes</strong> describe de forma directa y literal el evento de accesos paralelos. Se diferencia de <em>Viaje imposible</em> en que este último se enfoca en la velocidad del cambio de posición física en un marco temporal (pueden ser sesiones consecutivas pero demasiado rápidas), mientras que las sesiones concurrentes son estrictamente simultáneas (mismo segundo, dos lugares).</p>
+<h3 id="3-clave-para-el-examen-sy0-701_2">3. Clave para el Examen SY0-701</h3>
+<p>Para mitigar este riesgo de uso compartido de credenciales o secuestro de sesión, los administradores de seguridad deben aplicar límites estrictos de sesiones concurrentes en las políticas de seguridad (por ejemplo, restringir el acceso a una sola sesión activa por usuario).</p>
+<hr />
+<h2 id="pregunta-4-mitigacion-perimetral-y-contenido-bloqueado">Pregunta 4: Mitigación Perimetral y Contenido Bloqueado</h2>
+<h3 id="english-version_3">English Version</h3>
+<p>Which of the following terms refers to an indicator of malicious activity in a situation where a firewall or other security measure prevents an attempt to deliver a malicious payload or perform an unauthorized action?
+* [ ] DoS attack
+* [ ] Resource inaccessibility
+* [✅] <strong>Blocked content</strong>
+* [ ] Excessive consumption of system resources</p>
+<h3 id="version-en-espanol_3">Versión en Español</h3>
+<p>¿Cuál de los siguientes términos se refiere a un indicador de actividad maliciosa en una situación en la que un cortafuegos u otra medida de seguridad impide un intento de entregar una carga útil maliciosa o realizar una acción no autorizada?
+* [ ] Ataque DoS
+* [ ] Inaccesibilidad de los recursos
+* [✅] <strong>Contenido bloqueado (Blocked content)</strong>
+* [ ] Consumo excesivo de recursos del sistema</p>
+<h3 id="1-explicacion-general_3">1. Explicación General</h3>
+<p>Cuando un sistema de seguridad como un firewall de red, un filtro de correo electrónico o un proxy web intercepta y detiene de forma activa tráfico dañino (como un correo con malware o una petición SQL Injection), registra ese evento en sus logs bajo la categoría de Contenido bloqueado (<em>Blocked content</em>).</p>
+<h3 id="2-por-que-fallo-tu-respuesta">2. ¿Por qué falló tu respuesta?</h3>
+<p>Elegiste <em>Consumo excesivo de recursos del sistema</em>. El consumo excesivo de CPU o RAM ocurre típicamente durante ataques volumétricos, DoS, minería de criptomonedas no autorizada o desbordamientos de búfer. No describe la acción específica de un control defensivo de red (como un cortafuegos) interceptando y previniendo la entrega de malware o solicitudes sospechosas antes de que afecten al sistema interno; esa métrica de bloqueo preventivo se denomina simplemente <strong>Contenido bloqueado</strong>.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_3">3. Clave para el Examen SY0-701</h3>
+<p>Para el examen, si los logs de seguridad muestran picos masivos de <em>Blocked Content</em>, el analista del SOC sabe que la red está siendo escaneada o atacada activamente, pero que los controles defensivos perimetrales (firewall, IPS) están haciendo su trabajo y neutralizando las amenazas antes de que penetren en la intranet.</p>
+<hr />
+<h2 id="pregunta-5-deteccion-geoespacial-viaje-imposible">Pregunta 5: Detección Geoespacial: Viaje Imposible</h2>
+<h3 id="english-version_4">English Version</h3>
+<p>Which of the terms listed below most accurately describes a situation where an account is accessed from a location where it is physically impossible for the user to be?
+* [ ] Login time restrictions
+* [✅] <strong>Impossible travel</strong>
+* [ ] Concurrent session usage
+* [ ] Out-of-cycle logging</p>
+<h3 id="version-en-espanol_4">Versión en Español</h3>
+<p>¿Cuál de los términos que se enumeran a continuación describe con mayor precisión una situación en la que se accede a una cuenta desde una ubicación en la que es físicamente imposible que el usuario se encuentre?
+* [ ] Restricciones de tiempo de inicio de sesión
+* [✅] <strong>Viaje imposible (Impossible travel)</strong>
+* [ ] Uso de sesiones concurrentes
+* [ ] Registro fuera de ciclo</p>
+<h3 id="1-explicacion-general_4">1. Explicación General</h3>
+<p>El viaje imposible (<em>Impossible travel</em>) es una alerta de correlación geoespacial basada en el tiempo. Si un usuario inicia sesión en su oficina en la Ciudad de México a las 9:00 AM y luego inicia otra sesión desde París a las 9:15 AM, la distancia geográfica entre ambos puntos es imposible de recorrer en ese periodo temporal.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_3">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Viaje imposible</strong> es el término estándar de la industria (utilizado por herramientas de monitoreo como Microsoft Defender for Cloud Apps o SIEMs) para esta anomalía matemática de tiempo y espacio.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_4">3. Clave para el Examen SY0-701</h3>
+<p>Esta alerta suele indicar que la contraseña del usuario ha sido robada y un atacante extranjero está usando sus credenciales, o que el usuario legítimo está utilizando una Red Privada Virtual (VPN) con un servidor de salida en el extranjero.</p>
+<hr />
+<h2 id="pregunta-6-telemetria-y-registro-fuera-de-ciclo">Pregunta 6: Telemetría y Registro Fuera de Ciclo</h2>
+<h3 id="english-version_5">English Version</h3>
+<p>The term "out-of-cycle logging" refers to cases where systems or applications generate logs outside of their regular intervals or in abnormal volumes, which could indicate malicious activity.
+* [✅] <strong>True</strong>
+* [ ] False</p>
+<h3 id="version-en-espanol_5">Versión en Español</h3>
+<p>El término "registro fuera de ciclo" (out-of-cycle logging) se refiere a los casos en que los sistemas o las aplicaciones generan registros fuera de sus intervalos regulares o en volúmenes anormales, lo que podría indicar actividad maliciosa.
+* [✅] <strong>Verdadero</strong>
+* [ ] Falso</p>
+<h3 id="1-explicacion-general_5">1. Explicación General</h3>
+<p>La mayoría de los sistemas operativos, servicios empresariales e infraestructura de red generan bitácoras de logs con un ritmo periódico predecible (línea base). Un cambio dramático en la frecuencia de estos eventos indica una anomalía de comportamiento.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_4">2. ¿Por qué es la correcta y no el resto?</h3>
+<p>Es <strong>Verdadero</strong> porque define con precisión el comportamiento inusual de telemetría. Un pico masivo o el reporte de logs en horas de la madrugada (fuera de la ventana operativa normal) puede indicar que un script automatizado está escaneando la red o exfiltrando bases de datos.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_5">3. Clave para el Examen SY0-701</h3>
+<p>Los sistemas SIEM modernos utilizan el análisis de comportamiento de usuarios y entidades (UEBA) para detectar automáticamente estas desviaciones de "fuera de ciclo" comparando los flujos de logs activos contra el comportamiento histórico habitual de la organización.</p>
+<hr />
+<h2 id="pregunta-7-tecnicas-de-evasion-registros-faltantes-missing-logs">Pregunta 7: Técnicas de Evasión: Registros Faltantes (Missing Logs)</h2>
+<h3 id="english-version_6">English Version</h3>
+<p>Which of the following would indicate an attempt to hide evidence of malicious activity?
+* [ ] Account lockout
+* [ ] Resource inaccessibility
+* [✅] <strong>Missing logs</strong>
+* [ ] Concurrent session usage</p>
+<h3 id="version-en-espanol_6">Versión en Español</h3>
+<p>¿Cuál de las siguientes opciones indicaría un intento de ocultar pruebas de actividad maliciosa?
+* [ ] Bloqueo de cuenta
+* [ ] Inaccesibilidad de los recursos
+* [✅] <strong>Registros faltantes (Missing logs)</strong>
+* [ ] Uso de sesiones concurrentes</p>
+<h3 id="1-explicacion-general_6">1. Explicación General</h3>
+<p>Una vez que los atacantes comprometen un sistema de forma exitosa, una de sus prioridades principales es la fase de Borrado de Huellas (<em>Clearing tracks</em>). Para ello, intentan apagar los servicios de auditoría del sistema operativo o eliminar directamente los archivos de logs que registraron sus comandos y accesos ilegítimos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_5">2. ¿Por qué es la correcta y no el resto?</h3>
+<p>Los <strong>Registros faltantes</strong> (o huecos temporales inexplicables en los logs) son una señal de alerta de que alguien con altos privilegios los modificó o borró a propósito para encubrir sus pasos. Ninguno de los otros conceptos se asocia a la destrucción intencionada de evidencias de auditoría.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_6">3. Clave para el Examen SY0-701</h3>
+<p>Para mitigar e identificar inmediatamente los registros faltantes, las empresas deben configurar sus sistemas para enviar y duplicar sus logs en tiempo real hacia un servidor centralizado de recolección de logs inaccesible para los atacantes (ej. syslog server o SIEM con almacenamiento WORM - <em>Write Once, Read Many</em>).</p>
+<hr />
+<p><a href="../ExamCompass%20-%20Cuestionarios%20por%20Temas/">⬅️ Volver a Cuestionarios por Temas</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

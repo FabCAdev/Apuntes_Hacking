@@ -1,0 +1,2233 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://FabCAdev.github.io/Apuntes_Hacking/AVANCES/CERTIFICACIONES/COMPTIA%20SECURITY%2B/ExamCompass/Cuestionario%20por%20Temas/Cuestionario%20sobre%20vulnerabilidades%20de%20seguridad/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Cuestionario sobre vulnerabilidades de seguridad - Apuntes de Hacking de FabCAdev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pregunta-1-definicion-de-inyeccion-de-memoria" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-header__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes de Hacking de FabCAdev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cuestionario sobre vulnerabilidades de seguridad
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  🛡️ HACKING
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../%F0%9F%93%88%20AVANCES/" class="md-tabs__link">
+          
+  
+  📈 AVANCES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-tabs__link">
+          
+  
+  🚩 CTF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-tabs__link">
+          
+  
+  📖 ENCICLOPEDIA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Apuntes de Hacking de FabCAdev" class="md-nav__button md-logo" aria-label="Apuntes de Hacking de FabCAdev" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes de Hacking de FabCAdev
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🛡️ HACKING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📈 AVANCES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📈 AVANCES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../%F0%9F%93%88%20AVANCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mis Avances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🚩 CTF
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🚩 CTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../CAPTURE%20THE%20FLAG/CAPTURE%20THE%20FLAG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratorios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📖 ENCICLOPEDIA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📖 ENCICLOPEDIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../ENCICLOPEDIA/%F0%9F%93%96%20ENCICLOPEDIA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enciclopedia Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-1-definicion-de-inyeccion-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 1: Definición de Inyección de Memoria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 1: Definición de Inyección de Memoria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-2-definicion-de-biblioteca-de-enlace-dinamico-dll" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 2: Definición de Biblioteca de Enlace Dinámico (DLL)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 2: Definición de Biblioteca de Enlace Dinámico (DLL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-3-concepto-de-inyeccion-de-dll" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 3: Concepto de Inyección de DLL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 3: Concepto de Inyección de DLL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-4-mecanica-del-desbordamiento-de-bufer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 4: Mecánica del Desbordamiento de Búfer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 4: Mecánica del Desbordamiento de Búfer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-5-definicion-de-condicion-de-carrera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 5: Definición de Condición de Carrera
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 5: Definición de Condición de Carrera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-6-la-vulnerabilidad-de-tiempo-toctou" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 6: La Vulnerabilidad de Tiempo TOC/TOU
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 6: La Vulnerabilidad de Tiempo TOC/TOU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-7-vectores-para-actualizaciones-maliciosas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 7: Vectores para Actualizaciones Maliciosas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 7: Vectores para Actualizaciones Maliciosas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-8-clasificacion-de-vulnerabilidades-del-sistema-operativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 8: Clasificación de Vulnerabilidades del Sistema Operativo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 8: Clasificación de Vulnerabilidades del Sistema Operativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-9-inyeccion-de-comandos-en-bases-de-datos-sqli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 9: Inyección de Comandos en Bases de Datos (SQLi)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 9: Inyección de Comandos en Bases de Datos (SQLi)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-10-firmas-de-ataque-sqli-en-consultas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 10: Firmas de Ataque SQLi en Consultas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 10: Firmas de Ataque SQLi en Consultas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-11-anatomia-de-un-ataque-cross-site-scripting-xss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 11: Anatomía de un Ataque Cross-Site Scripting (XSS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 11: Anatomía de un Ataque Cross-Site Scripting (XSS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-12-definicion-de-fin-de-vida-util-eol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 12: Definición de Fin de Vida Útil (EOL)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 12: Definición de Fin de Vida Útil (EOL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-13-vulnerabilidad-critica-del-hardware-heredado-legacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 13: Vulnerabilidad Crítica del Hardware Heredado (Legacy)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 13: Vulnerabilidad Crítica del Hardware Heredado (Legacy)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-14-mecanica-de-escape-de-maquina-virtual-vm-escape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 14: Mecánica de Escape de Máquina Virtual (VM Escape)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 14: Mecánica de Escape de Máquina Virtual (VM Escape)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-15-riesgo-de-reutilizacion-de-recursos-en-virtualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 15: Riesgo de Reutilización de Recursos en Virtualización
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 15: Riesgo de Reutilización de Recursos en Virtualización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-16-vulnerabilidades-comunes-de-la-infraestructura-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 16: Vulnerabilidades Comunes de la Infraestructura Cloud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 16: Vulnerabilidades Comunes de la Infraestructura Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-17-instalacion-de-software-por-carga-lateral-sideloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 17: Instalación de Software por Carga Lateral (Sideloading)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 17: Instalación de Software por Carga Lateral (Sideloading)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-18-modificaciones-de-seguridad-en-dispositivos-apple-jailbreaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 18: Modificaciones de Seguridad en Dispositivos Apple (Jailbreaking)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 18: Modificaciones de Seguridad en Dispositivos Apple (Jailbreaking)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-19-modificaciones-de-seguridad-en-dispositivos-android-rooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 19: Modificaciones de Seguridad en Dispositivos Android (Rooting)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 19: Modificaciones de Seguridad en Dispositivos Android (Rooting)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pregunta-20-explotacion-de-amenazas-desconocidas-zero-day" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pregunta 20: Explotación de Amenazas Desconocidas (Zero-Day)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pregunta 20: Explotación de Amenazas Desconocidas (Zero-Day)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#english-version_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      English Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-en-espanol_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versión en Español
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-explicacion-general_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explicación General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-es-la-correcta-y-no-el-resto_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Por qué es la correcta y no el resto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clave-para-el-examen-sy0-701_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clave para el Examen SY0-701
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Cuestionario sobre vulnerabilidades de seguridad</h1>
+
+<p>Este apunte contiene el análisis detallado del cuestionario temático sobre vulnerabilidades del sistema operativo, memoria y aplicaciones de la plataforma ExamCompass para la certificación CompTIA Security+ (SY0-701), alineado con las respuestas oficiales del simulador.</p>
+<hr />
+<h2 id="pregunta-1-definicion-de-inyeccion-de-memoria">Pregunta 1: Definición de Inyección de Memoria</h2>
+<h3 id="english-version">English Version</h3>
+<p>Which type of application attack relies on introducing external code into the address space of a running program?
+* [ ] Buffer overflow
+* [✅] <strong>Memory injection</strong>
+* [ ] Replay attack
+* [ ] Pointer dereference</p>
+<h3 id="version-en-espanol">Versión en Español</h3>
+<p>¿Qué tipo de ataque a aplicaciones se basa en introducir código externo en el espacio de direcciones de un programa en ejecución?
+* [ ] Desbordamiento de búfer (Buffer overflow)
+* [✅] <strong>Inyección de memoria (Memory injection)</strong>
+* [ ] Ataque de repetición (Replay attack)
+* [ ] Desreferencia de puntero (Pointer dereference)</p>
+<h3 id="1-explicacion-general">1. Explicación General</h3>
+<p>La inyección de memoria es una técnica avanzada de explotación mediante la cual un proceso malicioso inyecta código ejecutable (shellcode) o una biblioteca directamente en el espacio de direcciones lógicas asignado a un subproceso legítimo que ya está corriendo en el sistema.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Inyección de memoria</strong> es la respuesta correcta porque describe con precisión el acto de insertar y ejecutar código en un espacio de memoria dinámico y activo. <em>Desbordamiento de búfer</em> se descarta porque consiste en saturar la capacidad de almacenamiento de datos de un búfer fijo para sobrescribir la pila (stack) o el montón (heap); aunque puede llevar a la ejecución de código, la técnica puramente definida por introducir código en un espacio de ejecución existente es la inyección de memoria. <em>Ataque de repetición</em> es una amenaza de red, y la <em>desreferencia de puntero</em> ocurre cuando el software intenta leer una ubicación de memoria inválida o nula.</p>
+<h3 id="3-clave-para-el-examen-sy0-701">3. Clave para el Examen SY0-701</h3>
+<p>Cuando una pregunta del examen describa la manipulación directa de la memoria de un proceso en ejecución para forzarlo a hospedar y procesar código malicioso externo de manera sigilosa, busque el concepto de Memory Injection.</p>
+<hr />
+<h2 id="pregunta-2-definicion-de-biblioteca-de-enlace-dinamico-dll">Pregunta 2: Definición de Biblioteca de Enlace Dinámico (DLL)</h2>
+<h3 id="english-version_1">English Version</h3>
+<p>A collection of precompiled functions designed to be used by more than one Microsoft Windows application simultaneously to save system resources is known as:
+* [✅] <strong>DLL</strong>
+* [ ] API
+* [ ] EXE
+* [ ] INI</p>
+<h3 id="version-en-espanol_1">Versión en Español</h3>
+<p>Una colección de funciones precompiladas diseñada para ser utilizada por más de una aplicación de Microsoft Windows simultáneamente para ahorrar recursos del sistema se conoce como:
+* [✅] <strong>DLL</strong>
+* [ ] API
+* [ ] EXE
+* [ ] INI</p>
+<h3 id="1-explicacion-general_1">1. Explicación General</h3>
+<p>En el entorno operativo Windows, las bibliotecas de enlace dinámico son componentes de software modular que permiten a múltiples programas compartir código y recursos lógicos idénticos para realizar tareas estándar (como dibujar ventanas o procesar redes) sin duplicar archivos en memoria.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_1">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>DLL (Dynamic Link Library)</strong> cumple de forma exacta con la definición de biblioteca de funciones precompiladas de Windows. <em>API</em> se descarta porque representa la interfaz conceptual de programación o el contrato lógico de comunicación, no el archivo precompilado que guarda las funciones. <em>EXE</em> representa un archivo ejecutable principal (un programa independiente). <em>INI</em> es un formato de archivo de texto plano utilizado para configuraciones de inicialización de software, no contiene código ejecutable ni funciones.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_1">3. Clave para el Examen SY0-701</h3>
+<p>Comprender qué es una DLL es el prerrequisito arquitectónico necesario para entender ataques complejos de secuestro y manipulación de procesos de Windows en la memoria del sistema.</p>
+<hr />
+<h2 id="pregunta-3-concepto-de-inyeccion-de-dll">Pregunta 3: Concepto de Inyección de DLL</h2>
+<h3 id="english-version_2">English Version</h3>
+<p>Which of the answers listed below refers to an application attack that relies on executing a library of code?
+* [ ] Memory leak
+* [✅] <strong>DLL injection</strong>
+* [ ] Pointer dereference
+* [ ] Buffer overflow</p>
+<h3 id="version-en-espanol_2">Versión en Español</h3>
+<p>¿Cuál de las respuestas enumeradas a continuación se refiere a un ataque a aplicaciones que se basa en la ejecución de una biblioteca de código?
+* [ ] Fuga de memoria (Memory leak)
+* [✅] <strong>Inyección de DLL (DLL injection)</strong>
+* [ ] Desreferencia de puntero (Pointer dereference)
+* [ ] Desbordamiento de búfer (Buffer overflow)</p>
+<h3 id="1-explicacion-general_2">1. Explicación General</h3>
+<p>La inyección de DLL es una variante específica de la inyección de memoria en la que un atacante obliga a un proceso legítimo de Windows a cargar y ejecutar una biblioteca de enlace dinámico (.dll) maliciosa externa dentro de su propio contexto de seguridad.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_2">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Inyección de DLL</strong> es la única opción que cumple estrictamente con el requisito de "ejecutar una biblioteca de código". <em>Desbordamiento de búfer</em> se descarta porque ataca los límites de almacenamiento de datos de una variable en memoria, no la carga estructurada de una biblioteca. <em>Fuga de memoria</em> es un fallo de desarrollo donde el programa olvida liberar memoria asignada, y la <em>desreferencia de puntero</em> es una falla de direccionamiento lógico.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_2">3. Clave para el Examen SY0-701</h3>
+<p>Si el enunciado del examen detalla que un malware intenta evadir la detección de un sistema EDR obligando a un proceso nativo del sistema operativo (como explorer.exe o svchost.exe) a cargar una biblioteca externa no autorizada, el ataque es DLL Injection.</p>
+<hr />
+<h2 id="pregunta-4-mecanica-del-desbordamiento-de-bufer">Pregunta 4: Mecánica del Desbordamiento de Búfer</h2>
+<h3 id="english-version_3">English Version</h3>
+<p>A type of exploit in which an application overwrites the contents of a memory area it should not have access to is called:
+* [ ] DLL injection
+* [✅] <strong>Buffer overflow</strong>
+* [ ] Memory leak
+* [ ] Privilege escalation</p>
+<h3 id="version-en-espanol_3">Versión en Español</h3>
+<p>Un tipo de exploit en el que una aplicación sobrescribe el contenido de un área de memoria a la que no debería tener acceso se denomina:
+* [ ] Inyección de DLL (DLL injection)
+* [✅] <strong>Desbordamiento de búfer (Buffer overflow)</strong>
+* [ ] Fuga de memoria (Memory leak)
+* [ ] Escalada de privilegios (Privilege escalation)</p>
+<h3 id="1-explicacion-general_3">1. Explicación General</h3>
+<p>Un desbordamiento de búfer ocurre cuando un programa recibe más volumen de datos del que está diseñado para almacenar en un búfer específico, provocando que el excedente de información se desborde y sobrescriba los bloques de memoria adyacentes.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_3">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Desbordamiento de búfer</strong> es la respuesta correcta porque describe con exactitud la vulnerabilidad de entrada de datos que "sobrescribe" el contenido de la memoria fuera de los límites reservados. <em>Inyección de DLL</em> carga una biblioteca entera de forma legítima para el proceso. <em>Fuga de memoria</em> no sobrescribe nada, solo agota la memoria libre. La <em>escalada de privilegios</em> es un objetivo de control de accesos que puede ser consecuencia de un desbordamiento, pero no es la falla técnica de memoria en sí.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_3">3. Clave para el Examen SY0-701</h3>
+<p>Las fallas de Buffer Overflow son causadas por una validación deficiente de la longitud de las entradas en lenguajes como C o C++. En el examen, se mitigan mediante funciones de validación de límites de entrada (bounds checking) y mecanismos como ASLR y DEP.</p>
+<hr />
+<h2 id="pregunta-5-definicion-de-condicion-de-carrera">Pregunta 5: Definición de Condición de Carrera</h2>
+<h3 id="english-version_4">English Version</h3>
+<p>A malfunction in a preprogrammed sequential access to a shared resource is described as:
+* [✅] <strong>Race condition</strong>
+* [ ] Concurrency error
+* [ ] Multithreading
+* [ ] Synchronization error</p>
+<h3 id="version-en-espanol_4">Versión en Español</h3>
+<p>Un mal funcionamiento en el acceso secuencial preprogramado a un recurso compartido se describe como:
+* [✅] <strong>Condición de carrera (Race condition)</strong>
+* [ ] Error de concurrencia (Concurrency error)
+* [ ] Multiprocesamiento (Multithreading)
+* [ ] Error de sincronización (Synchronization error)</p>
+<h3 id="1-explicacion-general_4">1. Explicación General</h3>
+<p>Una condición de carrera se produce cuando dos o más subprocesos de software intentan acceder y modificar un recurso compartido simultáneamente de manera que el resultado final depende exclusivamente del orden y la velocidad de ejecución de dichos subprocesos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_4">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Condición de carrera</strong> es el término técnico preciso que define esta falla secuencial específica. <em>Error de concurrencia</em> y <em>Error de sincronización</em> son clasificaciones conceptuales genéricas que abarcan múltiples tipos de fallas (como bloqueos mutuos o deadlocks), pero no definen el fallo de acceso secuencial preprogramado. <em>Multiprocesamiento</em> es una característica legítima de los procesadores modernos para ejecutar hilos en paralelo.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_4">3. Clave para el Examen SY0-701</h3>
+<p>La Race Condition ocurre cuando los desarrolladores no implementan mecanismos de bloqueo o exclusión mutua (mutex) en recursos críticos compartidos, permitiendo que un atacante altere el flujo normal de operaciones mediante ejecuciones veloces.</p>
+<hr />
+<h2 id="pregunta-6-la-vulnerabilidad-de-tiempo-toctou">Pregunta 6: La Vulnerabilidad de Tiempo TOC/TOU</h2>
+<h3 id="english-version_5">English Version</h3>
+<p>A type of vulnerability where the state of a resource is verified at one point in time but may change before the resource is actually used is referred to as:
+* [ ] TOC
+* [✅] <strong>TOC/TOU</strong>
+* [ ] TOU
+* [ ] TSIG</p>
+<h3 id="version-en-espanol_5">Versión en Español</h3>
+<p>Un tipo de vulnerabilidad en la que el estado de un recurso se verifica en un momento dado pero puede cambiar antes de que el recurso se utilice realmente se denomina:
+* [ ] TOC
+* [✅] <strong>TOC/TOU</strong>
+* [ ] TOU
+* [ ] TSIG</p>
+<h3 id="1-explicacion-general_5">1. Explicación General</h3>
+<p>Las vulnerabilidades TOC/TOU (Tiempo de Comprobación a Tiempo de Uso) son una subcategoría de las condiciones de carrera que ocurren cuando un programa realiza una verificación de seguridad sobre un recurso (como un archivo) y, en la fracción de segundo previa a que el sistema use dicho recurso, un atacante modifica el recurso verificado por uno malicioso.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_5">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>TOC/TOU (Time-of-Check to Time-of-Use)</strong> es la denominación correcta que une ambas fases temporales del fallo de lógica. <em>TOC (Time of Check)</em> y <em>TOU (Time of Use)</em> por sí solas describen solo fragmentos de la ventana temporal del ataque y no la vulnerabilidad completa. <em>TSIG (Transaction Signature)</em> es un protocolo criptográfico de seguridad utilizado para autenticar actualizaciones de zonas en servidores DNS.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_5">3. Clave para el Examen SY0-701</h3>
+<p>Si el escenario del examen describe que un sistema valida los privilegios de un archivo de texto de manera exitosa, pero un atacante reemplaza ese archivo mediante un enlace simbólico rápido justo antes de que el sistema lo ejecute, está ante un vector TOC/TOU.</p>
+<hr />
+<h2 id="pregunta-7-vectores-para-actualizaciones-maliciosas">Pregunta 7: Vectores para Actualizaciones Maliciosas</h2>
+<h3 id="english-version_6">English Version</h3>
+<p>A malicious application update can be enabled through various means, including:
+* [ ] Unsigned application code
+* [ ] Unencrypted update channel (HTTP vs HTTPS)
+* [ ] Fake update website
+* [ ] Compromised software development process
+* [✅] <strong>All of the above</strong></p>
+<h3 id="version-en-espanol_6">Versión en Español</h3>
+<p>La introducción de una actualización maliciosa en el código de una aplicación puede habilitarse a través de varios medios, incluidos:
+* [ ] Código de aplicación no firmado
+* [ ] Canal de actualización no cifrado (HTTP vs HTTPS)
+* [ ] Sitio web de actualizaciones falso
+* [ ] Proceso de desarrollo de software comprometido
+* [✅] <strong>Todo lo anterior</strong></p>
+<h3 id="1-explicacion-general_6">1. Explicación General</h3>
+<p>Los ataques de actualización maliciosa secuestran la cadena de confianza establecida entre el cliente y el desarrollador para inyectar troyanos dentro de los flujos legítimos de mantenimiento del software.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_6">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Todo lo anterior</strong> es la respuesta correcta porque cada una de las vulnerabilidades listadas permite un vector diferente de inyección: la falta de firmas digitales impide verificar el origen del código; el tráfico HTTP permite ataques On-path para alterar el paquete en tránsito; los sitios web falsos usan typosquatting para engañar al usuario; y un entorno de desarrollo comprometido da origen a un ataque directo a la cadena de suministro.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_6">3. Clave para el Examen SY0-701</h3>
+<p>Para proteger los canales de actualización contra amenazas, es mandatorio el uso exclusivo de cifrado de red en tránsito (HTTPS/TLS) acoplado con la firma criptográfica obligatoria del código fuente (Code Signing).</p>
+<hr />
+<h2 id="pregunta-8-clasificacion-de-vulnerabilidades-del-sistema-operativo">Pregunta 8: Clasificación de Vulnerabilidades del Sistema Operativo</h2>
+<h3 id="english-version_7">English Version</h3>
+<p>Which of the following answers does not refer to a common type of OS-based vulnerability?
+* [ ] Access control and permissions vulnerabilities
+* [ ] Vulnerabilities in installed applications, system utilities, and device drivers
+* [ ] Memory-related vulnerabilities
+* [ ] Patch and update management vulnerabilities
+* [ ] Vulnerabilities related to system/security misconfigurations
+* [ ] Network-related vulnerabilities
+* [✅] <strong>All of the above answer choices are examples of OS-based vulnerabilities</strong></p>
+<h3 id="version-en-espanol_7">Versión en Español</h3>
+<p>¿Cuál de las siguientes respuestas no se refiere a un tipo común de vulnerabilidad basada en el sistema operativo?
+* [ ] Vulnerabilidades de control de acceso y permisos
+* [ ] Vulnerabilidades en aplicaciones instaladas, utilidades del sistema y controladores de dispositivos
+* [ ] Vulnerabilidades relacionadas con la memoria
+* [ ] Vulnerabilidades de gestión de parches y actualizaciones
+* [ ] Vulnerabilidades relacionadas con malas configuraciones del sistema/seguridad
+* [ ] Vulnerabilidades relacionadas con la red
+* [✅] <strong>Todas las opciones de respuesta anteriores son ejemplos de vulnerabilidades basadas en el sistema operativo</strong></p>
+<h3 id="1-explicacion-general_7">1. Explicación General</h3>
+<p>La superficie de ataque de un sistema operativo (SO) es masiva debido a que actúa como el puente de orquestación entre la infraestructura de red, el hardware de memoria, las configuraciones del usuario y todas las aplicaciones instaladas.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_7">2. ¿Por qué es la correcta y no el resto?</h3>
+<p>La opción <strong>Todas las opciones de respuesta anteriores son ejemplos...</strong> es la correcta porque la pregunta pide identificar cuál de ellas no pertenece a la categoría. Dado que el control de accesos, los controladores, la gestión de memoria, la política de parches, las configuraciones del sistema y las conexiones de red forman parte integral de las responsabilidades directas de un sistema operativo moderno, todas constituyen ejemplos válidos de su superficie de riesgo.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_7">3. Clave para el Examen SY0-701</h3>
+<p>Para asegurar un sistema operativo frente a esta matriz de vulnerabilidades diversificada, la estrategia del examen exige aplicar metodologías de Endurecimiento del Sistema (OS Hardening).</p>
+<hr />
+<h2 id="pregunta-9-inyeccion-de-comandos-en-bases-de-datos-sqli">Pregunta 9: Inyección de Comandos en Bases de Datos (SQLi)</h2>
+<h3 id="english-version_8">English Version</h3>
+<p>Which of the answers listed below refers to a security vulnerability that enables inserting malicious code into input fields, such search bars or login forms, to execute unauthorized commands on a database?<br />
+<em> [ ] RCE
+* [✅] </em><em>SQLi</em>*
+* [ ] XSS
+* [ ] CSRF</p>
+<h3 id="version-en-espanol_8">Versión en Español</h3>
+<p>¿Cuál de las respuestas enumeradas a continuación se refiere a una vulnerabilidad de seguridad que permite insertar código malicioso en campos de entrada para ejecutar comandos no autorizados en una base de datos?
+* [ ] RCE
+* [✅] <strong>SQLi</strong>
+* [ ] XSS
+* [ ] CSRF</p>
+<h3 id="1-explicacion-general_8">1. Explicación General</h3>
+<p>La inyección SQL ocurre cuando los datos de entrada proporcionados por el usuario no son sanitizados ni validados adecuadamente por la aplicación web, permitiendo que caracteres especiales de control modifiquen la estructura de la consulta SQL original que se envía al motor de base de datos.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_8">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>SQLi (SQL Injection)</strong> es la única respuesta correcta ya que su objetivo y blanco exclusivo es el intérprete de comandos de la base de datos de respaldo (backend). <em>RCE</em> es la ejecución remota de código en el sistema operativo host general. <em>XSS (Cross-Site Scripting)</em> ataca a los navegadores de los usuarios finales que visitan la web. <em>CSRF</em> obliga al navegador de una víctima autenticada a enviar solicitudes HTTP no deseadas a una aplicación web.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_8">3. Clave para el Examen SY0-701</h3>
+<p>La contramedida técnica más efectiva recomendada por CompTIA para mitigar por completo la vulnerabilidad de inyección SQL es la implementación estricta de Consultas Parametrizadas (Parameterized Queries / Prepared Statements) y la validación de entradas.</p>
+<hr />
+<h2 id="pregunta-10-firmas-de-ataque-sqli-en-consultas">Pregunta 10: Firmas de Ataque SQLi en Consultas</h2>
+<h3 id="english-version_9">English Version</h3>
+<p>Which of the following indicates an SQL injection attack attempt?
+* [ ] DELETE FROM itemDB WHERE itemID = '1';
+* [✅] <strong>SELECT * FROM users WHERE userName = 'Alice' AND password = '' OR '1' = '1';</strong>
+* [ ] DROP TABLE itemDB;
+* [ ] SELECT * FROM users WHERE email = 'example@example.com' AND password = '';</p>
+<h3 id="version-en-espanol_9">Versión en Español</h3>
+<p>¿Cuál de las siguientes respuestas indica un intento de ataque de inyección SQL?
+* [ ] DELETE FROM itemDB WHERE itemID = '1';
+* [✅] <strong>SELECT * FROM users WHERE userName = 'Alice' AND password = '' OR '1' = '1';</strong>
+* [ ] DROP TABLE itemDB;
+* [ ] SELECT * FROM users WHERE email = 'example@example.com' AND password = '';</p>
+<h3 id="1-explicacion-general_9">1. Explicación General</h3>
+<p>Los atacantes utilizan operadores lógicos y tautologías matemáticas (afirmaciones que siempre resultan verdaderas, como '1'='1') para anular las cláusulas de validación de contraseñas de las aplicaciones web.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_9">2. ¿Por qué es la correcta y no el resto?</h3>
+<p>La opción que contiene <strong>OR '1' = '1'</strong> es el ejemplo perfecto de ataque de inyección SQL porque busca forzar a la base de datos a retornar un valor verdadero sin importar qué contraseña se escriba, otorgando acceso no autorizado a las cuentas. Las opciones de <em>DELETE</em> y <em>DROP TABLE</em> son comandos legítimos y completos de administración de bases de datos que no muestran la manipulación de una cadena de entrada de una aplicación. La última opción es una consulta de verificación estándar sin alteración maliciosa.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_9">3. Clave para el Examen SY0-701</h3>
+<p>Aprenda a identificar firmas de texto de inyección SQL clásicas en los registros (logs) del examen. Las comillas simples sueltas ('), los guiones dobles de comentarios (--) y las condiciones OR 1=1 son indicadores definitivos de SQLi.</p>
+<hr />
+<h2 id="pregunta-11-anatomia-de-un-ataque-cross-site-scripting-xss">Pregunta 11: Anatomía de un Ataque Cross-Site Scripting (XSS)</h2>
+<h3 id="english-version_10">English Version</h3>
+<p>Which of the answers listed below describe the characteristics of a cross-site scripting attack? (Select 3 answers)
+* [✅] <strong>Exploits the trust a user's web browser has in a website</strong>
+* [✅] <strong>A malicious script is injected into a trusted website</strong>
+* [✅] <strong>User's browser executes attacker's script</strong>
+* [ ] Exploits the trust a website has in the user's web browser<br />
+<em> [ ] A user is tricked by an attacker into submitting unauthorized web requests<br />
+</em> [ ] Website executes attacker's requests  </p>
+<h3 id="version-en-espanol_10">Versión en Español</h3>
+<p>¿Cuáles de las respuestas enumeradas a continuación describen las características de un ataque de cross-site scripting (XSS)? (Seleccione 3 respuestas)<br />
+<em> [✅] </em><em>Explota la confianza que el navegador web de un usuario tiene en un sitio web.</em><em>
+* [✅] </em><em>Se inyecta un script malicioso en un sitio web de confianza.</em><em>
+* [✅] </em><em>El navegador del usuario ejecuta el script del atacante.</em>*
+* [ ] Explota la confianza que un sitio web tiene en el navegador web del usuario.
+* [ ] Un atacante engaña a un usuario para que envíe solicitudes web no autorizadas.
+* [ ] El sitio web ejecuta las solicitudes del atacante.</p>
+<h3 id="1-explicacion-general_10">1. Explicación General</h3>
+<p>El ataque XSS (Secuestro de Sitios Cruzados) consiste en incrustar código de scripting (generalmente JavaScript) dentro de las páginas web que ven otros usuarios, con el fin de que sus navegadores locales ejecuten dicho código bajo el contexto de seguridad de la sesión legítima del sitio.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_10">2. ¿Por qué es la correcta y no el resto?</h3>
+<p>Las tres opciones marcadas con [✅] definen la anatomía exacta de XSS: el script malicioso se aloja o refleja en la web de confianza, el navegador confía en ese sitio y descarga el script, y finalmente la máquina de la víctima ejecuta las instrucciones (robando cookies de sesión). Las opciones descartadas describen el flujo opuesto y corresponden en realidad a la definición técnica de un ataque de Falsificación de Solicitud en Sitios Cruzados (CSRF).</p>
+<h3 id="3-clave-para-el-examen-sy0-701_10">3. Clave para el Examen SY0-701</h3>
+<p>Recuerde la diferencia clave de objetivos: XSS inyecta código que corre en el navegador del usuario víctima, mientras que CSRF aprovecha la sesión abierta del usuario para forzar el envío de comandos no deseados directamente hacia el servidor web.</p>
+<hr />
+<h2 id="pregunta-12-definicion-de-fin-de-vida-util-eol">Pregunta 12: Definición de Fin de Vida Útil (EOL)</h2>
+<h3 id="english-version_11">English Version</h3>
+<p>Which of the terms listed below refers to a situation in which a product or service may no longer receive security patches or other updates, making it more vulnerable to attack?
+* [✅] <strong>EOL</strong>
+* [ ] ALM
+* [ ] EOS
+* [ ] SDLC</p>
+<h3 id="version-en-espanol_11">Versión en Español</h3>
+<p>¿Cuál delos términos enumerados a continuación se refiere a una situación en la que un producto o servicio ya no recibe parches de seguridad u otras actualizaciones, haciéndolo más vulnerable a ataques?
+* [✅] <strong>EOL</strong>
+* [ ] ALM
+* [ ] EOS
+* [ ] SDLC</p>
+<h3 id="1-explicacion-general_11">1. Explicación General</h3>
+<p>El ciclo de vida comercial de un componente de hardware o software tiene un hito en el cual el fabricante cesa todo esfuerzo técnico de mantenimiento, suspendiendo la creación de soluciones ante fallas de seguridad emergentes.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_11">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>EOL (End of Life - Fin de la Vida Útil)</strong> es el estándar de la industria que marca el cese formal de parches de seguridad. <em>ALM</em> es la Gestión del Ciclo de Vida de las Aplicaciones (un marco organizativo general). <em>EOS (End of Sale)</em> indica que un producto deja de venderse al público, pero puede seguir recibiendo parches de soporte por un tiempo determinado. <em>SDLC</em> es el Ciclo de Vida de Desarrollo de Software.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_11">3. Clave para el Examen SY0-701</h3>
+<p>Operar activos en estado EOL aumenta drásticamente el riesgo empresarial. Si un sistema operativo es marcado como EOL, los atacantes buscarán exploits conocidos públicamente con la certeza de que no habrá parches para frenar la intrusión.</p>
+<hr />
+<h2 id="pregunta-13-vulnerabilidad-critica-del-hardware-heredado-legacy">Pregunta 13: Vulnerabilidad Crítica del Hardware Heredado (Legacy)</h2>
+<h3 id="english-version_12">English Version</h3>
+<p>What is the main vulnerability related to legacy hardware?
+* [ ] Compatibility issues
+* [✅] <strong>Lack of security updates and patches</strong>
+* [ ] Worn-out physical components
+* [ ] Lack of skilled personnel to run it and maintain it</p>
+<h3 id="version-en-espanol_12">Versión en Español</h3>
+<p>¿Cuál es la principal vulnerabilidad relacionada con el hardware heredado (Legacy)?
+* [ ] Problemas de compatibilidad
+* [✅] <strong>Falta de actualizaciones de seguridad y parches</strong>
+* [ ] Componentes físicos desgastados
+* [ ] Falta de personal calificado para ejecutarlo y mantenerlo</p>
+<h3 id="1-explicacion-general_12">1. Explicación General</h3>
+<p>El hardware heredado (Legacy) continúa realizando funciones operativas críticas en muchas empresas, pero al no tener soporte activo del proveedor, su firmware se vuelve inmune a las correcciones de vulnerabilidades modernas.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_12">2. ¿Por qué es la correcta y no el resto?</h3>
+<p>La <strong>Falta de actualizaciones de seguridad y parches</strong> es la respuesta correcta desde la perspectiva de ciberseguridad, ya que describe la vulnerabilidad lógica que deja al hardware expuesto a exploits permanentes. Los <em>problemas de compatibilidad</em>, los <em>componentes físicos desgastados</em> y la <em>falta de personal</em> son problemas operativos, de ingeniería de hardware o de recursos humanos, no la debilidad de seguridad primaria que explotan los atacantes de red.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_12">3. Clave para el Examen SY0-701</h3>
+<p>Cuando una corporación está obligada a mantener hardware Legacy por razones de producción y no puede actualizarlo, la contramedida mandatoria del examen es implementar Segmentación de Red estricta para aislar dichos dispositivos de internet.</p>
+<hr />
+<h2 id="pregunta-14-mecanica-de-escape-de-maquina-virtual-vm-escape">Pregunta 14: Mecánica de Escape de Máquina Virtual (VM Escape)</h2>
+<h3 id="english-version_13">English Version</h3>
+<p>The term "VM escape" refers to the process of breaking out of the boundaries of a guest operating system installation to access the primary hypervisor controlling all the virtual machines on the host machine.<br />
+<em> [✅] </em><em>True</em>*
+* [ ] False</p>
+<h3 id="version-en-espanol_13">Versión en Español</h3>
+<p>El término "VM escape" (escape de máquina virtual) se refiere al proceso de romper los límites de la instalación de un sistema operativo invitado para acceder al hipervisor principal que controla todas las máquinas virtuales en la máquina host.
+* [✅] <strong>Verdadero</strong>
+* [ ] Falso</p>
+<h3 id="1-explicacion-general_13">1. Explicación General</h3>
+<p>El aislamiento es el pilar de la virtualización. Si un atacante alojado dentro de una máquina virtual invitada (guest) logra explotar una falla en el software de virtualización para interactuar directamente con el hipervisor base del host, rompe este aislamiento por completo.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_13">2. ¿Por qué es la correcta y no el resto?</h3>
+<p>Es <strong>Verdadero</strong> porque define con precisión técnica el ataque de escape de máquina virtual. Lograr esto otorga al atacante el control potencial sobre el resto de las máquinas virtuales vecinas que comparten el mismo hardware físico. Marcar "Falso" ignoraría uno de los riesgos de infraestructura virtual y nube más críticos de la industria.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_13">3. Clave para el Examen SY0-701</h3>
+<p>El VM Escape representa la vulnerabilidad más severa en entornos de nube e infraestructura virtualizada, ya que compromete la confidencialidad e integridad multi-inquilino (multi-tenancy).</p>
+<hr />
+<h2 id="pregunta-15-riesgo-de-reutilizacion-de-recursos-en-virtualizacion">Pregunta 15: Riesgo de Reutilización de Recursos en Virtualización</h2>
+<h3 id="english-version_14">English Version</h3>
+<p>Which of the following answers refers to a virtualization-related vulnerability where virtualized assets allocated to one VM are improperly isolated and can be accessed or compromised by another VM?
+* [✅] <strong>Resource reuse</strong>
+* [ ] Privilege escalation
+* [ ] Resource exhaustion
+* [ ] Concurrent session usage</p>
+<h3 id="version-en-espanol_14">Versión en Español</h3>
+<p>¿Cuál de las siguientes respuestas se refiere a una vulnerabilidad relacionada con la virtualización en la que los activos virtualizados asignados a una VM no están aislados adecuadamente y pueden ser accedidos o comprometidos por otra VM?
+* [✅] <strong>Reutilización de recursos (Resource reuse)</strong>
+* [ ] Escalada de privilegios (Privilege escalation)
+* [ ] Agotamiento de recursos (Resource exhaustion)
+* [ ] Uso de sesiones concurrentes (Concurrent session usage)</p>
+<h3 id="1-explicacion-general_14">1. Explicación General</h3>
+<p>Cuando el hipervisor reasigna bloques de memoria caché, almacenamiento o ciclos de CPU que fueron utilizados por una máquina virtual a una máquina virtual distinta sin haber limpiado o sanitizado previamente los remanentes de datos binarios, expone información residual confidencial.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_14">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Reutilización de recursos</strong> es el término técnico formal para este fallo de limpieza de memoria en la virtualización. La <em>escalada de privilegios</em> es ganar accesos superiores en el sistema pero no describe el traspaso de datos entre VMs por falta de sanitización. El <em>agotamiento de recursos</em> es un ataque de denegación de servicio (DoS) por consumo masivo de hardware. El <em>uso de sesiones concurrentes</em> es una métrica de acceso de usuarios.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_14">3. Clave para el Examen SY0-701</h3>
+<p>El riesgo de Resource Reuse se mitiga asegurando que el hipervisor aplique políticas estrictas de borrado seguro y sobreescritura de los bloques de memoria física antes de asignarlos a un entorno virtual diferente.</p>
+<hr />
+<h2 id="pregunta-16-vulnerabilidades-comunes-de-la-infraestructura-cloud">Pregunta 16: Vulnerabilidades Comunes de la Infraestructura Cloud</h2>
+<h3 id="english-version_15">English Version</h3>
+<p>Which of the answers listed below refers to a cloud-related vulnerability type?
+* [ ] Insecure APIs
+* [ ] Poor access controls
+* [ ] Lack of security updates
+* [ ] Misconfigured cloud storage
+* [ ] Shadow IT / Malicious insiders
+* [✅] <strong>All of the above</strong></p>
+<h3 id="version-en-espanol_15">Versión en Español</h3>
+<p>¿Cuál de las respuestas enumeradas a continuación se refiere a un tipo de vulnerabilidad relacionada con la nube?
+* [ ] APIs inseguras
+* [ ] Controles de acceso deficientes
+* [ ] Falta de actualizaciones de seguridad
+* [ ] Almacenamiento en la nube mal configurado
+* [ ] Shadow IT / Insiders maliciosos
+* [✅] <strong>Todo lo anterior</strong></p>
+<h3 id="1-explicacion-general_15">1. Explicación General</h3>
+<p>Las implementaciones en la nube (IaaS, PaaS, SaaS) introducen vectores de riesgo específicos vinculados a la automatización, la exposición pública perimetral de interfaces y la responsabilidad compartida de las configuraciones lógicas.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_15">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Todo lo anterior</strong> es la opción correcta porque todas las respuestas describen fallas nativas de la nube: las APIs controlan la nube y si son inseguras exponen los datos; los accesos deficientes rompen el principio de mínimo privilegio; el almacenamiento mal configurado (como cubos S3 abiertos públicamente) causa fugas de información masivas; y el Shadow IT implica que los empleados desplieguen servicios en la nube sin la autorización del departamento de seguridad.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_15">3. Clave para el Examen SY0-701</h3>
+<p>En entornos de nube, el eslabón más débil no suele ser el proveedor (AWS, Azure, GCP), sino los errores de malas configuraciones (Misconfigurations) realizados por los propios clientes al desplegar los recursos.</p>
+<hr />
+<h2 id="pregunta-17-instalacion-de-software-por-carga-lateral-sideloading">Pregunta 17: Instalación de Software por Carga Lateral (Sideloading)</h2>
+<h3 id="english-version_16">English Version</h3>
+<p>The practice of installing mobile apps from websites and app stores other than the official marketplaces is referred to as:
+* [ ] Jailbreaking
+* [ ] Rooting
+* [✅] <strong>Sideloading</strong>
+* [ ] Carrier unlocking</p>
+<h3 id="version-en-espanol_16">Versión en Español</h3>
+<p>La práctica de instalar aplicaciones móviles desde sitios web y tiendas de aplicaciones distintas a los mercados oficiales se conoce como:
+* [ ] Jailbreaking
+* [ ] Rooting
+* [✅] <strong>Carga lateral (Sideloading)</strong>
+* [ ] Desbloqueo de operador (Carrier unlocking)</p>
+<h3 id="1-explicacion-general_16">1. Explicación General</h3>
+<p>Los sistemas operativos móviles modernos restringen de manera nativa la instalación de software a sus tiendas oficiales para garantizar que el código pase por un proceso previo de revisión y firma de seguridad. Romper este flujo controlado introduce software sin verificar.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_16">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Carga lateral (Sideloading)</strong> es la respuesta correcta porque define específicamente la acción de descargar e instalar paquetes de aplicaciones (.apk o .ipa) desde fuentes externas ajenas al control oficial del ecosistema. <em>Jailbreaking</em> y <em>Rooting</em> implican la modificación del sistema operativo para obtener privilegios administrativos, mas no son el nombre del acto de instalar el software externo. <em>Desbloqueo de operador</em> desvincula el modem celular del dispositivo de una telefónica específica.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_16">3. Clave para el Examen SY0-701</h3>
+<p>El Sideloading representa un riesgo severo de infección por malware debido a que las aplicaciones obtenidas en repositorios de terceros carecen de los controles de seguridad y escaneos de vulnerabilidades automatizados de las tiendas oficiales.</p>
+<hr />
+<h2 id="pregunta-18-modificaciones-de-seguridad-en-dispositivos-apple-jailbreaking">Pregunta 18: Modificaciones de Seguridad en Dispositivos Apple (Jailbreaking)</h2>
+<h3 id="english-version_17">English Version</h3>
+<p>Which of the following terms is used to describe the process of removing software restrictions imposed by Apple on its iOS operating system?
+* [ ] Sideloading
+* [ ] Rooting
+* [✅] <strong>Jailbreaking</strong>
+* [ ] Carrier unlocking</p>
+<h3 id="version-en-espanol_17">Versión en Español</h3>
+<p>¿Cuál de los siguientes términos se utiliza para describir el proceso de eliminar las restricciones de software impuestas por Apple en su sistema operativo iOS?
+* [ ] Carga lateral (Sideloading)
+* [ ] Rooting
+* [✅] <strong>Jailbreaking</strong>
+* [ ] Desbloqueo de operador (Carrier unlocking)</p>
+<h3 id="1-explicacion-general_17">1. Explicación General</h3>
+<p>El jailbreaking es un proceso de escalada de privilegios diseñado específicamente para dispositivos de la manzana que ejecutan iOS. Su objetivo principal es eludir los controles de seguridad del fabricante (como el entorno de aislamiento de aplicaciones o <em>sandbox</em> y la verificación de firmas de código) para permitir la personalización profunda del sistema y la instalación de software no autorizado.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_17">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Jailbreaking</strong> es la respuesta correcta debido a que es el término técnico y comercial exclusivo para la plataforma iOS de Apple. <em>Rooting</em> se descarta por estar estrictamente ligado a dispositivos basados en Android. <em>Sideloading</em> es el acto de instalar apps de fuentes externas (lo cual se facilita enormemente tras hacer jailbreak, pero no es el proceso de liberación del sistema operativo). <em>Desbloqueo de operador</em> solo elimina las trabas de red de telefonía celular para usar cualquier tarjeta SIM.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_17">3. Clave para el Examen SY0-701</h3>
+<p>Un dispositivo que ha pasado por el proceso de jailbreaking pierde su modelo de seguridad por defecto, dejando expuesta la información corporativa en tránsito y en reposo. Para mitigar este riesgo, las políticas corporativas deben exigir el bloqueo de estos terminales mediante herramientas de MDM/UEM.</p>
+<hr />
+<h2 id="pregunta-19-modificaciones-de-seguridad-en-dispositivos-android-rooting">Pregunta 19: Modificaciones de Seguridad en Dispositivos Android (Rooting)</h2>
+<h3 id="english-version_18">English Version</h3>
+<p>The term "Rooting" refers to the capability of gaining administrative access to the operating system and system applications on:
+* [✅] <strong>Android devices</strong>
+* [ ] iOS devices
+* [ ] Microsoft devices
+* [ ] All types of mobile devices</p>
+<h3 id="version-en-espanol_18">Versión en Español</h3>
+<p>El término "Rooting" se refiere a la capacidad de obtener acceso administrativo al sistema operativo y a las aplicaciones del sistema en:
+* [✅] <strong>Dispositivos Android</strong>
+* [ ] Dispositivos iOS
+* [ ] Dispositivos Microsoft
+* [ ] Todo tipo de dispositivos móviles</p>
+<h3 id="1-explicacion-general_18">1. Explicación General</h3>
+<p>El sistema operativo Android está construido sobre la arquitectura de un kernel de Linux. En la terminología nativa de Linux, el superusuario o administrador que posee el control absoluto de todo el sistema de archivos y las configuraciones de raíz del entorno se conoce formalmente como "root".</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_18">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Dispositivos Android</strong> es la opción correcta porque el concepto de "Rooting" deriva directamente de la obtención de privilegios de este usuario root de Linux/Android. <em>Dispositivos iOS</em> se descarta porque su proceso análogo se conoce estrictamente como Jailbreaking. <em>Dispositivos Microsoft</em> y <em>Todo tipo de dispositivos móviles</em> se descartan debido a la imprecisión técnica respecto a la plataforma origen de donde nace este vocablo informático.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_18">3. Clave para el Examen SY0-701</h3>
+<p>A nivel organizativo, el Rooting compromete severamente la postura de seguridad de la empresa. Permite que aplicaciones potencialmente maliciosas alteren archivos críticos de sistema que normalmente estarían fuertemente protegidos en modo de solo lectura.</p>
+<hr />
+<h2 id="pregunta-20-explotacion-de-amenazas-desconocidas-zero-day">Pregunta 20: Explotación de Amenazas Desconocidas (Zero-Day)</h2>
+<h3 id="english-version_19">English Version</h3>
+<p>A type of attack aimed at exploiting vulnerability that is present in already released software but unknown to the software developer is known as:
+* [ ] On-path attack
+* [ ] IV attack
+* [✅] <strong>Zero-day attack</strong>
+* [ ] Replay attack</p>
+<h3 id="version-en-espanol_19">Versión en Español</h3>
+<p>Un tipo de ataque destinado a explotar una vulnerabilidad que está presente en el software ya lanzado pero que el desarrollador del software desconoce se conoce como:
+* [ ] Ataque en ruta (On-path attack)
+* [ ] Ataque IV (IV attack)
+* [✅] <strong>Ataque de día cero (Zero-day attack)</strong>
+* [ ] Ataque de repetición (Replay attack)</p>
+<h3 id="1-explicacion-general_19">1. Explicación General</h3>
+<p>Las fallas de seguridad del software que son descubiertas y explotadas por actores maliciosos antes de que el fabricante del producto tenga conocimiento de su existencia (y, por lo tanto, antes de que pueda desarrollar y publicar un parche de mitigación) representan riesgos críticos de intrusión.</p>
+<h3 id="2-por-que-es-la-correcta-y-no-el-resto_19">2. ¿Por qué es la correcta y no el resto?</h3>
+<p><strong>Ataque de día cero (Zero-day)</strong> es el concepto exacto que define una brecha explotada donde el desarrollador tiene "cero días" de ventaja para combatirla mediante parches oficiales. <em>Ataque en ruta</em> es una amenaza de interceptación e interrupción de red (Man-in-the-Middle). <em>Ataque IV</em> explota debilidades en los vectores de inicialización de cifrados inalámbricos antiguos como WEP. <em>Ataque de repetición</em> reenvía capturas de datos válidas previas para evadir una autenticación de red legítima.</p>
+<h3 id="3-clave-para-el-examen-sy0-701_19">3. Clave para el Examen SY0-701</h3>
+<p>Dado que no existen parches disponibles para detener una amenaza de tipo Zero-day, la estrategia de defensa requerida por el examen se basa en el despliegue de soluciones de análisis de comportamiento y heurística a través de sistemas EDR/NDR para detectar las anomalías de explotación en tiempo real.</p>
+<hr />
+<p><a href="../ExamCompass%20-%20Cuestionarios%20por%20Temas/">⬅️ Volver a Cuestionarios por Temas</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "search.suggest", "search.highlight"], "search": "../../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
